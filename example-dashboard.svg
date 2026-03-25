@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <rect width="800" height="520" fill="#f8fafc"/>
+
+  <!-- Top filters bar -->
+  <rect x="20" y="15" width="130" height="30" rx="6" fill="#e2e8f0"/>
+  <text x="50" y="35" font-family="Inter,sans-serif" font-size="11" fill="#64748b">Quarter</text>
+  <rect x="165" y="15" width="130" height="30" rx="6" fill="#e2e8f0"/>
+  <text x="195" y="35" font-family="Inter,sans-serif" font-size="11" fill="#64748b">Month</text>
+  <rect x="310" y="15" width="130" height="30" rx="6" fill="#e2e8f0"/>
+  <text x="345" y="35" font-family="Inter,sans-serif" font-size="11" fill="#64748b">Week</text>
+  <rect x="455" y="15" width="130" height="30" rx="6" fill="#e2e8f0"/>
+  <text x="487" y="35" font-family="Inter,sans-serif" font-size="11" fill="#64748b">Coin</text>
+
+  <!-- KPI Cards -->
+  <rect x="20" y="60" width="180" height="70" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="40" y="82" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">General WinRate</text>
+  <text x="40" y="115" font-family="Inter,sans-serif" font-size="28" font-weight="bold" fill="#f59e0b">60.78%</text>
+
+  <rect x="215" y="60" width="180" height="70" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="235" y="82" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">Trades</text>
+  <text x="235" y="115" font-family="Inter,sans-serif" font-size="28" font-weight="bold" fill="#1e293b">171</text>
+
+  <rect x="410" y="60" width="180" height="70" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="430" y="82" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">Active Coins</text>
+  <text x="430" y="115" font-family="Inter,sans-serif" font-size="28" font-weight="bold" fill="#1e293b">9</text>
+
+  <rect x="605" y="60" width="180" height="70" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="625" y="82" font-family="Inter,sans-serif" font-size="10" fill="#94a3b8">Avg Duration (h)</text>
+  <text x="625" y="115" font-family="Inter,sans-serif" font-size="28" font-weight="bold" fill="#2563eb">16.8</text>
+
+  <!-- WinRate by trade type - horizontal bars -->
+  <rect x="20" y="150" width="370" height="160" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="40" y="175" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#1e293b">WinRate by Trade Type</text>
+
+  <text x="40" y="210" font-family="Inter,sans-serif" font-size="11" fill="#64748b">sell</text>
+  <rect x="80" y="197" width="200" height="20" rx="4" fill="#dbeafe"/>
+  <rect x="80" y="197" width="122" height="20" rx="4" fill="#3b82f6"/>
+  <text x="210" y="211" font-family="Inter,sans-serif" font-size="10" fill="#1e293b">60.53%</text>
+
+  <text x="40" y="250" font-family="Inter,sans-serif" font-size="11" fill="#64748b">buy</text>
+  <rect x="80" y="237" width="200" height="20" rx="4" fill="#dbeafe"/>
+  <rect x="80" y="237" width="121" height="20" rx="4" fill="#3b82f6"/>
+  <text x="208" y="251" font-family="Inter,sans-serif" font-size="10" fill="#1e293b">60.17%</text>
+
+  <!-- Donut chart - TakeProfit -->
+  <rect x="410" y="150" width="370" height="160" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="430" y="175" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#1e293b">TakeProfit Hits</text>
+
+  <circle cx="560" cy="240" r="50" fill="none" stroke="#f59e0b" stroke-width="24" stroke-dasharray="126 188"/>
+  <circle cx="560" cy="240" r="50" fill="none" stroke="#8b5cf6" stroke-width="24" stroke-dasharray="78 236" stroke-dashoffset="-126"/>
+  <circle cx="560" cy="240" r="50" fill="none" stroke="#a3e635" stroke-width="24" stroke-dasharray="110 204" stroke-dashoffset="-204"/>
+  <circle cx="560" cy="240" r="30" fill="white"/>
+
+  <circle cx="660" cy="205" r="5" fill="#f59e0b"/>
+  <text x="672" y="209" font-family="Inter,sans-serif" font-size="10" fill="#64748b">(1) 40.4%</text>
+  <circle cx="660" cy="225" r="5" fill="#8b5cf6"/>
+  <text x="672" y="229" font-family="Inter,sans-serif" font-size="10" fill="#64748b">(1,2,3) 24.5%</text>
+  <circle cx="660" cy="245" r="5" fill="#a3e635"/>
+  <text x="672" y="249" font-family="Inter,sans-serif" font-size="10" fill="#64748b">(1,2) 35.1%</text>
+
+  <!-- WinRate by Month - bar chart -->
+  <rect x="20" y="330" width="370" height="170" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="40" y="355" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#1e293b">WinRate by Month</text>
+
+  <line x1="60" y1="370" x2="60" y2="470" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="470" x2="350" y2="470" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="40" y="385" font-family="Inter,sans-serif" font-size="9" fill="#94a3b8">80%</text>
+  <text x="40" y="410" font-family="Inter,sans-serif" font-size="9" fill="#94a3b8">60%</text>
+  <text x="40" y="435" font-family="Inter,sans-serif" font-size="9" fill="#94a3b8">40%</text>
+  <text x="40" y="460" font-family="Inter,sans-serif" font-size="9" fill="#94a3b8">20%</text>
+
+  <rect x="140" y="395" width="120" height="75" rx="4" fill="#3b82f6"/>
+  <text x="175" y="390" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#1e293b">60.26%</text>
+  <text x="145" y="488" font-family="Inter,sans-serif" font-size="9" fill="#94a3b8">Mar 16 - Mar 22</text>
+
+  <!-- WinRate by Coin - horizontal bars -->
+  <rect x="410" y="330" width="370" height="170" rx="10" fill="white" stroke="#e2e8f0"/>
+  <text x="430" y="355" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#1e293b">WinRate by Coin</text>
+
+  <text x="430" y="380" font-family="Inter,sans-serif" font-size="9" fill="#64748b">LTCUSDT</text>
+  <rect x="500" y="370" width="220" height="12" rx="3" fill="#3b82f6"/>
+  <text x="725" y="380" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">100%</text>
+
+  <text x="430" y="398" font-family="Inter,sans-serif" font-size="9" fill="#64748b">TRXUSDT</text>
+  <rect x="500" y="388" width="220" height="12" rx="3" fill="#3b82f6"/>
+  <text x="725" y="398" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">100%</text>
+
+  <text x="430" y="416" font-family="Inter,sans-serif" font-size="9" fill="#64748b">BTCUSDT</text>
+  <rect x="500" y="406" width="175" height="12" rx="3" fill="#3b82f6"/>
+  <text x="680" y="416" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">79.4%</text>
+
+  <text x="430" y="434" font-family="Inter,sans-serif" font-size="9" fill="#64748b">SOLUSDT</text>
+  <rect x="500" y="424" width="147" height="12" rx="3" fill="#3b82f6"/>
+  <text x="652" y="434" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">66.7%</text>
+
+  <text x="430" y="452" font-family="Inter,sans-serif" font-size="9" fill="#64748b">AVAXUSDT</text>
+  <rect x="500" y="442" width="140" height="12" rx="3" fill="#60a5fa"/>
+  <text x="645" y="452" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">63.6%</text>
+
+  <text x="430" y="470" font-family="Inter,sans-serif" font-size="9" fill="#64748b">APTUSDT</text>
+  <rect x="500" y="460" width="124" height="12" rx="3" fill="#60a5fa"/>
+  <text x="629" y="470" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">56.3%</text>
+
+  <text x="430" y="488" font-family="Inter,sans-serif" font-size="9" fill="#64748b">ETHUSDT</text>
+  <rect x="500" y="478" width="115" height="12" rx="3" fill="#93c5fd"/>
+  <text x="620" y="488" font-family="Inter,sans-serif" font-size="9" fill="#1e293b">52.2%</text>
+</svg>

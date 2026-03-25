@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">IT-решения для бизнеса — сайты, приложения, боты, CRM, аналитика</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span class="logo-icon">&lt;/&gt;</span> <span class="logo-placeholder">Название</span>
+        </a>
+        <nav class="nav">
+            <a href="#services" data-i18n="nav_services">Услуги</a>
+            <a href="#portfolio" data-i18n="nav_portfolio">Примеры</a>
+            <a href="#process" data-i18n="nav_process">Как работаем</a>
+            <a href="#contact" data-i18n="nav_contact">Контакты</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav_cta">Обсудить задачу</a>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" data-i18n="hero_badge">IT-решения для малого и среднего бизнеса</div>
+                <h1 data-i18n="hero_title" data-i18n-html="true">Разбираемся в задаче бизнеса&nbsp;&mdash; предлагаем <span class="gradient-text">IT&#8209;решение</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">Помогаем бизнесу решать задачи через IT: сайты, мобильные приложения, чат-боты с AI, CRM-системы и аналитика данных. Не просто «пишем код» — вникаем в бизнес и делаем то, что реально нужно.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero_cta">Обсудить задачу</a>
+                    <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_cta2">Что мы делаем</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>5</strong>
+                        <span data-i18n="stat_directions">Направлений</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>50+</strong>
+                        <span data-i18n="stat_projects">Проектов</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>MVP</strong>
+                        <span data-i18n="stat_mvp">за 2 недели</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-services-preview">
+                    <div class="preview-card pc-1">
+                        <span class="pc-icon">🌐</span>
+                        <span data-i18n="preview_sites">Сайты и лендинги</span>
+                    </div>
+                    <div class="preview-card pc-2">
+                        <span class="pc-icon">🤖</span>
+                        <span data-i18n="preview_bots">AI-боты</span>
+                    </div>
+                    <div class="preview-card pc-3">
+                        <span class="pc-icon">📱</span>
+                        <span data-i18n="preview_apps">Приложения</span>
+                    </div>
+                    <div class="preview-card pc-4">
+                        <span class="pc-icon">⚙️</span>
+                        <span>CRM</span>
+                    </div>
+                    <div class="preview-card pc-5">
+                        <span class="pc-icon">📊</span>
+                        <span data-i18n="preview_analytics">Аналитика</span>
+                    </div>
+                    <div class="preview-center">
+                        <span data-i18n="preview_your">Ваша</span>
+                        <strong data-i18n="preview_task">задача</strong>
+                        <div class="preview-arrow">&darr;</div>
+                        <span data-i18n="preview_solution">IT-решение</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Approach -->
+<section class="approach">
+    <div class="container">
+        <div class="approach-inner">
+            <div class="approach-icon">💡</div>
+            <div class="approach-text">
+                <h2 data-i18n="approach_title">Суть простая</h2>
+                <p data-i18n="approach_desc">Вы рассказываете о задаче бизнеса — мы предлагаем IT-решение. Не навязываем лишнего, не усложняем. Делаем то, что принесёт результат.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services">
+    <div class="container">
+        <h2 class="section-title" data-i18n="services_title">Чем мы помогаем</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">5 направлений — одна цель: решить вашу бизнес-задачу через IT</p>
+
+        <div class="services-list">
+            <div class="service-card service-card-wide">
+                <div class="service-number">01</div>
+                <div class="service-icon-lg">🌐</div>
+                <div class="service-body">
+                    <h3 data-i18n="s1_title">Сайты и лендинги</h3>
+                    <p data-i18n="s1_desc">От одностраничников для запуска продукта до полноценных корпоративных сайтов. Адаптив под мобильные, SEO-основа, интеграция с аналитикой — всё включено.</p>
+                    <div class="service-tags">
+                        <span class="tag" data-i18n="s1_t1">Лендинги</span>
+                        <span class="tag" data-i18n="s1_t2">Корпоративные сайты</span>
+                        <span class="tag" data-i18n="s1_t3">Интернет-магазины</span>
+                        <span class="tag">SEO</span>
+                        <span class="tag" data-i18n="s1_t4">Адаптив</span>
+                        <span class="tag" data-i18n="s1_t5">Аналитика</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card service-card-wide">
+                <div class="service-number">02</div>
+                <div class="service-icon-lg">🤖</div>
+                <div class="service-body">
+                    <h3 data-i18n="s2_title">Чат-боты и AI-ассистенты</h3>
+                    <p data-i18n="s2_desc">От простых автоответчиков до умных AI-ассистентов, которые понимают контекст, отвечают на вопросы клиентов и помогают с продажами.</p>
+                    <div class="service-tags">
+                        <span class="tag" data-i18n="s2_t1">Telegram-боты</span>
+                        <span class="tag" data-i18n="s2_t2">AI-ассистенты</span>
+                        <span class="tag" data-i18n="s2_t3">Автоответчики</span>
+                        <span class="tag" data-i18n="s2_t4">Обработка заявок</span>
+                    </div>
+                    <a href="https://aitrxbot.com" target="_blank" class="service-example" data-i18n="s2_example">
+                        Пример: aitrxbot.com &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card service-card-wide">
+                <div class="service-number">03</div>
+                <div class="service-icon-lg">📱</div>
+                <div class="service-body">
+                    <h3 data-i18n="s3_title">Мобильные приложения</h3>
+                    <p data-i18n="s3_desc">iOS и Android — от MVP для проверки идеи до готового продукта. Личные кабинеты, каталоги, сервисы записи, доставка — зависит от задачи клиента.</p>
+                    <div class="service-tags">
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">MVP</span>
+                        <span class="tag" data-i18n="s3_t1">Личные кабинеты</span>
+                        <span class="tag" data-i18n="s3_t2">Каталоги</span>
+                        <span class="tag" data-i18n="s3_t3">Сервисы записи</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card service-card-wide">
+                <div class="service-number">04</div>
+                <div class="service-icon-lg">⚙️</div>
+                <div class="service-body">
+                    <h3 data-i18n="s4_title">CRM и автоматизация</h3>
+                    <p data-i18n="s4_desc">Настраиваем и внедряем CRM-системы, чтобы бизнес не терял заявки и клиентов. Автоматизируем рутину: воронки продаж, рассылки, отчёты, интеграция с мессенджерами и телефонией.</p>
+                    <div class="service-tags">
+                        <span class="tag" data-i18n="s4_t1">Воронки продаж</span>
+                        <span class="tag" data-i18n="s4_t2">Рассылки</span>
+                        <span class="tag" data-i18n="s4_t3">Интеграция с мессенджерами</span>
+                        <span class="tag" data-i18n="s4_t4">Телефония</span>
+                        <span class="tag" data-i18n="s4_t5">Автоотчёты</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card service-card-wide">
+                <div class="service-number">05</div>
+                <div class="service-icon-lg">📊</div>
+                <div class="service-body">
+                    <h3 data-i18n="s5_title">Аналитика и дашборды</h3>
+                    <p data-i18n="s5_desc">Собираем данные из разных источников в единую картину: строим наглядные дашборды, настраиваем отчёты и метрики, чтобы собственник видел, что происходит в бизнесе, и принимал решения.</p>
+                    <div class="service-tags">
+                        <span class="tag" data-i18n="s5_t1">Дашборды</span>
+                        <span class="tag" data-i18n="s5_t2">Отчёты</span>
+                        <span class="tag" data-i18n="s5_t3">Метрики и KPI</span>
+                        <span class="tag" data-i18n="s5_t4">Сбор данных</span>
+                        <span class="tag" data-i18n="s5_t5">Визуализация</span>
+                    </div>
+                    <a href="#portfolio" class="service-example" data-i18n="s5_example">
+                        Пример: аналитика по трейдингу &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h2 class="section-title" data-i18n="portfolio_title">Примеры работ</h2>
+        <p class="section-subtitle" data-i18n="portfolio_subtitle">Часть проектов под NDA, но вот что можем показать</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-card portfolio-card-featured">
+                <div class="portfolio-image">
+                    <img src="example-dashboard.svg" alt="Торговая аналитика">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag" data-i18n="p1_tag">Аналитика</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 data-i18n="p1_title">Дашборд торговой аналитики</h3>
+                    <p data-i18n="p1_desc">Интерактивная панель мониторинга для трейдера: WinRate по монетам и типам сделок, статистика TakeProfit, тренды по месяцам. Все данные обновляются автоматически.</p>
+                    <div class="portfolio-results">
+                        <div class="portfolio-result">
+                            <strong>171</strong>
+                            <span data-i18n="p1_trades">Сделок</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <strong>9</strong>
+                            <span data-i18n="p1_coins">Монет</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <strong>60.78%</strong>
+                            <span>Win Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-placeholder">
+                    <div class="placeholder-icon">🤖</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 data-i18n="p2_title">AI-бот для трейдинга</h3>
+                    <p data-i18n="p2_desc">Telegram-бот с AI-ассистентом для анализа рынка и торговых сигналов</p>
+                    <a href="https://aitrxbot.com" target="_blank" class="portfolio-link">aitrxbot.com &rarr;</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-placeholder">
+                    <div class="placeholder-icon">🔒</div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 data-i18n="p3_title">Проекты под NDA</h3>
+                    <p data-i18n="p3_desc">CRM-внедрения, мобильные приложения и корпоративные сайты — расскажем на консультации</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="process">
+    <div class="container">
+        <h2 class="section-title" data-i18n="process_title">Как мы работаем</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3 data-i18n="step1_title">Слушаем задачу</h3>
+                <p data-i18n="step1_desc">Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3 data-i18n="step2_title">Предлагаем решение</h3>
+                <p data-i18n="step2_desc">Подбираем оптимальный вариант: что делать, сколько стоит, сколько займёт</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3 data-i18n="step3_title">Делаем</h3>
+                <p data-i18n="step3_desc">Разрабатываем с промежуточными демо — вы видите прогресс на каждом этапе</p>
+            </div>
+            <div class="process-connector"></div>
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3 data-i18n="step4_title">Запускаем и поддерживаем</h3>
+                <p data-i18n="step4_desc">Внедряем, обучаем вашу команду и остаёмся на связи после запуска</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why us -->
+<section class="why-me">
+    <div class="container">
+        <h2 class="section-title" data-i18n="why_title">Почему с нами удобно</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🎯</div>
+                <h3 data-i18n="why1_title">Одна команда — все направления</h3>
+                <p data-i18n="why1_desc">Не нужно искать отдельно разработчика сайта, бот-мейкера и CRM-специалиста. Мы закрываем всё и видим общую картину</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🧠</div>
+                <h3 data-i18n="why2_title">Думаем о бизнесе, а не о коде</h3>
+                <p data-i18n="why2_desc">Сначала разбираемся в задаче, потом предлагаем решение. Не продаём ненужное и не усложняем</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⚡</div>
+                <h3 data-i18n="why3_title">Быстрый старт</h3>
+                <p data-i18n="why3_desc">MVP за 2 недели. Не тянут месяцами — запускаем быстро, дорабатываем по ходу</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🤝</div>
+                <h3 data-i18n="why4_title">Прозрачность</h3>
+                <p data-i18n="why4_desc">Вы всегда знаете что происходит, сколько стоит и когда будет готово. Без сюрпризов</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta">
+    <div class="container">
+        <div class="cta-inner">
+            <div class="cta-text">
+                <h2 data-i18n="cta_title">Расскажите о вашей задаче</h2>
+                <p data-i18n="cta_desc">Опишите что нужно — мы ответим в течение дня, предложим варианты решения и оценим сроки. Консультация бесплатно.</p>
+                <div class="cta-channels">
+                    <a href="https://t.me/" target="_blank" class="cta-channel">
+                        <span class="cta-channel-icon">✈️</span>
+                        <div>
+                            <strong>Telegram</strong>
+                            <span data-i18n="cta_tg_desc">Самый быстрый способ</span>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@example.com" class="cta-channel">
+                        <span class="cta-channel-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <span>hello@example.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <form class="cta-form" id="contactForm">
+                <div class="form-row">
+                    <input type="text" data-i18n-ph="form_name" placeholder="Ваше имя" required>
+                    <input type="tel" data-i18n-ph="form_phone" placeholder="Телефон или Telegram" required>
+                </div>
+                <input type="email" placeholder="Email">
+                <textarea data-i18n-ph="form_task" placeholder="Опишите задачу: что за бизнес, какая проблема, что хотите получить" rows="4"></textarea>
+                <button type="submit" class="btn btn-primary btn-lg btn-block" data-i18n="form_submit">Отправить заявку</button>
+                <p class="form-note" data-i18n="form_note">Ответим в течение дня. Консультация бесплатно.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="#" class="logo"><span class="logo-icon">&lt;/&gt;</span> <span class="logo-placeholder">Название</span></a>
+            <p data-i18n="footer_desc">IT-решения для бизнеса: сайты, боты, приложения, CRM, аналитика</p>
+        </div>
+        <div class="footer-links">
+            <a href="#services" data-i18n="nav_services">Услуги</a>
+            <a href="#portfolio" data-i18n="nav_portfolio">Примеры</a>
+            <a href="#process" data-i18n="nav_process">Как работаем</a>
+            <a href="#contact" data-i18n="nav_contact">Контакты</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/" target="_blank">Telegram</a>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p data-i18n="footer_copy">&copy; 2026. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
