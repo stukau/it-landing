@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<include-icons></include-icons>
+<script>fetch('icons.svg').then(r=>r.text()).then(t=>{document.querySelector('include-icons').outerHTML=t})</script>
 
 <!-- Header -->
 <header class="header">
@@ -68,23 +70,23 @@
             <div class="hero-image">
                 <div class="hero-services-preview">
                     <div class="preview-card pc-1">
-                        <span class="pc-icon">🌐</span>
+                        <svg class="pc-icon"><use href="icons.svg#ic-globe"/></svg>
                         <span data-i18n="preview_sites">Сайты и лендинги</span>
                     </div>
                     <div class="preview-card pc-2">
-                        <span class="pc-icon">🤖</span>
+                        <svg class="pc-icon"><use href="icons.svg#ic-bot"/></svg>
                         <span data-i18n="preview_bots">AI-боты</span>
                     </div>
                     <div class="preview-card pc-3">
-                        <span class="pc-icon">📱</span>
+                        <svg class="pc-icon"><use href="icons.svg#ic-phone"/></svg>
                         <span data-i18n="preview_apps">Приложения</span>
                     </div>
                     <div class="preview-card pc-4">
-                        <span class="pc-icon">⚙️</span>
+                        <svg class="pc-icon"><use href="icons.svg#ic-cog"/></svg>
                         <span>CRM</span>
                     </div>
                     <div class="preview-card pc-5">
-                        <span class="pc-icon">📊</span>
+                        <svg class="pc-icon"><use href="icons.svg#ic-chart"/></svg>
                         <span data-i18n="preview_analytics">Аналитика</span>
                     </div>
                     <div class="preview-center">
@@ -103,7 +105,7 @@
 <section class="approach">
     <div class="container">
         <div class="approach-inner">
-            <div class="approach-icon">💡</div>
+            <div class="approach-icon"><svg class="icon-xl"><use href="icons.svg#ic-lightbulb"/></svg></div>
             <div class="approach-text">
                 <h2 data-i18n="approach_title">Суть простая</h2>
                 <p data-i18n="approach_desc">Вы рассказываете о задаче бизнеса — мы предлагаем IT-решение. Не навязываем лишнего, не усложняем. Делаем то, что принесёт результат.</p>
@@ -121,7 +123,7 @@
         <div class="services-list">
             <div class="service-card service-card-wide">
                 <div class="service-number">01</div>
-                <div class="service-icon-lg">🌐</div>
+                <div class="service-icon-lg"><svg class="icon-lg"><use href="icons.svg#ic-globe"/></svg></div>
                 <div class="service-body">
                     <h3 data-i18n="s1_title">Сайты и лендинги</h3>
                     <p data-i18n="s1_desc">От одностраничников для запуска продукта до полноценных корпоративных сайтов. Адаптив под мобильные, SEO-основа, интеграция с аналитикой — всё включено.</p>
@@ -138,7 +140,7 @@
 
             <div class="service-card service-card-wide">
                 <div class="service-number">02</div>
-                <div class="service-icon-lg">🤖</div>
+                <div class="service-icon-lg"><svg class="icon-lg"><use href="icons.svg#ic-bot"/></svg></div>
                 <div class="service-body">
                     <h3 data-i18n="s2_title">Чат-боты и AI-ассистенты</h3>
                     <p data-i18n="s2_desc">От простых автоответчиков до умных AI-ассистентов, которые понимают контекст, отвечают на вопросы клиентов и помогают с продажами.</p>
@@ -156,7 +158,7 @@
 
             <div class="service-card service-card-wide">
                 <div class="service-number">03</div>
-                <div class="service-icon-lg">📱</div>
+                <div class="service-icon-lg"><svg class="icon-lg"><use href="icons.svg#ic-phone"/></svg></div>
                 <div class="service-body">
                     <h3 data-i18n="s3_title">Мобильные приложения</h3>
                     <p data-i18n="s3_desc">iOS и Android — от MVP для проверки идеи до готового продукта. Личные кабинеты, каталоги, сервисы записи, доставка — зависит от задачи клиента.</p>
@@ -173,7 +175,7 @@
 
             <div class="service-card service-card-wide">
                 <div class="service-number">04</div>
-                <div class="service-icon-lg">⚙️</div>
+                <div class="service-icon-lg"><svg class="icon-lg"><use href="icons.svg#ic-cog"/></svg></div>
                 <div class="service-body">
                     <h3 data-i18n="s4_title">CRM и автоматизация</h3>
                     <p data-i18n="s4_desc">Настраиваем и внедряем CRM-системы, чтобы бизнес не терял заявки и клиентов. Автоматизируем рутину: воронки продаж, рассылки, отчёты, интеграция с мессенджерами и телефонией.</p>
@@ -189,7 +191,7 @@
 
             <div class="service-card service-card-wide">
                 <div class="service-number">05</div>
-                <div class="service-icon-lg">📊</div>
+                <div class="service-icon-lg"><svg class="icon-lg"><use href="icons.svg#ic-chart"/></svg></div>
                 <div class="service-body">
                     <h3 data-i18n="s5_title">Аналитика и дашборды</h3>
                     <p data-i18n="s5_desc">Собираем данные из разных источников в единую картину: строим наглядные дашборды, настраиваем отчёты и метрики, чтобы собственник видел, что происходит в бизнесе, и принимал решения.</p>
@@ -243,7 +245,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-placeholder">
-                    <div class="placeholder-icon">🤖</div>
+                    <div class="placeholder-icon"><svg class="icon-xl"><use href="icons.svg#ic-bot"/></svg></div>
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p2_title">AI-бот для трейдинга</h3>
@@ -253,7 +255,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-placeholder">
-                    <div class="placeholder-icon">🔒</div>
+                    <div class="placeholder-icon"><svg class="icon-xl"><use href="icons.svg#ic-lock"/></svg></div>
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p3_title">Проекты под NDA</h3>
@@ -302,22 +304,22 @@
         <h2 class="section-title" data-i18n="why_title">Почему с нами удобно</h2>
         <div class="why-grid">
             <div class="why-card">
-                <div class="why-icon">🎯</div>
+                <div class="why-icon"><svg class="icon-md"><use href="icons.svg#ic-target"/></svg></div>
                 <h3 data-i18n="why1_title">Одна команда — все направления</h3>
                 <p data-i18n="why1_desc">Не нужно искать отдельно разработчика сайта, бот-мейкера и CRM-специалиста. Мы закрываем всё и видим общую картину</p>
             </div>
             <div class="why-card">
-                <div class="why-icon">🧠</div>
+                <div class="why-icon"><svg class="icon-md"><use href="icons.svg#ic-brain"/></svg></div>
                 <h3 data-i18n="why2_title">Думаем о бизнесе, а не о коде</h3>
                 <p data-i18n="why2_desc">Сначала разбираемся в задаче, потом предлагаем решение. Не продаём ненужное и не усложняем</p>
             </div>
             <div class="why-card">
-                <div class="why-icon">⚡</div>
+                <div class="why-icon"><svg class="icon-md"><use href="icons.svg#ic-zap"/></svg></div>
                 <h3 data-i18n="why3_title">Быстрый старт</h3>
                 <p data-i18n="why3_desc">MVP за 2 недели. Не тянут месяцами — запускаем быстро, дорабатываем по ходу</p>
             </div>
             <div class="why-card">
-                <div class="why-icon">🤝</div>
+                <div class="why-icon"><svg class="icon-md"><use href="icons.svg#ic-handshake"/></svg></div>
                 <h3 data-i18n="why4_title">Прозрачность</h3>
                 <p data-i18n="why4_desc">Вы всегда знаете что происходит, сколько стоит и когда будет готово. Без сюрпризов</p>
             </div>
@@ -334,14 +336,14 @@
                 <p data-i18n="cta_desc">Опишите что нужно — мы ответим в течение дня, предложим варианты решения и оценим сроки. Консультация бесплатно.</p>
                 <div class="cta-channels">
                     <a href="https://t.me/" target="_blank" class="cta-channel">
-                        <span class="cta-channel-icon">✈️</span>
+                        <span class="cta-channel-icon"><svg class="icon-sm"><use href="icons.svg#ic-send"/></svg></span>
                         <div>
                             <strong>Telegram</strong>
                             <span data-i18n="cta_tg_desc">Самый быстрый способ</span>
                         </div>
                     </a>
                     <a href="mailto:hello@example.com" class="cta-channel">
-                        <span class="cta-channel-icon">📧</span>
+                        <span class="cta-channel-icon"><svg class="icon-sm"><use href="icons.svg#ic-mail"/></svg></span>
                         <div>
                             <strong>Email</strong>
                             <span>hello@example.com</span>

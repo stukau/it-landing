@@ -48,6 +48,40 @@ ul {
     list-style: none;
 }
 
+/* === SVG Icons === */
+svg.icon-sm { width: 24px; height: 24px; }
+svg.icon-md { width: 32px; height: 32px; }
+svg.icon-lg { width: 40px; height: 40px; }
+svg.icon-xl { width: 48px; height: 48px; }
+
+svg.pc-icon {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.service-icon-lg {
+    color: var(--primary);
+}
+
+.approach-icon svg {
+    color: var(--white);
+}
+
+.why-icon svg {
+    color: var(--primary);
+}
+
+.placeholder-icon svg {
+    color: var(--primary);
+    opacity: 0.6;
+}
+
+.cta-channel-icon svg {
+    color: var(--white);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -317,6 +351,8 @@ ul {
 
 .pc-icon {
     font-size: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .pc-1 { top: 0; left: 50%; transform: translateX(-50%); }
@@ -370,8 +406,9 @@ ul {
 }
 
 .approach-icon {
-    font-size: 48px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .approach-text h2 {
@@ -449,9 +486,10 @@ ul {
 }
 
 .service-icon-lg {
-    font-size: 40px;
     flex-shrink: 0;
     margin-top: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .service-body h3 {
@@ -593,7 +631,9 @@ ul {
 }
 
 .placeholder-icon {
-    font-size: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .portfolio-link {
@@ -686,8 +726,8 @@ ul {
 }
 
 .why-icon {
-    font-size: 36px;
     margin-bottom: 16px;
+    display: flex;
 }
 
 .why-card h3 {
@@ -751,7 +791,8 @@ ul {
 }
 
 .cta-channel-icon {
-    font-size: 28px;
+    display: flex;
+    align-items: center;
 }
 
 .cta-channel strong {
