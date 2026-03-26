@@ -167,11 +167,21 @@ svg.pc-icon {
 }
 
 @keyframes dot-jump {
-    0%   { cy: 26; }
-    40%  { cy: 18; }
-    50%  { cy: 18; }
-    90%  { cy: 26; }
-    100% { cy: 26; }
+    0%   { cx: 5;  cy: 26; }
+    8%   { cx: 5;  cy: 20; }
+    16%  { cx: 18; cy: 18; }
+    24%  { cx: 18; cy: 12; }
+    32%  { cx: 31; cy: 10; }
+    40%  { cx: 31; cy: 4;  }
+    48%  { cx: 44; cy: 0;  }
+    65%  { cx: 44; cy: 0;  }
+    100% { cx: 5;  cy: 26; }
+}
+
+.logo-text-wrap {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
 }
 
 .logo-text {
@@ -179,6 +189,19 @@ svg.pc-icon {
     font-weight: 900;
     letter-spacing: -0.5px;
     line-height: 1;
+}
+
+.logo-subtitle {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 2px;
+}
+
+.footer .logo-subtitle {
+    color: #94a3b8;
 }
 
 .logo-ai {
