@@ -1,6 +1,6 @@
 const translations = {
   ru: {
-    page_title: "IT-решения для бизнеса — сайты, приложения, боты, CRM, аналитика",
+    page_title: "aikrok — IT-решения для бизнеса",
     nav_services: "Услуги",
     nav_portfolio: "Примеры",
     nav_process: "Как работаем",
@@ -71,11 +71,11 @@ const translations = {
     form_submit: "Отправить заявку",
     form_note: "Ответим в течение дня. Консультация бесплатно.",
     footer_desc: "IT-решения для бизнеса: сайты, боты, приложения, CRM, аналитика",
-    footer_copy: "© 2026. Все права защищены."
+    footer_copy: "© 2026 aikrok. Все права защищены."
   },
 
   en: {
-    page_title: "IT Solutions for Business — Websites, Apps, Bots, CRM, Analytics",
+    page_title: "aikrok — IT Solutions for Business",
     nav_services: "Services",
     nav_portfolio: "Portfolio",
     nav_process: "How we work",
@@ -146,11 +146,11 @@ const translations = {
     form_submit: "Send request",
     form_note: "We'll respond within a day. Free consultation.",
     footer_desc: "IT solutions for business: websites, bots, apps, CRM, analytics",
-    footer_copy: "© 2026. All rights reserved."
+    footer_copy: "© 2026 aikrok. All rights reserved."
   },
 
   es: {
-    page_title: "Soluciones IT para negocios — sitios web, apps, bots, CRM, analítica",
+    page_title: "aikrok — Soluciones IT para negocios",
     nav_services: "Servicios",
     nav_portfolio: "Portafolio",
     nav_process: "Cómo trabajamos",
@@ -221,11 +221,11 @@ const translations = {
     form_submit: "Enviar solicitud",
     form_note: "Responderemos en un día. Consulta gratuita.",
     footer_desc: "Soluciones IT para negocios: sitios web, bots, apps, CRM, analítica",
-    footer_copy: "© 2026. Todos los derechos reservados."
+    footer_copy: "© 2026 aikrok. Todos los derechos reservados."
   },
 
   fr: {
-    page_title: "Solutions IT pour entreprises — sites web, apps, bots, CRM, analytique",
+    page_title: "aikrok — Solutions IT pour entreprises",
     nav_services: "Services",
     nav_portfolio: "Portfolio",
     nav_process: "Notre méthode",
@@ -296,7 +296,7 @@ const translations = {
     form_submit: "Envoyer la demande",
     form_note: "Réponse sous 24h. Consultation gratuite.",
     footer_desc: "Solutions IT pour entreprises : sites web, bots, apps, CRM, analytique",
-    footer_copy: "© 2026. Tous droits réservés."
+    footer_copy: "© 2026 aikrok. Tous droits réservés."
   }
 };
 
