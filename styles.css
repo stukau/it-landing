@@ -156,19 +156,21 @@ svg.pc-icon {
     gap: 8px;
 }
 
-.logo-mark {
-    flex-shrink: 0;
-}
-
 .logo-text {
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--dark);
-    letter-spacing: -0.5px;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer .logo-text {
-    color: #e2e8f0;
+    background: linear-gradient(135deg, #818cf8 0%, #60a5fa 50%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .nav {
