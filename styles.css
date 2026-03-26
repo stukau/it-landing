@@ -157,25 +157,9 @@ svg.pc-icon {
 }
 
 .logo-stairs {
-    width: 40px;
-    height: 32px;
+    width: 48px;
+    height: 38px;
     flex-shrink: 0;
-}
-
-.logo-dot {
-    animation: dot-jump 2.4s ease-in-out infinite;
-}
-
-@keyframes dot-jump {
-    0%   { cx: 5;  cy: 26; }
-    8%   { cx: 5;  cy: 20; }
-    16%  { cx: 18; cy: 18; }
-    24%  { cx: 18; cy: 12; }
-    32%  { cx: 31; cy: 10; }
-    40%  { cx: 31; cy: 4;  }
-    48%  { cx: 44; cy: 0;  }
-    65%  { cx: 44; cy: 0;  }
-    100% { cx: 5;  cy: 26; }
 }
 
 .logo-text-wrap {
@@ -185,10 +169,14 @@ svg.pc-icon {
 }
 
 .logo-text {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 900;
-    letter-spacing: -0.5px;
+    letter-spacing: 2.6px;
     line-height: 1;
+    background: linear-gradient(135deg, #6d28d9, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .logo-subtitle {
@@ -197,27 +185,18 @@ svg.pc-icon {
     letter-spacing: 3.5px;
     text-transform: uppercase;
     color: var(--gray);
-    margin-top: 2px;
+    margin-top: 3px;
+}
+
+.footer .logo-text {
+    background: linear-gradient(135deg, #a78bfa, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer .logo-subtitle {
     color: #94a3b8;
-}
-
-.logo-ai {
-    color: var(--dark);
-}
-
-.logo-krok {
-    color: #6366f1;
-}
-
-.footer .logo-ai {
-    color: #e2e8f0;
-}
-
-.footer .logo-krok {
-    color: #818cf8;
 }
 
 .nav {
