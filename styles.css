@@ -19,7 +19,7 @@
     --radius-lg: 20px;
     --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
     --shadow-lg: 0 4px 24px rgba(0,0,0,0.1);
-    --gradient: linear-gradient(135deg, #6a3de8, #4f46e5);
+    --gradient: linear-gradient(135deg, #6366f1, #4f46e5);
 }
 
 html {
@@ -167,12 +167,11 @@ svg.pc-icon {
 }
 
 @keyframes dot-jump {
-    0%   { cx: 5;  cy: 26; }
-    20%  { cx: 18; cy: 18; }
-    40%  { cx: 31; cy: 10; }
-    60%  { cx: 44; cy: 0;  }
-    70%  { cx: 44; cy: 0;  }
-    100% { cx: 5;  cy: 26; }
+    0%   { cy: 26; }
+    40%  { cy: 18; }
+    50%  { cy: 18; }
+    90%  { cy: 26; }
+    100% { cy: 26; }
 }
 
 .logo-text {
