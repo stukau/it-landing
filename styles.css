@@ -19,7 +19,7 @@
     --radius-lg: 20px;
     --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
     --shadow-lg: 0 4px 24px rgba(0,0,0,0.1);
-    --gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+    --gradient: linear-gradient(135deg, #6a3de8, #4f46e5);
 }
 
 html {
