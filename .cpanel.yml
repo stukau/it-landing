@@ -2,6 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/aitrkjwg/aikrok.com/
-    - /bin/cp index.html styles.css script.js i18n.js icons.svg example-dashboard.svg robots.txt sitemap.xml $DEPLOYPATH
-    - /bin/mkdir -p $DEPLOYPATH/v2
-    - /bin/cp v2/index.html v2/styles.css v2/script.js v2/scene.js v2/i18n.js v2/icons.svg v2/example-dashboard.svg $DEPLOYPATH/v2/
+    - /bin/cp index.html styles.css script.js scene.js i18n.js icons.svg example-dashboard.svg robots.txt sitemap.xml $DEPLOYPATH

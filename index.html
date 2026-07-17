@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <include-icons></include-icons>
@@ -111,34 +111,7 @@
             <div class="hero-image">
                 <div class="hero-glow hero-glow-1"></div>
                 <div class="hero-glow hero-glow-2"></div>
-                <div class="hero-services-preview">
-                    <div class="preview-card pc-1">
-                        <svg class="pc-icon"><use href="icons.svg#ic-globe"/></svg>
-                        <span data-i18n="preview_sites">Сайты и лендинги</span>
-                    </div>
-                    <div class="preview-card pc-2">
-                        <svg class="pc-icon"><use href="icons.svg#ic-bot"/></svg>
-                        <span data-i18n="preview_bots">AI-боты</span>
-                    </div>
-                    <div class="preview-card pc-3">
-                        <svg class="pc-icon"><use href="icons.svg#ic-phone"/></svg>
-                        <span data-i18n="preview_apps">Приложения</span>
-                    </div>
-                    <div class="preview-card pc-4">
-                        <svg class="pc-icon"><use href="icons.svg#ic-cog"/></svg>
-                        <span>CRM</span>
-                    </div>
-                    <div class="preview-card pc-5">
-                        <svg class="pc-icon"><use href="icons.svg#ic-chart"/></svg>
-                        <span data-i18n="preview_analytics">Аналитика</span>
-                    </div>
-                    <div class="preview-center">
-                        <span data-i18n="preview_your">Ваша</span>
-                        <strong data-i18n="preview_task">задача</strong>
-                        <div class="preview-arrow">&darr;</div>
-                        <span data-i18n="preview_solution">IT-решение</span>
-                    </div>
-                </div>
+                <canvas id="hero3d" aria-hidden="true"></canvas>
             </div>
         </div>
     </div>
@@ -455,7 +428,11 @@
     </div>
 </footer>
 
-<script src="i18n.js"></script>
-<script src="script.js"></script>
+<script src="i18n.js?v=3"></script>
+<script src="script.js?v=3"></script>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module" src="scene.js?v=3"></script>
 </body>
 </html>
