@@ -51,6 +51,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// 3D parallax on hero preview
+const heroPreview = document.querySelector('.hero-services-preview');
+const heroImage = document.querySelector('.hero-image');
+if (heroPreview && heroImage && window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroImage.addEventListener('mousemove', (e) => {
+        const r = heroImage.getBoundingClientRect();
+        const dx = (e.clientX - r.left) / r.width - 0.5;
+        const dy = (e.clientY - r.top) / r.height - 0.5;
+        heroPreview.style.transform = `rotateX(${12 - dy * 16}deg) rotateY(${-10 + dx * 18}deg)`;
+    });
+    heroImage.addEventListener('mouseleave', () => {
+        heroPreview.style.transform = '';
+    });
+}
+
 // Animate elements on scroll
 const observerOptions = {
     threshold: 0.1,
