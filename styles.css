@@ -709,6 +709,22 @@ svg.pc-icon {
     color: var(--text-2);
 }
 
+.portfolio-preview {
+    height: 240px;
+    overflow: hidden;
+}
+
+.portfolio-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.portfolio-preview-center img {
+    object-position: center;
+}
+
 .portfolio-placeholder {
     display: flex;
     align-items: center;

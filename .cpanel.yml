@@ -2,6 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/aitrkjwg/aikrok.com/
-    - /bin/cp index.html styles.css script.js scene.js i18n.js icons.svg example-dashboard.svg robots.txt sitemap.xml llms.txt $DEPLOYPATH
+    - /bin/cp index.html styles.css script.js scene.js i18n.js icons.svg example-dashboard.svg portfolio-submap.jpg portfolio-aitrxbot.webp robots.txt sitemap.xml llms.txt $DEPLOYPATH
     - /bin/cp -R blog $DEPLOYPATH
     - /bin/sh -c 'grep -qs "ai-charset-v2" ${DEPLOYPATH}.htaccess || printf "\n# ai-charset-v2\nAddDefaultCharset UTF-8\nAddType \"text/plain; charset=utf-8\" .txt\n" >> ${DEPLOYPATH}.htaccess'
