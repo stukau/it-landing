@@ -1,0 +1,139 @@
+/* === Blog: shared styles (uses variables from ../styles.css) === */
+
+body { padding-top: 64px; }
+
+.blog-hero {
+    padding: 72px 0 40px;
+    text-align: center;
+}
+.blog-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.blog-hero p {
+    margin-top: 12px;
+    color: var(--text-2);
+    font-size: 18px;
+}
+
+/* Post cards */
+.post-list {
+    display: grid;
+    gap: 24px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 24px 96px;
+}
+.post-card {
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    background: var(--bg);
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.post-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+}
+.post-card h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+.post-card p {
+    margin-top: 10px;
+    color: var(--text-2);
+    font-size: 16px;
+}
+.post-card .post-meta { margin-top: 14px; }
+
+.post-meta {
+    color: var(--text-2);
+    font-size: 14px;
+}
+.post-meta .tag {
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* Article page */
+.article-header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 8px;
+}
+.article-header h1 {
+    font-size: clamp(28px, 4.5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+.article-header .post-meta { margin-top: 16px; }
+.breadcrumbs {
+    font-size: 14px;
+    color: var(--text-2);
+    margin-bottom: 20px;
+}
+.breadcrumbs a { color: var(--accent); }
+
+.article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 24px 64px;
+    font-size: 17px;
+    line-height: 1.65;
+}
+.article h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 44px 0 16px;
+}
+.article h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 12px;
+}
+.article p { margin: 16px 0; }
+.article ul, .article ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+.article ul { list-style: disc; }
+.article ol { list-style: decimal; }
+.article li { margin: 8px 0; }
+.article a { color: var(--accent); }
+.article a:hover { text-decoration: underline; }
+.article strong { font-weight: 700; }
+.article hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 40px 0;
+}
+
+/* CTA block at the end of an article */
+.article-cta {
+    max-width: 760px;
+    margin: 0 auto 96px;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-alt);
+    text-align: center;
+}
+.article-cta h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+.article-cta p {
+    margin: 12px 0 20px;
+    color: var(--text-2);
+}
+
+@media (max-width: 768px) {
+    .post-card { padding: 22px 24px; }
+}

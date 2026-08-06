@@ -13,3 +13,10 @@ Telegram-боты, AI-агенты и автоматизация бизнеса,
 - [Примеры работ](https://aikrok.com/#portfolio)
 - [Как работаем](https://aikrok.com/#process): от задачи до MVP за 2 недели
 - [Контакты](https://aikrok.com/#contact): info@aikrok.com, Telegram @yuri_admin
+
+## Блог
+
+- [Блог](https://aikrok.com/blog/): статьи об автоматизации бизнеса
+- [Как работает автоматизация бизнеса с помощью AI-агентов](https://aikrok.com/blog/avtomatizatsiya-biznesa-ai-agenty/)
+- [Telegram-боты для продаж и поддержки](https://aikrok.com/blog/telegram-boty-dlya-prodazh-i-podderzhki/)
+- [AI-агент для малого бизнеса: как выбрать разработчика](https://aikrok.com/blog/kak-vybrat-razrabotchika-ai-agenta/)
