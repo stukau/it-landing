@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" fill="none">
+  <rect width="800" height="340" fill="#f8fafc"/>
+
+  <!-- URL field + scan button -->
+  <rect x="28" y="24" width="516" height="44" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="50" y="52" font-family="Inter,sans-serif" font-size="15" fill="#94a3b8">https://ваш-сайт.com</text>
+  <rect x="556" y="24" width="216" height="44" rx="10" fill="#4ab8d8"/>
+  <text x="664" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" font-weight="600" fill="#ffffff">Сканировать сайт</text>
+
+  <!-- Score card -->
+  <rect x="28" y="88" width="296" height="224" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="176" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" letter-spacing="0.8" fill="#94a3b8">AI VISIBILITY SCORE</text>
+  <circle cx="176" cy="216" r="62" stroke="#e8edf3" stroke-width="14"/>
+  <circle cx="176" cy="216" r="62" stroke="#4ab8d8" stroke-width="14" stroke-linecap="round"
+          stroke-dasharray="280 390" transform="rotate(-90 176 216)"/>
+  <text x="176" y="228" text-anchor="middle" font-family="Inter,sans-serif" font-size="48" font-weight="bold" fill="#1e293b">72</text>
+  <text x="176" y="252" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" fill="#94a3b8">из 100</text>
+
+  <!-- Findings card -->
+  <rect x="344" y="88" width="428" height="224" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="368" y="118" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#1e293b">Что нашёл сканер</text>
+
+  <!-- row 1 -->
+  <circle cx="376" cy="146" r="9" fill="#dcfce7"/>
+  <path d="M372 146l3 3 5-6" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="396" y="151" font-family="Inter,sans-serif" font-size="13" fill="#475569">robots.txt</text>
+  <text x="748" y="151" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="#16a34a">найден</text>
+
+  <!-- row 2 -->
+  <circle cx="376" cy="180" r="9" fill="#dcfce7"/>
+  <path d="M372 180l3 3 5-6" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="396" y="185" font-family="Inter,sans-serif" font-size="13" fill="#475569">sitemap.xml</text>
+  <text x="748" y="185" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="#16a34a">найден</text>
+
+  <!-- row 3 -->
+  <circle cx="376" cy="214" r="9" fill="#dcfce7"/>
+  <path d="M372 214l3 3 5-6" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="396" y="219" font-family="Inter,sans-serif" font-size="13" fill="#475569">Schema.org разметка</text>
+  <text x="748" y="219" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="#16a34a">найдена</text>
+
+  <!-- row 4 -->
+  <circle cx="376" cy="248" r="9" fill="#fef3c7"/>
+  <path d="M376 244v4M376 252v0.5" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
+  <text x="396" y="253" font-family="Inter,sans-serif" font-size="13" fill="#475569">llms.txt</text>
+  <text x="748" y="253" text-anchor="end" font-family="Inter,sans-serif" font-size="12" fill="#d97706">отсутствует</text>
+
+  <line x1="368" y1="272" x2="748" y2="272" stroke="#eef2f7"/>
+  <text x="396" y="294" font-family="Inter,sans-serif" font-size="13" fill="#64748b">Конкурентов в ответах ИИ</text>
+  <text x="748" y="294" text-anchor="end" font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#1e293b">3</text>
+  <circle cx="376" cy="290" r="9" fill="#e6f4fa"/>
+  <circle cx="376" cy="290" r="3" fill="#4ab8d8"/>
+</svg>
