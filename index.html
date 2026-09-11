@@ -45,7 +45,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <include-icons></include-icons>
@@ -277,6 +277,36 @@
                     </div>
                 </div>
             </div>
+            <div class="portfolio-card portfolio-card-featured portfolio-card-video">
+                <div class="portfolio-video">
+                    <video class="portfolio-video-el" muted loop playsinline preload="none" poster="portfolio-batumi-rent.jpg" aria-label="Batumi Rent — промо-ролик">
+                        <source src="portfolio-batumi-rent.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="portfolio-video-sound" aria-label="Включить звук" data-i18n-aria="p6_sound_on"></button>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-tag" data-i18n="p6_tag">Telegram Mini App</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 data-i18n="p6_title">Batumi Rent — агрегатор аренды</h3>
+                    <p data-i18n="p6_desc">Telegram Mini App для поиска долгосрочной аренды в Батуми: парсер каналов, LLM превращает объявления в карточки, дедупликация склеивает дубли, а подписчики получают пуши о новых совпадениях</p>
+                    <div class="portfolio-results">
+                        <div class="portfolio-result">
+                            <strong>LLM</strong>
+                            <span data-i18n="p6_r1">Разбор объявлений</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <strong>0</strong>
+                            <span data-i18n="p6_r2">Дублей в ленте</span>
+                        </div>
+                        <div class="portfolio-result">
+                            <strong>24/7</strong>
+                            <span data-i18n="p6_r3">Пуши о новых</span>
+                        </div>
+                    </div>
+                    <a href="https://georgia-rent-search.fly.dev" target="_blank" rel="noopener" class="portfolio-link" data-i18n="p6_link">Открыть Mini App &rarr;</a>
+                </div>
+            </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
                     <img src="portfolio-aitrxbot.webp" alt="AI-бот для трейдинга" loading="lazy">
@@ -451,8 +481,8 @@
     </div>
 </footer>
 
-<script src="i18n.js?v=3"></script>
-<script src="script.js?v=3"></script>
+<script src="i18n.js?v=4"></script>
+<script src="script.js?v=4"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>

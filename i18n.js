@@ -58,6 +58,15 @@ const translations = {
     p4_desc: "iOS-приложение для контроля подписок: голосовой ввод, распознавание скриншотов, напоминания о списаниях и аналитика расходов",
     p5_title: "AI Visibility Scanner",
     p5_desc: "Веб-сервис, который показывает, что ИИ-помощники знают о вашем бизнесе: сканирует сайт, прогоняет запросы через LLM и выдаёт балл видимости с готовыми артефактами",
+    p6_tag: "Telegram Mini App",
+    p6_title: "Batumi Rent — агрегатор аренды",
+    p6_desc: "Telegram Mini App для поиска долгосрочной аренды в Батуми: парсер каналов, LLM превращает объявления в карточки, дедупликация склеивает дубли, а подписчики получают пуши о новых совпадениях",
+    p6_r1: "Разбор объявлений",
+    p6_r2: "Дублей в ленте",
+    p6_r3: "Пуши о новых",
+    p6_link: "Открыть Mini App →",
+    p6_sound_on: "Включить звук",
+    p6_sound_off: "Выключить звук",
     p3_title: "Проекты под NDA",
     p3_desc: "CRM-внедрения, мобильные приложения и корпоративные сайты — расскажем на консультации",
     process_title: "Как мы работаем",
@@ -141,6 +150,15 @@ const translations = {
     p4_desc: "iOS app that keeps subscriptions under control: voice input, screenshot parsing, renewal reminders and spending analytics",
     p5_title: "AI Visibility Scanner",
     p5_desc: "Web service that reveals what AI assistants know about your business: scans the site, runs niche queries through an LLM and returns a visibility score with ready-to-use artifacts",
+    p6_tag: "Telegram Mini App",
+    p6_title: "Batumi Rent — Rental Aggregator",
+    p6_desc: "Telegram Mini App for long-term rentals in Batumi: a channel parser, an LLM that turns raw posts into structured listings, deduplication that merges repeats, and push alerts for subscribers when new matches appear",
+    p6_r1: "Listing extraction",
+    p6_r2: "Duplicates in feed",
+    p6_r3: "New-match alerts",
+    p6_link: "Open Mini App →",
+    p6_sound_on: "Unmute",
+    p6_sound_off: "Mute",
     p3_title: "NDA Projects",
     p3_desc: "CRM implementations, mobile apps, and corporate websites — we'll share details during consultation",
     process_title: "How We Work",
@@ -224,6 +242,15 @@ const translations = {
     p4_desc: "App iOS para controlar suscripciones: entrada por voz, lectura de capturas de pantalla, recordatorios de cobros y análisis de gastos",
     p5_title: "AI Visibility Scanner",
     p5_desc: "Servicio web que muestra qué saben los asistentes de IA sobre tu negocio: analiza el sitio, lanza consultas de tu nicho a un LLM y devuelve una puntuación de visibilidad con artefactos listos para usar",
+    p6_tag: "Telegram Mini App",
+    p6_title: "Batumi Rent — agregador de alquileres",
+    p6_desc: "Mini App de Telegram para alquiler de larga estancia en Batumi: un parser de canales, un LLM que convierte los anuncios en fichas estructuradas, deduplicación que fusiona repetidos y avisos push a los suscriptores cuando aparecen nuevas coincidencias",
+    p6_r1: "Extracción de anuncios",
+    p6_r2: "Duplicados en el feed",
+    p6_r3: "Avisos de novedades",
+    p6_link: "Abrir Mini App →",
+    p6_sound_on: "Activar sonido",
+    p6_sound_off: "Silenciar",
     p3_title: "Proyectos bajo NDA",
     p3_desc: "Implementaciones CRM, apps móviles y sitios corporativos — los detalles en consulta",
     process_title: "Cómo Trabajamos",
@@ -307,6 +334,15 @@ const translations = {
     p4_desc: "App iOS pour garder le contrôle de ses abonnements : saisie vocale, lecture de captures d'écran, rappels de prélèvements et analyse des dépenses",
     p5_title: "AI Visibility Scanner",
     p5_desc: "Service web qui révèle ce que les assistants IA savent de votre activité : il analyse le site, teste les requêtes de votre secteur via un LLM et renvoie un score de visibilité avec des livrables prêts à l'emploi",
+    p6_tag: "Telegram Mini App",
+    p6_title: "Batumi Rent — agrégateur de locations",
+    p6_desc: "Mini App Telegram pour la location longue durée à Batumi : un parseur de canaux, un LLM qui transforme les annonces en fiches structurées, une déduplication qui fusionne les doublons et des notifications push aux abonnés dès qu'une nouvelle correspondance apparaît",
+    p6_r1: "Extraction des annonces",
+    p6_r2: "Doublons dans le flux",
+    p6_r3: "Alertes nouveautés",
+    p6_link: "Ouvrir la Mini App →",
+    p6_sound_on: "Activer le son",
+    p6_sound_off: "Couper le son",
     p3_title: "Projets sous NDA",
     p3_desc: "Implémentations CRM, apps mobiles et sites corporate — détails lors de la consultation",
     process_title: "Notre Méthode",
@@ -353,6 +389,12 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const key = el.getAttribute('data-i18n-ph');
     if (t[key]) el.placeholder = t[key];
+  });
+
+  // aria-labels
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (t[key]) el.setAttribute('aria-label', t[key]);
   });
 
   // Update active button

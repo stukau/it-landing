@@ -88,3 +88,29 @@ document.querySelectorAll('.service-card-wide, .portfolio-card, .why-card, .proc
     el.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s`;
     observer.observe(el);
 });
+
+// Portfolio promo video: autoplay (muted) while in view, sound toggle
+const promoVideo = document.querySelector('.portfolio-video-el');
+if (promoVideo) {
+    const soundBtn = promoVideo.parentElement.querySelector('.portfolio-video-sound');
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                promoVideo.play().catch(() => {});
+            } else {
+                promoVideo.pause();
+            }
+        });
+    }, { threshold: 0.4 });
+    videoObserver.observe(promoVideo);
+
+    if (soundBtn) {
+        soundBtn.addEventListener('click', () => {
+            promoVideo.muted = !promoVideo.muted;
+            soundBtn.classList.toggle('is-on', !promoVideo.muted);
+            const t = (typeof translations !== 'undefined') && translations[document.documentElement.lang];
+            if (t) soundBtn.setAttribute('aria-label', promoVideo.muted ? t.p6_sound_on : t.p6_sound_off);
+            if (!promoVideo.muted && promoVideo.paused) promoVideo.play().catch(() => {});
+        });
+    }
+}

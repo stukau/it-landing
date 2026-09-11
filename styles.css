@@ -736,6 +736,54 @@ svg.pc-icon {
     border-radius: 14px;
 }
 
+.portfolio-video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    padding: 32px;
+    background: radial-gradient(120% 120% at 20% 0%, #1d4f6e 0%, #0e2a44 55%, #0a1a30 100%);
+    overflow: hidden;
+}
+
+.portfolio-video-el {
+    display: block;
+    height: 400px;
+    aspect-ratio: 9 / 16;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    background: #0a1322;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.portfolio-video-sound {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(8, 16, 29, 0.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='11 5 6 9 2 9 2 15 6 15 11 19 11 5'/%3E%3Cline x1='23' y1='9' x2='17' y2='15'/%3E%3Cline x1='17' y1='9' x2='23' y2='15'/%3E%3C/svg%3E") center / 20px no-repeat;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.portfolio-video-sound:hover { transform: scale(1.06); }
+.portfolio-video-sound.is-on {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='11 5 6 9 2 9 2 15 6 15 11 19 11 5'/%3E%3Cpath d='M15.54 8.46a5 5 0 0 1 0 7.07'/%3E%3Cpath d='M19.07 4.93a10 10 0 0 1 0 14.14'/%3E%3C/svg%3E");
+}
+
+.portfolio-card-video .portfolio-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.portfolio-card-video .portfolio-results { margin-bottom: 24px; }
+
 .portfolio-placeholder {
     display: flex;
     align-items: center;
@@ -1075,6 +1123,8 @@ svg.pc-icon {
     .portfolio-grid { grid-template-columns: 1fr; }
     .portfolio-card-featured { grid-template-columns: 1fr; }
     .portfolio-info { padding: 28px 26px; }
+    .portfolio-video { min-height: 0; padding: 24px; }
+    .portfolio-video-el { height: 360px; }
 
     .process-steps { flex-direction: column; gap: 40px; align-items: center; margin-top: 48px; }
     .process-connector { width: 1px; height: 36px; min-width: 1px; }
