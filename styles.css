@@ -641,6 +641,10 @@ svg.pc-icon {
     grid-template-columns: 1.2fr 1fr;
 }
 
+.portfolio-card-wide {
+    grid-column: 1 / -1;
+}
+
 .portfolio-image {
     position: relative;
     overflow: hidden;
