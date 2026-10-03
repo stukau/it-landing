@@ -137,3 +137,32 @@ body { padding-top: 64px; }
 @media (max-width: 768px) {
     .post-card { padding: 22px 24px; }
 }
+
+/* Tag filter on the blog index */
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.blog-tag {
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-2);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.blog-tag:hover { color: var(--text); border-color: var(--accent); }
+.blog-tag.is-active {
+    color: #0b1120;
+    background: var(--accent);
+    border-color: var(--accent);
+}
