@@ -1224,3 +1224,62 @@ svg.pc-icon {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(74,184,216,0.25);
 }
+
+/* === Blog teaser === */
+.blog-teaser {
+    padding: 120px 0;
+    background: var(--bg-dark);
+}
+/* Blog is Russian-only */
+html:not([lang="ru"]) .blog-teaser { display: none; }
+
+.blog-teaser-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.blog-teaser-card {
+    display: block;
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-alt);
+    box-shadow: var(--shadow-card);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.blog-teaser-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.blog-teaser-tag {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+.blog-teaser-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+}
+
+.blog-teaser-more {
+    margin-top: 40px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .blog-teaser-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .blog-teaser { padding: 80px 0; }
+    .blog-teaser-grid { grid-template-columns: 1fr; }
+    .blog-teaser-card { padding: 26px; }
+}
