@@ -141,6 +141,12 @@ svg.pc-icon {
     gap: 8px;
 }
 
+.logo-mark {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
 .logo-text-wrap {
     display: flex;
     flex-direction: column;
