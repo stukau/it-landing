@@ -20,7 +20,7 @@ import subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://aikrok.com"
 TODAY = "2026-11-25"
-CSS_V, BLOG_CSS_V, I18N_V = "15", "3", "9"
+CSS_V, BLOG_CSS_V, I18N_V = "16", "3", "9"
 OG = BASE + "/og-image-en.png"
 
 

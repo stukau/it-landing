@@ -746,6 +746,19 @@ svg.pc-icon {
     border-radius: 14px;
 }
 
+.portfolio-preview-full {
+    height: auto;
+    padding: 0;
+    aspect-ratio: 5 / 3;
+}
+
+.portfolio-preview-full img {
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+    object-position: center top;
+}
+
 .portfolio-video {
     position: relative;
     display: flex;
