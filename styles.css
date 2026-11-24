@@ -1291,13 +1291,15 @@ html:not([lang="ru"]) .blog-teaser { display: none; }
 }
 
 /* === Service detail links + FAQ (Russian-only content) === */
-.service-more { display: block; }
-.service-example + .service-more { margin-top: 8px; }
+.service-more, .service-more-en { display: block; }
+.service-example + .service-more, .service-example + .service-more-en { margin-top: 8px; }
 html:not([lang="ru"]) .service-more,
 html:not([lang="ru"]) .faq-section { display: none; }
+html:not([lang="en"]) .only-en { display: none; }
+a.lang-btn { text-decoration: none; }
 
-.faq-section { padding: 120px 0; }
-.faq-section .faq { max-width: 760px; margin: 40px auto 0; }
+.faq-section, .faq-section-en { padding: 120px 0; }
+.faq-section .faq, .faq-section-en .faq { max-width: 760px; margin: 40px auto 0; }
 .faq details {
     border-bottom: 1px solid var(--border);
     padding: 18px 0;
@@ -1316,5 +1318,5 @@ html:not([lang="ru"]) .faq-section { display: none; }
     line-height: 1.6;
 }
 @media (max-width: 768px) {
-    .faq-section { padding: 80px 0; }
+    .faq-section, .faq-section-en { padding: 80px 0; }
 }

@@ -100,7 +100,7 @@ const translations = {
   },
 
   en: {
-    page_title: "aikrok — IT Solutions for Business",
+    page_title: "AiKrok — Websites, Telegram Bots, AI Agents &amp; CRM for Business",
     nav_services: "Services",
     nav_portfolio: "Portfolio",
     nav_process: "How we work",
@@ -438,19 +438,39 @@ function setLanguage(lang) {
   localStorage.setItem('lang', lang);
 }
 
+// Russian and English have their own URLs; Spanish and French are switched in place
+const pageLang = document.documentElement.lang || 'ru';
+const langUrl = { ru: '/', en: '/en/' };
+
+function chooseLanguage(lang) {
+  if (langUrl[lang] && lang !== pageLang) {
+    localStorage.setItem('lang', lang);
+    window.location.href = langUrl[lang];
+    return;
+  }
+  setLanguage(lang);
+}
+
 // Init language switcher
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+  btn.addEventListener('click', () => chooseLanguage(btn.dataset.lang));
 });
 
-// Load saved language or detect from browser
+// Load saved language or detect from browser.
+// Crawlers always get the page as served, so each URL is indexed in its own language.
 const savedLang = localStorage.getItem('lang');
+const isBot = /bot|crawl|spider|slurp|lighthouse|google|yandex|bing|duckduck|baidu|gpt|claude|perplexity|facebookexternalhit/i.test(navigator.userAgent);
 if (savedLang && translations[savedLang]) {
-  setLanguage(savedLang);
-} else if (!/bot|crawl|spider|slurp|lighthouse|google|yandex|bing|duckduck|baidu|gpt|claude|perplexity|facebookexternalhit/i.test(navigator.userAgent)) {
-  // Crawlers always get the default (Russian) version that matches the URL's canonical content
+  if (savedLang === 'en' && pageLang === 'ru') {
+    window.location.replace('/en/' + window.location.hash);
+  } else if (!langUrl[savedLang]) {
+    setLanguage(savedLang);
+  }
+} else if (!isBot) {
   const browserLang = navigator.language.slice(0, 2);
-  if (translations[browserLang] && browserLang !== 'ru') {
+  if (browserLang === 'en' && pageLang === 'ru') {
+    window.location.replace('/en/' + window.location.hash);
+  } else if (translations[browserLang] && !langUrl[browserLang]) {
     setLanguage(browserLang);
   }
 }

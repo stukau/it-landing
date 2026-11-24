@@ -23,6 +23,16 @@ Telegram-боты, AI-агенты и автоматизация бизнеса,
 - [Аналитика данных и дашборды для бизнеса](https://aikrok.com/services/analitika-i-dashbordy/): Собираем данные из рекламы, CRM, склада и таблиц в единую картину: дашборды для собственника, автоматические отчёты, метрики и KPI, ИИ-аналитика.
 - [Разработка AI-агентов и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/): AI-агенты для малого и среднего бизнеса: обработка заявок, поддержка клиентов, база знаний (RAG), документы, интеграции с CRM и учётом. Начинаем с одного процесса.
 
+## English
+
+- [AiKrok in English](https://aikrok.com/en/): home page
+- [Website and Landing Page Development](https://aikrok.com/en/services/razrabotka-saytov/): Landing pages, corporate websites and online stores for small and medium businesses: responsive, SEO-ready, with analytics and AI-search readiness. First version in 2 weeks.
+- [Telegram Bot and AI Assistant Development](https://aikrok.com/en/services/telegram-boty/): Custom Telegram bots: booking, sales, support, loyalty programs, Mini Apps and AI-powered bots. CRM and payment integrations. MVP in 2 weeks.
+- [Mobile App Development for iOS and Android](https://aikrok.com/en/services/mobilnye-prilozheniya/): Mobile apps for business: from an MVP that validates an idea to a finished product in the App Store. Account areas, catalogs, booking, AI features. First version in 2 weeks.
+- [CRM Implementation and Sales Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/): CRM setup and implementation for small and medium businesses: sales funnels, messenger and telephony integrations, mailings, automatic reports. So that no lead is lost.
+- [Data Analytics and Dashboards for Business](https://aikrok.com/en/services/analitika-i-dashbordy/): We bring data from ads, CRM, inventory and spreadsheets into one picture: owner dashboards, automatic reports, metrics and KPIs, AI analytics.
+- [AI Agent Development and Business Automation](https://aikrok.com/en/services/ai-agenty/): AI agents for small and medium businesses: lead processing, customer support, knowledge base (RAG), documents, CRM and accounting integrations. We start with one process.
+
 ## Блог
 
 - [Блог](https://aikrok.com/blog/): статьи об автоматизации бизнеса, AI-агентах, Telegram-ботах, CRM и аналитике
