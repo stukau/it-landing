@@ -1,0 +1,872 @@
+# AiKrok — полный текст ключевых страниц / full text of key pages
+
+> Источник: https://aikrok.com/. Этот файл собран из страниц сайта для ИИ-ассистентов и поисковых систем. Контакты: info@aikrok.com, Telegram https://t.me/yuri_admin.
+
+## Частые вопросы
+
+**Сколько стоит разработка?**
+Зависит от задачи: информационный Telegram-бот — ориентировочно от $200–600, бот с ИИ и интеграциями — от $3 000; сайты, приложения, CRM и аналитику оцениваем после короткого разбора. Смету с раскладкой по этапам даём до начала работ, консультация бесплатна.
+
+**Что значит «MVP за 2 недели»?**
+Это первая рабочая версия с одной ключевой функцией, доведённой до конца: реальный сценарий, обработка ошибок, минимальная аналитика. Второстепенные функции сознательно откладываем и добавляем по мере того, как продукт показывает результат.
+
+**Что нужно от нас, чтобы начать?**
+Рассказать о бизнесе и проблеме. Мы задаём вопросы, вникаем и предлагаем вариант решения с ценой и сроками. Техническое задание писать заранее не обязательно.
+
+**Вы поддерживаете проект после запуска?**
+Да. Внедряем, обучаем вашу команду и остаёмся на связи: исправляем, дорабатываем и развиваем решение.
+
+**На каких языках вы работаете?**
+На русском, английском, испанском и французском.
+
+## Примеры работ
+
+- **SubMap — трекер подписок** (https://apps.apple.com/ge/app/submap-subscription-tracker/id6767109129): iOS-приложение для контроля подписок: голосовой ввод, распознавание скриншотов, напоминания о списаниях и аналитика расходов
+- **My Stash — семейный бюджет** (https://apps.apple.com/app/my-stash-budget-receipts/id6812665710): iOS-приложение для учёта семейных финансов: счета в любых валютах, бюджеты с напоминаниями, аналитика трат, AI-распознавание чеков и голосовые списки покупок. Все данные хранятся на устройстве
+- **ECHO: The Dark Is Listening** (https://apps.apple.com/app/echo-the-dark-is-listening/id6797635978): Атмосферная iOS-головоломка: лабиринт в полной темноте, который проявляется кольцами эха от вашего касания. 70 уровней, живой генеративный звук и хаптика через Taptic Engine
+- **Petalstorm — казуальная аркада** (https://apps.apple.com/app/petalstorm/id6770308644): iOS-игра в жанре ball-shooter: лепестки вместо шаров, 8 усилений, 10 скинов, таблица лидеров Game Center, ежедневные награды и встроенные покупки
+- **Tochki — игра «Точки»** (https://apps.apple.com/app/tochki/id6812648131): iOS-версия школьной игры в точки на клетчатом листе: два игрока на одном телефоне или на двух устройствах по Bluetooth и Wi‑Fi без интернета и аккаунтов, поля до 30×30, статистика игроков и 16 призов
+- **Batumi Rent — агрегатор аренды** (https://georgia-rent-search.fly.dev): Telegram Mini App для поиска долгосрочной аренды в Батуми: парсер каналов, LLM превращает объявления в карточки, дедупликация склеивает дубли, а подписчики получают пуши о новых совпадениях
+- **AI Visibility Scanner** (https://ai-visibility-seven-chi.vercel.app): Веб-сервис, который показывает, что ИИ-помощники знают о вашем бизнесе: сканирует сайт, прогоняет запросы через LLM и выдаёт балл видимости с готовыми артефактами
+- **AI-бот для трейдинга** (https://aitrxbot.com): Telegram-бот с AI-ассистентом для анализа рынка и торговых сигналов
+
+## Разработка сайтов и лендингов для бизнеса
+
+URL: https://aikrok.com/services/razrabotka-saytov/
+
+Делаем сайты, которые решают задачу бизнеса, а не просто «существуют»: приводят заявки, объясняют продукт и понятны поисковикам и ИИ-ассистентам. Начинаем с первой рабочей версии и развиваем её по мере того, как появляются данные.
+
+### Что мы делаем
+
+- **Лендинги** — одностраничники под запуск продукта, услугу или рекламную кампанию.
+- **Корпоративные сайты** — услуги, кейсы, блог, контакты, несколько языков.
+- **Интернет-магазины** — каталог, корзина, оплата, уведомления о заказах.
+- **SEO-основа** — структура страниц, мета-теги, микроразметка schema.org, sitemap и robots.txt.
+- **Подготовка к ИИ-поиску** — llms.txt и разметка, чтобы сайт корректно читали ChatGPT и другие ассистенты.
+- **Аналитика и формы** — счётчики, цели, заявки в мессенджер или CRM.
+
+### Когда это нужно
+
+- нужно быстро проверить спрос на продукт или услугу;
+- старый сайт не приводит заявок и плохо выглядит на телефоне;
+- сайта нет в поиске и в ответах ИИ-ассистентов;
+- заявки с сайта теряются, потому что приходят на почту, которую никто не читает.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Стоимость зависит от числа страниц, языковых версий, дизайна и интеграций (оплата, CRM, каталог). Лендинг с формой заявки обычно укладывается в первую двухнедельную версию; корпоративный сайт и магазин делаем этапами. Точную смету с раскладкой по этапам даём после короткого разбора задачи — это бесплатно.
+
+### Примеры работ
+
+- **AI Visibility Scanner** — веб-сервис, который сканирует сайт, прогоняет запросы через LLM и показывает, что ИИ-помощники знают о бизнесе.
+- **Корпоративные сайты под NDA** — покажем и расскажем на консультации.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**Сколько времени занимает разработка сайта?**
+Лендинг — обычно до двух недель вместе с текстами и формой заявки. Корпоративный сайт или интернет-магазин делаем этапами: сначала запускаем минимальную рабочую версию, затем добавляем разделы и интеграции.
+
+**SEO входит в разработку?**
+Да, техническая основа входит: структура заголовков, мета-теги, микроразметка, sitemap, robots.txt, адаптив и скорость загрузки. Регулярное продвижение — статьи, ссылки, работа с запросами — обсуждается отдельно.
+
+**Можно ли подключить сайт к CRM и мессенджерам?**
+Да. Заявки с форм могут сразу попадать в CRM, Telegram-чат менеджеров или таблицу — так они не теряются в почте.
+
+**Что такое подготовка сайта к ИИ-поиску?**
+Это набор технических шагов — llms.txt, разметка schema.org, открытый для ИИ-ботов robots.txt и ясная структура текста, — чтобы ChatGPT и другие ассистенты могли корректно прочитать сайт и упоминать компанию в ответах.
+
+### Статьи по теме
+
+- [Сайт с ИИ-ассистентом: виджет, который отвечает и собирает заявки](https://aikrok.com/blog/sayt-s-ii-assistentom/)
+- [llms.txt, schema.org и robots.txt: как подготовить сайт к ИИ-поиску](https://aikrok.com/blog/llms-txt-i-schema-org-dlya-ii-poiska/)
+- [AI Visibility: как попасть в ответы ChatGPT и других ИИ-ассистентов](https://aikrok.com/blog/ai-visibility-kak-popast-v-otvety-ii/)
+- [MVP за две недели: что входит в первую версию, а что сознательно откладываем](https://aikrok.com/blog/mvp-za-2-nedeli-chto-vhodit/)
+
+### Другие услуги
+
+- [Telegram-боты и AI-ассистенты](https://aikrok.com/services/telegram-boty/)
+- [Мобильные приложения](https://aikrok.com/services/mobilnye-prilozheniya/)
+- [CRM и автоматизация](https://aikrok.com/services/crm-i-avtomatizaciya/)
+- [Аналитика и дашборды](https://aikrok.com/services/analitika-i-dashbordy/)
+- [AI-агенты и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/)
+
+## Разработка Telegram-ботов и AI-ассистентов
+
+URL: https://aikrok.com/services/telegram-boty/
+
+Делаем ботов под конкретный сценарий бизнеса — от простого меню и записи до ассистента с ИИ, который понимает вопрос клиента, отвечает по документам компании и создаёт сделку в CRM.
+
+### Что мы делаем
+
+- **Запись и бронирование** — расписание, напоминания, перенос и отмена.
+- **Продажи и поддержка** — ответы на частые вопросы, квалификация заявок, передача менеджеру.
+- **Боты с ИИ** — понимание свободного текста и ответы по базе знаний компании.
+- **Telegram Mini Apps** — полноценный интерфейс внутри Telegram без App Store и Google Play.
+- **Программы лояльности** — бонусы, рассылки, возврат клиентов.
+- **Внутренние боты** — заявки, согласования и отчёты для команды.
+- **Интеграции** — CRM, оплата, таблицы, учётные системы.
+
+### Когда это нужно
+
+- администратор тратит часы на запись и напоминания по телефону;
+- заявки приходят ночью и в выходные и остаются без ответа;
+- клиенты задают одни и те же вопросы в мессенджере;
+- нужно приложение для клиентов, но выпускать его в сторах дорого и долго.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Цена бота определяется уровнем задачи. По нашим ориентирам для рынков СНГ, Грузии и Восточной Европы: информационный бот с меню — примерно $200–600, бот с данными и сценариями — $800–3 000, бот с интеграциями и платежами — $2 500–8 000, бот с ИИ — от $3 000. Подробный разбор с расходами после запуска — в статье [«Сколько стоит Telegram-бот»](https://aikrok.com/blog/skolko-stoit-telegram-bot/). Смету под вашу задачу даём после бесплатной консультации.
+
+### Примеры работ
+
+- **Batumi Rent** — Telegram Mini App для поиска долгосрочной аренды: парсер каналов, LLM превращает объявления в карточки, дедупликация склеивает дубли, подписчики получают уведомления о новых совпадениях.
+- **AI-бот для трейдинга (aitrxbot.com)** — Telegram-бот с AI-ассистентом для анализа рынка и торговых сигналов.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**Сколько стоит Telegram-бот?**
+Ориентировочно от $200–600 за информационного бота с меню до $3 000 и выше за бота с ИИ и интеграциями. Цена зависит от сценариев, интеграций и требований к точности ответов; смету с раскладкой по этапам даём после разбора задачи.
+
+**За какой срок можно запустить бота?**
+Первую версию, закрывающую главный сценарий, обычно запускаем за две недели. Сложные интеграции и ИИ добавляем следующими этапами.
+
+**Чем бот на заказ отличается от бота из конструктора?**
+Конструктор подходит для простого меню и типовых сценариев. Разработка на заказ нужна, когда требуются интеграции с вашими системами, нестандартная логика, ИИ или Mini App.
+
+**Что выбрать: бота, Mini App или мобильное приложение?**
+Если клиенты уже в Telegram и нужны запись, каталог или личный кабинет — Mini App обычно быстрее и дешевле приложения. Отдельное приложение оправдано, когда нужны офлайн-режим, доступ к функциям устройства или присутствие в сторах.
+
+**Можно ли подключить бота к CRM?**
+Да. Бот может создавать сделки, обновлять карточки клиентов и передавать диалог менеджеру вместе с историей переписки.
+
+### Статьи по теме
+
+- [Сколько стоит Telegram-бот: от простого меню до бота с ИИ и платежами](https://aikrok.com/blog/skolko-stoit-telegram-bot/)
+- [Telegram-бот для записи и бронирования: сценарии, интеграции и подводные камни](https://aikrok.com/blog/telegram-bot-dlya-zapisi-i-bronirovaniya/)
+- [Telegram-бот с ИИ: как перейти от кнопочных сценариев к пониманию запроса](https://aikrok.com/blog/telegram-bot-s-ii-dlya-podderzhki/)
+- [Telegram Mini Apps: приложение для клиентов без App Store и Google Play](https://aikrok.com/blog/telegram-mini-apps-dlya-biznesa/)
+- [Telegram или WhatsApp: где строить бота для вашего рынка](https://aikrok.com/blog/telegram-ili-whatsapp-dlya-biznesa/)
+- [Telegram-бот для программы лояльности: бонусы, рассылки и возврат клиентов](https://aikrok.com/blog/telegram-bot-dlya-programmy-loyalnosti/)
+
+### Другие услуги
+
+- [Сайты и лендинги](https://aikrok.com/services/razrabotka-saytov/)
+- [Мобильные приложения](https://aikrok.com/services/mobilnye-prilozheniya/)
+- [CRM и автоматизация](https://aikrok.com/services/crm-i-avtomatizaciya/)
+- [Аналитика и дашборды](https://aikrok.com/services/analitika-i-dashbordy/)
+- [AI-агенты и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/)
+
+## Разработка мобильных приложений для iOS и Android
+
+URL: https://aikrok.com/services/mobilnye-prilozheniya/
+
+Разрабатываем приложения для iOS и Android — от первой версии для проверки идеи до продукта в сторе. Собственные приложения команды опубликованы в App Store, так что путь от идеи до публикации и модерации мы проходили не раз.
+
+### Что мы делаем
+
+- **MVP** — первая версия с одной ключевой функцией, доведённой до конца.
+- **Клиентские приложения** — личные кабинеты, каталоги, запись, доставка.
+- **ИИ-функции** — распознавание чеков и скриншотов, голосовой ввод.
+- **Локальное хранение данных** — когда важно, чтобы данные оставались на устройстве.
+- **Монетизация** — подписки и встроенные покупки.
+- **Публикация** — подготовка к модерации и выпуск в App Store и Google Play.
+
+### Когда это нужно
+
+- есть идея продукта, и её нужно проверить на реальных пользователях;
+- клиентам нужен личный кабинет или запись всегда под рукой;
+- нужны функции устройства: камера, голос, уведомления, работа без интернета;
+- непонятно, что выгоднее — приложение или Telegram Mini App.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Стоимость зависит от числа платформ, экранов, серверной части и интеграций. Мы предлагаем начинать с MVP: одна ключевая функция, реальные интеграции и минимальная аналитика — и дальше развивать по результатам. Что входит в такую первую версию, разобрано в статье [«MVP за две недели»](https://aikrok.com/blog/mvp-za-2-nedeli-chto-vhodit/). Смету даём после бесплатной консультации.
+
+### Примеры работ
+
+- **SubMap** — iOS-приложение для контроля подписок: голосовой ввод, распознавание скриншотов, напоминания о списаниях и аналитика расходов.
+- **My Stash** — iOS-приложение для семейного бюджета: счета в любых валютах, бюджеты с напоминаниями, AI-распознавание чеков; все данные хранятся на устройстве.
+- **ECHO, Petalstorm и Tochki** — три iOS-игры в App Store: головоломка с генеративным звуком, аркада с Game Center и встроенными покупками, игра для двоих по Bluetooth и Wi‑Fi без интернета.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**Что успеваете сделать за две недели?**
+Первую версию с одной ключевой функцией, доведённой до конца: рабочий сценарий, обработка ошибок, минимальная аналитика. Дополнительные разделы и второстепенные функции сознательно откладываем на следующие этапы.
+
+**Делаете под iOS и Android?**
+Да, разрабатываем под обе платформы. С какой начинать и нужна ли вторая сразу — зависит от аудитории; обсуждаем на консультации.
+
+**Приложение или Telegram Mini App?**
+Mini App быстрее и дешевле, если клиенты уже пользуются Telegram. Приложение оправдано, когда нужны офлайн-режим, камера, голосовой ввод, пуш-уведомления вне мессенджера или присутствие в сторах.
+
+**Поможете с публикацией в сторах?**
+Да. Готовим материалы, проходим модерацию и публикуем приложение; после запуска остаёмся на связи и выпускаем обновления.
+
+### Статьи по теме
+
+- [MVP за две недели: что входит в первую версию, а что сознательно откладываем](https://aikrok.com/blog/mvp-za-2-nedeli-chto-vhodit/)
+- [Мобильное приложение или Telegram Mini App: что выбрать бизнесу](https://aikrok.com/blog/mobilnoe-prilozhenie-ili-telegram-mini-app/)
+- [ИИ в мобильных приложениях: распознавание чеков, голосовой ввод и локальные данные](https://aikrok.com/blog/ii-v-mobilnyh-prilozheniyah/)
+- [Telegram Mini Apps: приложение для клиентов без App Store и Google Play](https://aikrok.com/blog/telegram-mini-apps-dlya-biznesa/)
+
+### Другие услуги
+
+- [Сайты и лендинги](https://aikrok.com/services/razrabotka-saytov/)
+- [Telegram-боты и AI-ассистенты](https://aikrok.com/services/telegram-boty/)
+- [CRM и автоматизация](https://aikrok.com/services/crm-i-avtomatizaciya/)
+- [Аналитика и дашборды](https://aikrok.com/services/analitika-i-dashbordy/)
+- [AI-агенты и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/)
+
+## Внедрение CRM и автоматизация продаж
+
+URL: https://aikrok.com/services/crm-i-avtomatizaciya/
+
+Настраиваем и внедряем CRM так, чтобы команда ей действительно пользовалась, а бизнес не терял заявки и клиентов. Автоматизируем рутину вокруг продаж: воронки, напоминания, рассылки и отчёты.
+
+### Что мы делаем
+
+- **Подбор CRM** — под процессы и размер команды, а не «самую популярную».
+- **Воронки продаж** — этапы, задачи и напоминания без ручного контроля.
+- **Интеграция с мессенджерами** — все диалоги в одной карточке клиента.
+- **Телефония** — звонки и записи в карточке сделки.
+- **Рассылки** — сегменты, цепочки, возврат клиентов.
+- **Автоотчёты** — ежедневная сводка собственнику, например в Telegram.
+- **ИИ в CRM** — автотеги по переписке, резюме звонков.
+
+### Когда это нужно
+
+- заявки ведутся в таблицах и чатах, часть из них теряется;
+- CRM купили, но менеджеры её не заполняют;
+- непонятно, на каком этапе срываются сделки;
+- собственник собирает отчёт вручную из нескольких систем.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Стоимость внедрения зависит от выбранной системы, числа пользователей, количества интеграций и состояния данных, которые нужно перенести. Начинаем с одного процесса — обычно это входящие заявки — и расширяем шаг за шагом. Смету с раскладкой по этапам даём после бесплатного разбора.
+
+### Примеры работ
+
+- **CRM-внедрения под NDA** — покажем и расскажем на консультации.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**С чего начинается внедрение CRM?**
+С разбора текущего процесса: откуда приходят заявки, кто и как их обрабатывает, где они теряются. Только после этого выбираем систему и настраиваем воронку.
+
+**Почему команда не пользуется CRM и что с этим делать?**
+Чаще всего потому, что система добавляет работу вместо того, чтобы её убирать. Помогают автоматическое создание сделок из мессенджеров и звонков, минимум обязательных полей и обучение команды на реальных сценариях.
+
+**Можно ли связать CRM с Telegram и WhatsApp?**
+Да. Переписка из мессенджеров попадает в карточку клиента, а менеджер отвечает из одного окна.
+
+**Нужна ли CRM совсем небольшой команде?**
+Если заявок несколько в день и ведёт их один человек, может хватить таблицы и бота. CRM оправдана, когда заявок становится больше, появляются несколько менеджеров или нужно видеть воронку целиком.
+
+### Статьи по теме
+
+- [Как выбрать CRM для малого бизнеса: критерии, сравнение и типичные ловушки](https://aikrok.com/blog/kak-vybrat-crm-dlya-malogo-biznesa/)
+- [Внедрение CRM: почему команда не пользуется системой и как это исправить](https://aikrok.com/blog/vnedrenie-crm-pochemu-komanda-ne-polzuetsya/)
+- [Интеграция CRM с мессенджерами: все диалоги в одной карточке клиента](https://aikrok.com/blog/integraciya-crm-s-messendzherami/)
+- [ИИ в CRM: автотеги, резюме звонков и прогноз сделок](https://aikrok.com/blog/ii-v-crm/)
+- [Автоматизация продаж малого бизнеса: воронка, которая работает без ручных напоминаний](https://aikrok.com/blog/avtomatizaciya-prodazh-malogo-biznesa/)
+
+### Другие услуги
+
+- [Сайты и лендинги](https://aikrok.com/services/razrabotka-saytov/)
+- [Telegram-боты и AI-ассистенты](https://aikrok.com/services/telegram-boty/)
+- [Мобильные приложения](https://aikrok.com/services/mobilnye-prilozheniya/)
+- [Аналитика и дашборды](https://aikrok.com/services/analitika-i-dashbordy/)
+- [AI-агенты и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/)
+
+## Аналитика данных и дашборды для бизнеса
+
+URL: https://aikrok.com/services/analitika-i-dashbordy/
+
+Собираем данные из разных источников в одну картину, чтобы собственник видел, что происходит в бизнесе, и принимал решения по цифрам, а не по ощущениям.
+
+### Что мы делаем
+
+- **Сбор данных** — реклама, CRM, склад, таблицы, платёжные системы.
+- **Дашборды** — ключевые метрики на одном экране, обновление автоматически.
+- **Автоматические отчёты** — ежедневная или еженедельная сводка в Telegram или на почту.
+- **Метрики и KPI** — помогаем выбрать показатели, которые действительно влияют на решения.
+- **ИИ-аналитика** — вопросы к данным на человеческом языке.
+- **Прогнозы** — оценка продаж там, где для этого достаточно данных.
+
+### Когда это нужно
+
+- отчёт собирается вручную из нескольких таблиц и занимает часы;
+- цифры в рекламном кабинете, CRM и бухгалтерии не сходятся;
+- собственник узнаёт о проблеме через месяц, а не на следующий день;
+- данные есть, но ими никто не пользуется.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Стоимость зависит от числа источников данных, их качества и того, насколько сложны расчёты. Первая версия — один дашборд с главными метриками из одного-двух источников — обычно укладывается в двухнедельный этап. Смету даём после бесплатного разбора.
+
+### Примеры работ
+
+- **Дашборд торговой аналитики** — интерактивная панель для трейдера: Win Rate по монетам и типам сделок, статистика TakeProfit, тренды по месяцам; данные обновляются автоматически.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**С чего начать, если данные разбросаны по таблицам?**
+С одного вопроса, на который нужен ответ каждый день, — например, сколько заявок и по какой цене пришло вчера. Под него собираем источники и строим первый дашборд, затем добавляем остальное.
+
+**Какие метрики нужны собственнику?**
+Обычно достаточно около десяти: выручка, заявки, конверсия, средний чек, стоимость привлечения, остатки, дебиторка. Точный набор зависит от бизнеса.
+
+**Нужна ли для этого дорогая BI-система?**
+Не всегда. Для малого бизнеса часто хватает лёгкого дашборда и ежедневной сводки в Telegram. Тяжёлые BI-платформы оправданы при большом числе источников и пользователей.
+
+**Можно ли задавать вопросы к данным обычным текстом?**
+Да, это делается с помощью языковой модели, подключённой к вашим данным. Важно ограничить её проверенными источниками, чтобы она не выдумывала цифры.
+
+### Статьи по теме
+
+- [Дашборд для собственника: десять метрик, которые нужно видеть каждое утро](https://aikrok.com/blog/dashboard-dlya-sobstvennika-biznesa/)
+- [Как собрать данные из рекламы, CRM и склада в одну картину](https://aikrok.com/blog/sbor-dannyh-iz-raznyh-istochnikov/)
+- [ИИ-аналитика: как задавать вопросы к данным на человеческом языке](https://aikrok.com/blog/ii-analitika-dannyh-dlya-biznesa/)
+- [Прогнозирование продаж с помощью ИИ: что реально работает для малого бизнеса](https://aikrok.com/blog/prognozirovanie-prodazh-s-pomoshchyu-ii/)
+- [Ежедневная сводка в Telegram вместо таблиц: как собирать отчёты автоматически](https://aikrok.com/blog/avtomatizaciya-otchetov-v-telegram/)
+
+### Другие услуги
+
+- [Сайты и лендинги](https://aikrok.com/services/razrabotka-saytov/)
+- [Telegram-боты и AI-ассистенты](https://aikrok.com/services/telegram-boty/)
+- [Мобильные приложения](https://aikrok.com/services/mobilnye-prilozheniya/)
+- [CRM и автоматизация](https://aikrok.com/services/crm-i-avtomatizaciya/)
+- [AI-агенты и автоматизация бизнеса](https://aikrok.com/services/ai-agenty/)
+
+## Разработка AI-агентов и автоматизация бизнеса
+
+URL: https://aikrok.com/services/ai-agenty/
+
+Создаём AI-агентов — цифровых сотрудников, которые обрабатывают заявки, консультируют клиентов, заполняют CRM и связывают ваши сервисы между собой. Начинаем с одного процесса и расширяем шаг за шагом.
+
+### Что мы делаем
+
+- **Обработка заявок** — квалификация лидов круглосуточно и передача менеджеру.
+- **Поддержка клиентов** — ответы по базе знаний с эскалацией на человека.
+- **База знаний (RAG)** — ИИ отвечает по документам вашей компании.
+- **Документы** — распознавание счетов, черновики договоров, контроль сроков.
+- **Интеграции** — CRM, учётные системы, таблицы, мессенджеры.
+- **Автоматизация процессов** — на n8n, Make или собственном коде, в зависимости от задачи.
+- **Защита от ошибок** — агент не выдумывает цены, сроки и условия.
+
+### Когда это нужно
+
+- менеджеры тратят время на однотипные вопросы и первичную квалификацию;
+- заявки вне рабочего времени остаются без ответа;
+- знания компании лежат в разрозненных документах, и новички долго в них вникают;
+- данные вручную переносятся между системами.
+
+### Как проходит работа
+
+- **Слушаем задачу.** Вы рассказываете о бизнесе и проблеме — мы задаём вопросы и вникаем.
+- **Предлагаем решение.** Что делать, сколько это стоит и сколько займёт — с раскладкой по этапам.
+- **Делаем.** С промежуточными демо: вы видите прогресс на каждом этапе. Первая рабочая версия — за 2 недели.
+- **Запускаем и поддерживаем.** Внедряем, обучаем команду и остаёмся на связи после запуска.
+
+### Сроки и стоимость
+
+Цена агента складывается из трёх слоёв: разовая разработка, ежемесячные расходы на модель и сервер, поддержка. Сильнее всего на бюджет влияют число интеграций, качество исходных документов и требования к точности. Подробный разбор — в статье [«Сколько стоит AI-агент»](https://aikrok.com/blog/skolko-stoit-ai-agent/). Смету под вашу задачу даём после бесплатной консультации.
+
+### Примеры работ
+
+- **Batumi Rent** — конвейер на LLM: парсер собирает объявления из каналов, модель превращает их в структурированные карточки, дедупликация склеивает дубли.
+- **AI Visibility Scanner** — сервис сканирует сайт, прогоняет запросы через LLM и выдаёт балл видимости бизнеса в ответах ИИ-помощников.
+
+[Все примеры работ →](https://aikrok.com/#portfolio)
+
+### Вопросы и ответы
+
+**Чем AI-агент отличается от чат-бота?**
+Чат-бот ведёт по заранее заданным кнопкам и сценариям. Агент понимает свободный текст, сам выбирает действие — ответить, уточнить, создать сделку, передать человеку — и работает с вашими системами.
+
+**С какого процесса начать автоматизацию?**
+С того, где много однотипной ручной работы и понятен результат: первичная обработка заявок, ответы на частые вопросы, перенос данных между системами. Один процесс — одна первая версия.
+
+**Как не дать агенту выдумывать ответы?**
+Агент отвечает только по проверенным источникам, цены и условия берёт из ваших систем, а не «из головы», а при неуверенности передаёт диалог человеку. Плюс тесты на реальных вопросах до запуска.
+
+**Безопасно ли передавать данные компании ИИ?**
+Зависит от данных и требований. Возможны облачные модели с договорными гарантиями или открытые модели на вашем сервере — выбираем вариант под уровень чувствительности данных.
+
+**Сколько стоит AI-агент?**
+От нескольких сотен долларов за автоматизацию на готовой платформе до десятков тысяч за систему с интеграциями в учёт и собственной моделью. Плюс ежемесячные расходы на модель, сервер и поддержку.
+
+### Статьи по теме
+
+- [Сколько стоит AI-агент: структура затрат, скрытые расходы и окупаемость](https://aikrok.com/blog/skolko-stoit-ai-agent/)
+- [Как работает автоматизация бизнеса с помощью AI-агентов](https://aikrok.com/blog/avtomatizatsiya-biznesa-ai-agenty/)
+- [AI-агент для обработки заявок: как квалифицировать лиды круглосуточно и без потерь](https://aikrok.com/blog/ai-agent-dlya-obrabotki-zayavok/)
+- [RAG на практике: как научить ИИ отвечать по документам вашей компании](https://aikrok.com/blog/rag-baza-znaniy-kompanii/)
+- [Галлюцинации ИИ: как не дать агенту выдумывать цены, сроки и условия](https://aikrok.com/blog/gallyucinacii-ii-kak-zashchitit-biznes/)
+- [С чего начать автоматизацию бизнеса: аудит процессов за один день](https://aikrok.com/blog/s-chego-nachat-avtomatizaciyu-biznesa/)
+- [n8n, Make или Zapier: какую платформу автоматизации выбрать малому бизнесу](https://aikrok.com/blog/n8n-make-zapier-sravnenie/)
+
+### Другие услуги
+
+- [Сайты и лендинги](https://aikrok.com/services/razrabotka-saytov/)
+- [Telegram-боты и AI-ассистенты](https://aikrok.com/services/telegram-boty/)
+- [Мобильные приложения](https://aikrok.com/services/mobilnye-prilozheniya/)
+- [CRM и автоматизация](https://aikrok.com/services/crm-i-avtomatizaciya/)
+- [Аналитика и дашборды](https://aikrok.com/services/analitika-i-dashbordy/)
+
+---
+
+# AiKrok in English
+
+## Frequently asked questions
+
+**How much does development cost?**
+It depends on the task: an informational Telegram bot is roughly $200–600, an AI-powered bot with integrations starts at $3,000; websites, apps, CRM and analytics are estimated after a short discussion. You get an itemized estimate before work begins, and the consultation is free.
+
+**What does “MVP in 2 weeks” mean?**
+A first working version with one key feature done properly: a real scenario, error handling and minimal analytics. Secondary features are deliberately postponed and added as the product proves itself.
+
+**What do you need from us to start?**
+Tell us about the business and the problem. We ask questions, dig in and propose a solution with a price and timeline. You don't need to write a specification in advance.
+
+**Do you support the project after launch?**
+Yes. We deploy, train your team and stay in touch: fixing, improving and extending the solution.
+
+**Which languages do you work in?**
+English, Russian, Spanish and French.
+
+## Portfolio
+
+- **SubMap — Subscription Tracker** (https://apps.apple.com/ge/app/submap-subscription-tracker/id6767109129): iOS app that keeps subscriptions under control: voice input, screenshot parsing, renewal reminders and spending analytics
+- **My Stash — Family Budget** (https://apps.apple.com/app/my-stash-budget-receipts/id6812665710): iOS app for family finances: accounts in any currency, budgets with reminders, spending analytics, AI receipt scanning and voice-dictated shopping lists. All data stays on the device
+- **ECHO: The Dark Is Listening** (https://apps.apple.com/app/echo-the-dark-is-listening/id6797635978): Atmospheric iOS puzzle: a pitch-black maze revealed only by rings of echo from your touch. 70 levels, live generative sound and Taptic Engine haptics
+- **Petalstorm — Casual Arcade** (https://apps.apple.com/app/petalstorm/id6770308644): iOS ball-shooter game: petals instead of balls, 8 power-ups, 10 skins, Game Center leaderboard, daily rewards and in-app purchases
+- **Tochki — Dots Game** (https://apps.apple.com/app/tochki/id6812648131): iOS version of the classic pencil-and-paper dots game, a simplified Go: two players on one phone or on two devices over Bluetooth and Wi‑Fi with no internet or accounts, boards up to 30×30, player stats and 16 prizes
+- **Batumi Rent — Rental Aggregator** (https://georgia-rent-search.fly.dev): Telegram Mini App for long-term rentals in Batumi: a channel parser, an LLM that turns raw posts into structured listings, deduplication that merges repeats, and push alerts for subscribers when new matches appear
+- **AI Visibility Scanner** (https://ai-visibility-seven-chi.vercel.app): Web service that reveals what AI assistants know about your business: scans the site, runs niche queries through an LLM and returns a visibility score with ready-to-use artifacts
+- **AI Trading Bot** (https://aitrxbot.com): Telegram bot with AI assistant for market analysis and trading signals
+
+## Website and Landing Page Development
+
+URL: https://aikrok.com/en/services/razrabotka-saytov/
+
+We build websites that do a job for the business: bring in leads, explain the product, and are easy for search engines and AI assistants to read. We start with a first working version and grow it as real data comes in.
+
+### What we do
+
+- **Landing pages** — one-pagers for a product launch, a service or an ad campaign.
+- **Corporate websites** — services, case studies, blog, contacts, several languages.
+- **Online stores** — catalog, cart, payments, order notifications.
+- **SEO foundation** — page structure, meta tags, schema.org markup, sitemap and robots.txt.
+- **AI-search readiness** — llms.txt and structured data so ChatGPT and other assistants read the site correctly.
+- **Analytics and forms** — tracking, goals, leads delivered to a messenger or CRM.
+
+### When you need it
+
+- you need to test demand for a product or service quickly;
+- the old website brings no leads and looks bad on a phone;
+- the site is missing from search results and from AI assistants' answers;
+- leads from the site get lost in a mailbox nobody reads.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+The cost depends on the number of pages, language versions, design and integrations (payments, CRM, catalog). A landing page with a lead form usually fits into the first two-week version; corporate sites and stores are built in stages. You get an itemized estimate after a short, free discussion of the task.
+
+### Our work
+
+- **AI Visibility Scanner** — a web service that scans a site, runs queries through an LLM and shows what AI assistants know about the business.
+- **Corporate websites under NDA** — we will show and explain them during a consultation.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**How long does it take to build a website?**
+A landing page usually takes up to two weeks including copy and a lead form. A corporate site or an online store is built in stages: we launch a minimal working version first, then add sections and integrations.
+
+**Is SEO included?**
+The technical foundation is: heading structure, meta tags, structured data, sitemap, robots.txt, responsive layout and loading speed. Ongoing promotion — articles, links, keyword work — is discussed separately.
+
+**Can the website be connected to a CRM and messengers?**
+Yes. Form submissions can go straight to a CRM, a managers' Telegram chat or a spreadsheet, so they don't get lost in email.
+
+**What does preparing a site for AI search mean?**
+A set of technical steps — llms.txt, schema.org markup, a robots.txt open to AI crawlers and clearly structured copy — so that ChatGPT and other assistants can read the site and mention the company in their answers.
+
+### Other services
+
+- [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
+- [Mobile Applications](https://aikrok.com/en/services/mobilnye-prilozheniya/)
+- [CRM & Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/)
+- [Analytics & Dashboards](https://aikrok.com/en/services/analitika-i-dashbordy/)
+- [AI Agents & Business Automation](https://aikrok.com/en/services/ai-agenty/)
+
+## Telegram Bot and AI Assistant Development
+
+URL: https://aikrok.com/en/services/telegram-boty/
+
+We build bots around a specific business scenario — from a simple menu and booking to an AI assistant that understands a customer's question, answers from your company documents and creates a deal in your CRM.
+
+### What we do
+
+- **Booking and scheduling** — timetable, reminders, rescheduling and cancellation.
+- **Sales and support** — answers to frequent questions, lead qualification, handover to a manager.
+- **AI-powered bots** — understanding free text and answering from your knowledge base.
+- **Telegram Mini Apps** — a full interface inside Telegram, no App Store or Google Play needed.
+- **Loyalty programs** — bonuses, broadcasts, winning customers back.
+- **Internal bots** — requests, approvals and reports for your team.
+- **Integrations** — CRM, payments, spreadsheets, accounting systems.
+
+### When you need it
+
+- an administrator spends hours on bookings and reminder calls;
+- leads arrive at night and on weekends and go unanswered;
+- customers keep asking the same questions in a messenger;
+- you need an app for customers, but releasing it in the stores is slow and expensive.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+The price of a bot is defined by the level of the task. Our indicative ranges: an informational bot with a menu — about $200–600, a bot with data and scenarios — $800–3,000, a bot with integrations and payments — $2,500–8,000, an AI-powered bot — from $3,000. Running costs after launch are a server and, for AI bots, the language model. You get an estimate for your task after a free consultation.
+
+### Our work
+
+- **Batumi Rent** — a Telegram Mini App for long-term rentals: a channel parser, an LLM that turns raw posts into structured listings, deduplication that merges repeats, and alerts for subscribers when new matches appear.
+- **AI Trading Bot (aitrxbot.com)** — a Telegram bot with an AI assistant for market analysis and trading signals.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**How much does a Telegram bot cost?**
+Roughly from $200–600 for an informational bot with a menu to $3,000 and up for an AI-powered bot with integrations. The price depends on scenarios, integrations and how accurate the answers must be; you get an itemized estimate after we go through the task.
+
+**How fast can a bot be launched?**
+The first version covering the main scenario usually launches in two weeks. Complex integrations and AI are added in the following stages.
+
+**How is a custom bot different from one made in a bot builder?**
+A builder is fine for a simple menu and standard scenarios. Custom development is needed when you require integrations with your systems, non-standard logic, AI or a Mini App.
+
+**Bot, Mini App or mobile app — which one?**
+If your customers already use Telegram and you need booking, a catalog or an account area, a Mini App is usually faster and cheaper than an app. A standalone app is justified when you need offline mode, access to device features or a presence in the stores.
+
+**Can the bot be connected to a CRM?**
+Yes. The bot can create deals, update customer records and hand the conversation over to a manager together with the chat history.
+
+### Other services
+
+- [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
+- [Mobile Applications](https://aikrok.com/en/services/mobilnye-prilozheniya/)
+- [CRM & Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/)
+- [Analytics & Dashboards](https://aikrok.com/en/services/analitika-i-dashbordy/)
+- [AI Agents & Business Automation](https://aikrok.com/en/services/ai-agenty/)
+
+## Mobile App Development for iOS and Android
+
+URL: https://aikrok.com/en/services/mobilnye-prilozheniya/
+
+We develop apps for iOS and Android — from a first version that tests an idea to a product in the store. Our team's own apps are published in the App Store, so we have gone from idea to review and release more than once.
+
+### What we do
+
+- **MVP** — a first version with one key feature done properly.
+- **Customer apps** — account areas, catalogs, booking, delivery.
+- **AI features** — receipt and screenshot recognition, voice input.
+- **On-device data** — when it matters that data never leaves the phone.
+- **Monetization** — subscriptions and in-app purchases.
+- **Publishing** — preparing for review and releasing to the App Store and Google Play.
+
+### When you need it
+
+- you have a product idea and need to test it on real users;
+- customers need an account area or booking always at hand;
+- you need device features: camera, voice, notifications, offline work;
+- it is unclear what pays off better — an app or a Telegram Mini App.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+The cost depends on the number of platforms, screens, the backend and integrations. We suggest starting with an MVP — one key feature, real integrations and minimal analytics — and growing it based on results. You get an estimate after a free consultation.
+
+### Our work
+
+- **SubMap** — an iOS app that keeps subscriptions under control: voice input, screenshot parsing, renewal reminders and spending analytics.
+- **My Stash** — an iOS app for family finances: accounts in any currency, budgets with reminders, AI receipt scanning; all data stays on the device.
+- **ECHO, Petalstorm and Tochki** — three iOS games in the App Store: a puzzle with generative sound, an arcade with Game Center and in-app purchases, and a two-player game over Bluetooth and Wi‑Fi with no internet.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**What can you build in two weeks?**
+A first version with one key feature done properly: a working scenario, error handling and minimal analytics. Extra sections and secondary features are deliberately left for later stages.
+
+**Do you build for both iOS and Android?**
+Yes. Which platform to start with, and whether you need the second one right away, depends on your audience — we discuss it during the consultation.
+
+**An app or a Telegram Mini App?**
+A Mini App is faster and cheaper if your customers already use Telegram. An app is justified when you need offline mode, the camera, voice input, push notifications outside the messenger or a presence in the stores.
+
+**Will you help with publishing in the stores?**
+Yes. We prepare the materials, go through review and publish the app; after launch we stay in touch and ship updates.
+
+### Other services
+
+- [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
+- [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
+- [CRM & Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/)
+- [Analytics & Dashboards](https://aikrok.com/en/services/analitika-i-dashbordy/)
+- [AI Agents & Business Automation](https://aikrok.com/en/services/ai-agenty/)
+
+## CRM Implementation and Sales Automation
+
+URL: https://aikrok.com/en/services/crm-i-avtomatizaciya/
+
+We set up and implement a CRM so that the team actually uses it and the business stops losing leads and customers. We automate the routine around sales: funnels, reminders, mailings and reports.
+
+### What we do
+
+- **Choosing a CRM** — for your processes and team size, not just “the most popular one”.
+- **Sales funnels** — stages, tasks and reminders without manual control.
+- **Messenger integration** — every conversation in one customer record.
+- **Telephony** — calls and recordings in the deal record.
+- **Mailings** — segments, sequences, winning customers back.
+- **Automatic reports** — a daily summary for the owner, for example in Telegram.
+- **AI in CRM** — automatic tags from conversations, call summaries.
+
+### When you need it
+
+- leads are tracked in spreadsheets and chats, and some of them get lost;
+- you bought a CRM, but managers don't fill it in;
+- it is unclear at which stage deals fall through;
+- the owner assembles a report by hand from several systems.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+The cost of implementation depends on the system chosen, the number of users, the number of integrations and the state of the data to be migrated. We start with one process — usually incoming leads — and expand step by step. You get an itemized estimate after a free review.
+
+### Our work
+
+- **CRM implementations under NDA** — we will show and explain them during a consultation.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**Where does a CRM implementation start?**
+With a review of the current process: where leads come from, who handles them and how, and where they get lost. Only then do we choose a system and set up the funnel.
+
+**Why doesn't the team use the CRM, and what can be done?**
+Most often because the system adds work instead of removing it. What helps: deals created automatically from messengers and calls, a minimum of required fields, and training the team on real scenarios.
+
+**Can a CRM be connected to Telegram and WhatsApp?**
+Yes. Messenger conversations land in the customer record, and the manager replies from a single window.
+
+**Does a very small team need a CRM?**
+If there are a few leads a day handled by one person, a spreadsheet and a bot may be enough. A CRM pays off when leads grow, several managers appear or you need to see the whole funnel.
+
+### Other services
+
+- [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
+- [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
+- [Mobile Applications](https://aikrok.com/en/services/mobilnye-prilozheniya/)
+- [Analytics & Dashboards](https://aikrok.com/en/services/analitika-i-dashbordy/)
+- [AI Agents & Business Automation](https://aikrok.com/en/services/ai-agenty/)
+
+## Data Analytics and Dashboards for Business
+
+URL: https://aikrok.com/en/services/analitika-i-dashbordy/
+
+We bring data from different sources into one picture, so the owner can see what is happening in the business and decide by the numbers rather than by gut feeling.
+
+### What we do
+
+- **Data collection** — ads, CRM, inventory, spreadsheets, payment systems.
+- **Dashboards** — key metrics on one screen, updated automatically.
+- **Automatic reports** — a daily or weekly summary in Telegram or by email.
+- **Metrics and KPIs** — we help pick the indicators that really drive decisions.
+- **AI analytics** — questions to your data in plain language.
+- **Forecasts** — sales estimates where there is enough data for them.
+
+### When you need it
+
+- the report is assembled by hand from several spreadsheets and takes hours;
+- numbers in the ad account, the CRM and accounting don't match;
+- the owner learns about a problem a month later instead of the next day;
+- the data exists, but nobody uses it.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+The cost depends on the number of data sources, their quality and how complex the calculations are. A first version — one dashboard with the main metrics from one or two sources — usually fits into a two-week stage. You get an estimate after a free review.
+
+### Our work
+
+- **Trading Analytics Dashboard** — an interactive panel for a trader: win rate by coin and trade type, take-profit statistics, monthly trends; the data updates automatically.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**Where to start if the data is scattered across spreadsheets?**
+With one question you need answered every day — for example, how many leads came in yesterday and at what cost. We collect the sources for it and build the first dashboard, then add the rest.
+
+**Which metrics does an owner need?**
+About ten is usually enough: revenue, leads, conversion, average order value, acquisition cost, stock, receivables. The exact set depends on the business.
+
+**Do we need an expensive BI system for this?**
+Not always. For a small business a lightweight dashboard and a daily summary in Telegram are often enough. Heavy BI platforms are justified with many sources and many users.
+
+**Can we ask questions about our data in plain text?**
+Yes — with a language model connected to your data. It is important to limit it to verified sources so that it doesn't make numbers up.
+
+### Other services
+
+- [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
+- [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
+- [Mobile Applications](https://aikrok.com/en/services/mobilnye-prilozheniya/)
+- [CRM & Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/)
+- [AI Agents & Business Automation](https://aikrok.com/en/services/ai-agenty/)
+
+## AI Agent Development and Business Automation
+
+URL: https://aikrok.com/en/services/ai-agenty/
+
+We build AI agents — digital employees that process leads, advise customers, fill in your CRM and connect your services together. We start with one process and expand step by step.
+
+### What we do
+
+- **Lead processing** — qualifying leads around the clock and handing them to a manager.
+- **Customer support** — answers from a knowledge base with escalation to a human.
+- **Knowledge base (RAG)** — the AI answers from your company's documents.
+- **Documents** — invoice recognition, contract drafts, deadline tracking.
+- **Integrations** — CRM, accounting systems, spreadsheets, messengers.
+- **Process automation** — on n8n, Make or custom code, depending on the task.
+- **Error protection** — the agent does not invent prices, deadlines or terms.
+
+### When you need it
+
+- managers spend time on repetitive questions and initial qualification;
+- leads outside working hours go unanswered;
+- company knowledge sits in scattered documents and newcomers take a long time to get up to speed;
+- data is copied between systems by hand.
+
+### How the work goes
+
+- **We listen.** You tell us about your business and the problem — we ask questions and dig in.
+- **We propose.** What to do, how much it costs and how long it takes — broken down by stage.
+- **We build.** With interim demos, so you see progress at every stage. The first working version is ready in 2 weeks.
+- **We launch and support.** We deploy, train your team and stay in touch after launch.
+
+### Timeline and cost
+
+An agent's price has three layers: one-off development, monthly costs for the model and server, and support. The budget is driven most by the number of integrations, the quality of the source documents and the accuracy required. You get an estimate for your task after a free consultation.
+
+### Our work
+
+- **Batumi Rent** — an LLM pipeline: a parser collects posts from channels, the model turns them into structured listings, and deduplication merges repeats.
+- **AI Visibility Scanner** — a service that scans a site, runs queries through an LLM and returns a score for how visible the business is in AI assistants' answers.
+
+[All examples →](https://aikrok.com/en/#portfolio)
+
+### Questions and answers
+
+**How is an AI agent different from a chatbot?**
+A chatbot follows predefined buttons and scenarios. An agent understands free text, chooses the action itself — answer, clarify, create a deal, hand over to a human — and works with your systems.
+
+**Which process should we automate first?**
+One with a lot of repetitive manual work and a clear outcome: initial lead processing, answers to frequent questions, moving data between systems. One process — one first version.
+
+**How do you stop an agent from making things up?**
+The agent answers only from verified sources, takes prices and terms from your systems rather than from memory, and hands the conversation to a human when unsure. Plus tests on real questions before launch.
+
+**Is it safe to share company data with AI?**
+It depends on the data and the requirements. Options include cloud models with contractual guarantees or open models on your own server — we choose based on how sensitive the data is.
+
+**How much does an AI agent cost?**
+From a few hundred dollars for automation on a ready-made platform to tens of thousands for a system integrated with accounting and its own model. Plus monthly costs for the model, server and support.
+
+### Other services
+
+- [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
+- [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
+- [Mobile Applications](https://aikrok.com/en/services/mobilnye-prilozheniya/)
+- [CRM & Automation](https://aikrok.com/en/services/crm-i-avtomatizaciya/)
+- [Analytics & Dashboards](https://aikrok.com/en/services/analitika-i-dashbordy/)

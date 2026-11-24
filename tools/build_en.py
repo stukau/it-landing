@@ -8,6 +8,8 @@ Run from the repo root after editing index.html or i18n.js:
 - /en/index.html is generated from index.html + the `en` block of i18n.js
 - /en/services/ pages are generated from the content below
 - hreflang links and RU/EN switch links are added to the Russian pages (idempotent)
+
+Then run tools/build_llms.py to refresh llms.txt and llms-full.txt.
 """
 import html
 import json
@@ -54,8 +56,28 @@ ORG = {"@type": "Organization", "@id": BASE + "/#organization", "name": "AiKrok"
 # ---------------------------------------------------------------- translations
 js = rd("i18n.js")
 js = js[:js.index("function setLanguage")]
-EN = json.loads(subprocess.check_output(
-    ["node", "-e", js + ";process.stdout.write(JSON.stringify(translations.en))"], text=True))
+_T = json.loads(subprocess.check_output(
+    ["node", "-e", js + ";process.stdout.write(JSON.stringify({en: translations.en, ru: translations.ru}))"], text=True))
+EN, RU = _T["en"], _T["ru"]
+
+# Products from the portfolio, published as structured data so search engines and
+# AI assistants can connect them to AiKrok. (i18n key, schema type, category, OS, url)
+APPS = [
+    ("p4", "SoftwareApplication", "FinanceApplication", "iOS", "https://apps.apple.com/ge/app/submap-subscription-tracker/id6767109129"),
+    ("p7", "SoftwareApplication", "FinanceApplication", "iOS", "https://apps.apple.com/app/my-stash-budget-receipts/id6812665710"),
+    ("p8", "SoftwareApplication", "GameApplication", "iOS", "https://apps.apple.com/app/echo-the-dark-is-listening/id6797635978"),
+    ("p9", "SoftwareApplication", "GameApplication", "iOS", "https://apps.apple.com/app/petalstorm/id6770308644"),
+    ("p10", "SoftwareApplication", "GameApplication", "iOS", "https://apps.apple.com/app/tochki/id6812648131"),
+    ("p6", "WebApplication", "LifestyleApplication", "Telegram", "https://georgia-rent-search.fly.dev"),
+    ("p5", "WebApplication", "BusinessApplication", "Web", "https://ai-visibility-seven-chi.vercel.app"),
+    ("p2", "WebApplication", "FinanceApplication", "Telegram", "https://aitrxbot.com"),
+]
+
+
+def app_nodes(t, lang):
+    return [{"@type": typ, "name": t[k + "_title"], "description": t[k + "_desc"], "url": url,
+             "applicationCategory": cat, "operatingSystem": os_, "inLanguage": lang,
+             "author": {"@id": BASE + "/#organization"}} for k, typ, cat, os_, url in APPS]
 
 SERVICES = [
     dict(
@@ -333,6 +355,7 @@ def build_home():
               "isPartOf": {"@id": BASE + "/#website"}, "about": {"@id": BASE + "/#organization"}},
              {"@type": "FAQPage", "mainEntity": [
                  {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in HOME_FAQ]}]
+    graph += app_nodes(EN, "en")
     h, n = re.subn(r'<script type="application/ld\+json">.*?</script>', lambda m: ld(graph), h, count=1, flags=re.S)
     assert n == 1
 
@@ -586,6 +609,10 @@ def patch_ru():
                       f'<link rel="canonical" href="{BASE}/">\n    ' + hreflang(BASE + "/", BASE + "/en/"), 1)
     h = re.sub(r"styles\.css\?v=\d+", "styles.css?v=" + CSS_V, h)
     h = re.sub(r"i18n\.js\?v=\d+", "i18n.js?v=" + I18N_V, h)
+    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h, flags=re.S)
+    data = json.loads(m.group(1))
+    data["@graph"] = [n for n in data["@graph"] if n["@type"] not in ("SoftwareApplication", "WebApplication")] + app_nodes(RU, "ru")
+    h = h[:m.start()] + ld(data["@graph"]) + h[m.end():]
     wr("index.html", h)
 
     for path in ["/services/"] + [f"/services/{s['slug']}/" for s in SERVICES]:
@@ -604,7 +631,7 @@ def patch_ru():
             wr(p, h)
 
 
-def patch_sitemap_llms():
+def patch_sitemap():
     sm = rd("sitemap.xml")
     if "/en/" not in sm:
         urls = ["/en/", "/en/services/"] + [f"/en/services/{s['slug']}/" for s in SERVICES]
@@ -618,16 +645,11 @@ def patch_sitemap_llms():
         marker = f"    <url>\n        <loc>{BASE}/blog/</loc>"
         assert marker in sm
         wr("sitemap.xml", sm.replace(marker, add + marker, 1))
-    ll = rd("llms.txt")
-    if "## English" not in ll:
-        sec = "## English\n\n- [AiKrok in English](%s/en/): home page\n" % BASE + "\n".join(
-            f"- [{s['h1']}]({BASE}/en/services/{s['slug']}/): {s['desc']}" for s in SERVICES) + "\n\n"
-        wr("llms.txt", ll.replace("## Блог", sec + "## Блог", 1))
 
 
 if __name__ == "__main__":
     patch_ru()
     build_home()
     build_services()
-    patch_sitemap_llms()
+    patch_sitemap()
     print("en build ok")
