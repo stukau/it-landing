@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">AiKrok — IT-решения для малого и среднего бизнеса</title>
+    <title data-i18n="page_title">AiKrok — разработка сайтов, Telegram-ботов, AI-агентов и CRM для бизнеса</title>
     <meta name="yandex-verification" content="abec07ea0bb2bd67" />
     <meta name="google-site-verification" content="f7u7teixLdBEkAva79UJzliq9vbEqosiv9LEpO72-sw" />
-    <meta name="description" content="AiKrok — разработка сайтов, мобильных приложений, Telegram-ботов, AI-агентов, CRM-систем и аналитики для бизнеса. Автоматизация бизнеса шаг за шагом. MVP за 2 недели. Бесплатная консультация.">
-    <meta name="keywords" content="IT-решения для бизнеса, автоматизация бизнеса, AI-агенты, разработка сайтов, мобильные приложения, Telegram-боты, CRM системы, аналитика данных, веб-разработка, MVP">
+    <meta name="description" content="AiKrok — IT-решения для малого и среднего бизнеса: сайты, мобильные приложения, Telegram-боты, AI-агенты, CRM и аналитика. Вникаем в задачу, первая версия (MVP) за 2 недели. Консультация бесплатно.">
     <link rel="canonical" href="https://aikrok.com/">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
@@ -16,13 +15,17 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aikrok.com/">
-    <meta property="og:title" content="AiKrok — IT-решения для малого и среднего бизнеса">
+    <meta property="og:title" content="AiKrok — разработка сайтов, Telegram-ботов, AI-агентов и CRM для бизнеса">
     <meta property="og:description" content="Разработка сайтов, приложений, Telegram-ботов, CRM и аналитики. MVP за 2 недели. Бесплатная консультация.">
+    <meta property="og:image" content="https://aikrok.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="AiKrok">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aikrok.com/og-image.png">
     <meta name="twitter:title" content="AiKrok — IT-решения для бизнеса">
     <meta name="twitter:description" content="Разработка сайтов, приложений, Telegram-ботов, CRM и аналитики. MVP за 2 недели.">
 
@@ -30,25 +33,161 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AiKrok",
-        "url": "https://aikrok.com",
-        "slogan": "Вникают в бизнес-задачу и предлагают конкретное IT-решение — без лишнего, с MVP за 2 недели",
-        "description": "IT-решения для малого и среднего бизнеса: сайты, мобильные приложения, Telegram-боты, AI-агенты и автоматизация бизнеса, CRM-системы, аналитика данных",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "info@aikrok.com",
-            "contactType": "customer service",
-            "url": "https://t.me/yuri_admin"
-        },
-        "sameAs": ["https://t.me/yuri_admin"]
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://aikrok.com/#organization",
+                "name": "AiKrok",
+                "url": "https://aikrok.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://aikrok.com/favicon-192.png",
+                    "width": 192,
+                    "height": 192
+                },
+                "image": "https://aikrok.com/og-image.png",
+                "slogan": "Вникают в бизнес-задачу и предлагают конкретное IT-решение — без лишнего, с MVP за 2 недели",
+                "description": "IT-решения для малого и среднего бизнеса: сайты, мобильные приложения, Telegram-боты, AI-агенты и автоматизация бизнеса, CRM-системы, аналитика данных",
+                "email": "info@aikrok.com",
+                "knowsLanguage": [
+                    "ru",
+                    "en",
+                    "es",
+                    "fr"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "info@aikrok.com",
+                    "contactType": "customer service",
+                    "url": "https://t.me/yuri_admin",
+                    "availableLanguage": [
+                        "Russian",
+                        "English",
+                        "Spanish",
+                        "French"
+                    ]
+                },
+                "sameAs": [
+                    "https://t.me/yuri_admin"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Услуги AiKrok",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Разработка сайтов и лендингов",
+                                "url": "https://aikrok.com/services/razrabotka-saytov/"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Разработка Telegram-ботов и AI-ассистентов",
+                                "url": "https://aikrok.com/services/telegram-boty/"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Разработка мобильных приложений",
+                                "url": "https://aikrok.com/services/mobilnye-prilozheniya/"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Внедрение CRM и автоматизация продаж",
+                                "url": "https://aikrok.com/services/crm-i-avtomatizaciya/"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Аналитика данных и дашборды",
+                                "url": "https://aikrok.com/services/analitika-i-dashbordy/"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Разработка AI-агентов и автоматизация бизнеса",
+                                "url": "https://aikrok.com/services/ai-agenty/"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://aikrok.com/#website",
+                "url": "https://aikrok.com/",
+                "name": "AiKrok",
+                "inLanguage": "ru",
+                "publisher": {
+                    "@id": "https://aikrok.com/#organization"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Сколько стоит разработка?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Зависит от задачи: информационный Telegram-бот — ориентировочно от $200–600, бот с ИИ и интеграциями — от $3 000; сайты, приложения, CRM и аналитику оцениваем после короткого разбора. Смету с раскладкой по этапам даём до начала работ, консультация бесплатна."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Что значит «MVP за 2 недели»?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Это первая рабочая версия с одной ключевой функцией, доведённой до конца: реальный сценарий, обработка ошибок, минимальная аналитика. Второстепенные функции сознательно откладываем и добавляем по мере того, как продукт показывает результат."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Что нужно от нас, чтобы начать?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Рассказать о бизнесе и проблеме. Мы задаём вопросы, вникаем и предлагаем вариант решения с ценой и сроками. Техническое задание писать заранее не обязательно."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Вы поддерживаете проект после запуска?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да. Внедряем, обучаем вашу команду и остаёмся на связи: исправляем, дорабатываем и развиваем решение."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "На каких языках вы работаете?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "На русском, английском, испанском и французском."
+                        }
+                    }
+                ]
+            }
+        ]
     }
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 <include-icons></include-icons>
@@ -156,6 +295,7 @@
                         <span class="tag" data-i18n="s1_t4">Адаптив</span>
                         <span class="tag" data-i18n="s1_t5">Аналитика</span>
                     </div>
+                    <a href="services/razrabotka-saytov/" class="service-example service-more">Подробнее: разработка сайтов и лендингов &rarr;</a>
                 </div>
             </div>
 
@@ -174,6 +314,7 @@
                     <a href="https://aitrxbot.com" target="_blank" class="service-example" data-i18n="s2_example">
                         Пример: aitrxbot.com &rarr;
                     </a>
+                    <a href="services/telegram-boty/" class="service-example service-more">Подробнее: разработка Telegram-ботов и AI-ассистентов &rarr;</a>
                 </div>
             </div>
 
@@ -191,6 +332,7 @@
                         <span class="tag" data-i18n="s3_t2">Каталоги</span>
                         <span class="tag" data-i18n="s3_t3">Сервисы записи</span>
                     </div>
+                    <a href="services/mobilnye-prilozheniya/" class="service-example service-more">Подробнее: разработка мобильных приложений &rarr;</a>
                 </div>
             </div>
 
@@ -207,6 +349,7 @@
                         <span class="tag" data-i18n="s4_t4">Телефония</span>
                         <span class="tag" data-i18n="s4_t5">Автоотчёты</span>
                     </div>
+                    <a href="services/crm-i-avtomatizaciya/" class="service-example service-more">Подробнее: внедрение CRM и автоматизация продаж &rarr;</a>
                 </div>
             </div>
 
@@ -226,6 +369,7 @@
                     <a href="#portfolio" class="service-example" data-i18n="s5_example">
                         Пример: аналитика по трейдингу &rarr;
                     </a>
+                    <a href="services/analitika-i-dashbordy/" class="service-example service-more">Подробнее: аналитика данных и дашборды &rarr;</a>
                 </div>
             </div>
 
@@ -242,6 +386,7 @@
                         <span class="tag" data-i18n="s6_t4">Интеграции</span>
                         <span class="tag" data-i18n="s6_t5">Работа 24/7</span>
                     </div>
+                    <a href="services/ai-agenty/" class="service-example service-more">Подробнее: разработка AI-агентов и автоматизация бизнеса &rarr;</a>
                 </div>
             </div>
         </div>
@@ -256,7 +401,7 @@
         <div class="portfolio-grid">
             <div class="portfolio-card portfolio-card-featured">
                 <div class="portfolio-image">
-                    <img src="example-dashboard.svg" alt="Торговая аналитика">
+                    <img src="example-dashboard.svg" width="800" height="520" alt="Дашборд торговой аналитики: Win Rate, сделки и тренды по месяцам">
                     <div class="portfolio-overlay">
                         <span class="portfolio-tag" data-i18n="p1_tag">Аналитика</span>
                     </div>
@@ -312,7 +457,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-aitrxbot.webp" alt="AI-бот для трейдинга" loading="lazy">
+                    <img src="portfolio-aitrxbot.webp" width="500" height="500" alt="AI-бот для трейдинга" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p2_title">AI-бот для трейдинга</h3>
@@ -322,7 +467,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-submap.jpg" alt="SubMap — трекер подписок" loading="lazy">
+                    <img src="portfolio-submap.jpg" width="544" height="384" alt="SubMap — трекер подписок" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p4_title">SubMap — трекер подписок</h3>
@@ -332,7 +477,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-my-stash.jpg" alt="My Stash — семейный бюджет и чеки" loading="lazy">
+                    <img src="portfolio-my-stash.jpg" width="560" height="448" alt="My Stash — семейный бюджет и чеки" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p7_title">My Stash — семейный бюджет</h3>
@@ -342,7 +487,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-echo.jpg" alt="ECHO: The Dark Is Listening — игра-головоломка" loading="lazy">
+                    <img src="portfolio-echo.jpg" width="600" height="544" alt="ECHO: The Dark Is Listening — игра-головоломка" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p8_title">ECHO: The Dark Is Listening</h3>
@@ -352,7 +497,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-petalstorm.jpg" alt="Petalstorm — казуальная аркада" loading="lazy">
+                    <img src="portfolio-petalstorm.jpg" width="600" height="500" alt="Petalstorm — казуальная аркада" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p9_title">Petalstorm — казуальная аркада</h3>
@@ -362,7 +507,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-tochki.jpg" alt="Tochki — игра «Точки» на тетрадном листе" loading="lazy">
+                    <img src="portfolio-tochki.jpg" width="600" height="561" alt="Tochki — игра «Точки» на тетрадном листе" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p10_title">Tochki — игра «Точки»</h3>
@@ -372,7 +517,7 @@
             </div>
             <div class="portfolio-card">
                 <div class="portfolio-preview portfolio-preview-center">
-                    <img src="portfolio-ai-visibility.svg" alt="AI Visibility Scanner" loading="lazy">
+                    <img src="portfolio-ai-visibility.svg" width="800" height="340" alt="AI Visibility Scanner" loading="lazy">
                 </div>
                 <div class="portfolio-info">
                     <h3 data-i18n="p5_title">AI Visibility Scanner</h3>
@@ -450,6 +595,20 @@
                 <h3 data-i18n="why4_title">Прозрачность</h3>
                 <p data-i18n="why4_desc">Вы всегда знаете что происходит, сколько стоит и когда будет готово. Без сюрпризов</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ (Russian-only) -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Частые вопросы</h2>
+        <div class="faq">
+            <details><summary>Сколько стоит разработка?</summary><p>Зависит от задачи: информационный Telegram-бот — ориентировочно от $200–600, бот с ИИ и интеграциями — от $3 000; сайты, приложения, CRM и аналитику оцениваем после короткого разбора. Смету с раскладкой по этапам даём до начала работ, консультация бесплатна.</p></details>
+            <details><summary>Что значит «MVP за 2 недели»?</summary><p>Это первая рабочая версия с одной ключевой функцией, доведённой до конца: реальный сценарий, обработка ошибок, минимальная аналитика. Второстепенные функции сознательно откладываем и добавляем по мере того, как продукт показывает результат.</p></details>
+            <details><summary>Что нужно от нас, чтобы начать?</summary><p>Рассказать о бизнесе и проблеме. Мы задаём вопросы, вникаем и предлагаем вариант решения с ценой и сроками. Техническое задание писать заранее не обязательно.</p></details>
+            <details><summary>Вы поддерживаете проект после запуска?</summary><p>Да. Внедряем, обучаем вашу команду и остаёмся на связи: исправляем, дорабатываем и развиваем решение.</p></details>
+            <details><summary>На каких языках вы работаете?</summary><p>На русском, английском, испанском и французском.</p></details>
         </div>
     </div>
 </section>
@@ -561,8 +720,8 @@
     </div>
 </footer>
 
-<script src="i18n.js?v=7"></script>
-<script src="script.js?v=4"></script>
+<script src="i18n.js?v=8"></script>
+<script src="script.js?v=5"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>

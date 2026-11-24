@@ -13,26 +13,75 @@
     <meta property="og:url" content="https://aikrok.com/blog/rag-baza-znaniy-kompanii/">
     <meta property="og:title" content="RAG на практике: как научить ИИ отвечать по документам вашей компании">
     <meta property="og:description" content="Как работает RAG простыми словами: подготовка документов компании, векторный поиск, типичные сбои, проверка качества ответов и сценарии для малого бизнеса.">
+    <meta property="og:image" content="https://aikrok.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="AiKrok">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "RAG на практике: как научить ИИ отвечать по документам вашей компании",
-        "description": "Как работает RAG простыми словами: подготовка документов компании, векторный поиск, типичные сбои, проверка качества ответов и сценарии для малого бизнеса.",
-        "url": "https://aikrok.com/blog/rag-baza-znaniy-kompanii/",
-        "datePublished": "2026-08-12",
-        "inLanguage": "ru",
-        "author": { "@type": "Organization", "name": "AiKrok", "url": "https://aikrok.com" },
-        "publisher": { "@type": "Organization", "name": "AiKrok", "url": "https://aikrok.com" }
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "RAG на практике: как научить ИИ отвечать по документам вашей компании",
+                "description": "Как работает RAG простыми словами: подготовка документов компании, векторный поиск, типичные сбои, проверка качества ответов и сценарии для малого бизнеса.",
+                "url": "https://aikrok.com/blog/rag-baza-znaniy-kompanii/",
+                "datePublished": "2026-08-12",
+                "inLanguage": "ru",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "mainEntityOfPage": "https://aikrok.com/blog/rag-baza-znaniy-kompanii/",
+                "dateModified": "2026-08-12",
+                "image": "https://aikrok.com/og-image.png",
+                "articleSection": "AI-агенты"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Главная",
+                        "item": "https://aikrok.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Блог",
+                        "item": "https://aikrok.com/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "RAG на практике: как научить ИИ отвечать по документам вашей компании",
+                        "item": "https://aikrok.com/blog/rag-baza-znaniy-kompanii/"
+                    }
+                ]
+            }
+        ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css?v=12">
-    <link rel="stylesheet" href="../blog.css?v=2">
+    <link rel="stylesheet" href="../../styles.css?v=13">
+    <link rel="stylesheet" href="../blog.css?v=3">
 </head>
 <body>
 
@@ -46,7 +95,7 @@
             <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
         </a>
         <nav class="nav">
-            <a href="/#services">Услуги</a>
+            <a href="/services/">Услуги</a>
             <a href="/#portfolio">Примеры</a>
             <a href="/#process">Как работаем</a>
             <a href="/blog/">Блог</a>
@@ -141,6 +190,17 @@
     <p>Мы в AiKrok обычно собираем первую рабочую версию RAG-помощника за две недели, и больше половины этого времени уходит не на код, а на работу с документами клиента. Это нормально: именно там создаётся качество ответов.</p>
 </main>
 
+<aside class="article-related">
+    <h2>Читайте также</h2>
+    <ul>
+        <li><a href="/blog/ai-agent-podderzhki-klientov/">AI-агент поддержки клиентов: база знаний, эскалация на человека и метрики качества</a></li>
+        <li><a href="/blog/ai-agent-dlya-obrabotki-zayavok/">AI-агент для обработки заявок: как квалифицировать лиды круглосуточно и без потерь</a></li>
+        <li><a href="/blog/kak-vybrat-razrabotchika-ai-agenta/">AI-агент для малого бизнеса: как выбрать разработчика и не потерять бюджет</a></li>
+        <li><a href="/blog/avtomatizatsiya-biznesa-ai-agenty/">Как работает автоматизация бизнеса с помощью AI-агентов</a></li>
+    </ul>
+    <p class="article-related-service">Услуга по теме: <a href="/services/ai-agenty/">Разработка AI-агентов и автоматизация бизнеса</a></p>
+</aside>
+
 <div class="article-cta">
     <h2>Хотите, чтобы ИИ отвечал по вашим документам?</h2>
     <p>Проведём инвентаризацию регламентов и соберём RAG-помощника для сотрудников или клиентов. MVP за 2 недели, консультация бесплатно.</p>
@@ -160,7 +220,7 @@
             <p>IT-решения для бизнеса: сайты, боты, приложения, CRM, аналитика и AI-агенты</p>
         </div>
         <div class="footer-links">
-            <a href="/#services">Услуги</a>
+            <a href="/services/">Услуги</a>
             <a href="/#portfolio">Примеры</a>
             <a href="/#process">Как работаем</a>
             <a href="/blog/">Блог</a>

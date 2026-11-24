@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://aikrok.com/</loc>
-        <lastmod>2026-10-01</lastmod>
+        <lastmod>2026-11-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/razrabotka-saytov/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/telegram-boty/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/mobilnye-prilozheniya/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/crm-i-avtomatizaciya/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/analitika-i-dashbordy/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://aikrok.com/services/ai-agenty/</loc>
+        <lastmod>2026-11-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://aikrok.com/blog/</loc>

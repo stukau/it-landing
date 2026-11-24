@@ -22,22 +22,35 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-// Form submission
+// Form submission: opens Telegram with the request pre-filled (no backend on this site)
 const form = document.getElementById('contactForm');
 if (form) {
+    const formMsg = {
+        ru: 'Открываем Telegram — нажмите «Отправить»',
+        en: 'Opening Telegram — press Send',
+        es: 'Abriendo Telegram — pulse Enviar',
+        fr: 'Ouverture de Telegram — appuyez sur Envoyer'
+    };
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        const val = (sel) => { const el = form.querySelector(sel); return el ? el.value.trim() : ''; };
+        const lines = ['Заявка с aikrok.com', 'Имя: ' + val('input[type="text"]'), 'Контакт: ' + val('input[type="tel"]')];
+        if (val('input[type="email"]')) lines.push('Email: ' + val('input[type="email"]'));
+        if (val('textarea')) lines.push('Задача: ' + val('textarea'));
+        const url = 'https://t.me/yuri_admin?text=' + encodeURIComponent(lines.join('\n'));
+        const win = window.open(url, '_blank');
+        if (!win) window.location.href = url;
+
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
-        btn.textContent = 'Отправлено!';
+        btn.textContent = formMsg[document.documentElement.lang] || formMsg.ru;
         btn.disabled = true;
         btn.style.opacity = '0.7';
         setTimeout(() => {
             btn.textContent = originalText;
             btn.disabled = false;
             btn.style.opacity = '1';
-            form.reset();
-        }, 3000);
+        }, 6000);
     });
 }
 

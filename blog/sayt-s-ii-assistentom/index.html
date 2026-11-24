@@ -13,26 +13,75 @@
     <meta property="og:url" content="https://aikrok.com/blog/sayt-s-ii-assistentom/">
     <meta property="og:title" content="Сайт с ИИ-ассистентом: виджет, который отвечает и собирает заявки">
     <meta property="og:description" content="Как устроен ИИ-ассистент на сайте: база знаний, квалификация, сбор заявок и передача человеку. Архитектура, пример диалога, риски, стоимость и метрики.">
+    <meta property="og:image" content="https://aikrok.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:site_name" content="AiKrok">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Сайт с ИИ-ассистентом: виджет, который отвечает и собирает заявки",
-        "description": "Как устроен ИИ-ассистент на сайте: база знаний, квалификация, сбор заявок и передача человеку. Архитектура, пример диалога, риски, стоимость и метрики.",
-        "url": "https://aikrok.com/blog/sayt-s-ii-assistentom/",
-        "datePublished": "2026-09-24",
-        "inLanguage": "ru",
-        "author": { "@type": "Organization", "name": "AiKrok", "url": "https://aikrok.com" },
-        "publisher": { "@type": "Organization", "name": "AiKrok", "url": "https://aikrok.com" }
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Сайт с ИИ-ассистентом: виджет, который отвечает и собирает заявки",
+                "description": "Как устроен ИИ-ассистент на сайте: база знаний, квалификация, сбор заявок и передача человеку. Архитектура, пример диалога, риски, стоимость и метрики.",
+                "url": "https://aikrok.com/blog/sayt-s-ii-assistentom/",
+                "datePublished": "2026-09-24",
+                "inLanguage": "ru",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "mainEntityOfPage": "https://aikrok.com/blog/sayt-s-ii-assistentom/",
+                "dateModified": "2026-09-24",
+                "image": "https://aikrok.com/og-image.png",
+                "articleSection": "Сайты"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Главная",
+                        "item": "https://aikrok.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Блог",
+                        "item": "https://aikrok.com/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Сайт с ИИ-ассистентом: виджет, который отвечает и собирает заявки",
+                        "item": "https://aikrok.com/blog/sayt-s-ii-assistentom/"
+                    }
+                ]
+            }
+        ]
     }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css?v=12">
-    <link rel="stylesheet" href="../blog.css?v=2">
+    <link rel="stylesheet" href="../../styles.css?v=13">
+    <link rel="stylesheet" href="../blog.css?v=3">
 </head>
 <body>
 
@@ -46,7 +95,7 @@
             <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
         </a>
         <nav class="nav">
-            <a href="/#services">Услуги</a>
+            <a href="/services/">Услуги</a>
             <a href="/#portfolio">Примеры</a>
             <a href="/#process">Как работаем</a>
             <a href="/blog/">Блог</a>
@@ -144,6 +193,15 @@
     <p>Мы в AiKrok обычно начинаем с базы знаний и тестовых диалогов, а не с дизайна окна чата: если ассистент отвечает плохо, никакой виджет этого не исправит. Если хотите понять, как это могло бы выглядеть на вашем сайте, можно начать с <a href="/#contact">бесплатной консультации</a>.</p>
 </main>
 
+<aside class="article-related">
+    <h2>Читайте также</h2>
+    <ul>
+        <li><a href="/blog/llms-txt-i-schema-org-dlya-ii-poiska/">llms.txt, schema.org и robots.txt: как подготовить сайт к ИИ-поиску</a></li>
+        <li><a href="/blog/ai-visibility-kak-popast-v-otvety-ii/">AI Visibility: как попасть в ответы ChatGPT и других ИИ-ассистентов</a></li>
+    </ul>
+    <p class="article-related-service">Услуга по теме: <a href="/services/razrabotka-saytov/">Разработка сайтов и лендингов для бизнеса</a></p>
+</aside>
+
 <div class="article-cta">
     <h2>Посетители уходят с сайта, не дождавшись ответа?</h2>
     <p>Мы соберём базу знаний, настроим ИИ-ассистента с передачей заявок в CRM и живому менеджеру. MVP за 2 недели, консультация бесплатно.</p>
@@ -163,7 +221,7 @@
             <p>IT-решения для бизнеса: сайты, боты, приложения, CRM, аналитика и AI-агенты</p>
         </div>
         <div class="footer-links">
-            <a href="/#services">Услуги</a>
+            <a href="/services/">Услуги</a>
             <a href="/#portfolio">Примеры</a>
             <a href="/#process">Как работаем</a>
             <a href="/blog/">Блог</a>

@@ -1,6 +1,6 @@
 const translations = {
   ru: {
-    page_title: "aikrok — IT-решения для бизнеса",
+    page_title: "AiKrok — разработка сайтов, Telegram-ботов, AI-агентов и CRM для бизнеса",
     nav_services: "Услуги",
     nav_portfolio: "Примеры",
     nav_process: "Как работаем",
@@ -447,7 +447,8 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 const savedLang = localStorage.getItem('lang');
 if (savedLang && translations[savedLang]) {
   setLanguage(savedLang);
-} else {
+} else if (!/bot|crawl|spider|slurp|lighthouse|google|yandex|bing|duckduck|baidu|gpt|claude|perplexity|facebookexternalhit/i.test(navigator.userAgent)) {
+  // Crawlers always get the default (Russian) version that matches the URL's canonical content
   const browserLang = navigator.language.slice(0, 2);
   if (translations[browserLang] && browserLang !== 'ru') {
     setLanguage(browserLang);
