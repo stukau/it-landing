@@ -1,0 +1,53 @@
+<!--title-->
+Seven Automation Mistakes That Eat Your Budget and Your Team's Trust
+<!--description-->
+Seven automation mistakes: undocumented process, starting with the hardest part, ignoring the team, AI instead of code, no metrics or owner. How to avoid them.
+<!--cta_title-->
+Worried about repeating other people's automation mistakes?
+<!--cta_text-->
+We'll start by going through the process and giving an honest assessment of what will be working in two weeks and what won't. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A failed automation project rarely looks like a disaster. More often it's a quiet story: the bot was launched, two people out of ten use it, the managers went back to Excel, and the owner doesn't bring it up because admitting the money was wasted is unpleasant. A year later someone suggests "trying AI", and the team greets the idea with weary skepticism. This is how automation eats not only the budget but also trust, and the latter is more expensive to restore.</p>
+    <p>Over several years of working with small and medium-sized businesses, we at AiKrok have seen the same causes of failure again and again, and they barely depend on industry or tools. Below are seven mistakes, each with the signs that let you spot it in advance and a way to avoid it.</p>
+
+    <h2>Mistake 1. Automating a process that doesn't exist</h2>
+    <p>The most common one. A manager says: "We want to automate request handling." We start digging in — and it turns out that requests are handled by three managers, each in their own way: one calls right away, another writes on WhatsApp the next day, the third first checks the customer against the database. Nobody knows which way is the right one. There is nothing to automate here: the bot will lock in one of the three variants, and two of the managers will consider it wrong.</p>
+    <p><strong>The sign:</strong> when asked "what happens to a request after it comes in?", different employees give different answers.</p>
+    <p><strong>What to do:</strong> first describe the process on one page — steps, owners, exceptions. Sometimes at this stage it turns out that half the steps can simply be removed and automation is no longer needed. How to run such a review in a day is described in the article <a href="/blog/s-chego-nachat-avtomatizaciyu-biznesa/">on process audits</a>.</p>
+
+    <h2>Mistake 2. Starting with the biggest and most complex thing</h2>
+    <p>"Let's build a system right away that takes the customer from first contact to repeat purchase, with AI, a CRM and analytics." A project like this runs for months, during which the business changes, requirements drift, and there is still no result. By launch, some of the scenarios are already outdated and the team is worn down by the wait.</p>
+    <p><strong>The sign:</strong> the project has no answer to the question "what will be working in two weeks".</p>
+    <p><strong>What to do:</strong> break it into stages, each of which delivers value on its own and can be launched separately. The first stage is the most painful and best-understood piece. The rest comes after the first has run for a month and shown numbers. What exactly belongs in the first version is something we covered in the article <a href="/blog/mvp-za-2-nedeli-chto-vhodit/">on an MVP in two weeks</a>.</p>
+
+    <h2>Mistake 3. Deciding for the team without asking the team</h2>
+    <p>Automation is ordered by the owner and used by the employees. If the managers weren't asked what gets in the way of their work, the system will almost certainly add actions for them rather than remove them: one more window, one more field, one more "confirm" button. People vote with their feet — they keep parallel spreadsheets, forget to set statuses, and the data in the system stops reflecting reality.</p>
+    <p><strong>The sign:</strong> a month after launch, there are fewer records in the system than deals in real life.</p>
+    <p><strong>What to do:</strong> before development, spend two or three hours with the people who will be using it. Find out what they do by hand ten times a day and start with that. The first effect should be visible to the employee, not just the manager: fewer calls to the dispatcher, no need to copy a request from a chat into a spreadsheet. Then discipline takes care of itself.</p>
+
+    <h2>Mistake 4. Expecting AI to do what ordinary code should do</h2>
+    <p>The fashion for language models leads to attempts to hand them everything: calculate the delivery cost, determine the deadline under a contract, pick a plan. The model does this confidently and sometimes incorrectly. Then it turns out the agent quoted the customer a price that isn't in the price list or promised a deadline the company can't meet.</p>
+    <p><strong>The sign:</strong> in the description of the solution, the model "calculates by itself", "determines by itself", "decides by itself" in places where there are clear rules.</p>
+    <p><strong>What to do:</strong> separate the roles. The model understands text, extracts data and phrases the answer. Calculations, checks and rules are ordinary code or a table. If a rule can be written as "if A, then B", it shouldn't live in the model. This removes most of the risks discussed in the article <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">on AI hallucinations</a>, and makes the solution cheaper along the way.</p>
+
+    <h2>Mistake 5. Not defining how to measure the result</h2>
+    <p>"It got better" is not a result. If you haven't recorded before launch what exactly should change and by how much, then three months later it is impossible to tell whether the automation is working. The owner relies on his impressions, the team on theirs, and the conversation about continuing turns into a clash of opinions.</p>
+    <p><strong>The sign:</strong> the answer to "how will we know it worked?" begins with "well, we'll see".</p>
+    <p><strong>What to do:</strong> before starting, fix two or three numbers: response time to a request, no-show rate, hours spent preparing a report. Measure them "before". Set a target expressed as a range. After launch, look at the same numbers once a week. This disciplines both the contractor and the client.</p>
+
+    <h2>Mistake 6. Launching and forgetting</h2>
+    <p>Automation is not a renovation that you finish and then just live with. Prices change, new services appear, customers start asking questions that didn't exist before, the messenger updates its API. If nobody is responsible for the system after launch, it degrades: the bot answers with outdated data, the integration breaks after an update, and the first to notice is the customer.</p>
+    <p><strong>The sign:</strong> after the project is accepted, there is no person who looks at the logs and conversations at least once a week.</p>
+    <p><strong>What to do:</strong> appoint an owner inside the company — not a developer but a business person who knows the process. Agree on support with the contractor: what is included and how fast they respond. Budget not only for development but also for maintenance, roughly a tenth to a fifth of the development cost per year, depending on complexity. The structure of these costs is broken down in the article <a href="/blog/skolko-stoit-ai-agent/">on the cost of an AI agent</a>.</p>
+
+    <h2>Mistake 7. Choosing the tool before understanding the task</h2>
+    <p>"We need Bitrix24", "we want a bot on n8n", "build it in Make, we already have a subscription". The tool is chosen out of familiarity, advertising or a friend's advice, and then the task is bent to fit it. As a result, a simple thing gets done in a complicated way, and a complicated one doesn't get done at all because the tool can't do it.</p>
+    <p><strong>The sign:</strong> the first meeting with the contractor is about platforms, not processes.</p>
+    <p><strong>What to do:</strong> first the task, volumes, integrations and data requirements. Then the tool that fits them. A good contractor will ask how many requests you get per day and where your customer records are stored before naming a platform. If they start with the name of the product they sell, that's a reason to be wary.</p>
+
+    <h2>What all seven have in common</h2>
+    <p>None of these mistakes is technical. In 2026 the technology is reliable: models understand text, integrations work, automation platforms are mature. Projects fail where they meet people and processes: an unclear task, inflated expectations, no owner and no measurement.</p>
+    <p>The good news is that all seven mistakes can be prevented before development begins, at the conversation stage. If before the start you have a one-page description of the process, it's clear what will be working in two weeks, the team took part in the discussion, the "before" numbers are recorded and an owner is appointed — the project is very likely to deliver a result. If at least three of these are missing, it's better to spend another week on preparation than months on rework.</p>
+
+    <h2>Where to start</h2>
+    <p>Go through the list of seven points for the process you're about to automate and honestly mark where the gaps are. There are usually two or three, and they can be closed in a few days of internal work, without a contractor. After that, the conversation with a developer will be shorter and the estimate more accurate. If you need an outside view, you can start with a <a href="/#contact">free consultation</a>: these are exactly the questions we ask at the first meeting.</p>

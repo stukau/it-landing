@@ -1,0 +1,67 @@
+<!--title-->
+AI in CRM: Auto-Tags, Call Summaries and Deal Forecasting
+<!--description-->
+AI in a small business CRM: auto-tags from chats, call summaries and scoring, deal forecasts from dialogue signals. What works right away and what is overrated.
+<!--cta_title-->
+Are the call recordings and correspondence in your CRM sitting unread?
+<!--cta_text-->
+We will add an AI layer to your CRM: conversation summaries, auto-tags, alerts on stalled deals. The first stage in 2 weeks, free consultation.
+<!--body-->
+<p>A small business CRM usually holds far more information than anyone uses. Correspondence running to hundreds of messages, call recordings nobody listens to again, "comment" fields filled in along the lines of "ok, thinking about it." The manager remembers the client while working the deal, and the head of the company sees only the funnel stage and the amount. Meanwhile, the answers to "why is the deal stuck," "which clients are hot" and "how much will we close this month" are already in the data — there is simply nobody to read it.</p>
+    <p>Language models can read. That is the main thing AI adds to a CRM: it turns unstructured conversations and calls into tags, summaries and signals you can work with. Let's look at the three uses that deliver results for a small business faster than the rest — auto-tags, call summaries and deal forecasting — and at where AI in CRM is overrated.</p>
+
+    <h2>What data your CRM already has and why it isn't working</h2>
+    <p>A typical deal card has a structured part (stage, amount, date, owner) and an unstructured part (correspondence, calls, comments, emails). Reports and filters work only with the first. The second — the most valuable — can be read only by a person and only one card at a time.</p>
+    <p>That leads to familiar problems. The head of sales can't filter for "clients who mentioned a competitor." A new manager taking over someone else's deals spends an hour reading each one. The reasons for lost deals exist only in the head of the person who had the conversation. The sales forecast is built on the sum of deals by stage, even though half of them died long ago and nobody changed the stage.</p>
+    <p>An AI layer in the CRM is a way to make the unstructured part usable for filters, reports and automations. Everything else follows from that.</p>
+
+    <h2>Auto-tags: structure from correspondence with no effort from the manager</h2>
+    <p>The simplest use. After every new message, or once a day, the model reads the conversation and applies tags from a predefined list: request type, product mentioned, budget range, objections ("too expensive," "takes too long," "I'll think about it"), competitor mentions, urgency, language of communication.</p>
+    <p>What this gives you in practice:</p>
+    <ul>
+        <li>A filter for "all deals with the 'too expensive' objection this month" — and the head of sales sees whether this is a systemic problem or specific to one manager.</li>
+        <li>Segments for mailings: clients who were interested in a particular category get an offer for exactly that category.</li>
+        <li>Automations: the "urgent" tag raises the priority and notifies the head of sales; the "competitor" tag triggers a "send comparison" task.</li>
+        <li>Qualification: based on the combination of tags, a deal is given a "hot," "warm" or "cold" status without manual assessment.</li>
+    </ul>
+    <p>The main rule is a limited, agreed list of tags. If you let the model invent tags freely, in a month there will be three hundred of them and the filters will become meaningless. The head of sales draws up the list; the model only chooses from it. Technically this is done through the CRM's API and a language model, connected by n8n or a custom service; some systems, including amoCRM and Bitrix24, now have built-in AI features, but they are usually less flexible.</p>
+
+    <h2>Call summaries: something nobody used to do</h2>
+    <p>Almost everyone has call recordings in the CRM, and almost nobody listens to them — neither the head of sales for quality control nor the manager before the next conversation. The chain "transcription to text → short summary → fields in the card" solves this within a minute of the call ending.</p>
+    <p>A good call summary contains: what was agreed, what the client wants, what concerns them, the next step and the date. Separately, the model can extract specific values — budget, timeline, address, quantity — and suggest filling in the card fields with them. Suggest, not fill in: the manager confirms with one click, otherwise recognition errors will end up in the data.</p>
+    <p>For the head of sales there is a second layer: scoring the call against a checklist. Did the manager introduce themselves, identify the need, name the next step, avoid promising something that isn't in the price list. This doesn't replace listening; it is a filter: listen only to the calls where the checklist signals a problem. As a rough guide, this cuts review time several times over and, more importantly, makes review regular rather than "when we get around to it."</p>
+    <p>The limitations, honestly: transcription quality is worse on noisy lines and when languages are mixed; the model initially confuses dialects and professional jargon; calls must be recorded with notice to the client under the rules of your jurisdiction. Transcribing voice messages from messengers works the same way and often has an even bigger effect, because nobody listened to voice messages again at all.</p>
+
+    <h2>Deal forecasting: more honest than a sum by stage</h2>
+    <p>The classic CRM forecast is the sum of deals at a stage multiplied by the "stage probability." The problem is that the probability is the same for every deal at that stage, while in reality a deal where the client replies within an hour and has asked about the contract and a deal where the last message was three weeks ago are completely different things.</p>
+    <p>An AI forecast takes into account signals that aren't in the structured fields: the tone and speed of the client's replies, mentions of timeline and budget, the presence of objections, activity over the last few days, similarity to previously closed deals. The output is a probability estimate for each deal and a list of "deals at risk" that are formally alive but whose signals say otherwise.</p>
+    <p>Important caveats:</p>
+    <ul>
+        <li>Training requires history. If the CRM has fewer than a few hundred closed deals with full correspondence, the forecast will rely mainly on the language model's general heuristics; that is fine for a start, but don't expect accuracy.</li>
+        <li>A forecast is a prioritization tool, not an accounting document. Its value is that in the morning the manager sees whom to call first, and the head of sales sees which deals to revive or honestly close.</li>
+        <li>The accuracy of such a model needs to be checked monthly by comparing predictions with actual results. Without that, trust in the numbers is unfounded.</li>
+    </ul>
+    <p>Serious revenue forecasts use not only language models but also statistical methods on sales history — this is covered in a separate article <a href="/blog/prognozirovanie-prodazh-s-pomoshchyu-ii/">on sales forecasting with AI</a>.</p>
+
+    <h2>What else really works</h2>
+    <p>A few uses that are added after the three main ones.</p>
+    <p><strong>Draft replies.</strong> For a standard question, the model suggests a reply in the company's style, and the manager edits and sends it. It saves time and reduces the variation in quality between employees. More on generating commercial texts in the article <a href="/blog/ii-dlya-kommercheskih-predlozheniy-i-pisem/">on AI for commercial proposals and emails</a>.</p>
+    <p><strong>Deal handover.</strong> When the owner changes, the new manager gets a one-screen summary of the entire history instead of reading three months of correspondence.</p>
+    <p><strong>Data entry checks.</strong> The model finds deals where the fields contradict the correspondence ("the card says the budget is 100, in the conversation the client said 300") and suggests a correction.</p>
+    <p><strong>A weekly review for the head of sales.</strong> A summary in Telegram: how many deals are stuck and why, which objections come up most often, which managers lose clients at which stage. This is already where AI in CRM meets report automation.</p>
+
+    <h2>Where AI in CRM is overrated</h2>
+    <p><strong>Fully automatic replies to clients from the CRM.</strong> In sales with a ticket size above everyday purchases, clients expect a person. AI is good as the manager's assistant, not as their replacement in deal correspondence.</p>
+    <p><strong>"Smart" scoring without data.</strong> If a company closes ten deals a month, no scoring will reveal statistically significant patterns. Auto-tags and summaries are useful from day one; forecasting is useful after history has accumulated.</p>
+    <p><strong>AI as a cure for an empty CRM.</strong> If managers don't keep their deals up to date, the model has nothing to read. AI amplifies good discipline but doesn't create it.</p>
+    <p><strong>Confidentiality.</strong> Client correspondence and call recordings are sent to a cloud model — for some industries this calls for a separate solution, such as an open model on your own server. The choice between the cloud and your own infrastructure is covered in the article <a href="/blog/bezopasnost-dannyh-pri-vnedrenii-ii/">on data security when implementing AI</a>.</p>
+
+    <h2>How to roll it out: an order that works</h2>
+    <ol>
+        <li><strong>Start with summaries.</strong> Summaries of correspondence and calls in the deal card are the most visible improvement with minimal risk. Managers see the benefit right away.</li>
+        <li><strong>Add auto-tags from an agreed list.</strong> 10–15 tags, no more. After a month, look at which filters are actually used.</li>
+        <li><strong>Set up automations based on tags.</strong> Notifications, tasks, segments. This is where AI starts saving time, not just informing.</li>
+        <li><strong>Connect forecasting and call scoring</strong> once history has accumulated and the team trusts the summaries.</li>
+        <li><strong>Check quality monthly.</strong> A sample of summaries against the originals, the forecast against actual results, tags against manual labeling.</li>
+    </ol>
+    <p>For a small business, the cost of such a layer consists of a one-time integration setup and a monthly model fee — roughly from tens to a couple of hundred dollars a month at volumes of several hundred conversations. At AiKrok we usually launch the first stage — summaries and tags in the existing CRM — in two weeks, and that is enough to understand whether it is worth going further.</p>

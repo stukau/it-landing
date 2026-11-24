@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports — AiKrok Blog</title>
+    <meta name="description" content="How to replace manual reports with a daily Telegram digest: which metrics to include, where the data comes from, how to build it and what mistakes ruin it.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/avtomatizaciya-otchetov-v-telegram/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/">
+    <meta property="og:title" content="A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports">
+    <meta property="og:description" content="How to replace manual reports with a daily Telegram digest: which metrics to include, where the data comes from, how to build it and what mistakes ruin it.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports",
+                "description": "How to replace manual reports with a daily Telegram digest: which metrics to include, where the data comes from, how to build it and what mistakes ruin it.",
+                "url": "https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/",
+                "datePublished": "2026-08-27",
+                "dateModified": "2026-08-27",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "Automation",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/avtomatizaciya-otchetov-v-telegram/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports",
+                        "item": "https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/avtomatizaciya-otchetov-v-telegram/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/avtomatizaciya-otchetov-v-telegram/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Automation</div>
+    <h1>A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports</h1>
+    <div class="post-meta"><span class="tag">Automation</span>August 27, 2026 · 7 min read</div>
+</div>
+
+<main class="article">
+<p>A small business owner's morning often starts with the same routine: open the sales spreadsheet, then the ad account, then message the manager "how many leads yesterday", then the accountant — "what's the status on payments". By ten the picture has come together, but an hour is gone, and tomorrow it all repeats. The option of "asking an assistant to compile the report" solves the owner's problem and creates a new one: one more person spends every morning copying numbers from one window into another.</p>
+    <p>A daily digest in Telegram is one of the simplest automation projects and one of the quickest to pay off. The numbers are pulled from your systems automatically, put into a short message and delivered at a convenient time. Let's look at what to include in such a digest, where the data comes from, how it works technically and which mistakes make a digest useless.</p>
+
+    <h2>Why Telegram and not a dashboard</h2>
+    <p>A dashboard is a good tool, but it has to be opened. Experience shows that a beautiful dashboard built with great effort is opened once a week after a month, and before an important meeting after three. A message in a messenger requires no action: it appears where the owner already reads everything else.</p>
+    <p>The second advantage is that a digest forces you to choose what matters. A dashboard can hold forty charts; a message holds five to seven lines. This constraint is useful: it makes you answer the question of which numbers you really need every day.</p>
+    <p>The dashboard and the digest don't compete. The digest is a daily pulse check; the dashboard is where you go when something in the digest looks odd. We covered how to build the latter in the article on <a href="/en/blog/dashboard-dlya-sobstvennika-biznesa/">a dashboard for the business owner</a>.</p>
+
+    <h2>What to include in the digest</h2>
+    <p>There is no universal set, but there is a principle: the digest contains what changes daily and calls for a reaction if it deviates. For retail and services, a good starting set looks like this:</p>
+    <ul>
+        <li><strong>Yesterday's money</strong>: revenue or incoming payments, compared with the same day last week.</li>
+        <li><strong>Leads</strong>: how many came in, from which channels, how many are still unprocessed.</li>
+        <li><strong>Funnel</strong>: how many deals moved to the key stage, how many closed, how many are stalled.</li>
+        <li><strong>Advertising</strong>: yesterday's spend and cost per lead by channel.</li>
+        <li><strong>Operations</strong>: orders in progress, overdue orders, stock below the minimum — whatever is critical for your particular business.</li>
+        <li><strong>One alert</strong>: if a metric has gone out of bounds, it is highlighted first rather than lost in the middle.</li>
+    </ul>
+    <p>A good test of the set: for every line, the owner should know what they will do if the number is bad. If there is no answer, the line goes.</p>
+
+    <h2>Where the data comes from</h2>
+    <p>The digest is built from the systems you already have. Typical sources and how they connect:</p>
+    <ul>
+        <li><strong>CRM</strong> (amoCRM, Bitrix24, HubSpot) — leads, deals, stages. API access is almost always available.</li>
+        <li><strong>The accounting system or 1C</strong> — revenue, payments, stock. Access is harder, and the details are covered in the article on <a href="/en/blog/integraciya-ii-s-1c-i-uchetnymi-sistemami/">integrating AI with 1C</a>, but for reading a few numbers it can usually be done.</li>
+        <li><strong>Ad accounts</strong> — spend and clicks via API or through ready-made connectors.</li>
+        <li><strong>Google Sheets</strong> — whatever is kept by hand: the monthly plan, the shift schedule, targets. A spreadsheet is a source too, provided it is filled in with discipline.</li>
+        <li><strong>The website and booking systems</strong> — visits, bookings, cancellations.</li>
+        <li><strong>The bank</strong> — incoming payments, if the bank offers an API or an export; otherwise through the accounting system.</li>
+    </ul>
+    <p>The main limitation isn't technical. If the data in the systems is incomplete (managers don't close deals, the cashier doesn't record sales on the same day), the digest will show something untrue. The first two weeks of running the digest usually go into spotting these gaps and closing them.</p>
+
+    <h2>How it works technically</h2>
+    <p>The setup for a small business consists of four elements and is built in a few days.</p>
+    <ol>
+        <li><strong>Schedule.</strong> n8n, Make or a small script runs at a set time — say, 8:30.</li>
+        <li><strong>Collection.</strong> The automation queries each source and pulls the numbers for yesterday and for the same day a week ago for comparison.</li>
+        <li><strong>Calculation and checks.</strong> Derived metrics are calculated: cost per lead, conversion, deviation from plan. Thresholds are checked: if ad spend grew by a third with the same number of leads, a warning is generated.</li>
+        <li><strong>Delivery.</strong> The text is assembled from a template and sent to Telegram via the Bot API — to the owner personally or to a private managers' group. Optionally with buttons: "more on advertising", "list of stalled deals".</li>
+    </ol>
+    <p>A language model isn't required in this setup, but it is useful in two places. The first is a plain-language comment on the numbers: "Revenue is a fifth below a typical Tuesday while the number of leads is the same — the problem is probably in the managers' conversion or in the order mix." The second is answering follow-up questions right in the chat: the owner writes "and Batumi separately?" and gets the number without going into the system. This is already a step toward <a href="/en/blog/ii-analitika-dannyh-dlya-biznesa/">AI analytics in plain language</a>.</p>
+
+    <h2>Example: a chain of three coffee shops</h2>
+    <p>The owner was getting three different reports from three managers at random times — one sent a photo of the cash register report, another a voice message. We built a digest: at 9:00 a message arrives with yesterday's revenue for each location, a comparison with last week, the average check, the number of checks and the stock of five key items that often run out. On a separate line is the location where revenue fell more than at the others, if there is one.</p>
+    <p>The data comes from the point-of-sale system and the purchasing spreadsheet. A month later the owner added an evening digest at 21:30 — shorter than the morning one, just revenue and the number of checks, to see the day as a whole. The managers were freed from daily reports, and conversations at the team meeting became about causes rather than numbers.</p>
+
+    <h2>Mistakes that make a digest useless</h2>
+    <p><strong>Too long.</strong> If the message doesn't fit on a phone screen without scrolling, people stop reading it within two weeks. Five to seven metrics; the rest goes behind a button or into the dashboard.</p>
+    <p><strong>No comparison.</strong> The figure "revenue 4,200" says nothing. The same figure next to "a typical Tuesday is 5,100" already calls for attention. Compare with a comparable period, not with yesterday, otherwise Monday will always be a "slump" after Saturday.</p>
+    <p><strong>No signal.</strong> A digest where everything is steady every day stops being noticed. Deviations should stand out in the first lines.</p>
+    <p><strong>No one responsible for the data.</strong> The digest showed zero sales at a location — because the cashier didn't close the shift. You need a person who responds to such signals, otherwise the owner will quickly stop trusting the numbers.</p>
+    <p><strong>A digest instead of a conversation.</strong> The numbers show what happened, but not why. A digest works well as a prompt for a short question to the manager, not as a replacement for the manager.</p>
+
+    <h2>What a digest won't replace</h2>
+    <p>Honest limitations. A digest won't show quarterly trends — that takes charts. It won't explain the causes — that takes people. It won't fix bad data — it will only highlight it. And it won't be accurate from day one: roughly two to four weeks go into agreeing on the contents, checking the numbers against reality and removing what isn't needed.</p>
+
+    <h2>Where to start</h2>
+    <p>The fastest route is one digest from two or three sources that are definitely accessible: the CRM and the sales spreadsheet, for example. Launch it, receive it for a week, see what is missing, add it. At AiKrok we build the first version of a digest in a few days and often use it as the first automation project: it is cheap, safe and immediately shows the owner what state the company's data is in. After that, the conversation about next steps — agents, integrations, dashboards — is no longer a shot in the dark.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/avtomatizaciya-prodazh-malogo-biznesa/">Sales Automation for Small Business: A Pipeline That Runs Without Manual Reminders</a></li>
+        <li><a href="/en/blog/s-chego-nachat-avtomatizaciyu-biznesa/">Where to Start with Business Automation: A One-Day Process Audit</a></li>
+        <li><a href="/en/blog/ii-dlya-marketinga-malogo-biznesa/">AI for Small Business Marketing: Content, Ads and Analytics Without an Agency</a></li>
+        <li><a href="/en/blog/no-code-avtomatizaciya-granicy/">No-Code Automation: What You Can Build Without a Developer and Where You Need One</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/ai-agenty/">AI Agent Development and Business Automation</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Collecting numbers from five windows by hand every morning?</h2>
+    <p>We'll connect your systems and set up a daily digest in Telegram with alerts on deviations. MVP in 2 weeks, free consultation.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

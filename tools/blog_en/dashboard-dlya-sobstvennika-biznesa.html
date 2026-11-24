@@ -1,0 +1,90 @@
+<!--title-->
+The Owner's Dashboard: Ten Metrics to See Every Morning
+<!--description-->
+A small business owner's dashboard: ten morning-screen metrics, how to choose them, where to get the data and how to build it without analysts in two weeks.
+<!--cta_title-->
+Finding out about business problems when it is too late to fix them?
+<!--cta_text-->
+We will bring data from your POS, CRM, bank and ads into one screen and a morning summary in Telegram. First version in 2 weeks, free consultation.
+<!--body-->
+<p>A small business owner learns how things are going from three sources: the accountant's report once a month, verbal updates at the team meeting, and their own sense that "something is off". The first source is weeks late, the second reflects what employees want to show, and the third is unreliable. Meanwhile, decisions have to be made every day.</p>
+    <p>An owner's dashboard is a single screen that answers the question "how is the business doing today" in two minutes in the morning. Not a forty-page report and not an analytics system for a finance specialist, but a short set of numbers that show where you need to step in. Below are ten metrics we consider the basic set for most small companies, the logic behind choosing them, and how to build such a screen without a team of analysts.</p>
+
+    <h2>The principles for choosing metrics</h2>
+    <p>Before listing them, it is important to agree on the rules. Otherwise the dashboard turns into a dumping ground for everything that could be exported.</p>
+    <ul>
+        <li><strong>A metric leads to action.</strong> If the number has changed, the owner knows whom to call. If that is not clear, the metric does not belong on the main screen.</li>
+        <li><strong>Comparison, not absolutes.</strong> "Revenue 12,400" says nothing. "12,400, 15% below the weekday average for the month" does. Every metric is shown against a norm or a previous period.</li>
+        <li><strong>Freshness — no older than yesterday.</strong> The morning screen shows yesterday's results and the month-to-date total. If the data is updated once a week, it is no longer a dashboard but a report.</li>
+        <li><strong>No more than ten.</strong> A screen that can be read in two minutes. Details are on the next level, one click away.</li>
+    </ul>
+
+    <h2>Ten metrics for the morning screen</h2>
+
+    <h3>1. Cash in accounts and on hand</h3>
+    <p>The simplest and most important number: how much money the company has right now. Broken down by account if there are several, with the trend for the week. It is surprising how many owners see this number only when the accountant says there is not enough for payroll.</p>
+
+    <h3>2. Revenue for yesterday and month to date</h3>
+    <p>Compared with the plan and with the same period last month. For seasonal businesses — with the same period last year. It is important to show not only the amount but also the pace: whether we are on plan or 20% behind, which is already clear by the tenth of the month.</p>
+
+    <h3>3. Receivables and overdue payments</h3>
+    <p>How much clients owe and what part of that debt is overdue. For B2B and services with payment after delivery, this is metric number one after cash. The warning sign is overdue debt growing while revenue is stable: the sales are there, but the money is not coming in.</p>
+
+    <h3>4. New inquiries and their sources</h3>
+    <p>How many inquiries came in yesterday and over the month, and from where (website, ads, Instagram, Telegram, referrals). A drop in inquiries is the earliest sign of a future drop in revenue; it is visible weeks before it shows up in the money.</p>
+
+    <h3>5. Pipeline conversion</h3>
+    <p>What share of inquiries become deals, and at which stage the most are lost. If the number of inquiries is the same but there are fewer deals, the problem is in sales, not in marketing. The data comes from the CRM, and if the CRM is not kept up, there will be no such metric — one more reason to figure out <a href="/blog/vnedrenie-crm-pochemu-komanda-ne-polzuetsya/">why the team does not use the system</a>.</p>
+
+    <h3>6. Average order value</h3>
+    <p>On its own and over time. Revenue growing while the average order value falls means the flow is growing but we are selling cheaper. A falling average order value is often the first sign that sales reps have started handing out discounts.</p>
+
+    <h3>7. Margin or gross profit</h3>
+    <p>Revenue minus the direct costs of the product or service. For retail — by category; for services — by line of business. A business can grow in revenue and lose money if sales of low-margin items are growing. This number requires data from the accounting system or 1C and usually does not appear on the dashboard on day one.</p>
+
+    <h3>8. Unanswered inquiries and response time</h3>
+    <p>How many messages and inquiries have been waiting for a reply longer than the norm, and the average first response time for yesterday. It is an operational metric, but for a business where clients write in messengers, it is directly tied to conversion. Seeing "seven inquiries unanswered since last night" in the morning is a reason for one call that saves several deals.</p>
+
+    <h3>9. Utilisation of the key resource</h3>
+    <p>Every business has a bottleneck: specialists in a salon, tables in a restaurant, vehicles in logistics, specialists' hours in an agency. The utilisation percentage for today and the coming week shows whether you need to push sales or, on the contrary, expand capacity.</p>
+
+    <h3>10. Repeat customers</h3>
+    <p>The share of revenue or orders from those who have bought before. For most small businesses this is the foundation of stability, and a drop in this share is a signal of quality problems that are not yet visible in reviews.</p>
+
+    <h2>What is deliberately left off the main screen</h2>
+    <p>Website traffic, social media followers, the number of calls, employee activity, dozens of operational indicators. They are useful, but for the head of a function, not for the owner in the morning. If the owner wants to see traffic every day, they are most likely acting as the marketer, and that is a separate conversation.</p>
+    <p>The exact makeup of the ten depends on the industry. A restaurant will have food cost and table turnover instead of receivables, an online school — the share of students who make it to the end of the course, a logistics company — the share of on-time deliveries. The principle is the same: numbers the owner uses to make decisions, not just "interesting to know".</p>
+
+    <h2>Where the data comes from and how to collect it</h2>
+    <p>The main difficulty with a dashboard is not visualisation but collecting data from different systems. A typical small business keeps its money in the bank and 1C, inquiries in a CRM, advertising in ad accounts, bookings in an industry-specific system, and stock in warehouse software. None of them knows about the others.</p>
+    <p>A setup that works for companies without an IT department:</p>
+    <ol>
+        <li><strong>A single store.</strong> At the start — Google Sheets or a simple database where data from all sources is put every day. There is no need to build a corporate data warehouse for a business of 20 people.</li>
+        <li><strong>Automatic collection.</strong> n8n or Make pull data on a schedule via API (CRM, ad accounts, the bank if it has an API) or via exports (1C, POS software) and write it to the store. Manual entry is acceptable only for what cannot be obtained otherwise — and it is better done through a Telegram bot with one question in the evening than through a spreadsheet.</li>
+        <li><strong>Visualisation.</strong> Looker Studio (free, works well with Google Sheets), Metabase (open source, your own server, convenient questions to the data) or Power BI (if the company is already in the Microsoft ecosystem). For ten metrics, any of them is enough.</li>
+        <li><strong>Delivery.</strong> A link to the dashboard that is opened in the morning, or — what sticks better — an automatic summary in Telegram at 8:00 AM with the key numbers and a link to the details. The summary option is covered in the article <a href="/blog/avtomatizaciya-otchetov-v-telegram/">on a daily summary in Telegram</a>.</li>
+    </ol>
+    <p>The details of combining sources are a separate topic; we covered it in the piece <a href="/blog/sbor-dannyh-iz-raznyh-istochnikov/">on collecting data from ads, CRM and the warehouse</a>.</p>
+
+    <h2>Example: a chain of four clothing stores</h2>
+    <p>Imagine the owner of four stores who received reports from the store managers on WhatsApp every evening — in free form, late and with rounded figures. He consolidated revenue across the chain himself on Sundays.</p>
+    <p>The first version of the dashboard pulled together revenue and the number of receipts for each location from the POS software, stock for key categories from the accounting system, cash in accounts from a bank export, and delivery requests from a Telegram bot. The summary arrived at 8:30 AM with four lines for the stores and a flag if any location deviated from the average by 20% or more.</p>
+    <p>What came to light in the first month: one store consistently showed good revenue with a falling average order value — the manager was compensating for low traffic with discounts. Second: stock of the best-selling sizes at two locations regularly dropped to zero by the weekend, and nobody initiated transfers between stores. Neither of these observations was visible in the managers' evening messages. Three months later, margin by category from 1C and the share of repeat purchases from the loyalty programme were added.</p>
+
+    <h2>Mistakes that make a dashboard worthless</h2>
+    <p><strong>Data that cannot be trusted.</strong> If the revenue on the dashboard does not match the till, the owner will stop opening it after the second time. Reconciliation with source data at the launch stage is a mandatory part of the work, and often takes longer than the visualisation itself.</p>
+    <p><strong>Too many screens.</strong> Nobody looks at five tabs with forty charts each. There is one main screen; details are one click away.</p>
+    <p><strong>No norm for comparison.</strong> A number without context does not prompt action. Every metric should show the deviation from the plan, the average or the previous period.</p>
+    <p><strong>Manual updates.</strong> A dashboard that someone has to fill in stops being updated the first time that person goes on holiday.</p>
+    <p><strong>A dashboard instead of a conversation.</strong> The numbers show that something is wrong. Why — you still find out from people. A dashboard makes those conversations specific, but it does not replace them.</p>
+
+    <h2>Where to start</h2>
+    <p>You do not need to collect all ten metrics at once. A sensible path for two weeks:</p>
+    <ol>
+        <li>Pick three or four numbers that you currently learn late and that affect your decisions. Usually these are cash, revenue, inquiries and something industry-specific.</li>
+        <li>Work out where this data lives and whether it can be pulled automatically.</li>
+        <li>Build the first version: automatic collection into a spreadsheet, a simple screen in Looker Studio or Metabase, a morning summary in Telegram.</li>
+        <li>For two weeks, check the numbers against reality and fix the discrepancies.</li>
+        <li>Add metrics one at a time once the previous ones have become a habit.</li>
+    </ol>
+    <p>At AiKrok we usually start such projects with exactly that: a morning summary of three or four numbers — it sticks faster than a full-screen dashboard, and the set of metrics is refined along the way. Once the basic data is collected, the next step is being able to <a href="/blog/ii-analitika-dannyh-dlya-biznesa/">ask questions of your data in plain language</a> without waiting for a new chart.</p>

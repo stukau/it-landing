@@ -1,0 +1,63 @@
+<!--title-->
+Online Store Automation: Orders, Stock, Notifications and Returns
+<!--description-->
+Automation for a small online store: collecting orders from every channel, syncing stock, status notifications and handling returns without the chaos.
+<!--cta_title-->
+Orders getting lost between channels, and half your messages are "where is my order"?
+<!--cta_text-->
+We'll bring orders into one place and set up notifications, stock sync and a returns process for your platform. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A small online store rarely hits a ceiling on traffic. It hits a ceiling on hands: orders come in from the website, Instagram and Telegram; the manager compiles them into a spreadsheet, calls to confirm, checks with the warehouse whether the item is in stock, types out the tracking number to the customer by hand, and then deals with a return where nobody remembers what was promised. At 10 orders a day this is bearable; at 40, the team is working at its limit and mistakes like "we sent the wrong size" become regular.</p>
+    <p>Online store automation is not about replacing the platform, nor about a big AI project. It is about the four areas where manual work and errors concentrate: order processing, stock, notifications and returns. Let's take each in turn: what gets automated, how, and where a person is still needed.</p>
+
+    <h2>Area 1. Orders from all channels in one place</h2>
+    <p>A small store's first problem is that orders live in three to five places. The website writes to the admin panel, Instagram to Direct, Telegram to the manager's private messages, the marketplace to its own dashboard. While the manager is compiling them into one spreadsheet, an order from Direct gets lost between stories.</p>
+    <p>The solution is a single collection point. This can be a CRM with an order module, an accounting system or, at the first stage, even a well-organized spreadsheet. What matters is that every channel automatically creates an order in it with the status "new": website orders via webhook, Telegram messages through a bot, Instagram and WhatsApp through their business APIs. The manager no longer collects orders; they process them.</p>
+    <p>This is also the place for automatic checks: does the item match the catalog, is it in stock, are the address and phone number filled in. Incomplete orders get flagged, and the customer is sent a clarifying question without the manager's involvement. If there are many orders from messengers and customers write in free text, clarifying and assembling the order can be done by a <a href="/blog/telegram-bot-s-ii-dlya-podderzhki/">Telegram bot with AI</a> that understands "I want those sneakers from the latest post, size 42".</p>
+
+    <h2>Area 2. Stock levels that don't lie</h2>
+    <p>Selling an item you don't have is a store's most expensive mistake: the customer waited, the money has to be refunded, the review is negative. The cause is almost always that stock levels are updated with a delay or differently in different systems.</p>
+    <p>What gets automated:</p>
+    <ul>
+        <li><strong>Stock synchronization</strong> between the warehouse or accounting system and all storefronts: the website, marketplaces, the Telegram catalog. Updates every few minutes, not once a day. For 1C this is done through data exchange or the API — the pitfalls are covered in the article on <a href="/blog/integraciya-ii-s-1c-i-uchetnymi-sistemami/">integration with 1C and accounting systems</a>.</li>
+        <li><strong>Reservation</strong> at checkout, so that two customers don't buy the last unit at the same time.</li>
+        <li><strong>Low-stock alerts</strong> to the person responsible for purchasing — in Telegram, taking the rate of sales into account: "four days' worth of this item left".</li>
+        <li><strong>Delisting</strong> items with zero stock and relisting them once the delivery has been booked in.</li>
+    </ul>
+    <p>Where this won't work: if the warehouse is run "by eye" and incoming goods aren't booked in on the same day. Automation will faithfully show numbers that don't exist. Order in the warehouse is a precondition for automation, not a result of it.</p>
+
+    <h2>Area 3. Customer notifications at every step</h2>
+    <p>Most of a store's support questions are one phrase in different forms: "where is my order". The customer asks not because they need an answer but because they don't know what is happening. Automatic notifications meet this need before the question arises.</p>
+    <p>The minimum chain: order accepted — payment received — handed over for packing — shipped with a tracking number — arrived at the pickup point — received. Each status automatically triggers a message in the channel the order came from: Telegram, WhatsApp, email or SMS. Delivery statuses are taken from the delivery service's API; the manager doesn't enter them.</p>
+    <p>What is worth adding once the basic chain works:</p>
+    <ul>
+        <li>a reminder about an unpaid order after an hour and after a day;</li>
+        <li>a reminder that the order is at the pickup point and the storage period is running out;</li>
+        <li>a request for a review a few days after receipt — once, not three times;</li>
+        <li>a message that an out-of-stock item has arrived, sent to the customers who asked about it.</li>
+    </ul>
+    <p>The boundary: notifications are not mailings. If promotions and product picks get added to order statuses, customers start blocking the channel and the statuses stop getting through. Promo is a separate story with separate consent, covered in the article on <a href="/blog/telegram-bot-dlya-programmy-loyalnosti/">a Telegram bot for a loyalty program</a>.</p>
+
+    <h2>Area 4. Returns without the chaos</h2>
+    <p>Returns are what a small store handles worst, because they are rare, unpleasant and each has its own circumstances. The customer writes to the manager, the manager promises to look into it, then checks with the warehouse, then with the accountant, and the customer writes again. Automation here doesn't make the decisions; it runs the process.</p>
+    <p>What can be done:</p>
+    <ol>
+        <li><strong>A return request form</strong> in the bot or on the website: order number, item, reason, photo if needed. The request is created in the system with its own status, and the customer gets a confirmation and a timeline.</li>
+        <li><strong>Automatic condition checks</strong>: whether the return period has expired, the product category, whether the order was paid. Simple cases get a ready decision and instructions; complex ones go to the manager with the information already collected.</li>
+        <li><strong>Return statuses</strong> with notifications: item received, checked, money sent. The customer doesn't need to ask.</li>
+        <li><strong>Tracking reasons.</strong> If half the returns of one item give the reason "doesn't match the size", that is a signal to fix the description or the size chart rather than process returns endlessly.</li>
+    </ol>
+    <p>What stays with a person: disputed cases, quality complaints, difficult customers. Automation should recognize such inquiries by their signs — a repeat message, negative wording, the word "complaint" — and pass them to the manager quickly instead of trying to close them with a template reply.</p>
+
+    <h2>How it's put together and what it costs</h2>
+    <p>A store with dozens of orders a day doesn't need a heavyweight ERP. A working setup looks like this: the store platform or CRM as the hub, an accounting system or spreadsheet for stock, n8n or Make as the glue between them and the channels, the Telegram Bot API and the WhatsApp Business API for talking to customers, and the delivery service's API for statuses. If the store platform has built-in notifications and integrations, it covers some of the scenarios without any extra build — this is worth checking first.</p>
+    <p>On timing: collecting orders in one place and basic notifications take the first two weeks. Stock synchronization depends on the accounting system, from a few days to a couple of weeks. Returns take another one to two weeks, once the earlier parts are working. Infrastructure costs for this volume are roughly tens of dollars a month; the main cost is development and integrations, and it depends heavily on how open the store platform and accounting system are to being connected.</p>
+
+    <h2>Example: a children's clothing store</h2>
+    <p>A website plus Instagram, 25–40 orders a day in season, two employees processing orders and a warehouse on the same premises. The main pain points: orders from Direct were getting lost, "where is my order" took up half the correspondence, and size-related returns dragged on for weeks.</p>
+    <p>The work was done in three stages. First, all orders into one CRM with an automatic completeness check, and delivery statuses sent to the customer in the channel the order came from. "Where is my order" questions almost disappeared from the correspondence within the first weeks. Then, stock synchronization with the storefront every ten minutes and low-stock alerts. The third stage was a return form in a Telegram bot with automatic decisions on simple cases and tracking of reasons. Tracking the reasons showed that two items were being returned disproportionately often because of the size chart — the description was fixed, and returns of those items fell.</p>
+    <p>What wasn't automated: confirming high-value orders — the manager still calls on those, because the share of errors in addresses and phone numbers turned out to be higher for such orders, and so is the cost of a mistake.</p>
+
+    <h2>Where to start</h2>
+    <p>Count how many messages a week are questions about order status, and how many orders a month got lost or went out with an error. These two numbers usually determine the first step: if the first is large, start with notifications; if the second is, start with collecting orders in one place. Stock and returns come next.</p>
+    <p>At AiKrok we start such projects with a one-day review: which channels, which platform, where the stock data lives, what the current system can do without modifications. It often turns out that half of what is needed already exists in the store platform and simply isn't switched on. The rest is built in two weeks as a first version and then refined according to what the real flow of orders shows.</p>

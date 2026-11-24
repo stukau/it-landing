@@ -1,0 +1,74 @@
+<!--title-->
+AI Sales Forecasting: What Actually Works for Small Businesses
+<!--description-->
+What AI can really do in sales forecasting for small businesses: three levels of methods, the data you need, judging accuracy, and where a forecast won't work.
+<!--cta_title-->
+Planning purchases and shifts by gut feeling instead of a forecast?
+<!--cta_text-->
+We'll collect your sales history, build a forecast for a specific decision and deliver it as a summary for your team. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>Before the season, the owner of a building materials store decides how much tile to buy: order too little and lose sales, order too much and tie up money in the warehouse until next year. The head of a small manufacturing business is wondering whether to hire two more people for the shift. The director of a food delivery service is planning how many couriers to put out on Friday evening. All three decisions come down to one question: how many sales there will be. Let's look at what AI can actually do in forecasting, which methods work for companies without an analytics department, and where it's better not to build a forecast at all.</p>
+
+    <h2>What a small business needs a forecast for</h2>
+    <p>A forecast is worth nothing in itself; the value appears when it changes a specific decision. In small companies these decisions fall into three groups:</p>
+    <ul>
+        <li><strong>Purchasing and inventory.</strong> How much of what to order from the supplier so that there are neither shortages nor dead stock. The most common scenario and the one that pays off best.</li>
+        <li><strong>People and shifts.</strong> How many employees are needed on a particular day or week: kitchen, couriers, administrators, operators.</li>
+        <li><strong>Money.</strong> Whether incoming payments will cover salaries and rent a month from now, and whether you can invest in advertising right now.</li>
+    </ul>
+    <p>If none of these decisions is made regularly in the company, the forecast will be a nice curve on a dashboard with no practical effect. First you should work out which decision it is supposed to support.</p>
+
+    <h2>Three levels of methods: from simple to complex</h2>
+    <p>The word "AI" in forecasting is often misleading. In practice three levels work, and for many companies the first is enough.</p>
+    <h3>Level 1. Statistics and seasonality</h3>
+    <p>A moving average, accounting for day of the week and month, a trend. This is not AI, but for a stable business with a year or more of history such methods give reasonable accuracy and, importantly, are understandable to the owner. If tile sales are 30–40% higher every April than in March, a simple spreadsheet will tell you that too.</p>
+    <h3>Level 2. Machine learning models</h3>
+    <p>Algorithms that take many factors into account at once: seasonality, holidays, weather, advertising spend, competitors' prices, stock levels. They require prepared data and a specialist to set them up, but they are noticeably more accurate on unstable series. For a small business this level is justified when you're dealing with hundreds of product items, each needing its own forecast — that can't be calculated by hand.</p>
+    <h3>Level 3. Language models as an interpreter</h3>
+    <p>GPT-5, Claude or Gemini are poor at predicting numbers on their own — that's not their job. But they are good at explaining the result: "the forecast for November is lower than last year's because there is no promo at the start of the month this year, and the trend over the last three months is negative". A sensible architecture: the numbers are calculated by a statistical or ML model, and the language model turns them into clear text and answers follow-up questions.</p>
+    <p>A mistake we often see: uploading a sales spreadsheet into a chat and asking it to "forecast next month". The answer will look convincing and may turn out to be random. A numerical forecast should be made by a tool designed for numbers.</p>
+
+    <h2>What data you need and how much history</h2>
+    <p>Forecast quality is determined almost entirely by the input data, not the algorithm.</p>
+    <ul>
+        <li><strong>Sales history by day</strong> (not by month), broken down by product or category. For a seasonal business — at least two full years, to separate the season from chance. For a business without pronounced seasonality, six to nine months is enough for first estimates.</li>
+        <li><strong>Stock levels and stockouts.</strong> If a product was out of stock for two weeks, zero sales on those days don't mean there was no demand. Without this information the model will underestimate the forecast.</li>
+        <li><strong>Promotions and prices.</strong> A spike in sales during a discount shouldn't be counted as ordinary demand.</li>
+        <li><strong>External factors</strong>, if they really have an effect: holidays, weather for seasonal goods, advertising spend.</li>
+    </ul>
+    <p>If the data is scattered across the point-of-sale system, 1C and spreadsheets, it first has to be brought together in one place. How this is done is described in detail in the article <a href="/blog/sbor-dannyh-iz-raznyh-istochnikov/">on collecting data from different sources</a>.</p>
+
+    <h2>Three different tasks that go by the same name</h2>
+    <p>"Sales forecast" means different things for retail, for B2B and for services, and the methods for each are different.</p>
+    <p><strong>Demand forecast by product</strong> — retail, delivery, manufacturing. Many items, many sales, stable statistics. First- and second-level methods work here, and the result is a purchasing recommendation for each item.</p>
+    <p><strong>Company revenue forecast</strong> — needed for cash planning. This is an aggregated series; it is usually calmer than individual products, and seasonal statistics adjusted for trend are often enough.</p>
+    <p><strong>Deal closing forecast in the CRM</strong> — B2B with a long cycle. There aren't hundreds of sales a day here, but there are deals at different stages with a history. The model estimates the probability of closing each deal from its features: how many days at the stage, how many touchpoints there were, which source the customer came from, the amount. This is closer to <a href="/blog/ii-v-crm/">AI in the CRM</a> than to classic forecasting, and the details are covered there.</p>
+
+    <h2>Where a forecast won't work</h2>
+    <p>It's more honest to say this before the project than after.</p>
+    <ul>
+        <li><strong>A new business with no history.</strong> Six months of sales is too little for anything but rough estimates. It's better to spend that time on careful data collection.</li>
+        <li><strong>Rare, expensive deals.</strong> If a company closes five contracts a quarter, statistics don't work: one contract falling through is minus 20%. Scenario planning is more useful here than a model.</li>
+        <li><strong>Abrupt changes.</strong> A change of product range, a relocation, entering a new market, purchase prices doubling. A model trained on the past doesn't know about any of this. After such events the forecast has to be rebuilt and treated with caution for the first few months.</li>
+        <li><strong>Data with gaps.</strong> If the point-of-sale system didn't record returns for six months and some sales went "past" the books, the forecast will inherit all of these distortions.</li>
+    </ul>
+
+    <h2>How to tell whether a forecast can be trusted</h2>
+    <p>A forecast is always wrong; the question is by how much. A simple check that doesn't require a specialist: build a forecast for a period that has already passed and compare it with the actual figures. If the model "predicts" last month with a 10% error, you should expect roughly that accuracy for the next one too.</p>
+    <p>Benchmarks for evaluation: for the aggregated revenue of a stable business, an error of around 5–15% a month ahead is considered workable; for individual products it is naturally higher, 20–40% for low-selling items is common, and that's fine, because purchasing decisions are made with a margin.</p>
+    <p>A useful rule: a forecast should be given not as a single number but as a range. "We'll sell 180–240 packs" is more honest and more useful to a buyer than "we'll sell 207". And one more: the model has to be retrained as new data comes in, not set up once and forgotten.</p>
+
+    <h2>Example: food delivery and shift planning</h2>
+    <p>A delivery service in a city of about half a million people, two years of hourly order history, data in the accounting system and in the delivery service. The pain point: either there aren't enough couriers at peak hours and orders run late, or couriers sit idle.</p>
+    <p>What was done: hourly orders were collected into one database, weather and holidays were added, and a second-level model was built that forecasts the number of orders by hour a week ahead. On top of it is a short summary in Telegram for the manager every evening: tomorrow's forecast by hour and a recommendation on the number of couriers per shift. A language model writes the explanation: "Friday, rain is forecast, we expect 25–35% more orders between 19:00 and 21:00".</p>
+    <p>What didn't work right away: in the first weeks the model missed on days of major football matches, so they were added as a separate factor. The week-ahead accuracy ended up being sufficient to build the shift schedule from the forecast rather than by gut feeling.</p>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Name the decision the forecast should support: purchasing, shifts or money. One, not three.</li>
+        <li>Check whether you have daily sales history for at least a year and whether stockouts and promotions are accounted for.</li>
+        <li>Start with the first level: seasonality and trend in a spreadsheet. Compare with the actual figures for past months. If the accuracy is sufficient for the decision, stop here.</li>
+        <li>If there are many items or the error is unacceptable, move on to second-level models and add external factors.</li>
+        <li>Deliver the forecast to where the decision is made: into the buyer's summary, into the <a href="/blog/dashboard-dlya-sobstvennika-biznesa/">owner's dashboard</a>, into a task for the manager. A forecast in a separate file that nobody opens doesn't work.</li>
+    </ol>
+    <p>At AiKrok we usually start such projects with a two-week version: one database, one forecast for one decision and a summary in Telegram. That's enough to see whether the forecast improves the quality of decisions, and only then make things more complex.</p>

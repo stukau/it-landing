@@ -1,0 +1,56 @@
+<!--title-->
+Online School Automation: Course Sales and Student Support
+<!--description-->
+Automating an online school: course sales from lead to payment and access, an AI assistant for students, and improving course completion rates.
+<!--cta_title-->
+Leads getting lost and students not finishing the course?
+<!--cta_text-->
+We'll build a sales funnel, automatic access provisioning and an AI assistant for your school's students. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>An online school with two or three courses and revenue that already allows it to hire a sales manager usually works like this: leads come from ads into Telegram and to the website, the manager writes to each one by hand, reminds them about payment and issues access, and once the cohort starts, the curators answer the same questions over and over — "where is the lesson", "how do I submit homework", "why hasn't the module opened". Meanwhile the founder sees two numbers that don't add up: how many leads came in and how many people made it to the end of the course. Most of the money is lost between them.</p>
+    <p>An online school has two loops that need to be automated differently: sales (from lead to payment) and learning (from payment to completion and repeat purchase). Let's go through both, focusing on what delivers results on a small budget.</p>
+
+    <h2>The sales loop: where leads get lost</h2>
+    <p>A typical school funnel: ad → subscription to a bot or a free resource → nurturing (emails, a webinar, a lesson series) → offer → payment. There is a leak at every transition, and most of the leaks are not about the quality of the course but about the speed and regularity of touchpoints.</p>
+    <p>What gets automated first:</p>
+    <ul>
+        <li><strong>An instant reply to a lead.</strong> Someone submits a request at 23:40 — a minute later they receive a message with the curriculum, the price and a question about their learning goal. In the morning the manager sees not just a contact but a qualified lead with context.</li>
+        <li><strong>A nurturing series driven by events, not by a schedule.</strong> Opened the lesson — the next message comes a day later. Didn't open it — a reminder in a different format. Watched the webinar to the end — a limited-time discount offer. This is set up with a Telegram bot combined with n8n or Make and a spreadsheet or CRM.</li>
+        <li><strong>Handling incomplete payments.</strong> Clicked "pay" and left — a reminder after an hour, after a day, and a handoff to the manager if the amount is above a threshold.</li>
+        <li><strong>Answers to questions about the course.</strong> An AI agent answers questions about the curriculum, format, schedule, installments and refunds, and passes to the manager those who are hesitating or haggling. The mechanics are detailed in the article <a href="/blog/avtomatizaciya-prodazh-malogo-biznesa/">on sales automation for small business</a>.</li>
+    </ul>
+    <p>The difference between a manual and an automated funnel shows at volume. At 50 leads a month, the manager copes as it is. At 500, automation decides who gets a reply and who is left without attention.</p>
+
+    <h2>Payment and access: removing manual provisioning</h2>
+    <p>The most painful part of a manual process is issuing access. A student pays on Friday evening and waits for the link until Monday. In 2026 this is unacceptable: the payment system sends a payment notification, the automation creates an account on the learning platform, adds the student to the cohort's private Telegram chat and sends instructions. The time from payment to the first lesson is minutes.</p>
+    <p>The same goes for installments and refunds: the payment status changes — access opens or closes according to a rule, the student gets a notification, and the manager gets only the exceptions. If the learning platform has no API, that limitation should be factored in when choosing it: as the school grows, issuing access by hand becomes an expensive bottleneck.</p>
+
+    <h2>The learning loop: a curator who never sleeps</h2>
+    <p>Once the cohort starts, the load shifts to the curators. In schools' experience, a significant share of student questions are organizational and repetitive: how to get access to the recording, where the assignment file is, when the homework will be checked, how to move to the next cohort. These are answered by an AI assistant that works from the school's knowledge base and is connected to the learning platform.</p>
+    <p>What it does:</p>
+    <ul>
+        <li>Answers organizational questions about the school's rules, the cohort schedule and the terms.</li>
+        <li>Points to where a specific piece of material is, based on the course content if it has been loaded into the knowledge base. How this works is covered in the article <a href="/blog/rag-baza-znaniy-kompanii/">RAG in practice</a>.</li>
+        <li>Explains lesson material in its own words if the student didn't understand it, but within the course content, not "from the internet". This is useful for technical and language courses, where the same concepts raise the same questions.</li>
+        <li>Passes to the curator everything that needs human judgment: checking creative work, conflict situations, refund requests, personal circumstances.</li>
+    </ul>
+    <p>A limitation worth stating honestly: the assistant doesn't replace feedback on homework where that feedback is the value of the course. It can check a test or code against formal criteria, but students expect an assessment of an essay, a design or pronunciation from a teacher, and an attempt to substitute a model for it is noticeable and hurts the school's reputation.</p>
+
+    <h2>Completion: automation against drop-off</h2>
+    <p>A low course completion rate is a direct business problem: a student who quit at the third module won't buy the next course and won't recommend the school. Here automation works like an attentive curator for every student:</p>
+    <ol>
+        <li>The platform provides progress data: who opened the lesson, who submitted the assignment, who hasn't logged in for a week.</li>
+        <li>Touchpoints are triggered by rules: hasn't logged in for five days — a warm reminder in Telegram; stuck on one lesson for more than a week — an offer to go through it with a curator; completed a module — a short congratulation and a preview of the next one.</li>
+        <li>Every morning the curator gets a list of at-risk students instead of going through everyone.</li>
+    </ol>
+    <p>The text of these messages can be personalized by a model using the student's name, the course topic and the place where they got stuck, but the template and tone are set by the school. The main thing is for touchpoints to be infrequent and relevant: a student who gets messages every day turns notifications off.</p>
+
+    <h2>What the founder sees</h2>
+    <p>When both loops are automated, end-to-end analytics appears: cost per lead by channel, conversion to payment by source, completion by cohort, share of repeat purchases. These figures can be brought together in a simple Looker Studio dashboard or a daily digest in Telegram. For a school with 3–5 courses, this is enough to make decisions: which channel to scale, which module to reshoot because students drop off there, which cohort to launch next.</p>
+    <p>Which metrics are worth showing the owner and which only distract is covered in the article <a href="/blog/dashboard-dlya-sobstvennika-biznesa/">on a dashboard for the business owner</a>.</p>
+
+    <h2>Where automation won't help</h2>
+    <p>If the course doesn't deliver results, automating completion will only show that sooner. If sales are built on the founder's personal brand and direct communication with the audience, an attempt to replace the founder with a bot's reply in private messages will be noticed and badly received: here it makes sense to automate everything around the conversation, but not the conversation itself. Finally, for a very small school (one course, a cohort every six months, a few dozen students) a full funnel is overkill — a bot that issues access and sends reminders is enough.</p>
+
+    <h2>Where to start</h2>
+    <p>At AiKrok we usually advise schools to start with two measurements: the time from lead to first reply and the share of students who made it to the end of the last cohort. The first number shows the losses in sales, the second in learning. Then, within two weeks, the most obvious gaps are closed: an automatic first reply and access provisioning, payment reminders, an assistant for organizational questions. A month later, compare the same two numbers and decide what to automate next: nurturing, drop-off handling or analytics.</p>

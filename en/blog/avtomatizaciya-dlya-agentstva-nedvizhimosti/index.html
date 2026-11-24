@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation for a Real Estate Agency: Listing Parsing, Deduplication and Matching — AiKrok Blog</title>
+    <meta name="description" content="How a real estate agency can automate collecting listings from Telegram: a model structures posts, deduplication merges duplicates, matching finds fits.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">
+    <meta property="og:title" content="Automation for a Real Estate Agency: Listing Parsing, Deduplication and Matching">
+    <meta property="og:description" content="How a real estate agency can automate collecting listings from Telegram: a model structures posts, deduplication merges duplicates, matching finds fits.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Automation for a Real Estate Agency: Listing Parsing, Deduplication and Matching",
+                "description": "How a real estate agency can automate collecting listings from Telegram: a model structures posts, deduplication merges duplicates, matching finds fits.",
+                "url": "https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/",
+                "datePublished": "2026-09-01",
+                "dateModified": "2026-09-01",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "Automation",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Automation for a Real Estate Agency: Listing Parsing, Deduplication and Matching",
+                        "item": "https://aikrok.com/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Automation</div>
+    <h1>Automation for a Real Estate Agency: Listing Parsing, Deduplication and Matching</h1>
+    <div class="post-meta"><span class="tag">Automation</span>September 1, 2026 · 9 min read</div>
+</div>
+
+<main class="article">
+<p>A real estate agent's working day in Batumi, Almaty or Warsaw starts the same way: open ten Telegram channels and a couple of Facebook groups, scroll through hundreds of posts like "two-room apartment by the sea for rent, call", copy the interesting ones into notes, realize that half of them are the same apartments from other brokers, and only then turn to clients. This ritual takes an hour to an hour and a half, and it is repeated two or three times a day, because good options are gone within a few hours.</p>
+    <p>Yet the process itself requires almost no human expertise. Reading a post, working out what the property is, comparing it with ones already seen, matching it against client requests — a machine does all of this better and faster. The agent's expertise is needed later: at the viewing, in negotiating the price, in checking the documents. Let's look at how automating this routine works, using a task we at AiKrok solved in the Batumi Rent project, and what turned out to be harder than it looked.</p>
+
+    <h2>Where listings come from and why they are awkward</h2>
+    <p>In the markets of the CIS, the Caucasus and part of Europe, a significant share of rental and sale offers lives not on classifieds sites but in messengers: owners' Telegram channels, brokers' chats, neighborhood groups. This is both an advantage (options appear earlier than on websites) and a problem: the posts are unstructured. One message gives the price in dollars, another in lari, a third says "negotiable". The address is exact in some places and "near the park" in others. The photos are attached to one post and the description to the next.</p>
+    <p>A classic parser built on regular expressions breaks on every second post here. That is why the modern setup consists of two layers: collection and understanding.</p>
+
+    <h2>Layer one: collecting posts</h2>
+    <p>Technically, this means subscribing to the relevant channels and groups through the Telegram API and regularly reading new messages. A few practical points that only come to light in operation:</p>
+    <ul>
+        <li>Posts get edited and deleted. If you collect only new ones, within a week the database will contain apartments that have already been rented. You need to track edits and deletions.</li>
+        <li>A single property is often published as an album of several messages: photos in one, text in another. They need to be stitched together.</li>
+        <li>Channels change: some die, new ones appear. The list of sources has to be editable without a programmer.</li>
+    </ul>
+    <p>Collecting from classifieds sites is a separate story. Many of them prohibit automated collection in their terms, and an agency should take this into account: it is safer to work with sources where the owner publishes the offer in an open channel themselves.</p>
+
+    <h2>Layer two: a language model turns a post into a record</h2>
+    <p>This is where AI comes in. Each collected post is sent to a language model with an instruction: extract the deal type (rent or sale), property type, number of rooms, floor area, floor, district or landmark, price with currency, term (daily, monthly, long-term), whether there is furniture and appliances, the contact, and signs of "from the owner" or "from a broker". The output is a structured database record with predefined fields.</p>
+    <p>What the model does well:</p>
+    <ul>
+        <li>Understands mixed text in Russian, Georgian and English within one post.</li>
+        <li>Normalizes prices: "600$", "600 dollars" and "1600 lari" are brought into a single field with a currency.</li>
+        <li>Recognizes implicit signals: "no brokers", "agents, please don't call" — this marks an owner.</li>
+    </ul>
+    <p>What needs oversight:</p>
+    <ul>
+        <li>The model may "fill in" missing data. If the post doesn't mention the floor, the record should be empty, not hold a plausible number. This is solved with a strict response schema and the instruction "not specified — leave empty".</li>
+        <li>The model identifies a district from a landmark ("near McDonald's") with varying accuracy. It is better to store the landmark as is and connect geocoding separately.</li>
+    </ul>
+    <p>Processing one post with a model at the level of GPT-5 or Claude costs fractions of a cent; with thousands of posts a day, that comes to roughly tens of dollars a month. To save money, you can use cheaper models for initial classification ("is this a listing at all, or a discussion?") and a strong model only for extracting the fields.</p>
+
+    <h2>Deduplication: the main technical challenge</h2>
+    <p>The same apartment appears in five channels from three brokers with different photos and a price that differs by 50 dollars. If duplicates aren't merged, the database quickly turns into the same noise the agent was trying to escape.</p>
+    <p>There is no single reliable signal, so a combination is what works:</p>
+    <ol>
+        <li><strong>Exact matches</strong>: the same phone number, identical photos (compared by an image hash that is robust to compression).</li>
+        <li><strong>Near matches</strong>: the rooms, the floor area within a tolerance, the landmark and the price within a few percent all match. Such pairs get a similarity score.</li>
+        <li><strong>Semantic comparison</strong>: descriptions are converted into vectors, and texts that are close in meaning become duplicate candidates. A vector database such as Qdrant is used for this.</li>
+        <li><strong>A model decision</strong> for disputed pairs: it is shown two records and asked whether they are the same property. This costs more, so it is applied only to candidates that have passed the previous filters.</li>
+    </ol>
+    <p>Fully automatic deduplication makes mistakes in both directions: it merges different apartments in the same building and fails to merge one apartment with different photos. A practical compromise is to merge confident matches automatically and show the doubtful ones to the agent with a "is this the same property?" button. After a couple of weeks of such answers, the threshold can be tuned.</p>
+
+    <h2>Matching: from the database to a specific client</h2>
+    <p>Once the database is clean, matching becomes simple. The client's request ("two-room apartment up to 700 dollars, no higher than the fifth floor, furnished, New Boulevard area, from September") is recorded in structured form, and every new listing is checked against the active requests. On a match, the agent gets a notification with the record and a link to the original post, and if desired the client receives the selection directly.</p>
+    <p>The same language model is useful here, but from the other side: it parses the client's request from free text in a messenger into the same fields as the listings. The agent doesn't fill in forms; they simply forward the client's message to the bot.</p>
+    <p>Whether to send selections to clients automatically and directly is a business model question. Some agencies believe the agent's value lies precisely in the selection and leave the final choice to a person. Others give clients access to a filtered feed in a Mini App and charge a commission for supporting the deal. Technically, both options are possible.</p>
+
+    <h2>Tying it in with the CRM and the agents' work</h2>
+    <p>The parser, deduplication and matching are a data source. For it to make money, it has to be built into daily work:</p>
+    <ul>
+        <li>A property record from the database turns into a deal in the CRM (amoCRM, Bitrix24 or a custom one) in a single action.</li>
+        <li>Client requests are kept not in the agent's head but in the system, and matching keeps working even when the agent is on vacation.</li>
+        <li>Property statuses (available, being shown, rented) are synced from the CRM back to the database, so that clients aren't offered options that are already gone.</li>
+    </ul>
+    <p>We wrote about how to get agents to actually keep the CRM up to date rather than keep parallel notes in the article <a href="/en/blog/vnedrenie-crm-pochemu-komanda-ne-polzuetsya/">on CRM adoption</a>. For listings from the agency's website and its own properties, the same database can serve as the source, with AI writing draft descriptions, but that is a different scenario.</p>
+
+    <h2>What can't be automated here</h2>
+    <p>Checking the owner and the documents, inspecting the real condition of the apartment, negotiating the price, assessing "the neighbors and the smells" — all of this stays with the agent. AI can flag suspicious signs (a price noticeably below the market for the district, one phone number on dozens of properties), but the decision is made by a person.</p>
+    <p>There is also a legal side. Owners' personal data from open posts ends up in the agency's database, and data protection requirements apply to storing it, especially in the EU. A sensible practice: store only what is needed for the work, don't share owners' contacts with clients without consent, and have a clear deletion procedure. For more on choosing between cloud and self-hosted models when processing such data, see the article <a href="/en/blog/bezopasnost-dannyh-pri-vnedrenii-ii/">on data security when adopting AI</a>.</p>
+
+    <h2>Timeline and where to start</h2>
+    <p>A working prototype — collection from 10–20 channels, structuring by a model, basic deduplication and notifications about matches with requests — fits into two weeks. Fine-tuning deduplication and connecting the CRM take a few more weeks on real data, because all the quirks of the sources only show up in operation.</p>
+    <p>Start with a simple list: which channels the agents read every day, how much time it takes and how many deals a month came from those channels. If that is dozens of hours a month and a noticeable share of deals, automation will pay off quickly. If the agency works only from its own property database, a parser isn't needed, and the effort is better spent on the CRM and matching.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/avtomatizaciya-restorana-i-dostavki/">Restaurant and Delivery Automation: Order Taking, Kitchen and Feedback</a></li>
+        <li><a href="/en/blog/ii-v-logistike-malogo-biznesa/">AI in Small Business Logistics: Routes, Statuses and Customer Communication</a></li>
+        <li><a href="/en/blog/avtomatizaciya-internet-magazina/">Online Store Automation: Orders, Stock, Notifications and Returns</a></li>
+        <li><a href="/en/blog/avtomatizaciya-zapisi-klientov-v-sfere-uslug/">Online Booking and Reminders for Service Businesses: How to Cut No-Shows</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/ai-agenty/">AI Agent Development and Business Automation</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Are your agents reading channels instead of closing deals?</h2>
+    <p>We'll build source parsing, structuring and matching for your market and connect it to your CRM. MVP in 2 weeks, free consultation.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

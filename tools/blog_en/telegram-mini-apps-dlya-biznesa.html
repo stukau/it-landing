@@ -1,0 +1,72 @@
+<!--title-->
+Telegram Mini Apps: An App for Your Customers Without the App Store or Google Play
+<!--description-->
+Telegram Mini Apps for business: how they differ from a bot, which tasks they suit, where they lose to a native app, plus timelines and costs with an example.
+<!--cta_title-->
+Need an app for your customers but don't want to wait for the App Store?
+<!--cta_text-->
+We'll build a Telegram Mini App for your task: a catalog, booking, loyalty or a feed with filters, integrated with your systems. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>The owner of a coffee shop chain wants an app: a menu, pre-ordering, bonuses, purchase history. The developer quotes a timeline and budget for two platforms, then adds: publishing in the App Store takes from several days to weeks, Apple may reject the build, updates go through review too, and above all, you still have to persuade a guest to download an app for the sake of coffee. In our experience, few download it, and even fewer use it regularly. The project gets shelved.</p>
+    <p>Telegram Mini Apps emerged as an answer to exactly this problem. A Mini App is a full-fledged web application that opens inside Telegram from a button or a link, with no installation and no app stores. In 2026, in markets where Telegram is the main messenger, this is often the fastest way to give customers an "app". Let's look at what it is technically, how it differs from a bot, which tasks it suits and where you still need a native app.</p>
+
+    <h2>What a Mini App is and how it differs from a bot</h2>
+    <p>A regular Telegram bot is a dialogue: messages, buttons, commands. It is convenient for short scenarios but awkward when you need to show a catalog of forty items, a calendar for the month or a map of properties. The user scrolls through messages, gets lost and leaves.</p>
+    <p>A Mini App is a web page that opens on top of the chat within Telegram itself. It has a normal app interface: screens, lists, cards, forms, maps. At the same time, Telegram gives it things a regular website doesn't have:</p>
+    <ul>
+        <li>The user is already authenticated: the Mini App knows their name and ID without registration or passwords.</li>
+        <li>Payment through Telegram's built-in payment providers in a few taps.</li>
+        <li>A link to the bot: the app can be opened from a message, and the bot can send a notification based on actions in the app.</li>
+        <li>The theme, language and interface settings adapt to the user's Telegram client.</li>
+        <li>Access to the contact and location with the user's permission.</li>
+    </ul>
+    <p>Technically, it is ordinary web development plus a thin layer of Telegram integration. Hence the main advantage: one codebase works on iOS, Android and desktop, and an update is simply a website update, with no reviews and no waiting.</p>
+
+    <h2>Which tasks a Mini App suits best</h2>
+    <p>The sign of a task that suits a Mini App: the customer needs to choose, view or configure something, and doing it in a dialogue is inconvenient. Typical scenarios by industry:</p>
+    <ul>
+        <li><strong>Food and retail:</strong> a menu or catalog with a cart, pre-ordering, repeating a past order, a bonus account.</li>
+        <li><strong>Services and booking:</strong> choosing a specialist, service and time in a calendar, rescheduling a visit, visit history. This scenario is covered in detail in the article <a href="/blog/telegram-bot-dlya-zapisi-i-bronirovaniya/">on a Telegram bot for appointments and bookings</a>.</li>
+        <li><strong>Real estate and listings:</strong> a feed with filters, a map, favorites, a subscription to new options matching set parameters.</li>
+        <li><strong>Loyalty:</strong> a customer card, tiers, history of bonuses earned, promotions. More in the article <a href="/blog/telegram-bot-dlya-programmy-loyalnosti/">on a loyalty program in Telegram</a>.</li>
+        <li><strong>Education:</strong> a schedule, materials, progress, tests.</li>
+        <li><strong>Internal tools:</strong> timesheets, vacation requests, checklists for field staff, where it matters to open it "from a phone in a second".</li>
+    </ul>
+    <p>What all these tasks have in common: the user turns to the service regularly but briefly. For this pattern of use, the barrier of installing an app is especially harmful, and a Mini App removes it.</p>
+
+    <h2>What it looks like in a real project</h2>
+    <p>At AiKrok, we built the Batumi Rent Mini App for finding rentals in Batumi. The problem: offers are published across dozens of Telegram channels as chaotic text, and a person spends hours going through them. The solution is made of three parts. A parser collects posts from the channels, a language model turns each one into a structured listing with the price, district, number of rooms and rental term, and duplicates from different channels are merged. The Mini App shows a clean feed with filters and cards, and the bot sends push notifications when an option appears that matches the user's saved filter.</p>
+    <p>Why a Mini App rather than a website or an app: the audience is already on Telegram and reads those very channels; no sign-in is needed; notifications about new options arrive in the same messenger where the person already spends their time. A store app for this task would have been more expensive and slower, with no noticeable gain for the user.</p>
+
+    <h2>What won't work with a Mini App, or will work worse</h2>
+    <p>Honest limitations worth knowing before you choose this format:</p>
+    <ul>
+        <li><strong>The audience is not on Telegram.</strong> In markets where the main messenger is WhatsApp, a Mini App will leave a significant share of customers out. This applies to many countries in Europe and Latin America. A comparison of markets is in the article <a href="/blog/telegram-ili-whatsapp-dlya-biznesa/">Telegram or WhatsApp</a>.</li>
+        <li><strong>Background work and sensors.</strong> The app doesn't run when it is closed: there is no background location tracking, no access to the phone's sensors or file system, and camera capabilities are limited. You can't build an activity tracker or a navigation app this way.</li>
+        <li><strong>Working offline.</strong> A Mini App requires an internet connection. For warehouse scanners or field staff in places with no coverage, you need a native app with local storage.</li>
+        <li><strong>Platform dependence.</strong> Telegram's rules, the available payment providers and the capabilities of Mini Apps themselves change. A business built entirely inside one messenger carries that risk.</li>
+        <li><strong>Complex graphics and performance.</strong> Games and apps with heavy image processing work, but worse than native ones.</li>
+    </ul>
+    <p>If even one of these points is critical, it's worth considering a mobile app — or a combination, where the Mini App serves as a lightweight entry point and the app is offered to the most active customers. How to choose between them is covered in the article <a href="/blog/mobilnoe-prilozhenie-ili-telegram-mini-app/">on choosing between an app and a Mini App</a>.</p>
+
+    <h2>Timelines, cost and what they are made up of</h2>
+    <p>A Mini App is a web application, and its cost is determined by the same factors: the number of screens, integrations, payments, the backend. Benchmarks for a small business:</p>
+    <ul>
+        <li><strong>A simple app</strong> (a catalog or booking, a few screens, one integration with a spreadsheet or CRM) fits into two weeks of development.</li>
+        <li><strong>An app with payments, a customer account and notifications</strong> — roughly three to five weeks.</li>
+        <li><strong>An app with an AI component</strong> (text parsing, recommendations, a built-in assistant) adds time for tuning the model and running costs for requests.</li>
+    </ul>
+    <p>The savings compared with a native app for two platforms are substantial: one codebase instead of two, no fees for developer accounts in the stores, no weeks of waiting for review. The infrastructure is ordinary hosting for a web application plus a database, roughly tens of dollars a month at low volume.</p>
+
+    <h2>What to prepare before development</h2>
+    <p>For two weeks to really produce a working version, the client should have the following by the start:</p>
+    <ol>
+        <li>A list of screens at the level of "what the user sees and what they can do on each". Five to seven screens for a first version is normal; more is a reason to postpone some to the second.</li>
+        <li>A data source: where the menu, schedule and stock levels come from. If it's a Google Sheets spreadsheet, that's fine for a start. If it's an accounting system, you need to know whether it has an API.</li>
+        <li>A decision on payments: whether they are needed in the first version and through which provider.</li>
+        <li>Notification rules: what the bot will write to the user about and how often. Less is better.</li>
+        <li>An understanding of who will make content changes after launch and through which interface.</li>
+    </ol>
+
+    <h2>Summary</h2>
+    <p>A Telegram Mini App is a workable way to give customers an app without stores, installation or double development, provided your audience lives in Telegram and the task doesn't require background work or offline use. For menus, booking, catalogs, loyalty and feeds with filters, it is often the optimal format: a faster launch, cheaper maintenance, a lower barrier for the customer. Where you need sensors, offline work or a WhatsApp audience, it's more honest to plan a native app or a hybrid from the outset.</p>

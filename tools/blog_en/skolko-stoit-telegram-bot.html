@@ -1,0 +1,77 @@
+<!--title-->
+How Much Does a Telegram Bot Cost: From a Simple Menu to a Bot with AI and Payments
+<!--description-->
+Telegram bot cost across four levels, from a menu to AI and payments. What goes into the estimate, post-launch costs, and bot builder vs custom development.
+<!--cta_title-->
+Want to know what a bot for your specific task will cost?
+<!--cta_text-->
+We'll go through the scenarios, determine the level of complexity and give you an estimate broken down by stage. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>The honest answer to the question "how much does a Telegram bot cost" is "from a few hundred to a few tens of thousands of dollars", and that answer is useless. The range is explained by the fact that the word "bot" covers very different things: a menu with opening hours, a booking system with payment and reminders, an AI assistant that answers from the company's documents and creates deals in the CRM.</p>
+    <p>This article is an attempt to break the price down into understandable components. After reading it you'll be able to estimate a budget for your own task, understand what goes into a contractor's estimate and what expenses will appear after launch. All figures are approximate, for the markets of the CIS, Georgia and Eastern Europe in 2026; in Western Europe developer rates are higher, and the estimate grows proportionally.</p>
+
+    <h2>Four levels of complexity and their approximate price</h2>
+    <p>The easiest way to think about bots is in levels. Each next one includes the previous and adds a new class of tasks.</p>
+
+    <h3>Level 1. An informational bot with a menu</h3>
+    <p>Buttons, prepared answers, contacts, links to the website, sometimes a "leave a request" form that forwards the message to a manager's chat. No database and no integrations.</p>
+    <p>Development: 3–7 days. Cost: roughly $200–600 if done by a freelancer or a small team. A bot like this can also be assembled in a bot builder for a monthly subscription, but builders have a ceiling, discussed below.</p>
+
+    <h3>Level 2. A bot with data and scenarios</h3>
+    <p>Booking a service with a choice of time, ordering from a catalog, a personal account with history, reminders, collecting requests into a spreadsheet or CRM. A database appears, along with an admin panel (at least in the form of Google Sheets) and logic for "what to do if the slot is taken".</p>
+    <p>Development: 2–4 weeks. Cost: roughly $800–3,000. Most of the time goes not into Telegram but into the business logic: rules for booking and cancellation, staff schedules, notifications. Typical scenarios are covered in the article <a href="/blog/telegram-bot-dlya-zapisi-i-bronirovaniya/">on a bot for appointments and bookings</a>.</p>
+
+    <h3>Level 3. A bot with integrations and payments</h3>
+    <p>Accepting payment inside Telegram or through external acquiring, synchronization with 1C, amoCRM or Bitrix24, stock levels, the point-of-sale system. A loyalty program with bonus accrual, segmented broadcasts, employee roles.</p>
+    <p>Development: 4–8 weeks. Cost: roughly $2,500–8,000. The price depends heavily on the systems the bot has to get along with: amoCRM has a well-documented API, while a ten-year-old point-of-sale program may have none at all, and a workaround will have to be invented.</p>
+
+    <h3>Level 4. A bot with AI</h3>
+    <p>Understanding free text, answers from the company's knowledge base, lead qualification through dialogue, actions in systems at the customer's request. This also includes a Telegram Mini App with a full interface, if the bot outgrows the chat.</p>
+    <p>Development: from 3 weeks for a first version to several months for a complex one. Cost: roughly $3,000–15,000 and up. In addition, monthly costs for the language model appear. How such a bot works is described in the article <a href="/blog/telegram-bot-s-ii-dlya-podderzhki/">on moving from buttons to understanding the request</a>.</p>
+
+    <h2>What goes into a developer's estimate</h2>
+    <p>When you receive a proposal, it's useful to understand what exactly you're paying for. A typical breakdown for a second- or third-level bot looks like this.</p>
+    <ul>
+        <li><strong>Analysis and scenario design — 10–20%.</strong> Understanding the process, drawing the dialogues, agreeing on exceptions. If this item is priced at zero, the developer will most likely build it "as understood", and the rework will fall on you.</li>
+        <li><strong>Developing the bot's logic — 30–40%.</strong> The scenarios themselves, dialogue states, error handling.</li>
+        <li><strong>Integrations — 20–40%.</strong> The more external systems, the higher the share. Each integration is a separate schedule risk.</li>
+        <li><strong>Admin panel — 10–20%.</strong> Where the owner will change the schedule, prices and texts. Saving here is dangerous: without an admin panel, every change is a request to the developer.</li>
+        <li><strong>Testing, launch, training — 10%.</strong> Running real scenarios, server setup, instructions for employees.</li>
+    </ul>
+    <p>If the estimate has no line for an admin panel or testing, ask — they may simply not be included.</p>
+
+    <h2>Post-launch costs people forget about</h2>
+    <p>Development is a one-off expense. After that the bot lives on, and that life has a price.</p>
+    <p><strong>Server.</strong> For most small-business bots — $5–30 a month. The load is small, and expensive infrastructure isn't needed.</p>
+    <p><strong>Language model</strong>, if there is AI. It depends on the volume of conversations and the chosen model: roughly from $20 to a few hundred dollars a month. Open models (Llama, Qwen, Mistral) on your own server remove the per-request charge but add the cost of a GPU server and administration — this only pays off at high volumes or with strict data requirements.</p>
+    <p><strong>Payment system fees.</strong> When accepting payment through the bot — a percentage of turnover, as with any acquiring. Telegram Stars is a separate story for digital goods, with its own platform commission.</p>
+    <p><strong>Automation platform subscriptions.</strong> If part of the logic is built in Make or Zapier — a monthly fee that grows with the volume of operations. Self-hosted n8n doesn't have this fee, but it has a server. A comparison is in the article <a href="/blog/n8n-make-zapier-sravnenie/">n8n, Make or Zapier</a>.</p>
+    <p><strong>Support and improvements.</strong> The most underestimated item. The messenger's API changes, new requirements appear, integrations break after a CRM update. A benchmark is 10–20% of the development cost per year, or hourly payment for actual work. A bot without support lives, on average, until the first serious change in an external system.</p>
+
+    <h2>Bot builder or custom development</h2>
+    <p>Bot builders cost $15–100 a month and let you assemble the first or second level without a programmer. This is a sensible choice if:</p>
+    <ul>
+        <li>the task fits into standard blocks (menus, forms, simple broadcasts);</li>
+        <li>you don't need integration with your accounting system, or it is on the list of ready-made ones;</li>
+        <li>you accept that the data is stored with the builder and moving later will be painful.</li>
+    </ul>
+    <p>Custom development is justified when non-standard logic appears, along with your own database, integrations with 1C or a point-of-sale system, AI with a knowledge base, or data storage requirements. The tipping point usually comes when a builder subscription with the limits you need starts to cost as much as supporting your own bot, while flexibility is still lacking. We covered this line in detail in the article <a href="/blog/no-code-avtomatizaciya-granicy/">on the limits of no-code automation</a>.</p>
+
+    <h2>What raises the price more than it seems</h2>
+    <p>A few requirements, each of which looks like a small thing but shifts the estimate noticeably.</p>
+    <p><strong>"Let's have it in Russian, English and Georgian."</strong> Multilingual support is not translating texts but a separate layer of logic and three times as much testing. Roughly +15–30% to the cost.</p>
+    <p><strong>"We need integration with our old program."</strong> If the system has no API, the developer will work through file exports or direct database access. That is slower and more fragile. Sometimes it's cheaper to switch to a modern accounting system first.</p>
+    <p><strong>"The bot should message all the customers in our database first."</strong> In Telegram a bot can't message someone who hasn't pressed "Start" themselves. Bringing an audience into the bot is a separate task and a separate marketing budget.</p>
+    <p><strong>"We want to be able to change everything without you."</strong> A reasonable wish, but a full admin panel with roles, a scenario editor and statistics is a mini-product inside the project. You need to agree on what exactly should be changeable without a developer and what shouldn't.</p>
+    <p><strong>"Make it like our competitor's, only better."</strong> Without a description of the scenarios an estimate is impossible, and the contractor either prices the risk in or bills for extras later. A short brief saves money; how to write one is covered in the article <a href="/blog/kak-napisat-tz-na-ai-agenta/">on a brief for an AI agent</a>, and the principles are the same.</p>
+
+    <h2>How to calculate payback</h2>
+    <p>A bot is justified not when it is cheap but when it returns more than it costs. Three ways to calculate it.</p>
+    <p><strong>Time saved.</strong> A salon administrator spends two hours a day on bookings and reminders by phone. The bot takes over most of that. At an hourly cost of $5–10 this is $200–400 a month — a second-level bot pays for itself in a few months.</p>
+    <p><strong>Reduced losses.</strong> Customer no-shows, forgotten requests, missed overnight inquiries. If reminders cut no-shows by at least a few percent, and every no-show is an empty hour for a specialist, the figure is easy to calculate.</p>
+    <p><strong>Additional sales.</strong> Loyalty program broadcasts, reactivating lapsed customers, upsells in the chat. Harder to measure, but with a bot it is measured directly: how many came after the message.</p>
+    <p>If none of the three ways gives a clear figure, perhaps a bot isn't needed for this task, and that is a perfectly normal conclusion.</p>
+
+    <h2>Summary: how to approach the budget</h2>
+    <p>Determine the level of your task and don't order the fourth if the pain is solved by the second. Ask for an estimate broken down by stage and clarify what support includes. Budget for monthly expenses: server, model, subscriptions, improvements. Calculate payback in hours and losses, not in abstract "digitalization".</p>
+    <p>At AiKrok we usually suggest starting with a first version in two weeks that covers the main scenario, and adding the rest as the bot shows results. This is cheaper than designing a large product all at once, and it shows sooner whether further investment is worthwhile. You can estimate a budget for your task at a <a href="/#contact">free consultation</a>.</p>

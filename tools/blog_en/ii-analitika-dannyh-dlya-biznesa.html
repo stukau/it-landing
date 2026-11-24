@@ -1,0 +1,84 @@
+<!--title-->
+AI Analytics: How to Ask Your Data Questions in Plain Language
+<!--description-->
+How AI analytics turns plain-language questions into data queries, where the approach works reliably, where it struggles and what to prepare before adopting it.
+<!--cta_title-->
+Want to ask your data questions instead of waiting for an export?
+<!--cta_text-->
+We will work out where your data lives and build an AI analyst in Telegram on top of your database. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A typical scene at a small company: the owner wants to understand why revenue dipped in September and writes to the accountant or the marketer. The answer arrives a day later as a forty-row export that still has to be deciphered. The question is simple; the path to the answer is not. AI analytics promises to remove that path: you write "show sales by location for September versus August" and get a table with an explanation. In this article we look at how it works, where the approach really delivers, and where it creates false confidence.</p>
+
+    <h2>What is behind the words "AI analytics"</h2>
+    <p>In practice the term most often means a combination of three things: your data (CRM, accounting system, POS, ad accounts), a language model, and a layer that translates a human question into a data query. The model does not "know" your numbers. It can write an SQL query or a formula, run it through a tool and explain the result in words.</p>
+    <p>This is an important clarification. If you upload a ten-thousand-row table into a chat and ask it to "calculate the average order value", the model may get the arithmetic wrong or lose some of the rows. But if you give it access to the database and a tool for running queries, the database does the calculation, and the model is responsible only for wording the query and interpreting the result. The second option is an order of magnitude more reliable, and it is the one meant from here on.</p>
+
+    <h2>How a single question travels: from phrase to answer</h2>
+    <p>To understand the limitations, it helps to see the whole chain.</p>
+    <ol>
+        <li><strong>The question.</strong> A manager writes in Telegram or a web interface: "Which products were returned most often last quarter, and for what total amount?"</li>
+        <li><strong>Understanding the schema.</strong> The model receives a description of the tables: what a "return" is in your database, which field holds the date, how orders and products are linked. Without this description it will guess.</li>
+        <li><strong>Query generation.</strong> The model writes SQL with a date filter and grouping by product.</li>
+        <li><strong>Validation and execution.</strong> The query passes through restrictions (read-only, a row limit, access only to permitted tables) and is executed in the database.</li>
+        <li><strong>The answer.</strong> The model receives the result and presents it: a table, a short conclusion and, if needed, a chart.</li>
+    </ol>
+    <p>The weakest link is the second step. If in your company a "client" in the CRM and a "counterparty" in 1C are different entities, and "revenue" means shipment for sales but payment for finance, the model will pick one of the interpretations and will not warn you. That is why you need a glossary of terms before implementation, often called a semantic layer: what each metric means and how it is calculated.</p>
+
+    <h2>Which questions AI answers well</h2>
+    <p>Experience shows that the approach is most useful for three types of questions.</p>
+    <h3>Facts and breakdowns</h3>
+    <p>"How many inquiries came from the website this week", "which location sold the most coffee at the weekend", "how many clients have not placed an order in more than 90 days". These are queries with unambiguous logic, and the model handles them consistently.</p>
+    <h3>Comparisons</h3>
+    <p>"Compare the average order value in May and June by category" — here the model saves the time that two exports and a pivot table would have taken. The main thing is that the periods and categories are defined in the schema.</p>
+    <h3>Follow-up chains</h3>
+    <p>The most valuable part: you can ask questions one after another. "Revenue fell by 12%. — In which categories? — Who are the main clients in this category? — When did they last buy?" An analyst would spend half a day on such a chain; the system answers in minutes.</p>
+
+    <h2>Where the approach struggles</h2>
+    <p>An honest list of limitations matters more than a list of capabilities.</p>
+    <ul>
+        <li><strong>"Why" questions.</strong> The model will show that sales fell in one region, but it does not know the reason (a sales rep left, a competitor cut prices) — that data simply is not in the database. A good system will say so directly; a bad one will invent a plausible explanation.</li>
+        <li><strong>Dirty data.</strong> Duplicate clients, empty fields, different spellings of the same city. AI does not clean data; it honestly calculates from what is there. If half the deals in the CRM have no source, a report by source will be meaningless.</li>
+        <li><strong>Complex business logic.</strong> A margin calculation that accounts for supplier bonuses, returns and logistics is better built once into a data mart than entrusted to the model to reproduce every time.</li>
+        <li><strong>Ambiguous wording.</strong> "Show the best clients" — best by revenue, by frequency, by margin? Mature systems ask a clarifying question instead of choosing silently.</li>
+    </ul>
+    <p>A separate topic is the tendency of models to give a confident answer where there is none. How to deal with this at the architecture level is covered in our article on <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">AI hallucinations</a>. For analytics the basic rule is simple: an answer always comes with the query that produced it, and it can be checked.</p>
+
+    <h2>What must be ready before implementation</h2>
+    <p>AI analytics does not replace putting your data in order; it makes it mandatory. The minimum set:</p>
+    <ul>
+        <li>The data is gathered in one place: a database or at least a set of linked tables. If advertising currently lives in the ad account, sales in the CRM and stock in 1C, it is worth first <a href="/blog/sbor-dannyh-iz-raznyh-istochnikov/">bringing them together into a single picture</a>.</li>
+        <li>10–20 key metrics are described: name, formula, source. This is the glossary for the model.</li>
+        <li>Permissions are defined: who can ask which questions. A sales rep does not need access to salaries.</li>
+        <li>The confidentiality question is settled: whether the data goes to a cloud model or a model on your own server is used (Qwen, Llama, Mistral).</li>
+    </ul>
+
+    <h2>Implementation options: from ready-made tools to your own agent</h2>
+    <p>The choice depends on who will be asking the questions and from where.</p>
+    <p><strong>Ready-made BI tools with AI features.</strong> Metabase, Power BI and Looker Studio let you ask questions in natural language in one form or another. The upside is that it is fast and needs no development. The downside is limited glossary customisation, handling of Russian that is not always good, and being tied to the tool's own interface.</p>
+    <p><strong>An agent in Telegram on top of your database.</strong> The manager writes a question to the bot and gets an answer with a table and a chart. Under the hood there is a model (Claude, GPT-5 or Gemini), a set of tools for querying the database and a description of the schema. Such an agent is built in one to two weeks if the data is already in order. At AiKrok we usually start with exactly this format: there is no need to train the team on a new interface, since everyone is in the messenger anyway.</p>
+    <p><strong>A hybrid with a morning summary.</strong> A fixed report arrives by itself every morning, and questions about it can be asked right there in the chat. There is a separate article about the summary format itself: <a href="/blog/avtomatizaciya-otchetov-v-telegram/">a daily summary in Telegram</a>. This option sticks best with owners who do not want to formulate questions every day but want to be able to dig deeper.</p>
+
+    <h2>Example: a distributor with three warehouses</h2>
+    <p>The company sells building materials, with accounting in 1C, sales in amoCRM and three warehouses in different cities. Once a week the director asked a manager to pull together stock and sales; it took about half a working day, and the numbers regularly diverged from accounting because of different shipment and payment dates.</p>
+    <p>What was done: exports from 1C and the CRM are loaded into PostgreSQL on a schedule, with a glossary of fifteen metrics described on top and a clear separation between "shipped" and "paid". The director asks questions in Telegram. A typical exchange: "Which items in the Kutaisi warehouse have had no movement for more than 60 days? — How much is that in money at purchase price? — Which clients bought them over the past year?" Three questions, five minutes, a ready call list.</p>
+    <p>What did not work straight away: for the first two weeks the model confused units of measurement (packs and pieces) until a conversion rule was added to the glossary. This is a normal stage, and it should be built into the plan.</p>
+
+    <h2>How to measure whether the system is useful</h2>
+    <p>Benchmarks worth tracking from day one:</p>
+    <ul>
+        <li>The share of questions that get a correct answer on the first try. In the first month this may be 60–70%; after the glossary is refined, noticeably higher.</li>
+        <li>How many questions are asked per week and by whom. If only the owner is asking, the system has not taken root in the team.</li>
+        <li>The time from question to decision. Not to the answer, but to the action: dead stock written off, a client called, purchasing adjusted.</li>
+    </ul>
+    <p>If the answers are used to make decisions, it makes sense to check a few random answers against a manual calculation once a month. It is cheap and gives peace of mind.</p>
+
+    <h2>Where to start</h2>
+    <p>You do not need to start with a big project. A sensible sequence looks like this:</p>
+    <ol>
+        <li>Write down the ten questions you ask your team most often. That will be your first test set.</li>
+        <li>Check which systems hold the data needed to answer them and whether it can be exported automatically.</li>
+        <li>Define the terms: what revenue, a client, an inquiry and a return mean in your company.</li>
+        <li>Build a minimal version: one database, one glossary, one channel (Telegram, for example). Run the ten questions and see where the system gets things wrong.</li>
+        <li>Expand the glossary and the sources as new questions come up.</li>
+    </ol>
+    <p>If the set of questions and systems is clear but it is not clear how to connect it all technically, we are ready to go through your situation in a <a href="/#contact">free consultation</a>. Most often a first working version can be launched in two weeks — provided the data is already gathered somewhere rather than scattered across employees' personal spreadsheets.</p>

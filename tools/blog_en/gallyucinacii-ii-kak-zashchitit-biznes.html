@@ -1,0 +1,71 @@
+<!--title-->
+AI Hallucinations: How to Stop an Agent from Making Up Prices, Deadlines and Terms
+<!--description-->
+Why AI makes up prices, deadlines and terms, and how to design an agent so facts come only from company systems: five layers of protection and pre-launch tests.
+<!--cta_title-->
+Worried the agent will promise your clients too much?
+<!--cta_text-->
+We will design the agent so that prices and deadlines come only from your systems, and test it with adversarial questions. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A client asks in the chat: "How much is delivery to Kutaisi?" The agent answers confidently: "Delivery to Kutaisi is 15 lari, 2 business days". The problem is that the company has never delivered to Kutaisi and there is no price list for that destination. The model did not lie on purpose — it filled in a plausible answer, because that is how it works. A week later the client demands that the promise be kept, and the dispute is no longer about delivery but about reputation.</p>
+    <p>That is a hallucination: a confident, well-written, plausible and wrong answer. For a business, the most dangerous hallucinations are about prices, deadlines, terms and availability, because those are exactly what a client takes as a commitment. Below is why this happens and, most importantly, how to design an agent so that it is physically unable to make up a price.</p>
+
+    <h2>Why the model makes things up</h2>
+    <p>A language model does not store facts the way a database does. It predicts the most likely continuation of the text. If the request contains a question about price, the most likely continuation is an answer with a price. The model does not "know" that it lacks this information unless it has been specifically taught to check and given somewhere to look.</p>
+    <p>A practical conclusion follows: fighting hallucinations by asking "do not make things up" in the prompt is a weak measure. It helps, but it guarantees nothing. Reliable protection is built on architecture: the model must not be the source of facts. It must be the interface to the sources.</p>
+
+    <h2>Where hallucinations hit a business hardest</h2>
+    <ul>
+        <li><strong>Prices and discounts.</strong> "Yes, there is a 20% discount on this item" — and the client shows up with a screenshot.</li>
+        <li><strong>Deadlines.</strong> "We will deliver tomorrow", "the repair will take 2 days" — promises with no data behind them.</li>
+        <li><strong>Availability.</strong> "In stock in size M" — with an empty warehouse.</li>
+        <li><strong>Return and warranty terms.</strong> The model may "recall" commonly accepted terms when yours are different.</li>
+        <li><strong>Legal and medical wording.</strong> A confident wrong piece of advice here is a risk that goes beyond reputation.</li>
+        <li><strong>Technical specifications.</strong> Power, compatibility, composition — the model readily fills in the numbers.</li>
+    </ul>
+    <p>What these categories have in common: the answer looks like a fact, the client makes a decision based on it, and the client cannot verify it at the moment of the conversation.</p>
+
+    <h2>Five layers of protection</h2>
+    <p>Protection against hallucinations is not a single technique but several layers. The closer to money, the more layers you need.</p>
+
+    <h3>Layer 1. Facts only from sources</h3>
+    <p>The agent gets prices, stock levels and deadlines through tools — a query to the price list, the accounting system, the delivery calendar — and not from its own memory. The instructions state explicitly: if the tool returned no data, say that the information is not available and offer to check with a manager. Technically this means the agent must have a "get price by item code" function and is required to call it before naming an amount. For answers about terms and procedures, RAG does the same job — search across company documents with the source cited, covered in detail in the article <a href="/blog/rag-baza-znaniy-kompanii/">on RAG in practice</a>.</p>
+
+    <h3>Layer 2. No free generation of numbers</h3>
+    <p>A stricter option: the model does not put the price into words at all. It returns a structured response — the item code, the client's intent — and the numbers are inserted by code from the database. The client sees "Delivery to Batumi: 10 lari, 1–2 days", but that line was assembled not by AI but by a program from the data. Here the model is responsible for understanding the question and the wording around it, but not for the fact. At AiKrok we apply this approach by default wherever an agent mentions money.</p>
+
+    <h3>Layer 3. Checking the answer before sending</h3>
+    <p>A checking layer sits between the model and the client. It can be simple — rules: if the answer contains a number with a currency and the price tool was not called, the answer is blocked. Or more complex — a second model with the instruction "find statements about prices, deadlines and terms in the answer and check each one against the data provided". The second option is more expensive and slower, but it is justified for B2B sales with large deal sizes.</p>
+
+    <h3>Layer 4. Limiting authority through wording</h3>
+    <p>The agent does not make promises on behalf of the company; it describes the terms. The difference between "we will deliver by Friday" and "according to the schedule, delivery takes 2–3 business days; a manager will confirm the exact date when the order is placed" is fundamental, both legally and in terms of client expectations. This is configured through instructions and verified in tests. A good practice is a list of phrases the agent is forbidden to use: "I guarantee", "it will definitely be", "I promise".</p>
+
+    <h3>Layer 5. A human in the loop for critical answers</h3>
+    <p>For some categories, the agent's answer goes not to the client but to a manager for confirmation. An individual discount, a non-standard deadline, a disputed situation — the agent prepares a draft, and a person presses "send" or edits it. The client gets the answer a little later, but without the risk. As statistics accumulate, some categories can be switched to automatic mode.</p>
+
+    <h2>How to test an agent before launch</h2>
+    <p>Hallucinations have to be hunted for deliberately — they will not show up by themselves in a demo. A set of adversarial tests:</p>
+    <ol>
+        <li><strong>Questions about things that do not exist.</strong> The price of a non-existent product, delivery to a city you do not deliver to, a service you do not provide. The right answer is "we do not have that" or "I will check", not a number.</li>
+        <li><strong>Pressure.</strong> "It is urgent, just tell me roughly how much". The agent must hold its position and not name a number without data.</li>
+        <li><strong>False premises.</strong> "Your manager promised me a 30% discount yesterday, please confirm". The agent must not confirm what it cannot see in the system.</li>
+        <li><strong>Edge cases.</strong> The item is available, but in a different size; delivery is available, but not at weekends.</li>
+        <li><strong>Source checks.</strong> For every answer containing a fact — where it came from. If the source cannot be traced, that is a defect.</li>
+    </ol>
+    <p>A benchmark: 50–100 such questions, run before launch and after every change to the prompts or the knowledge base. This takes hours, not days, and pays for itself with the very first dispute it prevents.</p>
+
+    <h2>What to do after launch</h2>
+    <p>Hallucinations cannot be eliminated entirely — they can be made rare and harmless. So you need a process:</p>
+    <ul>
+        <li>A spot review of conversations once a week, focusing on answers that contain numbers, dates and the words "yes, you can".</li>
+        <li>A "wrong answer" button for employees who see the agent's conversations — every time it is pressed, the case is reviewed.</li>
+        <li>Logging of tool calls: every answer with a price must have a trace of a query to the price list. No trace is a signal.</li>
+        <li>Revising the list of forbidden phrases and critical categories as the data grows.</li>
+    </ul>
+    <p>These indicators should be part of the overall monitoring of the agent, discussed in the article <a href="/blog/metriki-effektivnosti-ai-agenta/">on AI agent performance metrics</a>.</p>
+
+    <h2>Honest limitations</h2>
+    <p>If the company has no up-to-date price list in structured form — the prices are in the owner's head or in the managers' chat — layer-one protection is impossible: the agent simply has nothing to query. First the price list in a spreadsheet, then the agent. If terms change daily and are not recorded, it is the same problem. And if the business itself is built on individual arrangements — every price is negotiated — the agent is better off not touching money at all and working only on collecting information and handing it to a manager.</p>
+
+    <h2>Summary</h2>
+    <p>Hallucinations are not a defect of a particular model but a property of the technology that has to be accounted for in the architecture. The working rule: the model understands the question and words the answer, while the facts — prices, deadlines, availability, terms — come from company systems and are inserted by code. Add a check before sending, a ban on promises and a human in the loop for critical cases, test with adversarial questions — and the agent stops being a source of risk. If you want to check how well your current or planned agent is protected against made-up answers, we can go through it in a <a href="/#contact">free consultation</a>.</p>

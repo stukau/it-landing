@@ -1,0 +1,76 @@
+<!--title-->
+AI in a Law Firm: Client Intake, Documents and Deadline Tracking
+<!--description-->
+What AI does reliably in a law firm: qualifying inquiries without legal advice, drafts under a lawyer's control, deadline tracking and data protection.
+<!--cta_title-->
+Are your lawyers spending their time on work that isn't legal work?
+<!--cta_text-->
+We will review your firm's processes and propose a solution: inquiry qualification, deadline tracking, document drafts with confidentiality in mind. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A law firm of six to ten people lives in a constant contradiction. Clients pay for a lawyer's expertise, yet a large part of the lawyer's day goes to things that require none: answering a call asking "do you handle divorces?", listening to a half-hour story that turns out to be outside the firm's practice areas, gathering documents for a standard contract, checking whether the deadline for filing an appeal has been missed in one of forty cases. The partners know the hours are going to the wrong place, but hiring an assistant for every lawyer doesn't pay.</p>
+    <p>AI in legal practice is a topic surrounded by a lot of caution, and the caution is justified. Let's look at it soberly: which tasks language models take on reliably in 2026, where they work only under a lawyer's control, and where they shouldn't be used at all.</p>
+
+    <h2>The principle everything starts from</h2>
+    <p>AI in a law firm does not give legal opinions to clients. It prepares material for the lawyer and takes over communication that contains no legal assessment. This is not caution for caution's sake: a language model can confidently cite a non-existent provision or an outdated version, and the firm bears responsibility for the advice.</p>
+    <p>From this principle follows a design in which any automation is split into two parts: what goes to the client directly (schedule, status, list of documents, standard organizational answers) and what goes through a lawyer (analysis, draft documents, assessment of prospects). How to constrain the model so that it doesn't cross this line is covered in detail in the article <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">on AI hallucinations</a>.</p>
+
+    <h2>Client intake: qualification, not advice</h2>
+    <p>An incoming inquiry to a law firm is the most expensive place for manual work. A lawyer is pulled away from a case to find out that the caller needs a consultation on an employment dispute, which the firm doesn't handle. An AI agent on the website, in Telegram or WhatsApp does this work around the clock.</p>
+    <p>What it does:</p>
+    <ul>
+        <li>Establishes the substance of the inquiry in conversation: the area of law, the stage (nothing has happened yet, a dispute is under way, there is already a court decision), pressing deadlines, the region.</li>
+        <li>Matches it against the firm's profile. If the firm doesn't practice in that area, it politely says so and, where possible, provides contacts of colleagues.</li>
+        <li>Collects the initial documents: asks the client to send the contract, the claim letter, the decision, and records them in the case card.</li>
+        <li>Prepares a summary for the lawyer: who, with what, what is attached, how urgent it is, a preliminary complexity category.</li>
+        <li>Offers a consultation time from the calendar of a lawyer with the right specialization.</li>
+    </ul>
+    <p>What it doesn't do: it doesn't assess the prospects of the case, doesn't quote the cost of handling it (except for fixed-price services from the price list), and doesn't advise on what to do. To the question "do I have a chance?" the agent replies that the lawyer will determine that at the consultation, and offers to book one.</p>
+    <p>The effect for a firm of six lawyers with 80–120 inquiries a month: initial screening stops taking the lawyers' time, and they come to the consultation with a ready summary and documents. The share of off-target meetings drops noticeably. The general mechanics of qualifying inbound inquiries are described in the article <a href="/blog/ai-agent-dlya-obrabotki-zayavok/">on an AI agent for processing leads</a>.</p>
+
+    <h2>Documents: three levels of trust</h2>
+    <p>Working with documents is where language models are strong, but it is exactly here that discipline is needed. It helps to divide the tasks by level of trust.</p>
+    <h3>Level 1. Can be trusted after a quick check</h3>
+    <ul>
+        <li>Extracting data from the client's documents: parties, dates, amounts, company details. The model reads a scan or photo and fills in the case card.</li>
+        <li>Summarizing long documents: what a 40-page contract is about, which sections deal with liability and termination.</li>
+        <li>Comparing two versions: what changed between the counterparty's version and yours.</li>
+    </ul>
+    <h3>Level 2. A draft that the lawyer reads in full</h3>
+    <ul>
+        <li>A draft of a standard document from the firm's template: a lease agreement, a claim letter, a power of attorney. The model inserts the data from the case card and adapts the wording to the circumstances. The lawyer edits and signs.</li>
+        <li>A risk checklist for the counterparty's contract based on the firm's internal rules: is there a unilateral price change, is the penalty excessive, where is the jurisdiction.</li>
+        <li>Searching the internal knowledge base: how the firm worded a similar term in past cases. This is a task for a RAG approach over your own documents, covered in the article <a href="/blog/rag-baza-znaniy-kompanii/">RAG in practice</a>.</li>
+    </ul>
+    <h3>Level 3. Only as a source of ideas</h3>
+    <ul>
+        <li>Legal analysis and case law research. The model can suggest a direction, but the lawyer checks every reference to a provision or a case against the primary source. A scenario in which references from the model's answer end up in a document unchecked must be ruled out by the process, not by goodwill.</li>
+    </ul>
+    <p>A good practice is to mark in the system which document was generated and who checked it. After a few months this shows where the model makes mistakes more often and lets you refine the templates and instructions.</p>
+
+    <h2>Deadline tracking: the most underestimated task</h2>
+    <p>A missed procedural deadline is the firm's direct liability. Yet in most small practices deadlines are kept in the lawyers' personal calendars or, at best, in a shared spreadsheet that someone has to remember to update.</p>
+    <p>Automation here is built like this:</p>
+    <ol>
+        <li>Every event in a case (a ruling received, a claim letter sent, a decision served) is recorded in the system. The data can also come from documents recognized by the model: the date on an incoming ruling automatically becomes the starting point.</li>
+        <li>The rules for calculating deadlines for standard events are built in beforehand: the deadline for responding to a claim letter, for an appeal, for filing objections. This is ordinary code, not a model. The model must not calculate deadlines.</li>
+        <li>Reminders go to the responsible lawyer and the partner in Telegram or by email a set number of days in advance, with escalation if the task isn't marked as done.</li>
+        <li>A weekly summary for the partner: which deadlines fall this week, which cases have had no movement for longer than a set period.</li>
+    </ol>
+    <p>The role of AI here is a supporting one — extracting dates and events from documents and emails. The deadline logic itself must be deterministic and verifiable. The lawyer must be able to see where a date came from and to correct it manually.</p>
+
+    <h2>Confidentiality: a condition, not an option</h2>
+    <p>A law firm's client documents are one of the most sensitive categories of data. So three decisions matter during implementation:</p>
+    <ul>
+        <li><strong>Where the model runs.</strong> Cloud APIs from major providers with a data processing agreement and training on requests switched off suit most small firms. Practices with special requirements (government contracts, large corporate clients) consider deploying open models on their own server — Llama, Qwen, Mistral. The quality is lower, the control is higher.</li>
+        <li><strong>What goes into the model.</strong> For many tasks, personal data can be masked before sending: names and identifying details are replaced with placeholders and put back after the response.</li>
+        <li><strong>Who sees the logs.</strong> The history of requests to the model is confidential material too. Access to it must be restricted in the same way as access to case files.</li>
+    </ul>
+    <p>These questions should be settled before the first client document ends up in the system, and recorded in the firm's internal policy.</p>
+
+    <h2>What it looks like in practice</h2>
+    <p>Imagine a firm of eight lawyers that handles corporate disputes and transaction support. After implementation, a week looks like this. Inquiries come in through a Telegram bot and a form on the website; the agent qualifies them and books consultations; in the morning the partner sees a list of new inquiries with summaries. A lawyer who receives a contract from a counterparty uploads it to the system and a few minutes later gets a comparison with the firm's standard form and a list of discrepancies. A paralegal assembles a draft claim letter from a template and edits it instead of writing from scratch. On Friday the partner receives a summary of deadlines for the following week.</p>
+    <p>At AiKrok we start such projects with inquiry qualification and deadline tracking — these two blocks deliver a fast and measurable effect — and add document work as a second stage, once templates and review rules are in place.</p>
+
+    <h2>Where to start</h2>
+    <p>Choose the one of the three tasks where the pain is felt most: time lost on off-target inquiries, routine work with standard documents, or the fear of missing a deadline. Count how many lawyer hours go to that task in a month and multiply by the rate. Usually just one of the tasks pays back the implementation within a few months.</p>
+    <p>In parallel, formulate the rules: which questions the agent doesn't discuss with clients, which documents never go out without review, which data must not be sent to the cloud. These rules are the main part of the technical specification, and the clearer they are, the more calmly the whole firm will work.</p>

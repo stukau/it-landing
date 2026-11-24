@@ -1,0 +1,92 @@
+<!--title-->
+AI for Small Business Marketing: Content, Ads and Analytics Without an Agency
+<!--description-->
+How a small business can cover content, ads, analytics and customer communication with AI and no agency: what to delegate to models and where they fall short.
+<!--cta_title-->
+Marketing depends on one person and there is never time for the routine work?
+<!--cta_text-->
+We will build a pipeline on n8n with a model and Telegram: reviews, content, ad summaries, all with human approval. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>In a small company, marketing usually depends on one person, and sometimes on the owner working in the evenings. An agency costs as much as another employee, and the results of its work are hard to verify. Hence the interest in AI: can you cover content, advertising and analytics in-house if models take over the routine? The answer is yes, but with caveats, and the caveats matter more than the promises. Let's go area by area through what AI does well, where it falls short, and how to turn it into a working system without an agency.</p>
+
+    <h2>An honest map: what AI can do and what it can't yet</h2>
+    <p>Before splitting marketing into areas, it is worth fixing the overall picture.</p>
+    <p>AI handles volume and variation well: twenty headline options, adapting one text for five channels, sorting a thousand reviews by topic, a weekly summary of ad campaigns. These are tasks that used to consume time, not talent.</p>
+    <p>AI handles poorly anything that requires knowledge of your customer that isn't in the data: positioning, choosing the audience, deciding what is worth promoting at all. It also isn't accountable for the result — if a campaign fails, you are the one who will have to figure out why.</p>
+    <p>The practical conclusion: AI replaces the executor, not the strategist. The strategist remains a person inside the company, and time has to be set aside for that role.</p>
+
+    <h2>Content: from plan to publication</h2>
+    <h3>What to delegate to the model</h3>
+    <ul>
+        <li>A content plan for the month based on given topics and formats.</li>
+        <li>Drafts of posts, articles and emails based on your key points and facts.</li>
+        <li>Adapting one piece for different channels: a long article for the website, three posts for social media, a short email for the newsletter.</li>
+        <li>Editing and proofreading, simplifying the wording.</li>
+        <li>Product descriptions from specifications — by the hundreds, if needed.</li>
+    </ul>
+    <h3>How to avoid faceless text</h3>
+    <p>The main problem with AI content is sameness. By default, models write smoothly and about nothing. What helps in practice:</p>
+    <ul>
+        <li><strong>A company voice document.</strong> Two pages: how you speak, which words you don't use, examples of good and bad texts. It is passed to the model with every request.</li>
+        <li><strong>Facts instead of talking points.</strong> The model gets not "write about our advantages" but specific data: timelines, prices, real examples, customers' words. Facts make a good text, and the model doesn't have them — you do.</li>
+        <li><strong>A human at the end of the chain.</strong> Before publication, every text is read by a person who knows the business. Not for style, but for truth: the model can credit you with a service you don't offer.</li>
+    </ul>
+    <p>Emails and commercial proposals are a separate topic; personalization for a specific recipient works especially well there. This is covered in the article <a href="/blog/ii-dlya-kommercheskih-predlozheniy-i-pisem/">on AI for commercial proposals</a>.</p>
+
+    <h2>Advertising: ads, audiences and analyzing results</h2>
+    <p>Ad platforms have built AI into audience and bid selection themselves, and a small business rarely needs anything on top of that. Where external models really help:</p>
+    <p><strong>Ad variations.</strong> A test needs dozens of headlines and texts for different customer pain points. The model generates them in minutes from your description of the product and the audience; a person selects and edits. This speeds up testing several times over.</p>
+    <p><strong>Landing pages for segments.</strong> If cafe owners and salon owners both come for the same service, they need different texts. The model adapts the page to the segment while keeping the facts.</p>
+    <p><strong>Analyzing results.</strong> Given a week's export from the ad account with dozens of campaigns and hundreds of ads, the model finds what worked and what didn't, and puts it into words: "ads that mention timelines bring cheaper leads than ads that mention price." For this, the data has to be collected in one place rather than scattered across ad accounts and spreadsheets.</p>
+    <p>Where AI won't help: if the audience doesn't need the product or the price is out of line with the market, the best texts won't save the campaign. The model can make the diagnosis "the problem isn't the ads," but it can't provide the cure.</p>
+
+    <h2>Analytics: questions instead of reports</h2>
+    <p>Marketing reports in a small business often aren't produced at all — there is nobody to do it and no time. AI changes the format: instead of a report that someone has to put together, there is a summary that arrives by itself and the ability to ask a question.</p>
+    <p>A working setup: ad spend, leads from the CRM and sales go into one database; every morning the owner gets a short summary in Telegram (how much was spent, how many leads came in, the cost per lead by channel, what changed over the week); at any moment you can write "why did leads from ads cost twice as much last Friday" and get a breakdown. How such answers work and where they go wrong is covered in the article <a href="/blog/ii-analitika-dannyh-dlya-biznesa/">on AI analytics</a>.</p>
+    <p>An important limitation: analytics will show correlations in your data, but it won't tell you that a competitor launched a discount that day. The external context stays with the human.</p>
+
+    <h2>Customer communication: reviews, replies, newsletters</h2>
+    <p>This part of marketing suffers most often from a lack of hands, and here AI delivers a quick result.</p>
+    <ul>
+        <li><strong>Replies to reviews.</strong> The model prepares a draft reply to every review in your tone, and a person approves it with one tap. Negative reviews are flagged and sent to the owner before a reply is published.</li>
+        <li><strong>Analyzing feedback.</strong> The model sorts hundreds of reviews and inquiries from a quarter by topic: what people praise, what they complain about, what they ask for. This is material for both the product and the advertising — what people praise is what's worth writing about.</li>
+        <li><strong>Segmented newsletters.</strong> Not one email for everyone, but different texts for those who bought long ago, recently, and never. The model writes the versions, and the mailing system sends them to the right people.</li>
+        <li><strong>Visibility in AI assistants.</strong> A new channel: some customers ask ChatGPT and similar tools about companies. To show up there, you need structured content with direct answers to questions. This is covered in the article on <a href="/blog/ai-visibility-kak-popast-v-otvety-ii/">AI Visibility</a>.</li>
+    </ul>
+
+    <h2>How it comes together into a system: an example</h2>
+    <p>A small chain of three coffee shops, where marketing is handled by the manager in whatever time is left over from operations. What was built in three weeks:</p>
+    <ol>
+        <li><strong>An n8n workflow</strong> that every morning collects new reviews from map services, passes them to the model (Claude) together with the brand voice document, gets draft replies and sends them to the manager in Telegram with "publish" and "edit" buttons.</li>
+        <li><strong>A content pipeline</strong>: once a week the manager dictates three or four news items and facts in a Telegram voice message; the model turns them into posts for two social networks and a short email to regular guests; the drafts arrive for approval.</li>
+        <li><strong>An ad summary</strong>: spend from the ad accounts and orders from the loyalty program are collected in a spreadsheet, and on Mondays a written breakdown of the week arrives.</li>
+    </ol>
+    <p>This takes about an hour of the manager's time per week instead of the previous six to eight, which usually couldn't be found. What was not automated: the choice of promotions and the seasonal menu — those are decisions, not routine.</p>
+    <p>At AiKrok we build pipelines like this on n8n or Make with a model and Telegram connected; a typical setup launches in one to two weeks, and after that the owner changes the instruction texts without a developer.</p>
+
+    <h2>The risks nobody talks about</h2>
+    <ul>
+        <li><strong>Made-up facts.</strong> The model can write "in business since 2015" or "free delivery" with no basis. Any text with numbers and promises is checked by a person.</li>
+        <li><strong>Monotony.</strong> After three months all the posts start to sound the same. The remedy is to update the voice document regularly and feed the model real stories from employees and customers.</li>
+        <li><strong>Legal and platform restrictions.</strong> Advertising of medical services, finance and alcohol is regulated, and the model doesn't know these rules by default. The rules have to be written explicitly into the instructions and checked anyway.</li>
+        <li><strong>False savings.</strong> If AI freed up ten hours a week and nobody spent them on strategy and talking to customers, marketing got cheaper but not better.</li>
+    </ul>
+
+    <h2>How to build this without an agency: roles and budget</h2>
+    <p>The minimum setup for a company without an in-house marketer:</p>
+    <ul>
+        <li><strong>An owner of voice and facts</strong> — a person in the company who knows the customer and approves everything that gets published. Two to three hours a week.</li>
+        <li><strong>A pipeline</strong> — n8n or Make, a model subscription, Telegram as the interface. Roughly from a few dozen dollars a month for tools at low volumes.</li>
+        <li><strong>A developer on call</strong> — for the initial build and occasional improvements, not on a permanent basis.</li>
+        <li><strong>A part-time advertising specialist</strong> — if the ad budget is substantial: AI will speed up their work, but the bidding and audience strategy is better left to a person with experience.</li>
+    </ul>
+    <p>The agency doesn't disappear as an option — it becomes the choice for tasks that need an outside view: a rebrand, entering a new market, a major campaign. In this setup there is no longer any reason to hand the routine to an agency.</p>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Write the company voice document and a collection of facts: timelines, prices, case studies, customers' phrases. Without it, any AI content will be faceless.</li>
+        <li>Pick one routine task that isn't getting done now for lack of time: most often it is replies to reviews or regular posts.</li>
+        <li>Build a pipeline for it with mandatory human approval and watch the results for two weeks.</li>
+        <li>Add a summary of advertising and sales so that budget decisions are made on the numbers.</li>
+        <li>Spend the freed-up time on what AI doesn't do: conversations with customers and decisions about where to go next.</li>
+    </ol>

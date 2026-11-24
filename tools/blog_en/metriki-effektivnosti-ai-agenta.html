@@ -1,0 +1,75 @@
+<!--title-->
+How to Measure AI Agent Performance: Metrics a Business Owner Can Read
+<!--description-->
+Seven AI agent metrics an owner can read: resolution rate, escalations, accuracy, cost per inquiry. How to take a baseline before launch and where to get data.
+<!--cta_title-->
+The agent is running, but you have no numbers on it?
+<!--cta_text-->
+We'll set up conversation logging, metrics and a weekly Telegram summary on top of an existing or a new agent. MVP in 2 weeks, the consultation is free.
+<!--body-->
+<p>The agent is live, the developer has shown a nice demo, the team says "it seems to work." Two months go by and the owner asks a simple question: "We spent money on this — what has changed?" In reply they get either technical reports about tokens and latency, or general words about "taking the load off the sales reps." Neither helps make the decision: develop the agent further, leave it as it is or switch it off.</p>
+    <p>The problem is that AI agent metrics are usually chosen by developers, while the person who has to look at them is the business owner. This article offers a set of indicators that make sense without a technical background, a way to calculate them without expensive analytics, and an honest look at what can't be measured.</p>
+
+    <h2>Three levels of metrics: what the developer, the manager and the owner see</h2>
+    <p>It's convenient to split the indicators into three layers. They don't compete; they answer different questions.</p>
+    <ul>
+        <li><strong>The technical layer</strong> — availability, model response time, cost per request, API error rate. The developer needs it so the agent doesn't go down. For the owner it's enough to know it exists.</li>
+        <li><strong>The operational layer</strong> — how many inquiries the agent resolved by itself, how many it handed to people, how quickly, how accurately. This is the department head's territory.</li>
+        <li><strong>The business layer</strong> — what changed in money and time: conversion, response speed, the cost of handling an inquiry, hours freed up. This is the answer to the question "what has changed."</li>
+    </ul>
+    <p>A typical mistake is to show the owner the first layer and expect them to draw the conclusions themselves. The second and third layers need to be designed before launch, otherwise in two months there will be nothing to compare against: nobody recorded how things were "before."</p>
+
+    <h2>Metrics worth an owner's attention</h2>
+    <p>Below are seven indicators. Not all of them suit every agent: some matter for a support agent, others for a lead qualification agent. Pick three or four and look at them weekly.</p>
+
+    <h3>1. Share of inquiries resolved without a human</h3>
+    <p>The easiest metric to understand. Out of a hundred conversations, how many did the agent bring to a result by itself: answered, booked, processed, sent. A benchmark for a support agent with a decent knowledge base is half to two thirds of inquiries, but it depends heavily on the industry. It's important to count not "answered" but "the customer didn't come back with the same question and didn't ask for a human."</p>
+
+    <h3>2. Time to first response and time to resolution</h3>
+    <p>Before the agent: a website inquiry waited hours for a reply, and in the evening and at weekends — until the next working day. After: minutes. This is one of the few metrics where the effect is visible immediately and unambiguously. It's worth recording separately by time of day — night-time and weekend inquiries were exactly where the losses were.</p>
+
+    <h3>3. Escalation rate and reasons</h3>
+    <p>How many conversations the agent handed to a human, and why. A high escalation rate is not bad in itself — an agent that hands over difficult cases is better than one that makes up answers to them. But if 40% of escalations are the same question about delivery to a particular region, there's a hole in the knowledge base, and closing it costs less than paying for manual handling.</p>
+
+    <h3>4. Accuracy on a control sample</h3>
+    <p>Once every week or two, the department head reviews 20–30 random conversations and gives each a rating: correct, with flaws, error. It's half an hour of manual work, but it gives an honest picture of quality that no automatic metric can replace. Critical errors — an invented price, a promised service that doesn't exist — are counted separately and ideally equal zero.</p>
+
+    <h3>5. Cost per handled inquiry</h3>
+    <p>Spending on the model API, hosting and support, divided by the number of inquiries. It is compared with what an inquiry cost under manual handling: the employee's salary divided by the number of conversations per month. As a rough guide, an agent on a cloud model handles an inquiry tens of times cheaper than a person, but in this calculation it's important not to forget the one-off development costs. More on the cost structure in our article <a href="/blog/skolko-stoit-ai-agent/">on the cost of an AI agent</a>.</p>
+
+    <h3>6. Conversion at the stage where the agent works</h3>
+    <p>For a lead qualification agent: what share of inquiries reached a sales rep with a completed card, and what share of those turned into a deal. For service booking: the share of conversations that ended in a booking. This metric is the most closely tied to money and the most dependent on external factors — season, advertising, prices. That's why it is compared not "before and after" but against a control group, where possible.</p>
+
+    <h3>7. Hours freed up</h3>
+    <p>The most debatable metric, but the most convincing one for an owner. The number of inquiries resolved by the agent multiplied by the average manual handling time. An honest calculation takes a conservative time estimate and doesn't count the freed-up hours as income — they are a resource that still has to be put to use somewhere.</p>
+
+    <h2>How to take a "before" baseline if the agent isn't live yet</h2>
+    <p>Without a starting point, all metrics turn into opinions. The minimum preparation takes one to two weeks before launch:</p>
+    <ol>
+        <li>Export from the CRM or messenger the number of inquiries per month and their distribution by hour.</li>
+        <li>Ask the sales reps to log the time they spend on inquiries for a week. Not perfect, but better than nothing.</li>
+        <li>Count how many inquiries went unanswered or were answered more than a day later.</li>
+        <li>Record the current conversion at the stage you're handing over to the agent.</li>
+    </ol>
+    <p>These four numbers are worth writing into the same document that holds the <a href="/blog/kak-napisat-tz-na-ai-agenta/">specification for the agent</a> — then the acceptance criteria and the post-launch metrics will form a single system.</p>
+
+    <h2>Where to get the data and how to present it</h2>
+    <p>A small business doesn't need a separate BI system. A working setup looks like this: the agent writes a record of each conversation to a spreadsheet or database — time, channel, outcome (resolved, escalated, abandoned), topic, and the customer's rating if one is collected. On top of this you build a simple dashboard in Looker Studio or Metabase with five to seven charts.</p>
+    <p>What works better for an owner than a dashboard is a short summary in Telegram on Mondays: inquiries for the week, resolved by the agent, escalated, average rating, the three most frequent escalation topics. That summary is put together by the same n8n or Make that runs the agent. If you already have a dashboard for other business indicators, it makes sense to add the agent's metrics there — that's the subject of our article on <a href="/blog/dashboard-dlya-sobstvennika-biznesa/">a dashboard for the business owner</a>.</p>
+
+    <h2>Example: a booking agent in a salon chain</h2>
+    <p>Three salons, receptionists, booking through WhatsApp and Telegram. Before the agent: roughly a quarter of evening inquiries went unanswered until morning, and in that time some customers booked with competitors.</p>
+    <p>After the agent launched, four metrics were tracked: the share of bookings made without a receptionist, time to first response, escalation rate and no-shows. A month later it was clear: the agent handles bookings well, while escalations are mostly about rescheduling — customers wrote "move it to tomorrow," and the agent didn't understand which booking to move. This isn't a "success or failure" metric but a specific task for improvement, which was closed in a few days. Without a weekly review of escalation reasons, the problem would have lived on for months.</p>
+
+    <h2>What can't be measured</h2>
+    <p>An honest word about the limits.</p>
+    <ul>
+        <li><strong>Customer satisfaction</strong> is measured poorly by a single "rate this answer" button: only a small share respond, mostly the dissatisfied or the very satisfied. You can watch the trend, but not the absolute values.</li>
+        <li><strong>The agent's net contribution to revenue</strong> is almost impossible to separate from advertising, season and the sales reps' work without a control group, which a small business can rarely afford.</li>
+        <li><strong>Answer quality, automatically</strong> — there are approaches where one model rates another's answers, and they're useful at scale, but they can't yet replace the manager's manual sample.</li>
+        <li><strong>The effect in the first two weeks</strong> — the agent is still being tuned, the knowledge base is being filled in, the numbers jump around. Decisions shouldn't be made earlier than after a month of stable operation.</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <p>The performance of an AI agent is measured not in tokens or model speed but in what changed in the process: how many inquiries are resolved without people, how quickly you respond, how much one inquiry costs and why the agent calls a human. To do that, you need to take a baseline before launch, pick three or four metrics, record the outcome of every conversation and look through a sample yourself once a week.</p>
+    <p>At AiKrok we build conversation logging and a weekly summary into the very first version of an agent — without it, two months later the conversation about results turns into an argument about impressions. If your agent is already running and you have no numbers, adding logging on top of the existing solution is usually easier than it seems.</p>

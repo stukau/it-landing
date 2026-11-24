@@ -1,0 +1,78 @@
+<!--title-->
+A Telegram Bot for Your Loyalty Program: Bonuses, Broadcasts and Bringing Customers Back
+<!--description-->
+A loyalty program in a Telegram bot: phone sign-up, earning and redeeming bonuses, expiry reminders, win-back, POS and 1C integration, a coffee shop example.
+<!--cta_title-->
+Want customers to come back without plastic cards or an app?
+<!--cta_text-->
+We'll launch a loyalty program in Telegram: bonuses, reminders, segmented broadcasts and, if needed, a link to your POS. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>Plastic loyalty cards get left at home, nobody downloads a coffee shop's mobile app for a single discount, and an SMS blast saying "today only, −20%" costs money and lands in spam. Meanwhile, the goal for a small business hasn't changed: get a customer who bought once to come back a second and a third time. Keeping an existing customer is almost always cheaper than bringing in a new one.</p>
+    <p>A Telegram bot for a loyalty program solves this without cards or apps: the customer is already in the messenger, bonuses are credited by phone number or QR code, broadcasts are free, and for the first time the business can see who comes back and how often. Let's look at what such a program consists of, how to launch it and where it won't work.</p>
+
+    <h2>What a loyalty bot can do: the basic set</h2>
+    <p>A loyalty program in Telegram is not "a bot with a discount" but several connected mechanics.</p>
+    <ul>
+        <li><strong>Customer sign-up.</strong> Tap "Start", share a phone number, and the card is created. No five-screen forms: you can ask for the name and date of birth later, in exchange for a bonus.</li>
+        <li><strong>Earning bonuses.</strong> The cashier enters the phone number or scans the customer's QR code from the bot, and bonuses are credited based on the receipt total. Or the bot is integrated with the POS or 1C, and bonuses are credited automatically.</li>
+        <li><strong>Redeeming.</strong> The customer shows a code, the cashier confirms the redemption. The limit on the share of the receipt that can be paid with bonuses is set in the settings.</li>
+        <li><strong>Balance and history.</strong> At any moment the customer can see how much they have saved up and when the bonuses expire.</li>
+        <li><strong>Broadcasts and segments.</strong> Messages go not to everyone but to groups: those who haven't visited in 30 days, people with birthdays, those who bought a particular category.</li>
+        <li><strong>Referral mechanics.</strong> A customer invites a friend via a link, and both get a bonus after the friend's first purchase.</li>
+    </ul>
+    <p>This is enough for a coffee shop, a beauty salon, a car wash, a neighborhood store or a three-location fast food chain. More complex things — status tiers, personalized offers based on history — are added later, once the data has accumulated.</p>
+
+    <h2>Why Telegram rather than a card or an app</h2>
+    <p>The main argument is the absence of an entry barrier. To join the program, the customer needs to tap one button in a messenger they already have installed. For comparison: a mobile app has to be downloaded, registered in and allowed to send notifications — and some people drop off at every step.</p>
+    <p>The second argument is the economics of communication. The bot can message the customer at any time after sign-up, and it's free. SMS costs money, and so do WhatsApp broadcasts, where every marketing message also goes through moderation. For a base of several thousand customers, the difference adds up to hundreds of dollars a year — we covered this in our comparison of <a href="/blog/telegram-ili-whatsapp-dlya-biznesa/">Telegram and WhatsApp for business</a>.</p>
+    <p>The third is data. A plastic card doesn't know whether the customer read the offer. The bot does: who opened it, who tapped, who came in after the broadcast. This turns loyalty from an expense into a measurable tool.</p>
+    <p>The limitation is obvious: if your customers aren't on Telegram, none of this works. In markets dominated by WhatsApp, the logic of the program is the same, but the costs and capabilities are different.</p>
+
+    <h2>Win-back mechanics that work in small business</h2>
+    <p>Bonuses alone don't bring a customer back. What brings them back is a reason to come, delivered at the right moment. Here are several scenarios worth building into the first version.</p>
+
+    <h3>Expiry reminder</h3>
+    <p>"You have 340 bonuses; 150 will expire in 7 days." A simple, honest and highly effective trigger: customers don't like losing what they already have. The key is not to make the expiry periods too short, otherwise it comes across as a trick.</p>
+
+    <h3>Reactivation after silence</h3>
+    <p>The customer hasn't bought anything in 30, 60, 90 days — three different messages with an increasingly valuable offer. For a coffee shop it could be "we haven't seen you in a while — free syrup with your next coffee", for a car wash — "time for a wash, the bonus for a visit this week is doubled". Important: those who didn't respond to the third message are better left alone rather than bombarded further.</p>
+
+    <h3>Birthdays and occasions</h3>
+    <p>A classic, but it works if the offer is real and not "3% off". It pairs well with a reminder three days before the date, so the customer has time to plan a visit.</p>
+
+    <h3>Refer a friend</h3>
+    <p>A referral link in the bot, a bonus for both after the friend's first purchase. It works noticeably better for businesses people want to talk about — cafes, barbershops, kids' studios — and worse for utilitarian services like dry cleaning.</p>
+
+    <h3>A bonus for a review</h3>
+    <p>An hour or two after the visit, the bot asks for a rating. If it's high, the bot suggests leaving a review on the map or on Google; if it's low, it sends it to the manager and offers the customer compensation. This is both loyalty and an early warning system for problems at a location.</p>
+
+    <h2>How it connects to the POS and accounting</h2>
+    <p>The most common technical question. There are three options, in order of increasing complexity.</p>
+    <p><strong>Manual mode.</strong> The cashier has a separate "staff bot" or a web page: enter the phone number and the amount, and the bonuses are credited. It requires no POS integration, launches in a week and suits one or two locations. The downside is that it depends on staff discipline.</p>
+    <p><strong>Integration with POS software or 1C.</strong> The receipt is closed, the data goes to the bot, and bonuses are credited automatically. Many POS systems have an API or an export; if you have 1C, you can work through data exchange. The details of this kind of setup are described in the article <a href="/blog/integraciya-ii-s-1c-i-uchetnymi-sistemami/">on integration with 1C and accounting systems</a>.</p>
+    <p><strong>The bot as part of the CRM.</strong> Customers, purchases and bonuses live in amoCRM, Bitrix24 or your own database, and the bot is an interface to them. This gives you a single history: visits, support requests, broadcasts. For a chain of locations, this is the right target setup.</p>
+    <p>For reporting at the start, a spreadsheet or a simple dashboard is enough: how many members, how many were active in the month, what share of receipts involve bonuses, how many came back after a broadcast. After six months, enough data accumulates to see which mechanics really drive repeat visits.</p>
+
+    <h2>Example: a chain of three coffee shops</h2>
+    <p>Imagine three coffee shops in one city. Customers kept losing their "sixth coffee free" loyalty cards, baristas stamped them "from memory", and the owner had no idea how many regulars each location had.</p>
+    <p>The first version of the bot: sign-up by phone number, crediting bonuses via the barista's tablet (enter the number and the amount), redemption by a code from the bot, an expiry reminder and reactivation after 21 days of silence. The launch took two weeks, most of which went into training the baristas and putting QR code stickers on the counter.</p>
+    <p>What delivered results: expiry reminders and a morning broadcast, "double bonuses on cappuccino today", on slow weekdays. What didn't work: the referral program — guests are happy to come themselves but rarely share links. Three months later, the POS software was connected to eliminate manual entry, and a post-visit survey was added. For the first time, the owner saw that one location was bringing guests back noticeably worse than the other two, and the reason turned out to be not the coffee but the shift schedule.</p>
+
+    <h2>Where a loyalty program in Telegram won't work</h2>
+    <p>Honest limitations, so you don't waste your budget.</p>
+    <ul>
+        <li><strong>Infrequent purchases.</strong> If a customer comes once every two years (renovation, large appliances, wedding services), accumulating bonuses is pointless. Other tools work there — referral and service-based ones.</li>
+        <li><strong>Low margin with no room for bonuses.</strong> If 3–5% of the receipt going to bonuses breaks the economics, the program turns into a loss. Do the math first, then launch.</li>
+        <li><strong>Staff are against it.</strong> If cashiers don't enter the numbers, there will be no customer base. You need incentives and oversight at least in the first months.</li>
+        <li><strong>No one is responsible for broadcasts.</strong> A bot without regular, meaningful messages is just a bonus calculator. Someone has to think once a week about what to send and to whom.</li>
+    </ul>
+
+    <h2>Where to start</h2>
+    <p>At AiKrok, we advise against starting with POS integration — it lengthens the project, and the value of the program can be tested without it.</p>
+    <ol>
+        <li>Define the rules: the earning percentage, the bonus lifetime, the maximum share that can be paid with bonuses. Check the math against a month of real receipts.</li>
+        <li>Launch the bot with manual crediting at one location. Sign-up, balance, redemption, one expiry reminder.</li>
+        <li>Get the first few hundred members and measure what share came back within a month.</li>
+        <li>Add reactivation and segmented broadcasts, then integration with the POS or CRM.</li>
+    </ol>
+    <p>If the loyalty program is part of a bigger customer-facing task, it's worth looking at the overall picture in the article <a href="/blog/telegram-boty-dlya-prodazh-i-podderzhki/">on Telegram bots for sales and support</a>: often a single bot covers bonuses, booking and answering questions.</p>

@@ -1,0 +1,83 @@
+<!--title-->
+Integrating CRM with Messengers: Every Conversation in One Client Card
+<!--description-->
+Integrating CRM with Telegram, WhatsApp and Instagram: connection options, merging contacts into one card, team rules, AI summaries and common failures.
+<!--cta_title-->
+Is your client communication history still living in your managers' phones?
+<!--cta_text-->
+We will connect messengers to your CRM and set up contact merging and conversation routing rules. The first version in 2 weeks, free consultation.
+<!--body-->
+<p>A manager replies to a client in WhatsApp from a personal phone, the other part of the conversation is in Telegram from a work account, the request from the website landed in email, and the CRM has a single line about this client: "interested, call back." When the manager goes on vacation or quits, the communication history leaves with them. The head of the company can't check what the client was promised, and the client has to retell their situation to a third person.</p>
+    <p>Integrating the CRM with messengers solves exactly this problem: all conversations from all channels go into one client card, managers reply from the CRM, and the history stays in the company. Let's look at how it works, what the connection options are, what breaks most often, and how to keep the integration from turning into yet another headache.</p>
+
+    <h2>What exactly the result should be</h2>
+    <p>It helps to fix the target picture at the outset, so you can later check integrators' proposals against it.</p>
+    <ul>
+        <li>A new message from any messenger automatically creates a contact and a deal in the CRM (or is linked to existing ones).</li>
+        <li>The manager reads and replies to messages right from the card, without switching between apps. The client gets the reply in the messenger they wrote from.</li>
+        <li>One client who wrote from both Telegram and WhatsApp is one card, not two.</li>
+        <li>Attachments (photos, documents, voice messages) are saved in the card.</li>
+        <li>An unanswered message is visible to the head of sales: how long it has been waiting, who is responsible.</li>
+        <li>When a manager leaves the company, the correspondence stays in the CRM and passes to the new owner.</li>
+    </ul>
+    <p>If the integration doesn't deliver at least the first three points, it doesn't solve the problem — it is just "you have a new message" notifications.</p>
+
+    <h2>Three ways to connect messengers to a CRM</h2>
+
+    <h3>Built-in CRM integrations</h3>
+    <p>amoCRM, Bitrix24, HubSpot and most other systems have their own section of integrations with Telegram, WhatsApp and Instagram. Connecting takes from 15 minutes to a couple of hours, and support is on the vendor's side.</p>
+    <p>The advantages are obvious: fast, no developer needed, updated by the vendor. The drawbacks show up later: limited logic (you can't do "if the client wrote at night, reply automatically and create a task in the morning"), contacts from different channels not always merged correctly, dependence on the stability of a particular integration. For WhatsApp, built-in integrations almost always require the official Business API through a provider — and that is a separate fee.</p>
+
+    <h3>Aggregator services</h3>
+    <p>An intermediate layer that gathers messengers into one interface and passes them to the CRM. It is convenient when there are many channels or the CRM doesn't support the messenger you need directly. It adds a monthly subscription and one more point of failure, but often works more reliably with WhatsApp and Instagram than the built-in modules.</p>
+
+    <h3>A custom integration via APIs and an automation platform</h3>
+    <p>The Telegram Bot API, the WhatsApp Business API and your CRM's API are connected through n8n, Make or a service written for the task. This takes longer and costs more at the start, but gives full control over the logic: how to merge contacts, what to do with messages outside working hours, how to distribute conversations among managers, which events to send to analytics.</p>
+    <p>This path is justified when there are non-standard requirements, when the CRM is custom-built, or when you want to add AI processing of messages before they reach the manager.</p>
+
+    <h2>The main technical problem: one client, one card</h2>
+    <p>In Telegram a client is identified by an internal ID and may not show their phone number. In WhatsApp, by the number. In Instagram, by the account. On the website, by the email or phone number from the form. If nothing is done, one person turns into three or four cards, and the value of the integration is lost.</p>
+    <p>What is done in practice:</p>
+    <ul>
+        <li><strong>Requesting the contact in Telegram.</strong> On first contact the bot asks the client to share their number — one button. Most clients agree if they understand why. The card is then matched by number against WhatsApp and the database.</li>
+        <li><strong>Matching on a combination of attributes.</strong> The name plus the last digits of the phone number mentioned in the conversation, plus the email. This already requires logic that built-in integrations usually don't provide.</li>
+        <li><strong>Manual merging.</strong> The manager sees a suspected duplicate and merges the cards with a button. This should be provided as a fallback in any setup.</li>
+        <li><strong>AI matching.</strong> The model reads the first message and tries to find the client from context ("this is Anna, I wrote to you yesterday about the kitchen"). It works as a hint for the manager, not as an automatic decision.</li>
+    </ul>
+    <p>There is no fully automatic solution. A realistic goal is for duplicates to be a rare exception rather than the norm.</p>
+
+    <h2>Rules without which the integration doesn't work</h2>
+    <p>Connecting the messengers technically is half the job. The other half is the agreements within the team, and they matter more.</p>
+    <p><strong>We reply only from the CRM.</strong> If a manager sees a message in the CRM but replies from their phone, the history scatters again. The rule must be strict, and personal accounts for work correspondence must be prohibited. This is the most common point of team resistance, and we wrote about how to deal with it in the article <a href="/blog/vnedrenie-crm-pochemu-komanda-ne-polzuetsya/">on CRM implementation</a>.</p>
+    <p><strong>A single work number and bot.</strong> For WhatsApp — the company's business number through the official API; for Telegram — the company's bot, not employees' accounts. The client writes to the company, not to Sergey.</p>
+    <p><strong>Response time standards.</strong> How many minutes a message can wait during working hours, what happens outside working hours, who picks it up if the person responsible is unavailable. The integration makes this measurable, but people have to set the rule.</p>
+    <p><strong>Who handles "nobody's" conversations.</strong> A new inquiry without an owner must go to a specific person according to a rule (round-robin, by line of business, by region), otherwise it will be left hanging.</p>
+
+    <h2>What AI adds on top of the integration</h2>
+    <p>Once all conversations are collected in one place, it becomes possible to process them before or after the manager.</p>
+    <p>The most useful things in practice: an automatic summary of a long conversation in the card ("the client wants a kitchen for up to 300 thousand, deadline — by November, white color is important, has doubts about the hardware"), auto-tags by content (hot/cold, request type, product mentioned), a draft reply to a standard question that the manager edits and sends. AI can take night-time messages by itself: clarify the request, record the details, promise a reply in the morning — and by the time the manager arrives, there is already a structured brief in the card.</p>
+    <p>These scenarios are described in more detail in the article <a href="/blog/ii-v-crm/">on AI in CRM</a>. Just remember: an AI layer makes sense after the integration is working reliably, not instead of it.</p>
+
+    <h2>Example: a custom furniture studio</h2>
+    <p>Imagine a studio that makes kitchens and wardrobes: two managers, a designer, a measurer. Clients write on Instagram after seeing an ad, then move to WhatsApp or Telegram, send photos of their rooms and discuss the project for weeks. Before the integration, the correspondence lived in the managers' phones, photos got lost, and the measurer received the address in a voice message.</p>
+    <p>The solution: amoCRM with Instagram, the WhatsApp Business API and a Telegram bot connected. The first message from any channel creates a deal at the "New request" stage, and the Telegram bot asks for a phone number to merge with the other channels. All photos and files land in the card. At the "Measurement" stage, a task is automatically created for the measurer with the address and a link to the correspondence. If a deal at the "Estimate" stage doesn't move for five days — a reminder to the manager and a notification to the head of the studio.</p>
+    <p>Two months later they added AI summaries of the correspondence: when a deal passes to the designer, they read a short summary of the requirements instead of a hundred messages. Duplicate cards remained — roughly a few percent of inquiries — and the administrator merges them once a week. The main result is not in the numbers but in the fact that, for the first time, one manager leaving did not lead to the loss of clients in progress.</p>
+
+    <h2>What usually breaks</h2>
+    <ul>
+        <li><strong>WhatsApp through unofficial methods.</strong> Connecting a personal number through "gray" solutions works until the first time the number is blocked. For business — only the official Business API.</li>
+        <li><strong>Expiring tokens and authorizations.</strong> Instagram and some integrations require periodic reconnection. Monitoring is needed: if messages have stopped arriving, someone has to notice it in the first hour, not a week later.</li>
+        <li><strong>Voice messages.</strong> They land in the card as a file nobody listens to. The solution is automatic transcription to text, which is inexpensive now.</li>
+        <li><strong>Mass mailings through the same channels.</strong> Bulk messages from the CRM without clients' consent lead to complaints and blocks. Mailings are a separate tool with separate rules.</li>
+        <li><strong>Plan limits.</strong> Many CRMs and aggregators limit the number of conversations or channels on a plan. Check in advance what will happen as you grow.</li>
+    </ul>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Count where inquiries come from over a month, by channel. This sets the priorities: connect first whatever has the most conversations.</li>
+        <li>Set up unified corporate channels: a WhatsApp business number, a company Telegram bot, a work Instagram account.</li>
+        <li>Connect the CRM's built-in integrations and observe for a week: how contacts are merged, what gets lost, what irritates the managers.</li>
+        <li>Fix the rules: we reply from the CRM, response standards, owners. Introduce them at the same time as the launch.</li>
+        <li>If the built-in capabilities aren't enough, design your own logic through n8n or custom development. Add the AI layer when the basic integration is stable.</li>
+    </ol>
+    <p>The choice of channel for a new market should be matched to customers' habits — see the article <a href="/blog/telegram-ili-whatsapp-dlya-biznesa/">Telegram or WhatsApp for business</a>. At AiKrok we most often start the integration with the single busiest channel and expand once the team has got used to working from the card.</p>

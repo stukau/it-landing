@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG in Practice: How to Get AI to Answer from Your Company&#x27;s Documents — AiKrok Blog</title>
+    <meta name="description" content="How RAG works in plain terms: preparing company documents, vector search, typical failures, checking answer quality, and use cases for small businesses.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/rag-baza-znaniy-kompanii/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/">
+    <meta property="og:title" content="RAG in Practice: How to Get AI to Answer from Your Company&#x27;s Documents">
+    <meta property="og:description" content="How RAG works in plain terms: preparing company documents, vector search, typical failures, checking answer quality, and use cases for small businesses.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "RAG in Practice: How to Get AI to Answer from Your Company's Documents",
+                "description": "How RAG works in plain terms: preparing company documents, vector search, typical failures, checking answer quality, and use cases for small businesses.",
+                "url": "https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/",
+                "datePublished": "2026-08-12",
+                "dateModified": "2026-08-12",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "AI Agents",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/rag-baza-znaniy-kompanii/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "RAG in Practice: How to Get AI to Answer from Your Company's Documents",
+                        "item": "https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/rag-baza-znaniy-kompanii/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/rag-baza-znaniy-kompanii/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / AI Agents</div>
+    <h1>RAG in Practice: How to Get AI to Answer from Your Company's Documents</h1>
+    <div class="post-meta"><span class="tag">AI Agents</span>August 12, 2026 · 9 min read</div>
+</div>
+
+<main class="article">
+<p>Out of the box, a language model knows a lot about the world and nothing about your company. It hasn't read your price list, your returns policy, your supplier contract or your onboarding guide for new employees. That's why the first attempt to "connect AI to the business" often ends the same way: the model answers smoothly, confidently and off the mark. RAG is a way to fix this without expensive fine-tuning: the model answers not from memory but from your documents, which are supplied to it at the moment the question is asked.</p>
+    <p>This article covers how RAG works at a level sufficient for making decisions, which documents suit it, where it breaks and how to tell that the system is answering correctly.</p>
+
+    <h2>How RAG works, explained without formulas</h2>
+    <p>RAG stands for retrieval-augmented generation — generating an answer with retrieved material inserted. The process has four steps.</p>
+    <ol>
+        <li><strong>Preparation.</strong> The company's documents are split into chunks of a few paragraphs each. Each chunk is converted into a numerical representation of its meaning — a vector — and placed in a dedicated store: Qdrant, Pinecone or an equivalent.</li>
+        <li><strong>Question.</strong> An employee or a customer asks a question. It is converted into a vector as well.</li>
+        <li><strong>Search.</strong> The system finds the chunks closest in meaning to the question. Not by matching words — by meaning: the question "can I return an item after a month" will find the clause "the return period is 14 days", even if the word "month" doesn't appear in it.</li>
+        <li><strong>Answer.</strong> The retrieved chunks, together with the question, are passed to the model (GPT-5, Claude, Gemini or the open Llama, Qwen) with an instruction to answer only on their basis and to cite the source.</li>
+    </ol>
+    <p>The key property of this approach: the knowledge lives in the documents, not inside the model. Update the document and the answer is updated. Nothing needs to be retrained.</p>
+
+    <h2>How RAG differs from "just pasting everything into the prompt"</h2>
+    <p>For small volumes — a single five-page guide — RAG isn't needed: the whole text can be passed to the model as is. Modern models accept hundreds of pages at a time. But this approach has three limits.</p>
+    <ul>
+        <li><strong>Cost.</strong> Every request is billed by the volume of text passed in. Sending 300 pages for every "what are our opening hours" question is expensive.</li>
+        <li><strong>Accuracy.</strong> The more irrelevant text there is in the context, the higher the chance that the model latches onto the wrong passage.</li>
+        <li><strong>Access control.</strong> If some documents can be shown to customers and others only to employees, you need search with filters. That is exactly what RAG is.</li>
+    </ul>
+    <p>A rule of thumb: up to a few dozen pages, you can get by without RAG. From a hundred pages up, especially with regular updates, you need it.</p>
+
+    <h2>Which documents are suitable and which need to be put in order first</h2>
+    <p>Answer quality is determined by the quality of the document corpus more than by the choice of model. These work well:</p>
+    <ul>
+        <li>procedures, instructions and policies with a clear structure and headings;</li>
+        <li>descriptions of services and pricing plans, contract terms;</li>
+        <li>internal FAQs and reviewed support cases;</li>
+        <li>meeting minutes and decisions, if they are recorded in a consistent format.</li>
+    </ul>
+    <p>These work poorly without preprocessing:</p>
+    <ul>
+        <li>scans without recognized text — they first need to be run through OCR;</li>
+        <li>tables with a complex structure in PDFs — chunking loses the relationships between cells;</li>
+        <li>several versions of the same document, when it's unclear which one is current;</li>
+        <li>chat conversations where a decision is spread across dozens of messages.</li>
+    </ul>
+    <p>A typical situation in a company of 15–40 people: procedures are in Google Docs, some in Notion, the price list is in Excel, and the most important agreements are in people's heads. Before launching RAG you need a day or two for an inventory: what is current, what to delete, who owns each document. This stage can't be skipped, otherwise the system will answer from an outdated 2024 version of the price list that someone forgot to remove.</p>
+
+    <h2>Where RAG breaks in practice</h2>
+    <p>Let's go through the typical failures and what to do about them.</p>
+    <h3>Chunking cuts through the meaning</h3>
+    <p>If a chunk begins with "in this case the amount is refunded in full" and the condition was left in the previous chunk, the system will give an answer without the condition. The cure is chunking along semantic boundaries — headings, clauses — with a small overlap between neighboring chunks.</p>
+    <h3>The wrong thing was found</h3>
+    <p>A question about "payment" finds chunks about both payments by customers and payments to suppliers. Hybrid search helps: semantic plus keyword, along with metadata — document type, department, date. A separate step that reranks the retrieved chunks often makes sense.</p>
+    <h3>The model answers confidently when nothing was found</h3>
+    <p>The most dangerous situation. If there are no relevant chunks, the model tends to fill in the answer from general knowledge. The protection is a strict instruction, "if the provided chunks don't contain the answer, say so", plus a similarity threshold check: below the threshold the system doesn't answer but hands the question to a human. More in the article <a href="/en/blog/gallyucinacii-ii-kak-zashchitit-biznes/">on AI hallucinations</a>.</p>
+    <h3>The question requires calculation, not search</h3>
+    <p>"How much did we earn in March" is not a document search but a database query. RAG isn't the right fit here; you need an agent with access to the accounting system or BI. At the start it's useful to split questions into "we look it up in texts" and "we calculate it from data".</p>
+
+    <h2>Use cases in small and medium-sized businesses</h2>
+    <p><strong>An internal assistant for employees.</strong> Answers about procedures, vacations, paperwork. The safest first project: mistakes are seen by your own people, not customers. More in the article <a href="/en/blog/ai-agent-dlya-hr-i-onbordinga/">about an AI agent for HR</a>.</p>
+    <p><strong>Customer support.</strong> A knowledge base of terms, pricing plans, instructions. The most important thing here is separation: the customer-facing part of the corpus is kept apart from the internal one.</p>
+    <p><strong>A law or accounting firm.</strong> Search across your own templates, past opinions, standard positions. Saves hours on "didn't we already write something like this".</p>
+    <p><strong>Manufacturing and service.</strong> Equipment manuals, maintenance procedures, repair history. A technician in the field asks a question by voice in Telegram and gets an answer with a link to the relevant section of the manual.</p>
+    <p><strong>The sales department.</strong> Quick answers on product specifications, terms for different customer categories, arguments against competitors — all from internal materials.</p>
+
+    <h2>How to check that the system answers correctly</h2>
+    <p>Before launch you need a test set: 50–100 real questions with known correct answers. They are gathered from correspondence, from newcomers' questions, from customer inquiries. Then they are run through the system and three things are checked: whether the right chunk was found, whether the answer is phrased correctly, and whether the source is cited. After every change — to chunking, the model, the instructions — the run is repeated. Without such a set, any tuning turns into guesswork.</p>
+    <p>After launch it's useful to collect feedback right in the interface: "helpful" and "not helpful" buttons with the option to write the correct answer. These cases are reviewed once a week, and either the documents are corrected or new ones are added.</p>
+
+    <h2>Data, access and choosing a model</h2>
+    <p>Two questions are worth settling before work begins. The first is where the documents and vectors are stored: in the provider's cloud or on your own server. For most companies the cloud option is acceptable, but healthcare, finance and legal firms often require on-premise hosting with an open model. The options are reviewed in the article <a href="/en/blog/bezopasnost-dannyh-pri-vnedrenii-ii/">on data security when adopting AI</a>.</p>
+    <p>The second is access rights. If an accountant and an intern ask the same question, they should get different answers or a different amount of information. This is solved with metadata on the chunks and by filtering the search by the user's role. Building this in at the start is cheaper than reworking it later.</p>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Choose one knowledge domain — for example, procedures for employees or terms for customers. Not everything at once.</li>
+        <li>Take an inventory of the documents: whether they are current, who owns them, who is allowed to see them.</li>
+        <li>Collect 50 real questions with correct answers — this is your test set.</li>
+        <li>Launch the first version in closed mode for a few employees for two weeks.</li>
+        <li>Based on the results, fix the documents and the chunking, then widen the audience.</li>
+    </ol>
+    <p>At AiKrok we usually build the first working version of a RAG assistant in two weeks, and more than half of that time goes not into code but into working with the client's documents. That's normal: this is where answer quality is created.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/ai-agent-podderzhki-klientov/">An AI Customer Support Agent: Knowledge Base, Human Escalation and Quality Metrics</a></li>
+        <li><a href="/en/blog/ai-agent-dlya-obrabotki-zayavok/">An AI Agent for Inbound Leads: Qualifying Around the Clock Without Losing Any</a></li>
+        <li><a href="/en/blog/kak-vybrat-razrabotchika-ai-agenta/">AI Agents for Small Business: How to Choose a Developer Without Wasting Your Budget</a></li>
+        <li><a href="/en/blog/avtomatizatsiya-biznesa-ai-agenty/">How Business Automation with AI Agents Works</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/ai-agenty/">AI Agent Development and Business Automation</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Want AI to answer from your documents?</h2>
+    <p>We'll take stock of your policies and procedures and build a RAG assistant for your employees or customers. MVP in 2 weeks, free consultation.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

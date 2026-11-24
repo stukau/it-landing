@@ -1,0 +1,72 @@
+<!--title-->
+An AI Customer Support Agent: Knowledge Base, Human Escalation and Quality Metrics
+<!--description-->
+How an AI support agent works: what to build the knowledge base from, when to hand off to an operator and which quality metrics an owner should check weekly.
+<!--cta_title-->
+Is support eating into your sales time?
+<!--cta_text-->
+We'll build a support agent on your real conversations: knowledge base, handoff to an operator, metrics. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>In a small company, support rarely exists as a separate department. Customer questions are handled by the same manager who sells, or by the accountant, or by the owner personally in Telegram. Most of these questions repeat: where is my order, how do I return it, what are your payment details, are you open on Saturday. Each answer takes a minute, but over a day those minutes add up to two or three hours, and that time comes out of sales.</p>
+    <p>An AI support agent takes over the repetitive questions and leaves people the cases that call for authority or empathy. But for it to work rather than annoy, it needs three things: a decent knowledge base, clear rules for handing off to a person and metrics that show whether it is helping or doing harm. Let's go through each in turn.</p>
+
+    <h2>How a support agent differs from a button bot</h2>
+    <p>A button bot offers a menu to choose from. A customer whose "payment went through but the order doesn't show up" can't find a matching option and types "operator" or leaves. An agent built on a language model reads the question as it is, finds the answer in the company's knowledge base, queries a system if needed — checking the order status by number — and gives a substantive answer.</p>
+    <p>The second difference is handling context. If the customer follows up with "and what if delivery is to another city?", the agent understands that this is about the same order and doesn't start the conversation over. For the business, this means less irritation and fewer transfers to an operator. We covered the move from scripts to understanding the request in detail in the article <a href="/blog/telegram-bot-s-ii-dlya-podderzhki/">on a Telegram bot with AI</a>.</p>
+
+    <h2>The knowledge base: where the agent gets its answers</h2>
+    <p>This is the main component, and it is the one companies most often skimp on. The agent answers exactly as well as the documents it has been given.</p>
+    <h3>What usually goes into the knowledge base</h3>
+    <ul>
+        <li>delivery, payment, return and warranty terms;</li>
+        <li>descriptions of plans, services or product categories;</li>
+        <li>opening hours, addresses, payment details, contacts;</li>
+        <li>internal instructions: what to do about defects, delays, double charges;</li>
+        <li>answers to real questions from the past few months of correspondence.</li>
+    </ul>
+    <p>The last item is the most valuable. Fifty real conversations from Telegram or WhatsApp give you more than any FAQ written from scratch, because they show how customers actually phrase their questions.</p>
+    <h3>How the knowledge base works technically</h3>
+    <p>Documents are split into chunks, converted into vector representations and placed in a store (Qdrant, Pinecone or one built into the platform). When a customer asks a question, the agent finds the chunks closest in meaning and builds its answer on them alone. This approach is called RAG, and there is a separate article on its finer points — <a href="/blog/rag-baza-znaniy-kompanii/">RAG in practice</a>.</p>
+    <p>An important rule: if the knowledge base has no answer, the agent should say "I'll check with my colleagues" and pass the question on rather than make something up. This is configurable, but it needs attention during testing.</p>
+    <h3>What needs updating</h3>
+    <p>A knowledge base goes out of date faster than you'd think: delivery times change, a new plan is added, the payment details are different. Appoint one person responsible for keeping it current and set a simple rule: any change in terms means editing the document first and announcing it to customers second. Otherwise the agent will keep confidently describing the old terms.</p>
+
+    <h2>Escalation: when and how to hand off to a person</h2>
+    <p>Handing off to an operator is not a sign of the agent's weakness but part of its job. Badly configured escalation comes in two kinds: the agent hands off everything, so there is no point in having it, or it hands off nothing and drives the customer to anger.</p>
+    <h3>Triggers that are usually set explicitly</h3>
+    <ul>
+        <li>The customer asks for a person directly — hand off at once, with no attempts to "clarify one more time".</li>
+        <li>The question involves money above a small threshold: a refund, compensation, a disputed charge.</li>
+        <li>The knowledge base has no matching chunk, or the model rates its confidence as low.</li>
+        <li>The tone of the message is sharply negative, or it mentions a complaint, a lawsuit or reviews.</li>
+        <li>The customer asks essentially the same question for the third time — which means the previous answers didn't help.</li>
+        <li>The request requires actions the agent has no authority for: changing an order, giving a discount.</li>
+    </ul>
+    <h3>What the handoff should look like</h3>
+    <p>The operator receives not "a customer is waiting" but a short summary: who it is, what they asked, what the agent has already answered, what the order status is. The customer receives an honest message with the expected response time. If it is night, we say so: "A colleague will reply from 9:00, your request has been logged." That is better than silence or pretending to be a live operator.</p>
+    <p>A useful practice: once the operator has resolved the issue, feed the answer back into the knowledge base if the situation could come up again. That way the agent learns from every case it hands off.</p>
+
+    <h2>Industry scenarios</h2>
+    <p><strong>Online store.</strong> The bulk of the volume is order status and returns. The agent is connected to the accounting system and answers by order number. Escalation: disputed returns and defects.</p>
+    <p><strong>Online school.</strong> Questions about access to lessons, how long assignments take to be checked, installment plans. The agent knows the cohort schedule and the rules. Escalation: conflicts with a teacher, course refunds.</p>
+    <p><strong>Service center.</strong> "Is my phone ready" — the agent checks the status by receipt number. Escalation: changes to the repair cost, quality complaints.</p>
+    <p><strong>Property management company or coworking space.</strong> Bookings, passes, rules, payment. The agent takes most of the everyday questions; escalation is for emergencies and complaints about neighbors.</p>
+    <p>In every case the agent works in the channels where the customers already are — most often Telegram and the WhatsApp Business API, less often a website widget.</p>
+
+    <h2>Quality metrics: what the owner should look at</h2>
+    <p>Without metrics, a support agent turns into "seems to be working". A set that is enough to start with:</p>
+    <ul>
+        <li><strong>Share of questions resolved without a person.</strong> The benchmark for standard support is well over half, but it depends on the industry. If the figure is growing because customers are abandoning the conversation, that is not success.</li>
+        <li><strong>Share of escalations and their reasons.</strong> Break them down by category: no answer in the knowledge base, a request for a person, negativity. Each category tells you what to fix.</li>
+        <li><strong>Post-conversation rating.</strong> A simple "did this help?" question with two buttons. Collect it separately for the agent and for the operators.</li>
+        <li><strong>Repeat contacts on the same topic within 24 hours.</strong> A sign of an answer that was formally correct but useless.</li>
+        <li><strong>Time to first reply and time to resolution.</strong> Compare with the period before launch.</li>
+        <li><strong>Manual spot checks.</strong> Read 20–30 conversations once a week. This catches errors the numbers don't show: the wrong tone, outdated terms, answers that are too long.</li>
+    </ul>
+    <p>These figures can be shown in a simple dashboard in Metabase or Looker Studio, or sent as a digest to Telegram once a day. For agent metrics in general, see the article <a href="/blog/metriki-effektivnosti-ai-agenta/">on the metrics the owner sees</a>.</p>
+
+    <h2>Where a support agent won't live up to expectations</h2>
+    <p>If terms in the company change by word of mouth and aren't written down anywhere, the agent has nothing to answer from. If most inquiries are unique technical problems that require diagnostics, the agent can only collect the initial information. If customers are few and each one is worth their weight in gold — in premium services, for example — a personal reply from the owner is worth more than any automation. And finally, the agent won't fix a bad product: if the complaints are caused by genuinely missed deadlines, it will only report them faster.</p>
+
+    <h2>Summary</h2>
+    <p>A support agent is not a "smart chat" but a combination of three elements: an up-to-date knowledge base, clear escalation rules and regular monitoring by metrics. Remove any one of them and the result will disappoint. A first version can be built in two weeks: at AiKrok we usually start by exporting real conversations, use them to build the knowledge base and the list of handoff triggers, and for the first weeks after launch keep the agent in a mode where the operator sees every answer. After that comes expanding the knowledge base, connecting order statuses and gradually reducing the share of manual checks.</p>

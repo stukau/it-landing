@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Systems: When One AI Agent Isn&#x27;t Enough, and How Not to Over-Engineer — AiKrok Blog</title>
+    <meta name="description" content="When one AI agent isn&#x27;t enough: the signs, working patterns (dispatcher, pipeline, author and critic), cost, latency and rules against over-engineering.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/multiagentnye-sistemy-dlya-biznesa/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/">
+    <meta property="og:title" content="Multi-Agent Systems: When One AI Agent Isn&#x27;t Enough, and How Not to Over-Engineer">
+    <meta property="og:description" content="When one AI agent isn&#x27;t enough: the signs, working patterns (dispatcher, pipeline, author and critic), cost, latency and rules against over-engineering.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Multi-Agent Systems: When One AI Agent Isn't Enough, and How Not to Over-Engineer",
+                "description": "When one AI agent isn't enough: the signs, working patterns (dispatcher, pipeline, author and critic), cost, latency and rules against over-engineering.",
+                "url": "https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/",
+                "datePublished": "2026-08-13",
+                "dateModified": "2026-08-13",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "AI Agents",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/multiagentnye-sistemy-dlya-biznesa/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Multi-Agent Systems: When One AI Agent Isn't Enough, and How Not to Over-Engineer",
+                        "item": "https://aikrok.com/en/blog/multiagentnye-sistemy-dlya-biznesa/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/multiagentnye-sistemy-dlya-biznesa/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/multiagentnye-sistemy-dlya-biznesa/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / AI Agents</div>
+    <h1>Multi-Agent Systems: When One AI Agent Isn't Enough, and How Not to Over-Engineer</h1>
+    <div class="post-meta"><span class="tag">AI Agents</span>August 13, 2026 · 8 min read</div>
+</div>
+
+<main class="article">
+<p>The term "multi-agent system" sounds impressive, and contractors are happy to use it: several AI agents, each with its own role, talk to one another and solve the task together. In a presentation it looks convincing. In practice, most small business tasks are solved by one agent with good tools, and a multi-agent architecture adds cost, latency and new points of failure. But there are situations where you really can't do without one.</p>
+    <p>This article is about how to tell one from the other: when one agent isn't enough, what a sensible multi-agent setup looks like, and the signs that a project is over-engineered.</p>
+
+    <h2>What a multi-agent system is, in plain terms</h2>
+    <p>A single agent is a language model plus a set of tools: access to the CRM, email, a database, a calculator. It receives a task, plans the steps, calls the tools and returns a result.</p>
+    <p>A multi-agent system is several such agents, each with its own role, its own instructions and its own set of tools. One sorts incoming emails, another checks stock levels in the warehouse, a third writes the reply to the customer, a fourth checks that the reply doesn't break the rules. Their work is coordinated either by a dispatcher agent or by a predefined task handoff scheme. The frameworks for this are LangGraph, CrewAI and the like.</p>
+    <p>The team analogy fits, but with a caveat: agents are no smarter than their instructions, and every handoff between them is an extra model call that costs money and time and can introduce an error.</p>
+
+    <h2>When one agent really isn't enough</h2>
+    <p>Signs that the task has outgrown a single-agent setup.</p>
+    <h3>The instructions have become contradictory</h3>
+    <p>If one agent has to sell, and check compliance with legal restrictions, and write briefly, and explain in detail, the instructions swell to a dozen pages and the model starts getting confused. Splitting it into "one writes, another checks" removes the conflict of roles.</p>
+    <h3>Too many tools</h3>
+    <p>When an agent has thirty different actions available, it picks the wrong one more often. A rule of thumb from practice: more than 10–15 tools for one agent is a reason to think about splitting by domain, for example "everything about the warehouse" and "everything about customers."</p>
+    <h3>An independent check is needed</h3>
+    <p>In tasks involving money, contracts and medical data you need a controller that took no part in preparing the answer. A reviewer agent with separate instructions — "find errors and violations" — catches what the author misses.</p>
+    <h3>Parts of the task can be done in parallel</h3>
+    <p>If you need to query three different sources at the same time — supplier websites, a database and email — parallel agents save waiting time.</p>
+    <h3>Different requirements for the model</h3>
+    <p>Email classification can be done by a cheap, fast model, and drafting a complex reply by an expensive one. Different agents mean different models, which cuts the API bill severalfold.</p>
+
+    <h2>Typical patterns that actually work</h2>
+    <p>Three architectures take root well in small and medium businesses.</p>
+    <p><strong>Dispatcher and specialists.</strong> An incoming request goes to a router agent, which determines the type of task and passes it to one of the specialists: sales, support, accounting questions. An example is a single company Telegram channel that both customers and employees write to. This is the most common and the most understandable pattern.</p>
+    <p><strong>Pipeline.</strong> The task passes through several agents in sequence. An example from document workflow: one agent recognizes an incoming invoice, a second matches it against the contract and the order, a third generates the accounting entry and a notification to the accountant. Each step is verifiable, and a failure is easy to localize.</p>
+    <p><strong>Author and critic.</strong> One agent prepares the output — a quote, a reply to a customer, a draft contract. The second checks it against a list of requirements and either sends it back for revision or lets it through. Two or three rounds at most, otherwise you get an endless argument.</p>
+    <p>"A society of agents that talk freely among themselves and decide for themselves who does what" looks impressive in demos but is hardly used in business: the result is unpredictable, and the cost of a single task can grow tens of times over.</p>
+
+    <h2>Example: what this looks like in a real project</h2>
+    <p>Take a real estate agency that collects listings from many Telegram channels and shows customers curated selections. The task is similar to what we at AiKrok did in the Batumi Rent project. Let's break the process down into roles.</p>
+    <ul>
+        <li><strong>The collector</strong> reads the channels and picks out messages that look like listings. A simple task — a cheap model, or rules with no AI at all.</li>
+        <li><strong>The structurer</strong> turns the text of a post into a card: district, price, rooms, floor, contact. This needs a stronger model.</li>
+        <li><strong>The deduplicator</strong> compares a new card with existing ones and decides whether it's a repeat. Part of the work is vectors and rules, part is a model for borderline cases.</li>
+        <li><strong>The notifier</strong> matches cards against customer requests and sends a push.</li>
+    </ul>
+    <p>Note: of the four roles, only two require a language model, and none requires the agents to "discuss" anything among themselves. It's a pipeline with clear interfaces. This is exactly what sensible multi-agent design looks like. More on the task in our article <a href="/en/blog/avtomatizaciya-dlya-agentstva-nedvizhimosti/">on automation for a real estate agency</a>.</p>
+
+    <h2>How not to over-engineer: signs and rules</h2>
+    <p>Signs that a project is sliding into excessive complexity:</p>
+    <ul>
+        <li>there are more than five agents in the scheme, and the task is to answer a customer's question about delivery;</li>
+        <li>the agents pass the task to each other in a circle, and nobody knows how many rounds there will be;</li>
+        <li>the cost of one handled inquiry has grown severalfold compared with the single-agent version;</li>
+        <li>when an error occurs, it's impossible to tell which agent made it;</li>
+        <li>the contractor spends longer explaining the architecture than the business problem.</li>
+    </ul>
+    <p>Rules that help keep the system within bounds:</p>
+    <ol>
+        <li><strong>Start with one agent.</strong> Split only when you've hit a specific limitation, not in advance "to grow into."</li>
+        <li><strong>Fix the handoff scheme.</strong> Who passes what to whom is written down in advance, not decided by the model on the fly.</li>
+        <li><strong>Limit the loops.</strong> Any "author — critic" loop has a maximum number of iterations.</li>
+        <li><strong>Take deterministic logic out of the agents.</strong> If something can be decided by a rule or a database query, a model has no place there.</li>
+        <li><strong>Log every step.</strong> Every task should leave a clear trail: what each agent saw and what it decided.</li>
+    </ol>
+
+    <h2>Cost and speed: what you're rarely warned about</h2>
+    <p>Each agent is at least one model call, and more often several. If single-agent handling of an inquiry cost, say, one unit, a pipeline of four agents will cost roughly three to six units, and a free-discussion scheme — an unpredictable amount. Latency adds up too: four sequential steps of five seconds each is twenty seconds of waiting for a customer in a chat. For background processes this doesn't matter; for a live conversation it's critical.</p>
+    <p>That's why in customer-facing channels the aim is to keep one agent on the line and the rest in the background. For the structure of agent costs in general, see our article <a href="/en/blog/skolko-stoit-ai-agent/">on how much an AI agent costs</a>.</p>
+
+    <h2>Summary</h2>
+    <p>A multi-agent system is not a sign of a project's maturity and not an argument in a contractor's favor. It's a tool for specific situations: a conflict of roles in the instructions, too many tools, a need for an independent check, parallel processing or savings from using different models. If none of these situations has arisen for you, one agent will do the job better, more cheaply and more predictably. And if one has, choose a simple pattern: dispatcher, pipeline or author with critic, with a strictly defined task handoff and logs at every step.</p>
+    <p>If you're unsure which architecture your task needs, a sensible first step is to describe the process in words and show it to someone who will give an honest assessment. In our <a href="/en/#contact">free consultation</a> we say "one agent will be enough for you" more often than the opposite.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/rag-baza-znaniy-kompanii/">RAG in Practice: How to Get AI to Answer from Your Company's Documents</a></li>
+        <li><a href="/en/blog/ai-agent-podderzhki-klientov/">An AI Customer Support Agent: Knowledge Base, Human Escalation and Quality Metrics</a></li>
+        <li><a href="/en/blog/ai-agent-dlya-obrabotki-zayavok/">An AI Agent for Inbound Leads: Qualifying Around the Clock Without Losing Any</a></li>
+        <li><a href="/en/blog/kak-vybrat-razrabotchika-ai-agenta/">AI Agents for Small Business: How to Choose a Developer Without Wasting Your Budget</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/ai-agenty/">AI Agent Development and Business Automation</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Not sure whether you need one agent or several?</h2>
+    <p>We'll go through your process and propose the minimum sufficient architecture with no unnecessary links. MVP in 2 weeks, the consultation is free.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

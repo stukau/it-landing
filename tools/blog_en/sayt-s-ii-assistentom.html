@@ -1,0 +1,86 @@
+<!--title-->
+A Website with an AI Assistant: A Widget That Answers Questions and Captures Leads
+<!--description-->
+How a website AI assistant works: knowledge base, qualification, lead capture and human handoff. Architecture, a sample dialogue, risks, cost and metrics.
+<!--cta_title-->
+Are visitors leaving your site before they get an answer?
+<!--cta_text-->
+We'll put together a knowledge base and set up an AI assistant that passes leads to your CRM and a live manager. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A visitor comes to the website at eleven at night with a specific question: do you deliver to their district and how much does it cost. A "leave a request and we'll call you back" form doesn't suit them — they want an answer now, not a call tomorrow in the middle of the working day. They leave for a competitor where the answer was available. A website AI assistant handles exactly this situation: it answers from your materials at any time, clarifies what the person needs and, if they are ready, tactfully collects their contact details. Let's look at how such a widget is built, what it should be able to do and where the pitfalls are.</p>
+
+    <h2>How an AI widget differs from what websites already have</h2>
+    <p>Chats with operators and button-based bots have lived on websites for a long time. An AI assistant is a third type, and it's important to understand the difference.</p>
+    <p><strong>A chat with an operator</strong> gives a quality answer, but only during working hours and only while the operator is free. At night and on weekends it is a contact form.</p>
+    <p><strong>A button-based bot</strong> works around the clock but follows a rigid script: "choose a section — choose a subsection". As soon as a question doesn't fit the tree, the bot suggests leaving a request. Users sense this and often close the window at the second step.</p>
+    <p><strong>An AI assistant</strong> understands a free-form question, looks for the answer in the company's knowledge base, answers in its own words and remembers the context of the conversation. At the same time it is not the all-knowing conversational partner from a general chat with a model: its knowledge is limited to your materials, and that is deliberate.</p>
+    <p>The best option in practice is a hybrid: the AI answers first, and for a complex question or at the customer's request it hands the conversation over to a live person with a brief summary.</p>
+
+    <h2>The widget's four jobs</h2>
+    <p>Put briefly, there are four requirements for the assistant.</p>
+    <h3>Answer from the knowledge base</h3>
+    <p>Services, prices, lead times, delivery and return terms, addresses, opening hours, answers to frequent questions. The source is your website, price lists and internal procedures. Technically this is implemented with the RAG approach: the assistant first finds the relevant passages in the documents, then writes an answer based only on them. How this works and how to prepare the documents is described in detail in the article <a href="/blog/rag-baza-znaniy-kompanii/">RAG in practice</a>.</p>
+    <h3>Qualify</h3>
+    <p>In the course of the conversation the assistant works out what the person needs: type of service, scope, timing, city. This is not a ten-field questionnaire but two or three natural clarifying questions within the dialogue.</p>
+    <h3>Collect contact details</h3>
+    <p>When the person is ready to discuss details, the assistant suggests leaving a phone number or messenger contact — and does so at the right moment, not in the first message. The lead, together with a summary of the conversation, goes to the CRM or to the manager in Telegram.</p>
+    <h3>Hand over to a human</h3>
+    <p>At the customer's request, on a complaint, on a question outside the knowledge base or when there are signs that the customer is a large one. The handoff must come with context: the operator sees the whole conversation rather than starting with "hello, how can I help you".</p>
+
+    <h2>How it works inside</h2>
+    <p>The widget on the website is only the visible part. The full setup looks like this:</p>
+    <ol>
+        <li><strong>The widget</strong> — a small script on the website, the chat window. It holds no logic; it only sends messages and displays answers.</li>
+        <li><strong>The backend</strong> — a server that receives the message, stores the conversation history, checks limits and controls the flow.</li>
+        <li><strong>The knowledge base</strong> — your documents, split into chunks and indexed in a vector database (Qdrant, Pinecone or a built-in solution).</li>
+        <li><strong>The language model</strong> — Claude, GPT-5, Gemini or an open model on your own server. It receives the question, the retrieved chunks and the instructions, and returns an answer.</li>
+        <li><strong>Integrations</strong> — a CRM (amoCRM, Bitrix24, HubSpot), Telegram for notifying the manager, sometimes a booking calendar or an inventory system for checking availability.</li>
+    </ol>
+    <p>An important architectural detail: the model is not called directly from the browser. The access keys live on the server, and that is also where the limits on the number of messages per visitor are enforced — otherwise someone will use your widget as free access to the model, and the bill will come to you.</p>
+
+    <h2>Where the knowledge base comes from and how it is kept alive</h2>
+    <p>The most common cause of weak answers is not the model but a thin or outdated knowledge base. What usually goes into it:</p>
+    <ul>
+        <li>The text of the website's pages — services, prices, terms, contacts.</li>
+        <li>Documents that aren't on the website: the detailed price list, the returns policy, instructions on preparing for a service, the terms section of the standard contract.</li>
+        <li>Real customer questions with answers. It's best to collect them from managers and administrators — they know what people actually ask.</li>
+        <li>An explicit list of what the company does not do, so that the assistant doesn't try to sell a service that doesn't exist.</li>
+    </ul>
+    <p>Updating should be routine: you change a price on the website — the knowledge base is reindexed automatically or at the press of a button. If nobody is responsible for keeping it current, in six months the assistant will be quoting old prices, and that is worse than having no assistant.</p>
+
+    <h2>What a dialogue that brings in a lead looks like</h2>
+    <p>The website of a custom kitchen studio, evening, a visitor on a phone.</p>
+    <p>Customer: "How much is a 3-meter kitchen with an island?"</p>
+    <p>Assistant: "A straight kitchen 3 meters long without an island usually costs in the range of X–Y in our projects, depending on the material of the fronts and the hardware. An island adds roughly Z. The exact price depends on the layout. Could you tell me whether you already have measurements or a floor plan?"</p>
+    <p>Customer: "I have a plan from the developer."</p>
+    <p>Assistant: "Great, with the plan we can prepare a preliminary estimate in one or two days. If it's convenient, leave your Telegram or WhatsApp number — a designer will message you in the morning and check which material you're considering."</p>
+    <p>The customer leaves a number. A deal is created in the CRM with the source "website assistant" and the summary: "3 m kitchen with an island, has the developer's plan, interested in the cost". In the morning the designer doesn't start from scratch.</p>
+    <p>Note: the prices are given as a range with reference to the factors, and the contact is requested only once it has become clear that the person really needs an estimate. This is configured in the assistant's instructions and verified on test dialogues.</p>
+
+    <h2>Risks and limitations</h2>
+    <p><strong>Made-up facts.</strong> If the knowledge base has no answer, the model may invent one: name a discount or a deadline that doesn't exist. The protection is a strict rule to answer only from the retrieved chunks, and when there are none, to say honestly "I'll check with a manager" and hand the conversation to a human. More on protection techniques in the article <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">about AI hallucinations</a>.</p>
+    <p><strong>Legally binding answers.</strong> The assistant must not make promises that the company is obliged to keep: fixed prices for complex services, guaranteed deadlines, medical or legal opinions. For such topics — handoff to a human.</p>
+    <p><strong>Personal data.</strong> Conversations contain phone numbers and names. You need to understand where the history is stored, whether it goes to a cloud model and how long it is kept. For clinics and financial companies this may mean choosing a model on your own server.</p>
+    <p><strong>Load on the team.</strong> A good assistant increases the flow of leads, including overnight ones. If the managers aren't ready to process them in the morning, part of the effect is lost.</p>
+    <p><strong>Where an assistant isn't needed.</strong> A brochure site with one service and one price: a well-written page is enough there. A business with three inquiries a week: the assistant will take longer to pay for itself than you'd like.</p>
+
+    <h2>Cost and metrics</h2>
+    <p>Operating costs for a small website consist of the model API (roughly from a few tens of dollars a month at moderate traffic), backend hosting and the vector database. Developing the first version with a knowledge base, CRM integration and notifications usually takes about two weeks.</p>
+    <p>What to measure from day one:</p>
+    <ul>
+        <li>The share of conversations that ended in a lead or a booking.</li>
+        <li>The share of questions the assistant found no answer to — this is the list for expanding the knowledge base.</li>
+        <li>The share of handoffs to a human and the reasons.</li>
+        <li>Lead quality as rated by the managers: better or worse than from the form.</li>
+    </ul>
+    <p>A website assistant is a special case of the broader task of handling incoming inquiries; how to build that process as a whole, from the website to messengers, is covered in the article <a href="/blog/ai-agent-dlya-obrabotki-zayavok/">about an AI agent for handling requests</a>.</p>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Collect from your managers the twenty most frequent customer questions and the answers to them. This is the core of the knowledge base.</li>
+        <li>Define what the assistant must not promise and when it is required to hand over to a human.</li>
+        <li>Decide where leads go: CRM, Telegram, email.</li>
+        <li>Launch the first version on one or two key pages rather than the whole site, and read the conversations for two weeks.</li>
+        <li>Fill in the knowledge base based on the unanswered questions, adjust the instructions and extend to the remaining pages.</li>
+    </ol>
+    <p>At AiKrok we usually start with the knowledge base and test dialogues rather than with the design of the chat window: if the assistant answers poorly, no widget will fix that. If you want to understand what this could look like on your website, you can start with a <a href="/#contact">free consultation</a>.</p>

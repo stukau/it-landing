@@ -1,0 +1,89 @@
+<!--title-->
+An AI-Powered Telegram Bot: Moving from Button Menus to Understanding the Request
+<!--description-->
+How to move a Telegram support bot from a button menu to understanding free text: migration stages, the knowledge base, guardrails and escalation.
+<!--cta_title-->
+Does your support bot still reply "choose a menu item"?
+<!--cta_text-->
+We'll move it to understanding text without stopping your current scenarios: knowledge base, guardrails, escalation. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>At most companies, the Telegram support bot looks the same: a main menu of six buttons, three more under each, and a canned text at the end. A customer with a non-standard question goes through two menu levels, doesn't find what they need and types "operator". The statistics for such bots are usually honest: up to half of the conversations end in a handoff to a human, and operators answer the same questions as before the bot was launched. The bot exists, but the workload hasn't dropped.</p>
+    <p>Moving to a bot that understands free text means a different architecture, different content preparation and different control rules. Let's look at how to make this transition in stages without breaking what already works.</p>
+
+    <h2>Why the button-based scenario hits a ceiling</h2>
+    <p>A button bot is good exactly as long as customer questions fit into a tree drawn in advance. In practice, the tree goes out of date within a couple of months: new services appear, delivery terms change, and customers phrase their questions differently from what the scenario's author expected.</p>
+    <p>Typical symptoms that the ceiling has been reached:</p>
+    <ul>
+        <li>Customers ignore the buttons and write in text right away — and the bot replies "I don't understand, choose a menu item".</li>
+        <li>One question touches two branches at once ("I want to return an item and change the delivery address on another order"), and the scenario doesn't provide for that combination.</li>
+        <li>The menu tree has grown so much that even the person who built it is afraid to edit it.</li>
+        <li>Operators complain that the bot "hands over" the conversation without context, and they have to ask the customer everything again from scratch.</li>
+    </ul>
+    <p>If you recognize at least two of these, there is no point in expanding the menu further. Each new button adds complexity and almost no value.</p>
+
+    <h2>What exactly changes when you move to understanding the request</h2>
+    <p>Inside a button bot the logic is rigid: a tap, then an answer. Inside an AI bot, three new layers appear.</p>
+    <p><strong>Intent recognition.</strong> A language model (GPT-5, Claude, Gemini or the open-source Qwen on your own server) reads the message and determines what the customer wants: to check an order status, arrange a return, complain, or ask about a price. The model copes with typos, colloquial phrasing and mixed languages — the things a button bot breaks on.</p>
+    <p><strong>Knowledge base.</strong> Instead of canned texts under each button, there is a set of company documents: delivery terms, the returns policy, plan descriptions, instructions. The model finds the relevant fragment in them and formulates an answer based on it. The approach is called RAG, and it is covered in detail in the article <a href="/blog/rag-baza-znaniy-kompanii/">on RAG in practice</a>.</p>
+    <p><strong>Actions.</strong> The bot doesn't just answer, it also does things: checks the order status in the accounting system, creates a ticket in the CRM, books a time slot. For this, it is connected to tools — the online store's API, amoCRM or Bitrix24, Google Sheets.</p>
+    <p>It's important to understand that the buttons don't go anywhere. For frequent and unambiguous actions ("my orders", "contact a manager") they remain more convenient than any text. What changes is the principle: buttons are the fast path, free text is the main one.</p>
+
+    <h2>Three stages of transition instead of one big launch</h2>
+    <p>Rewriting the bot from scratch is risky and expensive. It makes more sense to move in steps, each of which delivers a measurable result.</p>
+
+    <h3>Stage 1. Hybrid: buttons plus free input</h3>
+    <p>We keep the current menu but teach the bot to respond to text. If the customer writes instead of tapping a button, the model determines the intent and either answers itself from the knowledge base or leads the customer to the right menu branch. At this stage, the knowledge base is often just the existing button answers reformatted into documents. It takes one to two weeks, and it already removes a noticeable share of the "I don't understand" replies.</p>
+
+    <h3>Stage 2. Answers based on company documents</h3>
+    <p>We connect the real documentation: policies, price lists, the FAQ from the internal wiki. We set the bot up to cite the source, or at least rely on it, rather than make things up. This is also where the first serious quality control loop appears — more on that below.</p>
+
+    <h3>Stage 3. Actions in your systems</h3>
+    <p>The bot gets access to customer data: orders, bookings, bonus balance. Now it answers the question "where is my order" not with the instruction "log in to your account" but with the actual status. This requires integration with the accounting system and careful handling of access rights — the bot must show a customer only their own data.</p>
+
+    <h2>Preparing the knowledge base: where quality is usually lost</h2>
+    <p>The most common cause of bad answers is not the model but the documents. The model answers exactly as well as the source is clearly written.</p>
+    <p>What's worth doing before connecting AI:</p>
+    <ol>
+        <li><strong>Collect real questions.</strong> Export the conversation history for two to three months and group the requests. Usually 20–30 phrasings cover most of the flow.</li>
+        <li><strong>Rewrite the answers for machine reading.</strong> One question — one document or section. No "see above", no tables with complex merged cells, no outdated caveats.</li>
+        <li><strong>Remove contradictions.</strong> If the policy says returns within 14 days and the website says 30, the bot will give one answer one time and the other the next. Discrepancies need to be eliminated before launch, not after complaints.</li>
+        <li><strong>Assign an owner.</strong> Someone on the team is responsible for keeping the documents up to date. Otherwise, six months later the bot is confidently describing a promotion that ended last quarter.</li>
+    </ol>
+
+    <h2>Where the bot should not answer on its own</h2>
+    <p>Understanding the request doesn't mean the right to answer any question. There are topics where a mistake costs more than waiting for an operator's reply.</p>
+    <ul>
+        <li><strong>Individual prices and discounts.</strong> The bot can quote a price from the price list but must not "negotiate". Any personal discount goes only through a manager.</li>
+        <li><strong>Deadlines that depend on external factors.</strong> The bot can promise "we'll deliver by Friday" only if that is literally written in the order data. Otherwise: "the estimated time for this plan is three to five days".</li>
+        <li><strong>Complaints and conflicts.</strong> The bot should hand an angry customer over to a human quickly rather than try to "resolve the issue" with a template apology.</li>
+        <li><strong>Legal and medical wording.</strong> Anything that could be interpreted as advice carrying liability goes out only with a specialist's confirmation.</li>
+    </ul>
+    <p>The technical side of these restrictions is a big topic of its own; we covered it in the article <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">on AI hallucinations</a>. In short: a system prompt with prohibitions, fact-checking against data rather than the model's memory, and a list of stop topics on which the bot must escalate.</p>
+
+    <h2>Escalation to a human: how to make it seamless for the customer</h2>
+    <p>Good escalation is the kind where the customer doesn't feel "I've been dumped". This takes a few simple rules.</p>
+    <p>The bot passes the operator not "the customer wants to talk" but a brief summary: what they asked, what the bot has already answered, what data it checked. The operator continues the conversation in the same chat instead of asking the customer to repeat themselves. Once the issue is resolved, the conversation returns to the bot, and it goes on answering the next questions.</p>
+    <p>The handoff criteria are set explicitly: the customer asked for a human, the model is not confident in its answer (this is measurable), the question falls under a stop topic, the customer has repeated the same question twice. The last sign is often underestimated, yet it's the one that catches situations where the bot "sort of answered" but missed the point.</p>
+    <p>What else matters: the operator must be able to see where the bot got it wrong and have a "mark answer as incorrect" button. These marks are the main source of improvements to the knowledge base. For a broader look at organizing support with AI, see the article <a href="/blog/ai-agent-podderzhki-klientov/">on an AI customer support agent</a>.</p>
+
+    <h2>Example: a water delivery service moves its bot to AI</h2>
+    <p>Imagine a small company that delivers water and coolers. A bot with the menu "Order / Reschedule delivery / Pay / Ask a question" had existed for two years. About 40% of conversations ended in a handoff to the dispatcher, most often because of phrasing like "can you come tomorrow, but not in the morning, after three, and one more bottle".</p>
+    <p>At the first stage, text understanding was added to the bot: the model breaks the message down into parameters (date, time, quantity) and feeds them into the existing order scenario. The buttons stayed. At the second, documents were connected: bottle deposit rules, delivery zones, the holiday schedule. At the third, access to the order database, so that the bot itself can give the date of the next delivery and the remaining prepaid balance.</p>
+    <p>The restrictions were kept strict: the bot doesn't promise a specific delivery hour (that's the logistics manager's call), doesn't discuss compensation for late delivery and hands any message containing a complaint over to the dispatcher. The dispatcher now deals mostly with routes rather than answering "when will you get here". A realistic benchmark: the share of conversations involving a human drops by a factor of one and a half to three if the knowledge base and restrictions are set up carefully.</p>
+
+    <h2>What usually goes wrong</h2>
+    <p>A few mistakes that we at AiKrok see most often in transitions like this.</p>
+    <p><strong>The buttons were turned off completely.</strong> Some customers don't like typing and want to tap "my orders". By removing the buttons, you make the experience worse for the sake of a pure concept.</p>
+    <p><strong>Launched without logging.</strong> If you don't save conversations and operator marks, a month later it won't be clear whether the bot has become better or worse. A simple table in Metabase or Google Sheets with the escalation rate and ratings is the required minimum.</p>
+    <p><strong>No agreement on who is responsible for the documents.</strong> The bot starts making mistakes not because of the code but because of an outdated policy, and nobody knows who to go to.</p>
+    <p><strong>The model was chosen by benchmarks, not by the task.</strong> For support with a knowledge base, consistency in following instructions and cost per request matter more than record test scores. Often a cheaper model with good documents works better than an expensive one with bad ones.</p>
+
+    <h2>Where to start</h2>
+    <p>The transition doesn't require stopping the current bot. The practical order is as follows:</p>
+    <ol>
+        <li>Export the conversations for the last two to three months and calculate what share ends in a handoff to a human, and why.</li>
+        <li>Pick the five to seven most frequent topics the bot currently can't handle and prepare documents for them.</li>
+        <li>Launch hybrid mode: the menu stays, and the model handles free text. Two weeks is a realistic time frame for the first version.</li>
+        <li>Collect the operators' marks, refine the documents, then connect actions in your systems.</li>
+    </ol>
+    <p>The basic principles of building support bots without AI are described in the article <a href="/blog/telegram-boty-dlya-prodazh-i-podderzhki/">on Telegram bots for sales and support</a> — they still hold after the transition. If you'd like to assess which stage you should start from, you can <a href="/#contact">discuss your task in a free consultation</a>.</p>

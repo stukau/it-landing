@@ -545,6 +545,13 @@ Yes. Form submissions can go straight to a CRM, a managers' Telegram chat or a s
 **What does preparing a site for AI search mean?**
 A set of technical steps — llms.txt, schema.org markup, a robots.txt open to AI crawlers and clearly structured copy — so that ChatGPT and other assistants can read the site and mention the company in their answers.
 
+### Related articles
+
+- [A Website with an AI Assistant: A Widget That Answers Questions and Captures Leads](https://aikrok.com/en/blog/sayt-s-ii-assistentom/)
+- [llms.txt, schema.org and robots.txt: How to Get Your Website Ready for AI Search](https://aikrok.com/en/blog/llms-txt-i-schema-org-dlya-ii-poiska/)
+- [AI Visibility: How to Get Into the Answers of ChatGPT and Other AI Assistants](https://aikrok.com/en/blog/ai-visibility-kak-popast-v-otvety-ii/)
+- [An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone](https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/)
+
 ### Other services
 
 - [Telegram Bots & AI Assistants](https://aikrok.com/en/services/telegram-boty/)
@@ -611,6 +618,15 @@ If your customers already use Telegram and you need booking, a catalog or an acc
 **Can the bot be connected to a CRM?**
 Yes. The bot can create deals, update customer records and hand the conversation over to a manager together with the chat history.
 
+### Related articles
+
+- [How Much Does a Telegram Bot Cost: From a Simple Menu to a Bot with AI and Payments](https://aikrok.com/en/blog/skolko-stoit-telegram-bot/)
+- [A Telegram Bot for Appointments and Bookings: Scenarios, Integrations and Pitfalls](https://aikrok.com/en/blog/telegram-bot-dlya-zapisi-i-bronirovaniya/)
+- [An AI-Powered Telegram Bot: Moving from Button Menus to Understanding the Request](https://aikrok.com/en/blog/telegram-bot-s-ii-dlya-podderzhki/)
+- [Telegram Mini Apps: An App for Your Customers Without the App Store or Google Play](https://aikrok.com/en/blog/telegram-mini-apps-dlya-biznesa/)
+- [Telegram or WhatsApp: Where to Build a Bot for Your Market](https://aikrok.com/en/blog/telegram-ili-whatsapp-dlya-biznesa/)
+- [A Telegram Bot for Your Loyalty Program: Bonuses, Broadcasts and Bringing Customers Back](https://aikrok.com/en/blog/telegram-bot-dlya-programmy-loyalnosti/)
+
 ### Other services
 
 - [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
@@ -674,6 +690,13 @@ A Mini App is faster and cheaper if your customers already use Telegram. An app 
 **Will you help with publishing in the stores?**
 Yes. We prepare the materials, go through review and publish the app; after launch we stay in touch and ship updates.
 
+### Related articles
+
+- [An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone](https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/)
+- [Mobile App or Telegram Mini App: Which Should Your Business Choose?](https://aikrok.com/en/blog/mobilnoe-prilozhenie-ili-telegram-mini-app/)
+- [AI in Mobile Apps: Receipt Recognition, Voice Input and On-Device Data](https://aikrok.com/en/blog/ii-v-mobilnyh-prilozheniyah/)
+- [Telegram Mini Apps: An App for Your Customers Without the App Store or Google Play](https://aikrok.com/en/blog/telegram-mini-apps-dlya-biznesa/)
+
 ### Other services
 
 - [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
@@ -736,6 +759,14 @@ Yes. Messenger conversations land in the customer record, and the manager replie
 **Does a very small team need a CRM?**
 If there are a few leads a day handled by one person, a spreadsheet and a bot may be enough. A CRM pays off when leads grow, several managers appear or you need to see the whole funnel.
 
+### Related articles
+
+- [How to Choose a CRM for a Small Business: Criteria, Comparison and Common Traps](https://aikrok.com/en/blog/kak-vybrat-crm-dlya-malogo-biznesa/)
+- [CRM Implementation: Why Your Team Doesn't Use the System and How to Fix It](https://aikrok.com/en/blog/vnedrenie-crm-pochemu-komanda-ne-polzuetsya/)
+- [Integrating CRM with Messengers: Every Conversation in One Client Card](https://aikrok.com/en/blog/integraciya-crm-s-messendzherami/)
+- [AI in CRM: Auto-Tags, Call Summaries and Deal Forecasting](https://aikrok.com/en/blog/ii-v-crm/)
+- [Sales Automation for Small Business: A Pipeline That Runs Without Manual Reminders](https://aikrok.com/en/blog/avtomatizaciya-prodazh-malogo-biznesa/)
+
 ### Other services
 
 - [Websites & Landing Pages](https://aikrok.com/en/services/razrabotka-saytov/)
@@ -796,6 +827,14 @@ Not always. For a small business a lightweight dashboard and a daily summary in 
 
 **Can we ask questions about our data in plain text?**
 Yes — with a language model connected to your data. It is important to limit it to verified sources so that it doesn't make numbers up.
+
+### Related articles
+
+- [The Owner's Dashboard: Ten Metrics to See Every Morning](https://aikrok.com/en/blog/dashboard-dlya-sobstvennika-biznesa/)
+- [How to Bring Data from Ads, CRM and Inventory into One Picture](https://aikrok.com/en/blog/sbor-dannyh-iz-raznyh-istochnikov/)
+- [AI Analytics: How to Ask Your Data Questions in Plain Language](https://aikrok.com/en/blog/ii-analitika-dannyh-dlya-biznesa/)
+- [AI Sales Forecasting: What Actually Works for Small Businesses](https://aikrok.com/en/blog/prognozirovanie-prodazh-s-pomoshchyu-ii/)
+- [A Daily Digest in Telegram Instead of Spreadsheets: How to Automate Your Reports](https://aikrok.com/en/blog/avtomatizaciya-otchetov-v-telegram/)
 
 ### Other services
 
@@ -862,6 +901,16 @@ It depends on the data and the requirements. Options include cloud models with c
 
 **How much does an AI agent cost?**
 From a few hundred dollars for automation on a ready-made platform to tens of thousands for a system integrated with accounting and its own model. Plus monthly costs for the model, server and support.
+
+### Related articles
+
+- [How Much Does an AI Agent Cost: Cost Structure, Hidden Expenses and Payback](https://aikrok.com/en/blog/skolko-stoit-ai-agent/)
+- [How Business Automation with AI Agents Works](https://aikrok.com/en/blog/avtomatizatsiya-biznesa-ai-agenty/)
+- [An AI Agent for Inbound Leads: Qualifying Around the Clock Without Losing Any](https://aikrok.com/en/blog/ai-agent-dlya-obrabotki-zayavok/)
+- [RAG in Practice: How to Get AI to Answer from Your Company's Documents](https://aikrok.com/en/blog/rag-baza-znaniy-kompanii/)
+- [AI Hallucinations: How to Stop an Agent from Making Up Prices, Deadlines and Terms](https://aikrok.com/en/blog/gallyucinacii-ii-kak-zashchitit-biznes/)
+- [Where to Start with Business Automation: A One-Day Process Audit](https://aikrok.com/en/blog/s-chego-nachat-avtomatizaciyu-biznesa/)
+- [n8n, Make or Zapier: Which Automation Platform Should a Small Business Choose?](https://aikrok.com/en/blog/n8n-make-zapier-sravnenie/)
 
 ### Other services
 

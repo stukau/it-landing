@@ -1,0 +1,73 @@
+<!--title-->
+How Much Does an AI Agent Cost: Cost Structure, Hidden Expenses and Payback
+<!--description-->
+What makes up the price of an AI agent: development, API, hosting, support and hidden costs. Three typical configurations and a simple payback model.
+<!--cta_title-->
+Want to know whether an agent will pay off in your case?
+<!--cta_text-->
+We'll calculate the savings from your real hours and suggest a minimal configuration. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>An honest answer to the question "how much does an AI agent cost" starts with a clarification: which one exactly, and for what task. This is not evasion. The range really is huge — from a few hundred dollars for automation on an off-the-shelf platform to tens of thousands for a system with accounting integrations, its own model and support. But the cost structure is the same for all projects, and once you understand it, comparing contractors' proposals and calculating payback becomes much easier.</p>
+    <p>This article covers what makes up the price of an agent, which expenses don't make it into the proposal, and how to calculate whether the project will pay off in your case. All figures are approximate and depend on the market.</p>
+
+    <h2>Three layers of cost</h2>
+    <p>The full cost of an agent breaks down into development, operating expenses and support. The most common mistake is looking only at the first layer.</p>
+    <h3>1. Development: one-off costs</h3>
+    <p>This includes analyzing the process, design, building, integrations, testing and launch. What affects the amount:</p>
+    <ul>
+        <li><strong>Number of integrations.</strong> Each system — CRM, 1C, telephony, warehouse, payment provider — is a separate piece of work. An agent with one channel and Google Sheets costs several times less than an agent with five integrations.</li>
+        <li><strong>Quality of data and documents.</strong> If the company's knowledge base is a dozen scattered files and some correspondence, a significant part of the budget will go into putting it in order.</li>
+        <li><strong>Accuracy requirements.</strong> An agent that answers questions about opening hours and an agent that quotes prices and places orders are tested differently. The latter requires multi-layered protection against errors.</li>
+        <li><strong>Platform.</strong> Building on n8n or Make is faster and cheaper than developing on LangGraph with custom code, but less flexible. For most small-business tasks the first option is enough.</li>
+    </ul>
+    <p>Rough timelines: a simple agent is one to two weeks of work, a mid-level one with several integrations is three to five weeks, a complex system is two months or more. A developer's hourly rate varies greatly between markets, so the same agent will cost differently in Tbilisi, Warsaw and Berlin. What a two-week project looks like is described in detail in the article <a href="/blog/mvp-za-2-nedeli-chto-vhodit/">about an MVP in two weeks</a>.</p>
+    <h3>2. Operating expenses: monthly</h3>
+    <ul>
+        <li><strong>Language model API.</strong> Payment for the volume of text processed. For a support agent with a few hundred conversations a day this is roughly tens to low hundreds of dollars a month; for an agent that reads long documents, noticeably more. The choice of model changes the cost several times over: cheap models for simple tasks, expensive ones for complex tasks.</li>
+        <li><strong>Hosting.</strong> A server for n8n or the agent's code — from a small monthly amount for a virtual machine. If you need your own model on a GPU, it's substantially more expensive; more on that below.</li>
+        <li><strong>Platform subscriptions.</strong> Make and Zapier charge per operation; at high volume this becomes a noticeable line item. Self-hosted n8n doesn't have this line.</li>
+        <li><strong>Channels.</strong> The Telegram Bot API is free. The WhatsApp Business API is paid, with charges per conversation. Telephony for voice agents is billed per minute.</li>
+        <li><strong>A vector database</strong> for RAG — a cloud subscription or your own server.</li>
+    </ul>
+    <h3>3. Support and further development</h3>
+    <p>An agent is never "finished". Conditions change, new types of questions appear, the APIs of the systems it is integrated with get updated. It needs regular log review, prompt edits and knowledge base updates. A benchmark is a few hours a month for a simple agent, more for a complex one. This is either your own employee's time or a contract with a contractor. If the proposal doesn't have this line, ask who will be doing it.</p>
+
+    <h2>Hidden costs nobody warns you about</h2>
+    <p><strong>Your own team's time.</strong> The most underestimated item. Someone has to describe the process, gather the documents, answer the developer's questions, test, and check the first weeks of operation. For a two-week project this is roughly 10–20 hours of a manager's or key employee's time. Without it the project will either drag on or turn out to be the wrong thing.</p>
+    <p><strong>Putting in order what is being automated.</strong> If there is no price list in structured form, it will have to be created. If the procedures are outdated, they will have to be rewritten. Formally these aren't costs of the agent, but without them the agent won't work.</p>
+    <p><strong>API costs growing with load.</strong> An agent that cost 40 dollars a month at the start will cost roughly 120 when the flow triples. This is normal and predictable, but it should be in the financial model.</p>
+    <p><strong>Your own model.</strong> If security requirements mean data can't go to the cloud, you need a server with a GPU — rental from a few hundred dollars a month and up — plus administration. This can double operating expenses. When this is really necessary and when it isn't is covered in the article <a href="/blog/bezopasnost-dannyh-pri-vnedrenii-ii/">about data security when adopting AI</a>.</p>
+    <p><strong>Rework after a failed start.</strong> If the first contractor built the agent without tests and logs, it is often cheaper for the second one to build it again than to figure it out. Savings at the first stage turn into paying twice.</p>
+    <p><strong>Moving between platforms.</strong> An agent built on Zapier may, as volume grows, cost more in subscription fees than your own server with n8n. The migration is a separate piece of work.</p>
+
+    <h2>Three typical configurations with price ranges</h2>
+    <p>To find your way around proposals, it helps to keep three levels in mind. The figures are a benchmark for the CIS and Eastern European markets; in Western Europe development is more expensive, while operating expenses are the same.</p>
+    <p><strong>Basic agent.</strong> One channel (Telegram or the website), answers from a knowledge base, passing leads to Google Sheets or a CRM, notifications to the manager. Built on n8n. Development is one to two weeks. Operating expenses are roughly 20–100 dollars a month. Suitable for a salon, a small store, a studio, a private practice.</p>
+    <p><strong>Working agent with integrations.</strong> Several channels, integration with the CRM and the accounting system, checking availability and statuses, lead qualification with handoff to a manager, protection against made-up prices, reports. Development is three to five weeks. Operating expenses are roughly 100–400 dollars a month. Suitable for an online store, a distributor, a clinic, an agency.</p>
+    <p><strong>System.</strong> Several agents with different roles, your own model or a hybrid, integration with 1C and telephony, strict security requirements, an SLA for support. Development is two months or more. Operating expenses start from a few hundred dollars a month, noticeably more with your own model. Suitable for companies of 50–100 employees or more with several processes.</p>
+    <p>If a contractor proposes a "system" for a task that a basic agent can handle, that's a reason to ask why.</p>
+
+    <h2>How to calculate payback</h2>
+    <p>A simple model in four steps.</p>
+    <ol>
+        <li><strong>Calculate the time the agent will take over.</strong> How many hours a month employees spend on the process being automated. Count honestly: not the whole time of the process, but the part the agent will actually cover. This is usually 50–80% for routine tasks.</li>
+        <li><strong>Multiply by the hourly cost</strong> of the employee, including taxes and overheads.</li>
+        <li><strong>Add the indirect effect</strong>, if it can be estimated: leads that used to be lost at night; customers who didn't wait for a reply. It's important not to fantasize here — take the lower estimate.</li>
+        <li><strong>Compare with the full cost:</strong> development divided by 12 months, plus monthly operating expenses and support.</li>
+    </ol>
+    <p>An example with illustrative numbers. A clinic with two administrators: reminders, appointment confirmations, answers to standard questions — about 60 hours a month. At an hourly cost of 10 dollars that is 600 dollars. The agent covers 70% — 420 dollars a month in savings. Development is 2,500 dollars, operating expenses and support are 120 dollars a month. The net effect is about 300 dollars a month, and payback is roughly 8–9 months, not counting the reduction in no-shows. If you take into account that reminders cut no-shows by at least a few percent, the period is noticeably shorter.</p>
+    <p>If this model gives a payback of more than a year and a half to two years, the project is most likely premature — or the wrong process was chosen.</p>
+
+    <h2>Where an agent won't pay off</h2>
+    <ul>
+        <li>The flow of inquiries is small: a dozen a week. Reply templates and notifications will solve the task more cheaply.</li>
+        <li>The process is unstable and changes every week — the agent will have to be reworked constantly.</li>
+        <li>The main value is personal contact: premium services where the customer wants to talk to the owner.</li>
+        <li>The data the agent has to work with doesn't exist in structured form, and nobody is going to put it in order.</li>
+    </ul>
+
+    <h2>How to read a contractor's proposal</h2>
+    <p>A good proposal separates development, operating expenses and support, lists the integrations, describes what testing includes, and states who owns the code and access credentials after delivery. Warning signs: a single figure with no breakdown, no operating expenses in the calculation, a promise of "full automation", no process analysis stage. At AiKrok we always start with a free consultation where we calculate payback before naming a price — sometimes the result is advice not to build an agent at all. More on choosing a contractor in the article <a href="/blog/kak-vybrat-razrabotchika-ai-agenta/">about choosing an AI agent developer</a>.</p>
+
+    <h2>Summary</h2>
+    <p>The cost of an agent is development plus monthly expenses plus support plus your team's time. Proposals should be compared on all four components, and payback calculated on the real hours the agent will take over. For most small-business tasks a sensible start is a basic or working agent with payback within a year; anything beyond that needs separate justification.</p>

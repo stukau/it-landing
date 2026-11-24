@@ -20,7 +20,7 @@ import subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://aikrok.com"
 TODAY = "2026-11-25"
-CSS_V, BLOG_CSS_V, I18N_V = "14", "3", "9"
+CSS_V, BLOG_CSS_V, I18N_V = "15", "3", "9"
 OG = BASE + "/og-image-en.png"
 
 
@@ -52,6 +52,30 @@ def crumbs(items):
 
 
 ORG = {"@type": "Organization", "@id": BASE + "/#organization", "name": "AiKrok", "url": BASE + "/"}
+
+TAGS_EN = {"AI-агенты": "AI Agents", "Автоматизация": "Automation", "CRM": "CRM", "Telegram-боты": "Telegram Bots",
+           "Аналитика": "Analytics", "Сайты": "Websites", "Приложения": "Apps"}
+FRAG_KEYS = ["title", "description", "cta_title", "cta_text", "body"]
+
+
+def en_posts():
+    """English blog translations from tools/blog_en/<slug>.html -> {slug: {title, description, ...}}."""
+    d = os.path.join(ROOT, "tools", "blog_en")
+    out = {}
+    for f in sorted(os.listdir(d)) if os.path.isdir(d) else []:
+        if not f.endswith(".html"):
+            continue
+        t = open(os.path.join(d, f), encoding="utf-8").read()
+        parts = re.split(r"<!--(%s)-->\n?" % "|".join(FRAG_KEYS), t)
+        frag = {parts[i]: parts[i + 1].strip("\n") for i in range(1, len(parts) - 1, 2)}
+        assert list(frag) == FRAG_KEYS, (f, list(frag))
+        for k in FRAG_KEYS[:4]:
+            frag[k] = frag[k].strip()
+        out[f[:-5]] = frag
+    return out
+
+
+POSTS_EN = en_posts()
 
 # ---------------------------------------------------------------- translations
 js = rd("i18n.js")
@@ -383,8 +407,32 @@ def build_home():
 
 """ % "\n".join("            <details><summary>%s</summary><p>%s</p></details>" % (q, a) for q, a in HOME_FAQ)
     a, b = h.index("<!-- FAQ (Russian-only) -->"), h.index("<!-- CTA -->")
-    h = h[:a] + faq + h[b:]
-    h = re.sub(r'\s*<a href="blog/"[^>]*>[^<]*</a>', "", h)
+    teaser = ""
+    cards = re.findall(r'<a class="blog-teaser-card" href="blog/([^"/]+)/">\s*<span class="blog-teaser-tag">([^<]+)</span>', h[a:b])
+    if cards and all(slug in POSTS_EN for slug, _ in cards):
+        teaser = """<!-- Blog -->
+<section class="blog-teaser-en only-en">
+    <div class="container">
+        <h2 class="section-title">From the blog</h2>
+        <p class="section-subtitle">Prices, timelines and typical mistakes — no fluff and no made-up numbers</p>
+        <div class="blog-teaser-grid">
+%s
+        </div>
+        <div class="blog-teaser-more">
+            <a href="/en/blog/" class="btn btn-outline btn-lg">All articles</a>
+        </div>
+    </div>
+</section>
+
+""" % "\n".join("""            <a class="blog-teaser-card" href="/en/blog/%s/">
+                <span class="blog-teaser-tag">%s</span>
+                <h3>%s</h3>
+            </a>""" % (slug, TAGS_EN[tag], html.escape(POSTS_EN[slug]["title"], quote=False)) for slug, tag in cards)
+    h = h[:a] + faq + teaser + h[b:]
+    if POSTS_EN:
+        h = h.replace('href="blog/"', 'href="/en/blog/"')
+    else:
+        h = re.sub(r'\s*<a href="blog/"[^>]*>[^<]*</a>', "", h)
 
     # absolute asset paths (the page lives one level deeper)
     h = re.sub(r'\b(src|href|poster)="(?!https?:|/|#|mailto:)([^"]+)"', r'\1="/\2"', h)
@@ -441,7 +489,7 @@ HEAD = """<!DOCTYPE html>
         <nav class="nav">
             <a href="/en/services/">Services</a>
             <a href="/en/#portfolio">Portfolio</a>
-            <a href="/en/#process">How we work</a>
+            <a href="/en/#process">How we work</a>{blog_link}
             <a href="/en/#contact">Contact</a>
         </nav>
         <div class="header-right">
@@ -471,7 +519,7 @@ FOOT = """
         <div class="footer-links">
             <a href="/en/services/">Services</a>
             <a href="/en/#portfolio">Portfolio</a>
-            <a href="/en/#process">How we work</a>
+            <a href="/en/#process">How we work</a>{blog_link}
             <a href="/en/#contact">Contact</a>
         </div>
         <div class="footer-contacts">
@@ -491,11 +539,15 @@ FOOT = """
 """
 
 
+BLOG_LINK = '\n            <a href="/en/blog/">Blog</a>' if POSTS_EN else ""
+FOOT = FOOT.replace("{blog_link}", BLOG_LINK)
+
+
 def head(title, desc, path, graph, ogtitle):
     e = lambda s: html.escape(s, quote=True)
     return HEAD.format(title=e(title), desc=e(desc), url=BASE + "/en" + path, ogtitle=e(ogtitle), og=OG,
                        alt=hreflang(BASE + path, BASE + "/en" + path), ld=ld(graph),
-                       cssv=CSS_V, bcssv=BLOG_CSS_V, ru_path=path, en_path="/en" + path)
+                       cssv=CSS_V, bcssv=BLOG_CSS_V, ru_path=path, en_path="/en" + path, blog_link=BLOG_LINK)
 
 
 def li(items):
@@ -514,6 +566,12 @@ def build_services():
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in s["faq"]]},
         ]
         e = lambda t: html.escape(t, quote=False)
+        ru_page = rd(f"services/{s['slug']}/index.html")
+        rel = [x for x in re.findall(r'<li><a href="/blog/([^"/]+)/">', ru_page) if x in POSTS_EN]
+        related = ""
+        if rel:
+            related = "    <h2>Related articles</h2>\n    <ul>\n" + li(
+                '<a href="/en/blog/%s/">%s</a>' % (x, e(POSTS_EN[x]["title"])) for x in rel) + "\n    </ul>\n\n"
         body = f"""
 <div class="article-header">
     <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/services/">Services</a> / {e(s['short'])}</div>
@@ -556,7 +614,7 @@ def build_services():
 {chr(10).join('        <details><summary>' + q + '</summary><p>' + a + '</p></details>' for q, a in s['faq'])}
     </div>
 
-    <h2>Other services</h2>
+{related}    <h2>Other services</h2>
     <ul class="link-chips">
 {li('<a href="/en/services/' + o['slug'] + '/">' + e(o['short']) + '</a>' for o in SERVICES if o is not s)}
     </ul>

@@ -1232,7 +1232,7 @@ svg.pc-icon {
 }
 
 /* === Blog teaser === */
-.blog-teaser {
+.blog-teaser, .blog-teaser-en {
     padding: 120px 0;
     background: var(--bg-dark);
 }
@@ -1285,7 +1285,7 @@ html:not([lang="ru"]) .blog-teaser { display: none; }
     .blog-teaser-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .blog-teaser { padding: 80px 0; }
+    .blog-teaser, .blog-teaser-en { padding: 80px 0; }
     .blog-teaser-grid { grid-template-columns: 1fr; }
     .blog-teaser-card { padding: 26px; }
 }

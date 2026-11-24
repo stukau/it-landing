@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Write a Spec for an AI Agent: Template, Examples and Common Gaps — AiKrok Blog</title>
+    <meta name="description" content="An eight-section spec template for an AI agent, worked examples for a clinic and a wholesale supplier, and the gaps that tend to surface only after launch.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/kak-napisat-tz-na-ai-agenta/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/">
+    <meta property="og:title" content="How to Write a Spec for an AI Agent: Template, Examples and Common Gaps">
+    <meta property="og:description" content="An eight-section spec template for an AI agent, worked examples for a clinic and a wholesale supplier, and the gaps that tend to surface only after launch.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "How to Write a Spec for an AI Agent: Template, Examples and Common Gaps",
+                "description": "An eight-section spec template for an AI agent, worked examples for a clinic and a wholesale supplier, and the gaps that tend to surface only after launch.",
+                "url": "https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/",
+                "datePublished": "2026-08-20",
+                "dateModified": "2026-08-20",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "AI Agents",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/kak-napisat-tz-na-ai-agenta/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "How to Write a Spec for an AI Agent: Template, Examples and Common Gaps",
+                        "item": "https://aikrok.com/en/blog/kak-napisat-tz-na-ai-agenta/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/kak-napisat-tz-na-ai-agenta/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/kak-napisat-tz-na-ai-agenta/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / AI Agents</div>
+    <h1>How to Write a Spec for an AI Agent: Template, Examples and Common Gaps</h1>
+    <div class="post-meta"><span class="tag">AI Agents</span>August 20, 2026 · 8 min read</div>
+</div>
+
+<main class="article">
+<p>Most disputes between a client and an AI agent developer start with one sentence: "But we agreed it would be able to do that." Agreed verbally, in a chat thread, "on a call." A month later the agent answers customers differently from what the owner had in mind, the developer considers the job done, and the budget is already spent. The cause is almost always the same — the specification was either never written at all, or written along the lines of "a smart bot that answers questions and sells."</p>
+    <p>The good news: a spec for an AI agent doesn't require technical knowledge. It requires an honest description of how the process works now and what it should become. This article gives you a working template, filled-in examples for different industries and a list of the gaps that most often surface only after launch.</p>
+
+    <h2>How an agent spec differs from a spec for ordinary software</h2>
+    <p>A classic spec describes deterministic behavior: press a button, get a result. An AI agent works with a language model, and its behavior is probabilistic. It may answer the same question in different words, and in a situation nobody foresaw it may make a decision nobody planned for.</p>
+    <p>That is why an agent spec shifts the emphasis from "what it does" to three other questions:</p>
+    <ul>
+        <li><strong>Boundaries</strong> — what the agent must not do under any circumstances.</li>
+        <li><strong>Sources of truth</strong> — where it gets prices, stock levels, lead times and terms. Not "from memory," but from a specific spreadsheet or CRM.</li>
+        <li><strong>Handoff rules</strong> — when the agent must stop and call in a member of staff.</li>
+    </ul>
+    <p>If these three blocks are written down, the developer will clarify the rest on their own. If not, you'll get an agent that confidently promises a discount that doesn't exist. We covered how to prevent this technically in our article on <a href="/en/blog/gallyucinacii-ii-kak-zashchitit-biznes/">AI hallucinations</a>, but the protection starts with the spec.</p>
+
+    <h2>The spec template: eight sections</h2>
+    <p>The template below is designed for a document of two to four pages. You don't need more: nobody reads a long spec, and a short one leaves too much to the contractor's discretion.</p>
+
+    <h3>1. The business goal in one paragraph</h3>
+    <p>Not "implement AI," but a measurable result. Example: "Cut the time to first response on a website inquiry from 2–3 hours to 2 minutes, during and outside business hours, so that fewer inquiries go to competitors." If you can't state the goal with a number in it, that's a sign the process isn't understood yet.</p>
+
+    <h3>2. The process "as is"</h3>
+    <p>Step by step: who receives the inquiry, where they see it, what they check, where they record it, who they pass it to. Include the exceptions: "if a customer writes at night, we reply in the morning," "if they ask about wholesale prices, we pass it to the manager." Half of the agent's logic later grows out of exactly these exceptions.</p>
+
+    <h3>3. The process "to be"</h3>
+    <p>The same process, but with the agent inside it. State which steps the agent does on its own, which need human confirmation, and which stay entirely with people. A useful wording: "The agent is allowed to…" and "The agent is not allowed to…".</p>
+
+    <h3>4. Channels and systems</h3>
+    <p>List everything the agent has to interact with: Telegram, WhatsApp Business API, a website widget, email; amoCRM, Bitrix24, HubSpot, 1C, Google Sheets. For each system: is there API access, who will grant it, what data we read, what data we write. This section most often turns out to be the most painful: it emerges that the CRM plan has no API, or that 1C sits on a server with no external access.</p>
+
+    <h3>5. Knowledge base</h3>
+    <p>Where the agent gets the information for its answers: price list, internal procedures, FAQ, service descriptions. What form they exist in (PDF, website, a manager's head), how often they change, who is responsible for keeping them current. If the knowledge is only "in someone's head," the spec records a task to collect it — and that is a separate piece of work, often on the client's side.</p>
+
+    <h3>6. Scenarios and sample conversations</h3>
+    <p>Five to ten real conversations from your customer correspondence: typical ones, difficult ones and ones that ended in conflict. For each, state how the agent should respond. This is the most valuable section of the spec — it replaces pages of abstract requirements.</p>
+
+    <h3>7. Restrictions, tone and escalation</h3>
+    <p>Forbidden topics, wordings and promises. Tone of voice ("formal, no emoji, brief"). Conditions for handing off to a human: negativity, a question about a refund, a request for non-standard terms, a repeated question with no resolution, a direct demand to "get me a human." Where the escalation goes — which chat, to whom, with what summary.</p>
+
+    <h3>8. Acceptance criteria</h3>
+    <p>How you will know the agent is ready. Options: "On a test set of 50 conversations, at least 90% of answers are rated as correct," "Not a single invented price in the test," "Escalation is triggered in all 10 control situations." More on post-launch metrics in our article <a href="/en/blog/metriki-effektivnosti-ai-agenta/">on measuring agent performance</a>.</p>
+
+    <h2>Worked example: a dental clinic</h2>
+    <p>Goal: take the load off the receptionist, who spends roughly half the day on the same questions in messengers, and stop losing evening inquiries.</p>
+    <p>As is: patients write on WhatsApp and Telegram, the receptionist replies in the gaps between appointments, and in the evening messages wait until morning. Appointments are kept in a medical information system, into which the receptionist copies the data by hand.</p>
+    <p>To be: the agent answers questions about prices, the address and preparation for procedures from the knowledge base, offers free slots from the schedule and creates a provisional appointment. The receptionist confirms the appointment in the morning with one tap.</p>
+    <p>The agent is not allowed to: make a diagnosis, recommend treatment, quote a final price for complex work, or discuss complications. Any question about pain, bleeding or how the patient feels after a procedure means an immediate handoff to the receptionist, flagged "urgent."</p>
+    <p>Acceptance criterion: 40 test conversations, of which the 8 medical questions must go to escalation with no attempt to answer.</p>
+
+    <h2>Worked example: a wholesale building materials supplier</h2>
+    <p>Here the emphasis is different. The goal is lead qualification: filter out private individuals asking for two bags of cement and pass on to a sales rep those who buy in volume.</p>
+    <p>Sources of truth: a price list in Google Sheets with "retail" and "wholesale from N units" columns, stock levels in 1C. The agent reads stock levels but does not create orders — it only prepares a draft for the sales rep.</p>
+    <p>Rules: the agent may quote retail prices and availability. For wholesale terms, deferred payment and discounts — only the phrase "I'm passing this to a manager, who will contact you within an hour" and a card in amoCRM with the fields filled in: volume, region, urgency, contact. For a task like this it's worth thinking through from the start how the agent works together with the pipeline — that's the subject of our article on <a href="/en/blog/ai-agent-dlya-obrabotki-zayavok/">an AI agent for handling inquiries</a>.</p>
+
+    <h2>Common gaps that surface after launch</h2>
+    <p>Over several projects, we at AiKrok have put together a list of what is almost always forgotten in the spec.</p>
+    <ul>
+        <li><strong>Who updates the knowledge base.</strong> Prices changed, the agent quotes the old ones. The spec named no owner — so the developer gets the blame.</li>
+        <li><strong>What to do with customer data.</strong> Where the conversations go, which model processes them, whether personal data may be sent to the cloud. For healthcare, lawyers and finance this is not a formality — and the question must be settled before launch.</li>
+        <li><strong>Working hours and mode.</strong> The agent works around the clock, while a night-time escalation goes nowhere. You need to spell it out: at night the agent collects the contact and promises a reply in the morning, rather than messaging an employee at three in the morning.</li>
+        <li><strong>Languages.</strong> For a business in Georgia or Kazakhstan, customers write in two or three languages. If this isn't stated, the agent will answer in the language it was tested in.</li>
+        <li><strong>Limits and cost.</strong> How many requests per month are expected, what budget for the model API is acceptable. Without this the developer will pick the strongest and most expensive model.</li>
+        <li><strong>Returning customers.</strong> Should the agent remember a customer who wrote a week ago? This affects the architecture and the cost.</li>
+        <li><strong>What counts as success in three months.</strong> The spec ends at acceptance, but the business carries on. It's useful to record up front which indicators you'll look at after launch and who is responsible for them.</li>
+    </ul>
+
+    <h2>Where a spec won't help</h2>
+    <p>If the process hasn't settled and changes every week, the spec will go out of date faster than anyone can read it. In those cases it's more honest to start with a short pilot: describe only the goal, the boundaries and the escalation, launch the agent on a share of the inquiries and add requirements as you go. This is how the MVP in two weeks approach works — the first version is deliberately narrow, and the spec grows along with the product.</p>
+    <p>The second situation is when the client tries to use the spec to lock in one-hundred-percent answer accuracy. For language models no such criterion exists; realistic wordings are the share of correct answers on a test sample and zero critical errors in the control scenarios.</p>
+
+    <h2>Where to start</h2>
+    <ol>
+        <li>Export 30–50 real customer conversations from the last month. This is the basis for sections 2 and 6.</li>
+        <li>Write the goal with a number in it. If you can't, talk to the team about what exactly hurts.</li>
+        <li>Draw up the "agent is not allowed to" list. It usually matters more than the "agent can" list.</li>
+        <li>Check access to the systems before signing the contract, not after.</li>
+        <li>Hand the draft to the developer and ask them to ask questions. A good contractor will find the gaps in it within half an hour — that's normal, and cheaper than finding them after launch.</li>
+    </ol>
+    <p>A spec for an AI agent is not a formality for the contract but a tool that saves weeks of rework. The two to four hours spent preparing it pay off on the very first call with the developer. If you're not sure where to begin, come to a <a href="/en/#contact">free consultation</a> with your draft and we'll go through it together.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/n8n-make-zapier-sravnenie/">n8n, Make or Zapier: Which Automation Platform Should a Small Business Choose?</a></li>
+        <li><a href="/en/blog/skolko-stoit-ai-agent/">How Much Does an AI Agent Cost: Cost Structure, Hidden Expenses and Payback</a></li>
+        <li><a href="/en/blog/gallyucinacii-ii-kak-zashchitit-biznes/">AI Hallucinations: How to Stop an Agent from Making Up Prices, Deadlines and Terms</a></li>
+        <li><a href="/en/blog/bezopasnost-dannyh-pri-vnedrenii-ii/">Data Security When Adopting AI: Cloud Model or Your Own Server</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/ai-agenty/">AI Agent Development and Business Automation</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Have a draft spec, or just an idea for an agent?</h2>
+    <p>We'll go through the task together, find the gaps and propose a minimal architecture. MVP in 2 weeks, the consultation is free.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

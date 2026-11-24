@@ -1,0 +1,65 @@
+<!--title-->
+A Telegram Bot for Appointments and Bookings: Scenarios, Integrations and Pitfalls
+<!--description-->
+A Telegram booking bot: buttons, a Mini App or an AI dialogue, scenarios for salons, auto shops, restaurants and rentals, schedule integrations and pitfalls.
+<!--cta_title-->
+Does booking customers eat up hours of messaging every day?
+<!--cta_text-->
+We'll build a Telegram booking bot around your schedule, cancellation rules and existing systems, with no double bookings. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>Booking a customer is an operation that looks trivial and yet eats up a disproportionate amount of time. A stylist replies in the messenger between clients, an auto shop administrator holds the phone with their shoulder while flipping through a notebook, a guesthouse owner answers "yes, it's available" at night and discovers in the morning that those dates were already promised to someone else. Each of these conversations takes a few minutes, and there are dozens of them a day. And each one is a chance to make a mistake.</p>
+    <p>A Telegram booking bot solves this problem where customers already write in Telegram. But "a booking bot" is too broad a notion: behind it are different formats, different depths of integration and a set of pitfalls that people regularly fall into on their first rollout. Let's go through it all in order.</p>
+
+    <h2>Three bot formats — and which one to choose</h2>
+    <h3>Button-based scenario</h3>
+    <p>The classic dialogue: choose a service → choose a specialist → choose a day → choose a time → confirm. Each step is a set of buttons under the message. It fits when there are few services and a manageable number of free slots. The advantage is simplicity and low cost. The drawback is that with ten specialists and a schedule a month ahead, the customer drowns in buttons.</p>
+    <h3>A Mini App with a calendar</h3>
+    <p>A button in the bot opens an app with a proper calendar, a list of services with prices, specialist profiles and a "book" button. This is more convenient for a complex schedule and looks like a familiar interface. It costs a little more to develop, but for salons, clinics and studios with several specialists it is usually the right choice. What a Mini App is and how it differs from a bot is covered in detail in the article <a href="/blog/telegram-mini-apps-dlya-biznesa/">on Telegram Mini Apps</a>.</p>
+    <h3>A dialogue that understands text</h3>
+    <p>The customer writes: "I'd like a manicure with Nino on Thursday after six." A language model parses the request, the bot checks the schedule and replies: "Nino is free on Thursday at 18:30 and 19:15 — which time works for you?" This is the most natural format and the most demanding in terms of implementation quality. It is justified when customers already write in text and don't want to tap buttons, and also where requests are varied: you can't describe a table booking "for six with a high chair by the window" with buttons.</p>
+    <p>In practice the formats are combined: a Mini App for those who came via a link and want to choose for themselves, a text dialogue for those who wrote in the chat, and buttons for confirmations and rescheduling.</p>
+
+    <h2>Scenarios by industry</h2>
+    <p>The booking logic is similar everywhere, but the details that decide whether the bot will be useful depend on the field.</p>
+    <ul>
+        <li><strong>Beauty salon, barbershop, studio.</strong> What matters most is the schedule of a specific specialist and the duration of the service. A booking for a package of two treatments must take up the correct combined slot. You need reminders, rescheduling and a waiting list for popular specialists.</li>
+        <li><strong>Auto repair shop, tire service.</strong> The booking is not for a mechanic but for a bay or a lift. The duration depends on the job, which the customer often can't name precisely. The bot collects the make, the problem and photos, and the administrator confirms the duration and time.</li>
+        <li><strong>Restaurant: table reservations.</strong> The resource is tables with a capacity, and slots with a seating duration. A deposit for large parties and a confirmation a few hours before the visit are important; otherwise you get empty tables on a peak evening.</li>
+        <li><strong>Guesthouse, apartments.</strong> Booking a date range rather than a slot. Synchronization with the calendars of the platforms that also bring in bookings is critical; otherwise double booking is guaranteed.</li>
+        <li><strong>Trainer, tutor, consultant.</strong> One resource, recurring sessions, session packages. The bot keeps the schedule, deducts sessions from the package and reminds about renewal.</li>
+        <li><strong>Clinic.</strong> A separate story with data requirements and integration with a medical system; it is covered in the article <a href="/blog/avtomatizaciya-medicinskoy-kliniki/">on clinic automation</a>.</li>
+    </ul>
+
+    <h2>Integrations: where the schedule lives</h2>
+    <p>The key question for any booking bot is what counts as the source of truth for free time. There are four options, and the choice determines the complexity of the project.</p>
+    <ol>
+        <li><strong>The schedule lives in the bot itself.</strong> The bot is the only booking channel, and the administrator also enters bookings through it or through its panel. The simplest option, suitable for a small business with no other system.</li>
+        <li><strong>Google Calendar or an equivalent.</strong> Each specialist has their own calendar; the bot reads availability and creates events. Convenient when the specialists already live in their calendars. Events created manually without structure need to be handled carefully.</li>
+        <li><strong>An existing booking system or CRM.</strong> The business already has YClients, Altegio, amoCRM, Bitrix24 or an industry-specific system. The bot becomes an interface to it via the API. The main advantage is one schedule for all channels. The main difficulty is the quality of the particular system's API: in some places it is complete, in others it doesn't return the data you need.</li>
+        <li><strong>External booking platforms.</strong> For accommodation and restaurants, some bookings come from platforms. Synchronization goes through standard calendar formats or an API, with delays taken into account: minutes can pass between a booking on the platform and its appearance on your side, and a double booking is possible in that gap.</li>
+    </ol>
+    <p>On top of this come payments (a prepayment or deposit via Telegram payment providers or external acquiring) and staff notifications: a specialist should learn about a new booking immediately rather than discover it in the calendar in the morning. How to tie all of this together in a single customer record is covered in the article <a href="/blog/integraciya-crm-s-messendzherami/">on integrating a CRM with messengers</a>.</p>
+
+    <h2>Pitfalls you learn about after launch</h2>
+    <p>Any bot from a no-code builder can book customers. The difference shows up in edge cases, and they are what determines whether the business will trust the system.</p>
+    <p><strong>Double booking.</strong> Two customers picked the same slot seconds apart, or the administrator took a booking by phone while a customer was finishing theirs in the bot. This is solved by locking the slot during checkout and checking at the moment of confirmation, not at the moment of display. Bot builders often don't provide for this.</p>
+    <p><strong>Duration and buffers.</strong> The service takes 60 minutes, but the specialist needs 10 minutes to clean up. A customer is 15 minutes late, and all the bookings shift. The bot must account for buffers between bookings and let the administrator quickly shift the schedule, with automatic notifications to the next customers.</p>
+    <p><strong>Cancellations and no-shows.</strong> A free cancellation an hour before the visit is a loss. The cancellation rules (until when it is free, when the deposit is kept) must be clearly shown at booking and applied automatically. Without prepayment, the no-show rate for popular specialists stays high no matter how many reminders you send; with a small deposit it drops noticeably. How to build a reminder sequence is covered in the article <a href="/blog/avtomatizaciya-zapisi-klientov-v-sfere-uslug/">on online booking and reminders</a>.</p>
+    <p><strong>Time zones.</strong> For online consultations and tutors with clients in different countries, the bot must show the time in the client's time zone and store it in a single format. Mistakes here look like "the client showed up an hour early" and damage your reputation.</p>
+    <p><strong>Staff don't look at the system.</strong> If a specialist keeps taking bookings in a notepad and doesn't mark their time as busy, the bot will offer customers time that is already taken. This is the most common reason businesses abandon booking bots, and the fix is not technical: the specialist has to get more from the system than they put in — for example, a ready schedule for the day and customer reminders they don't have to send themselves.</p>
+    <p><strong>A text dialogue with no boundaries.</strong> If the bot understands free text, customers ask it about everything: prices, parking, "can I bring my dog". The model must answer from the business's knowledge base and honestly say "I'll check with the administrator" instead of making things up. And a booking must only happen through a schedule check, not on the basis of the model saying "I've booked you".</p>
+    <p><strong>Spam and abuse.</strong> An open bot can be used to book ten slots from different accounts. Limits on the number of active bookings per customer and phone confirmation for new customers are simple protection that people forget about.</p>
+
+    <h2>What to include in the first version</h2>
+    <p>At AiKrok, we usually propose the following set for a first version, which fits into two weeks:</p>
+    <ul>
+        <li>Booking via buttons or a Mini App for one to five specialists, accounting for service durations and buffers.</li>
+        <li>A connection to the current schedule source, if there is one, or the bot's own schedule with a simple panel for the administrator.</li>
+        <li>Reminders a day and two hours ahead with one-tap confirmation, plus rescheduling and cancellation according to the business's rules.</li>
+        <li>A notification to the specialist about a new booking, cancellation or rescheduling.</li>
+        <li>Double-booking protection and per-customer limits.</li>
+    </ul>
+    <p>Prepayment, a waiting list, a text dialogue with a model and occupancy analytics are sensible to add in a second stage, once basic booking has been running for a month and it has become clear exactly where customers and time are being lost.</p>
+
+    <h2>Summary</h2>
+    <p>A Telegram booking bot is useful not when it can take bookings, but when it correctly handles cancellations, rescheduling, buffers, double bookings and the staff who have to trust it. The format — buttons, a Mini App or a free-form dialogue — is chosen to match the complexity of the schedule and the customers' habits, and the source of truth for free time determines the whole architecture. If you account for the pitfalls in advance, the bot takes most booking conversations off the administrator and reduces no-shows; if not, in a month everyone will be back to the notebook.</p>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone — AiKrok Blog</title>
+    <meta name="description" content="What really fits into a two-week MVP: one core feature, integrations, error handling, analytics and handover. What we postpone, and when two weeks won&#x27;t work.">
+    <link rel="canonical" href="https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/">
+    <link rel="alternate" hreflang="ru" href="https://aikrok.com/blog/mvp-za-2-nedeli-chto-vhodit/">
+    <link rel="alternate" hreflang="en" href="https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/">
+    <link rel="alternate" hreflang="x-default" href="https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/">
+    <meta property="og:title" content="An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone">
+    <meta property="og:description" content="What really fits into a two-week MVP: one core feature, integrations, error handling, analytics and handover. What we postpone, and when two weeks won&#x27;t work.">
+    <meta property="og:image" content="https://aikrok.com/og-image-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="AiKrok">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BlogPosting",
+                "headline": "An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone",
+                "description": "What really fits into a two-week MVP: one core feature, integrations, error handling, analytics and handover. What we postpone, and when two weeks won't work.",
+                "url": "https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/",
+                "datePublished": "2026-09-26",
+                "dateModified": "2026-09-26",
+                "inLanguage": "en",
+                "mainEntityOfPage": "https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/",
+                "image": "https://aikrok.com/og-image-en.png",
+                "articleSection": "Apps",
+                "author": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://aikrok.com/#organization",
+                    "name": "AiKrok",
+                    "url": "https://aikrok.com/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://aikrok.com/favicon-192.png"
+                    }
+                },
+                "translationOfWork": {
+                    "@type": "BlogPosting",
+                    "url": "https://aikrok.com/blog/mvp-za-2-nedeli-chto-vhodit/",
+                    "inLanguage": "ru"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://aikrok.com/en/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://aikrok.com/en/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone",
+                        "item": "https://aikrok.com/en/blog/mvp-za-2-nedeli-chto-vhodit/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=15">
+    <link rel="stylesheet" href="/blog/blog.css?v=3">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="/en/" class="logo">
+            <div class="logo-text-wrap">
+                <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                <span class="logo-subtitle">step by step</span>
+            </div>
+            <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+        </a>
+        <nav class="nav">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </nav>
+        <div class="header-right">
+            <div class="lang-switcher">
+                <a class="lang-btn" href="/blog/mvp-za-2-nedeli-chto-vhodit/" hreflang="ru">RU</a>
+                <a class="lang-btn active" href="/en/blog/mvp-za-2-nedeli-chto-vhodit/" hreflang="en">EN</a>
+            </div>
+            <a href="/en/#contact" class="btn btn-primary btn-sm">Discuss a project</a>
+        </div>
+    </div>
+</header>
+
+<div class="article-header">
+    <div class="breadcrumbs"><a href="/en/">Home</a> / <a href="/en/blog/">Blog</a> / Apps</div>
+    <h1>An MVP in Two Weeks: What Goes into the First Version and What We Deliberately Postpone</h1>
+    <div class="post-meta"><span class="tag">Apps</span>September 26, 2026 · 8 min read</div>
+</div>
+
+<main class="article">
+<p>The phrase "MVP in two weeks" raises two opposite fears in clients. The first: in two weeks they'll build something so raw you'd be embarrassed to show it to customers. The second: under the word MVP they'll sell full-scale development at the price of full-scale development. Both fears are well founded, because the term is abused. Let's look honestly at what fits into two weeks of work by a small team, what is deliberately left out, and the signs that the timeline is unrealistic for your task.</p>
+
+    <h2>What an MVP is and what it isn't</h2>
+    <p>An MVP is a minimal version of a product that can already be used to solve one real problem. The key word is used: real customers or employees, real data, a real result. Not a prototype for a presentation, not a clickable mockup, not a "look how it will be" demo.</p>
+    <p>At the same time, an MVP is not a product cut down beyond recognition. If a booking bot makes the booking but doesn't send a confirmation, it can't be used — the receptionist will still have to phone. So the confirmation is part of the minimum. But choosing a specialist by photo, visit history and a bonus program are not.</p>
+    <p>The line is drawn by one question: what can't the product do its single job without? Everything that gets the answer "it can manage without this" is postponed.</p>
+
+    <h2>What the first version must include</h2>
+    <p>Whatever the type of product — a bot, a Mini App, an agent, a dashboard — the two weeks include five layers.</p>
+    <h3>One core feature, taken all the way</h3>
+    <p>Not three features at 70%, but one at 100%. For an inquiry-handling bot: receive, qualify, pass to a sales rep. For a dashboard: show five agreed metrics based on data from real systems. For a booking Mini App: choose a time, book, get a confirmation and a reminder.</p>
+    <h3>Integrations with real systems</h3>
+    <p>The data comes from the actual CRM, not from a test spreadsheet. Inquiries go to a live sales rep. If there's no integration, it's a demo, not an MVP. The first version usually includes one or two integrations, no more.</p>
+    <h3>Handling errors and edge cases</h3>
+    <p>What happens when a customer goes off script, the CRM is unavailable, or the model returns an unexpected answer. For each situation there is predictable behavior, most often a handoff to a human. This layer is invisible, but it's exactly what separates a working product from a prototype.</p>
+    <h3>Minimal analytics</h3>
+    <p>How many people used it, how many made it to the end, where they dropped off. Without this, a month later it's impossible to decide what to do next. A simple event log and a spreadsheet or a Telegram summary are enough.</p>
+    <h3>Handover and instructions</h3>
+    <p>Access credentials, a short guide for the team, an understanding of who changes settings and how — for example, the reply texts or the schedule. If after launch every change requires a developer, the product hasn't been handed over.</p>
+
+    <h2>What we deliberately postpone</h2>
+    <p>A list of what clients most often ask to include in the first version, and why we suggest waiting.</p>
+    <ul>
+        <li><strong>User accounts and roles.</strong> An administrator, a sales rep, a manager with different permissions. The first version has one type of user; for the rest, a Telegram summary is enough.</li>
+        <li><strong>A second and third channel.</strong> Telegram and WhatsApp and a website widget all at once. We start with the channel where most of the customers are; the others come after the scenario has been tested.</li>
+        <li><strong>Multiple languages.</strong> One language, the one the main audience speaks. A second language gets added in days once the scenario has settled, not rewritten three times along with it.</li>
+        <li><strong>Branded design.</strong> A neat, clear interface built on standard components — yes. A unique design system with animations — after it's clear which screens will stay at all.</li>
+        <li><strong>In-product payment.</strong> If for the first few weeks you can invoice manually or through a link, that's what we do. A payment integration drags refunds, receipts and support along with it.</li>
+        <li><strong>Scaling.</strong> An architecture for a thousand concurrent users when there will be twenty. We design so that scaling is possible, but don't implement it in advance.</li>
+        <li><strong>Rare scenarios.</strong> Anything that happens less than once a week is handled by a person in the first version.</li>
+        <li><strong>Complex AI logic.</strong> Multi-agent setups, long-term memory, self-learning. One agent with clear instructions covers most small business tasks.</li>
+    </ul>
+    <p>Each of these items can be added later, and it's almost always added in a different form from the one imagined at the start — because two weeks of the product working for real change your understanding of the task.</p>
+
+    <h2>What the two weeks look like day by day</h2>
+    <p>An approximate rhythm for a project with one core feature and one or two integrations:</p>
+    <ol>
+        <li><strong>Days 1–2.</strong> Working through the task and fixing the boundaries: what's in, what's out. Access to the client's systems. Agreeing the scenario on paper — literally in text, who writes what and what happens.</li>
+        <li><strong>Days 3–4.</strong> The skeleton: server, database, connection to the CRM or accounting system, the first end-to-end run "from input to output" on test data.</li>
+        <li><strong>Days 5–9.</strong> The main feature, error handling, and setting up the AI part if there is one: model instructions, knowledge base, checks on real examples.</li>
+        <li><strong>Days 10–11.</strong> Testing together with the client on real cases. Fixes based on the results — there are always a lot of them, and that's normal.</li>
+        <li><strong>Days 12–13.</strong> Analytics, the guide, handing over access, training the team.</li>
+        <li><strong>Day 14.</strong> Launch to a limited audience: one location, one group of customers, one sales rep.</li>
+    </ol>
+    <p>The main risk to the timeline is not development but waiting: for access, for answers, for decisions on the scenario. If the client replies once every three days, two weeks turn into five.</p>
+
+    <h2>Three MVPs that fit the timeline</h2>
+    <p><strong>An inquiry-handling bot.</strong> It receives messages in Telegram, asks two or three clarifying questions, determines whether the request is a qualified one, creates a deal in amoCRM with a summary and notifies a sales rep. Not included: WhatsApp, calendar integration, automatic answers to pricing questions from a knowledge base.</p>
+    <p><strong>A booking Mini App.</strong> Choosing a service and a time from the real schedule, booking, confirmation, a reminder the day before. Not included: choosing a specialist, payment, history, reviews, bonuses. How to decide whether you need a native app here at all is covered in our article <a href="/en/blog/mobilnoe-prilozhenie-ili-telegram-mini-app/">on choosing between an app and a Mini App</a>.</p>
+    <p><strong>An owner's dashboard.</strong> Five metrics from the CRM and the accounting system, updated once a day, with a summary in Telegram every morning. Not included: breakdown by employee, forecasts, natural-language questions, connecting advertising data.</p>
+    <p>In all three cases the second version — another two to three weeks — adds what actually turned out to be needed according to the data from the first weeks, not according to the original wish list.</p>
+
+    <h2>What we need from the client</h2>
+    <p>The timeline holds only with the client's involvement, and it's worth assessing that involvement in advance.</p>
+    <ul>
+        <li>One person who makes decisions on the scenario and is available daily, at least for a short call or a reply in chat.</li>
+        <li>Access to the systems in the first two days, not in the second week.</li>
+        <li>Real examples: ten to twenty genuine inquiries, conversations or documents for setup and testing.</li>
+        <li>A willingness to launch to a limited audience with an imperfect product and look at the data.</li>
+        <li>A clear specification, even a short one. How to write it without missing what matters is covered in our article <a href="/en/blog/kak-napisat-tz-na-ai-agenta/">on writing a spec for an AI agent</a>.</li>
+    </ul>
+
+    <h2>Where two weeks won't be enough</h2>
+    <p>An honest list of signs that mean you should plan for a longer timeline from the start:</p>
+    <ul>
+        <li>Integration with a "boxed" 1C installation or a home-grown accounting system with no documented API.</li>
+        <li>Payments with receipts and refunds as a mandatory part of the first version.</li>
+        <li>A native app for two platforms with publication in the stores — review alone can take up to a week.</li>
+        <li>Security requirements under which the model has to run on your server, and there's no infrastructure for that.</li>
+        <li>A process that hasn't yet settled in the company: first you need to agree on how it works without automation.</li>
+    </ul>
+    <p>In such cases it's better to say "four weeks" and deliver than to promise two and miss. The other traps that lie in wait at launch are collected in our article <a href="/en/blog/oshibki-avtomatizacii-biznesa/">on automation mistakes</a>.</p>
+
+    <h2>Summary</h2>
+    <p>An MVP in two weeks is not a compromise on quality but a compromise on scope. One feature, working with real data and real people, with error handling and minimal analytics, handed over to the team. Everything else comes deliberately later, in the form that the first weeks of use suggest.</p>
+    <p>At AiKrok we work by this principle not out of a love of short deadlines, but because we've seen enough products that spent six months in development "with all the features" and turned out not to need half of them. Two weeks is the price of an answer to the question of whether your customers need this thing at all.</p>
+</main>
+
+<aside class="article-related">
+    <h2>Read next</h2>
+    <ul>
+        <li><a href="/en/blog/mobilnoe-prilozhenie-ili-telegram-mini-app/">Mobile App or Telegram Mini App: Which Should Your Business Choose?</a></li>
+        <li><a href="/en/blog/ii-v-mobilnyh-prilozheniyah/">AI in Mobile Apps: Receipt Recognition, Voice Input and On-Device Data</a></li>
+    </ul>
+    <p class="article-related-service">Related service: <a href="/en/services/mobilnye-prilozheniya/">Mobile App Development for iOS and Android</a></p>
+</aside>
+
+<div class="article-cta">
+    <h2>Want to test an idea on real customers without spending six months on development?</h2>
+    <p>We'll lock in one core feature, connect your systems and launch a working version. MVP in 2 weeks, the consultation is free.</p>
+    <a href="/en/#contact" class="btn btn-primary btn-lg">Discuss a project</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div class="footer-brand">
+            <a href="/en/" class="logo">
+                <div class="logo-text-wrap">
+                    <span class="logo-text"><span class="logo-ai">Ai</span><span class="logo-krok">Krok</span></span>
+                    <span class="logo-subtitle">step by step</span>
+                </div>
+                <img src="/logo-mark.png?v=2" class="logo-mark" alt="" width="44" height="44">
+            </a>
+            <p>IT solutions for business: websites, bots, apps, CRM, analytics, and AI agents</p>
+        </div>
+        <div class="footer-links">
+            <a href="/en/services/">Services</a>
+            <a href="/en/#portfolio">Portfolio</a>
+            <a href="/en/#process">How we work</a>
+            <a href="/en/blog/">Blog</a>
+            <a href="/en/#contact">Contact</a>
+        </div>
+        <div class="footer-contacts">
+            <a href="https://t.me/yuri_admin" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:info@aikrok.com">info@aikrok.com</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 aikrok. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

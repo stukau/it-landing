@@ -1,0 +1,79 @@
+<!--title-->
+A Telegram Bot for Internal Processes: Requests, Approvals and Team Reports
+<!--description-->
+A Telegram bot for internal team tasks: structured requests, one-tap approvals, shift reports and a policy helpdesk. Architecture, an example and the limits.
+<!--cta_title-->
+Do internal requests and approvals still live in the group chat?
+<!--cta_text-->
+We'll build a bot for your team's requests, approvals and reports that writes to your spreadsheets or accounting system. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>In a company of 15–40 people, internal processes rarely live in one system. A purchase request is in the group chat, a vacation approval is in direct messages to the manager, and the daily sales report is in a spreadsheet that someone fills in every evening, if they don't forget. The manager learns about problems once they have already become problems, and employees spend time figuring out "who to write to and in what format".</p>
+    <p>A Telegram bot for internal tasks solves exactly this problem: it becomes a single entry point for the team's routine actions in the place where the team already spends its day — the messenger. Below we look at which processes make sense to move into a bot first, how typical scenarios are structured and where such a bot is not a good fit.</p>
+
+    <h2>Why Telegram rather than a separate system</h2>
+    <p>For internal processes you can buy a task tracker, set up Bitrix24 or deploy a corporate portal. The problem is always the same: employees don't log in to them. The further a tool is from the window people are used to, the less consistently it gets used.</p>
+    <p>The team already has Telegram open all day. A bot in it requires no training, no registration and nothing to install. A request can be submitted in 20 seconds from a phone, and approved with a single tap on a button in the notification. This is the main argument: not functionality, but the absence of friction.</p>
+    <p>The second argument is that a bot connects easily to what the company already has: Google Sheets, 1C, amoCRM, Notion, email. It doesn't replace accounting systems; it becomes a convenient interface to them.</p>
+
+    <h2>Four types of processes that move into a bot first</h2>
+
+    <h3>Requests: from "write in the chat" to a structured form</h3>
+    <p>Requests for office supplies, IT support, equipment repair, an access pass, access to a system. They have one thing in common: the person handling the request needs a set of fields, while the employee writes free text and forgets half of them.</p>
+    <p>The bot asks questions one at a time: what is needed, how urgent, for which department, any comment. It records the request in a spreadsheet or tracker, assigns a number and notifies the person responsible. The employee sees the status ("received", "in progress", "done") and doesn't pester the handler with "so how's it going".</p>
+    <p>The handler gets a queue instead of chaos in direct messages. The manager gets statistics: how many requests, of what type, how quickly they are closed.</p>
+
+    <h3>Approvals: vacations, expenses, discounts</h3>
+    <p>A classic scenario: a sales manager wants to give a customer a bigger discount than the standard one and writes to their supervisor. The supervisor is on the road and will see it in two hours, by which time the customer has cooled off.</p>
+    <p>In a bot, the approval looks like this: the sales manager fills in a short form (customer, amount, discount size, justification), and the supervisor receives a message with two buttons — "Approve" and "Reject" — and, if needed, a comment field. The decision is recorded with a timestamp, and the sales manager is notified instantly.</p>
+    <p>Useful details: limits below which no approval is needed at all (a discount of up to 5% is an automatic "yes"), two-level chains for large amounts, a reminder to the approver if there is no answer after two hours, and a substitute if the supervisor has marked themselves as on vacation.</p>
+
+    <h3>Team reports: the end of the day without spreadsheets</h3>
+    <p>The sales managers' evening report, a shift report in production, a field technician's report. At a set time the bot sends the employee three to five questions, collects the answers and puts them into a spreadsheet or database. The manager gets a summary for everyone at once: who reported, who didn't, the key figures for the day.</p>
+    <p>The reverse direction works separately — an automatic summary for the manager built from system data, with no employee involvement. We covered this scenario in detail in the article <a href="/blog/avtomatizaciya-otchetov-v-telegram/">on a daily summary in Telegram</a>.</p>
+
+    <h3>Helpdesk: questions about policies and contacts</h3>
+    <p>"Where is the request form?", "What's the procedure for arranging a business trip?", "Who is in charge of the warehouse in Tbilisi?". These questions come up again with every new hire. A bot connected to a document base answers them itself and routes the difficult ones to the person responsible. For companies that hire actively, this takes a noticeable load off HR and managers; more on this in the piece <a href="/blog/ai-agent-dlya-hr-i-onbordinga/">on an AI agent for HR</a>.</p>
+
+    <h2>How such a bot works technically</h2>
+    <p>An internal bot is usually simpler than a customer-facing one: the audience is known, the scenarios are finite, the load is small. A typical architecture looks like this.</p>
+    <ul>
+        <li><strong>Authorization.</strong> The bot knows the list of employees (by Telegram ID or phone number) and their roles. An outside user is denied access. When someone leaves, they are removed from the list and access is closed.</li>
+        <li><strong>Scenarios.</strong> For requests and approvals — buttons and step-by-step forms. This is more reliable than free text: the fields are filled in and the format is consistent.</li>
+        <li><strong>Storage.</strong> At the start, Google Sheets is often enough: the manager sees everything in a familiar spreadsheet. As you grow — a database and Metabase for reports.</li>
+        <li><strong>Integrations.</strong> Creating a task in the tracker, an entry in 1C, a record in the CRM, an email to the accountant. The connections are built in n8n or Make, or written directly if the logic is non-standard.</li>
+        <li><strong>Notifications.</strong> The bot initiates messages itself: it reminds about an unsubmitted report, reports a change in request status, escalates an overdue approval.</li>
+    </ul>
+    <p>AI is needed in such a bot only in specific spots: to parse the free text of a request into fields, to answer questions about policies, to summarize the week's reports. There is no point in making the whole bot "smart" — for approving a discount, a "Yes" button beats any language model.</p>
+
+    <h2>Example: a 30-person manufacturing company</h2>
+    <p>Imagine a small furniture manufacturer: a workshop, a warehouse, two sales managers, a purchasing manager, an accountant and a director. Before the bot, requests for materials went to the purchasing manager as voice messages, non-standard orders were approved by calling the director, and the foreman wrote the shift output report in a notebook.</p>
+    <p>The first version of the bot did three things. Materials request: the foreman selects a category, enters the item and quantity, the purchasing manager gets a numbered task, and the foreman sees the status. Order approval: the sales manager sends the parameters (amount, deadline, non-standard requirements), and the director confirms with a button; orders up to a certain amount with a standard deadline don't require approval. Shift report: at 18:00 the foreman receives questions about output, defects and downtime, the answers go into a spreadsheet, and in the morning the director sees a summary for the week.</p>
+    <p>A month later, something unexpected was added: the bot began sending reminders about orders with an approaching shipping date and collecting a photo report of finished products before they are sent to the customer. This is a typical trajectory — the first version covers the obvious, and the real needs surface once it's in use.</p>
+
+    <h2>Where an internal bot is not a good fit</h2>
+    <p>An honest look at the limits, so you don't build more than you need.</p>
+    <p><strong>Complex project management.</strong> If you need Gantt charts, task dependencies and resource planning, that's a job for a tracker, and the bot can only serve as a notifier for it.</p>
+    <p><strong>Legally binding documents.</strong> An approval in a bot is a quick way to make a decision, but the vacation order still has to be signed according to HR record-keeping rules. The bot shortens the path to the signature; it doesn't replace it.</p>
+    <p><strong>Teams where Telegram is not the main channel.</strong> In some countries and industries the corporate standard is Slack, Teams or WhatsApp. Building a bot in a place employees don't visit is pointless. The logic of choosing a channel is covered in the article <a href="/blog/telegram-ili-whatsapp-dlya-biznesa/">Telegram or WhatsApp for business</a>.</p>
+    <p><strong>Confidential data without restrictions.</strong> Payroll records and employees' personal data are better kept out of the bot unless you have well-designed roles and, possibly, your own server for storing the history.</p>
+
+    <h2>What counts as a result</h2>
+    <p>An internal bot is rarely measured directly in money, but there are measurable indicators:</p>
+    <ul>
+        <li>Time from submitting a request to it being taken into work (usually drops from hours to minutes).</li>
+        <li>Approval time — roughly from "half a day" to 15–30 minutes, if the approver gets the notification on their phone.</li>
+        <li>The share of reports submitted on time — with reminders from the bot, it steadily approaches 100%.</li>
+        <li>The number of "where do I find this" questions in group chats — an indirect but very telling sign.</li>
+    </ul>
+    <p>If these numbers haven't moved after two months, the problem is more often in the process than in the bot: for example, the approver doesn't respond to notifications, and the reminders need to be escalated higher.</p>
+
+    <h2>Where to start</h2>
+    <p>At AiKrok, we usually advise against designing a "corporate portal in Telegram" right away; instead, take the one process that annoys people the most. The steps:</p>
+    <ol>
+        <li>Write down five internal processes that currently involve the most back-and-forth and clarification. Pick one, the most repetitive.</li>
+        <li>Describe it as a form: which fields the handler needs, who approves, what counts as completion.</li>
+        <li>Decide where the data should go — a spreadsheet, a tracker, an accounting system.</li>
+        <li>Launch the first version in one department. Two weeks is enough for requests with approval and storage in a spreadsheet.</li>
+        <li>After a month, collect feedback and add the next process.</li>
+    </ol>
+    <p>The main rule for an internal bot is that it has to be faster than messaging a colleague directly. If that condition is met, the team will start using it without being ordered to.</p>

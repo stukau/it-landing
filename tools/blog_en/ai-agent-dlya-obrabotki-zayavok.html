@@ -1,0 +1,103 @@
+<!--title-->
+An AI Agent for Inbound Leads: Qualifying Around the Clock Without Losing Any
+<!--description-->
+How an AI agent takes leads from your site, Telegram and WhatsApp 24/7, asks follow-up questions, filters out poor fits and hands the manager a ready brief.
+<!--cta_title-->
+Losing leads outside working hours?
+<!--cta_text-->
+We'll review your inbound flow and build an agent that replies, qualifies and passes leads to your CRM. MVP in 2 weeks, free consultation.
+<!--body-->
+<p>A lead came in on Friday at 22:40 through the form on the website. The manager saw it on Monday morning and called at lunchtime — by then the customer had already bought from a competitor who replied within ten minutes. This story repeats itself in dental clinics, car repair shops, renovation studios and small B2B companies. The problem isn't lazy managers; it's that the inbound flow doesn't match the working schedule and keeps scattering across channels: website, Telegram, WhatsApp, Instagram, email, phone calls.</p>
+    <p>An AI agent for inbound leads closes exactly this gap. It replies within seconds at any hour, asks follow-up questions, separates relevant inquiries from spam and hands the manager not a "contact" but a ready brief. Below we look at how such an agent is built, where it really helps and which limitations you need to factor in up front.</p>
+
+    <h2>What lead qualification is and why people do it badly</h2>
+    <p>Qualifying a lead means understanding three things: what the person needs, how ready they are to buy and whether they are a good fit for you as a customer. In theory, the manager does this on the first call. In practice, the call gets postponed, not all the questions get asked, and the answers end up in phone notes or aren't written down at all.</p>
+    <p>Typical losses at this stage:</p>
+    <ul>
+        <li>inquiries outside working hours go unanswered until the next day;</li>
+        <li>leads from different channels aren't brought together in one place, and some simply get lost;</li>
+        <li>the manager spends time on irrelevant inquiries — job seekers, suppliers, spam;</li>
+        <li>information about the customer isn't recorded, so the next contact starts from scratch.</li>
+    </ul>
+    <p>The agent doesn't replace selling. It takes over the first, most routine layer: reply, clarify, record, pass to the right person.</p>
+
+    <h2>How an AI agent works on the inbound flow</h2>
+    <p>Leaving out the technical details, the flow looks like this.</p>
+    <ol>
+        <li><strong>Intake.</strong> A lead arrives from any channel — a website form, Telegram, the WhatsApp Business API, email. All channels feed into a single entry point.</li>
+        <li><strong>Understanding the request.</strong> A language model (GPT-5, Claude, Gemini or an open model on your own server) reads the message and works out what it is about: service, product, urgency, city, budget if one is mentioned.</li>
+        <li><strong>Follow-up questions.</strong> The agent asks only the questions that are still missing for qualification. If the customer has already written "I need an air conditioner installed in a two-room apartment in Tbilisi next week", there is no need to ask again about the city and the type of property.</li>
+        <li><strong>Scoring.</strong> Using predefined criteria, the agent assigns a category: hot, warm, not a fit. The criteria are set by the business, not by the model.</li>
+        <li><strong>Handoff.</strong> A record is created in amoCRM, Bitrix24, HubSpot or Google Sheets, and the person responsible gets a Telegram notification with a short summary of the conversation. Hot leads go out immediately, warm ones go into the morning queue, and irrelevant ones are closed with a polite reply.</li>
+    </ol>
+    <p>The key difference from a button-based bot: the agent understands free text and doesn't break when the customer goes off script. We wrote more about the difference between the approaches in the article <a href="/blog/avtomatizatsiya-biznesa-ai-agenty/">on how automation with AI agents works</a>.</p>
+
+    <h2>Qualification criteria: what the agent should ask</h2>
+    <p>The most common mistake is giving the agent twenty questions. The customer gets tired by the fourth and leaves. A working set usually fits into three to five parameters, and it depends heavily on the industry.</p>
+    <h3>Example: an apartment renovation studio</h3>
+    <ul>
+        <li>Type of property and floor area.</li>
+        <li>City or district — to rule out right away the areas you don't travel to.</li>
+        <li>When the work should start.</li>
+        <li>Whether there is a design project.</li>
+    </ul>
+    <p>It's better not to ask about budget head-on in the first message: in this niche it puts people off. The agent can name an approximate price range per square meter and see how the customer reacts.</p>
+    <h3>Example: a B2B packaging supplier</h3>
+    <ul>
+        <li>Type of product and approximate monthly volume.</li>
+        <li>One-off purchase or regular deliveries.</li>
+        <li>Delivery region.</li>
+        <li>The date by which the first batch is needed.</li>
+    </ul>
+    <p>Here, by contrast, volume is the main criterion: an order for 200 boxes and one for 20,000 boxes are handled by different people.</p>
+    <p>It helps to phrase the criteria as simple rules: "if the volume is above X and the region is on the list — hot, pass to Ivan immediately". The model is good at extracting facts from text, while the rule-based decision is better left deterministic — that way there are fewer surprises.</p>
+
+    <h2>What the agent hands to the manager</h2>
+    <p>A good outcome of the agent's work is not "a new lead in the CRM" but a short record the manager can call on right away. It usually contains:</p>
+    <ul>
+        <li>the gist of the request in one or two sentences;</li>
+        <li>answers to the qualifying questions as fields, not as a chat transcript;</li>
+        <li>the category and the reason the agent assigned it;</li>
+        <li>a convenient time to get in touch, if the customer named one;</li>
+        <li>a link to the full conversation.</li>
+    </ul>
+    <p>The same fields can be rolled up into a daily digest: how many leads came in, how many were hot, which channels brought the most irrelevant ones. How to put together such reports automatically is covered in the article <a href="/blog/avtomatizaciya-otchetov-v-telegram/">on a daily digest in Telegram</a>.</p>
+
+    <h2>Where a lead agent won't work or will work poorly</h2>
+    <p>Honest limitations worth knowing before you start.</p>
+    <p><strong>A long, complex B2B cycle with tenders.</strong> If every deal is a series of meetings and custom calculations, the agent will only help at the entry point: recording the contact and collecting basic data. The savings will be small.</p>
+    <p><strong>Prices and terms that change every day.</strong> The agent must not quote a price unless it has access to the current price list through an integration. Otherwise it will start making one up — how to prevent this is covered in the article <a href="/blog/gallyucinacii-ii-kak-zashchitit-biznes/">on AI hallucinations</a>.</p>
+    <p><strong>A small flow.</strong> With five leads a week, it makes more sense to set up notifications and reply templates than to build an agent. The threshold beyond which the project starts to pay off is roughly several dozen inquiries a week or a noticeable share of leads arriving outside working hours.</p>
+    <p><strong>Chaos in the process itself.</strong> If the company has no shared understanding of who is responsible for leads and what counts as a relevant inquiry, the agent will only speed up the chaos. Agree on the rules first, then automate.</p>
+
+    <h2>Stack and timeline: what it's built from</h2>
+    <p>For a small business, a combination that doesn't require custom development "from scratch" is almost always enough:</p>
+    <ul>
+        <li><strong>Orchestration</strong> — n8n (can be deployed on your own server) or Make.</li>
+        <li><strong>Model</strong> — GPT-5 or Claude via API; where data has to be stored in-house — Qwen or Llama on a rented server.</li>
+        <li><strong>Channels</strong> — the Telegram Bot API, the WhatsApp Business API, a webhook from the website form, a mailbox.</li>
+        <li><strong>Storage</strong> — your existing CRM. If there is no CRM, Google Sheets with Telegram notifications is enough for the first stage.</li>
+    </ul>
+    <p>At AiKrok we usually fit the first working version of such an agent into two weeks: a few days to go through the process and the criteria, then the build, connecting the channels and the CRM, and a run on real leads. For the first two or three weeks after launch the manager checks every record — this is the stage when the prompts and criteria get adjusted. After that, checks become spot checks.</p>
+
+    <h2>How to measure the result</h2>
+    <p>Don't use "percentage of automation" as your metric. Look at what changes in money and time:</p>
+    <ul>
+        <li>median time to first reply — before and after;</li>
+        <li>the share of leads that got a reply outside working hours;</li>
+        <li>the share of irrelevant inquiries that never reached the manager;</li>
+        <li>conversion from lead to a conversation with the manager and then to a deal, by channel;</li>
+        <li>the number of leads where the agent handed the conversation to a person marked "didn't understand".</li>
+    </ul>
+    <p>The last metric matters: it shows where the script diverges from reality and tells you what to fix.</p>
+
+    <h2>Where to start</h2>
+    <p>A practical sequence of steps that works without unnecessary cost.</p>
+    <ol>
+        <li>Collect the leads from the past month across all channels into one spreadsheet. Mark how many of them came in outside working hours and how many turned out to be irrelevant.</li>
+        <li>Write down the three to five questions whose answers the manager needs before the first call.</li>
+        <li>Spell out the rules: what counts as a hot lead and who it goes to.</li>
+        <li>Launch the agent on one channel — usually the website or Telegram — and compare its work with manual handling for two weeks.</li>
+        <li>Connect the remaining channels once the criteria have settled.</li>
+    </ol>
+    <p>If you need an outside view of the process and an assessment of whether an agent will pay off on your flow, you can start with a <a href="/#contact">free consultation</a>: we go through your current leads and tell you honestly where notifications are enough and where an agent is already needed.</p>

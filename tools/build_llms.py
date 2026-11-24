@@ -10,6 +10,8 @@ import json
 import os
 import re
 
+from build_en import POSTS_EN
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://aikrok.com"
 SLUGS = ["razrabotka-saytov", "telegram-boty", "mobilnye-prilozheniya",
@@ -123,6 +125,8 @@ L.append("")
 L.append(f"- [Главная]({BASE}/): услуги, примеры работ, процесс, частые вопросы, контакты")
 L.append(f"- [Услуги]({BASE}/services/): все шесть направлений")
 L.append(f"- [Home (English)]({BASE}/en/): services, portfolio, process, FAQ, contact")
+if POSTS_EN:
+    L.append(f"- [Blog (English)]({BASE}/en/blog/): the same articles in English")
 L.append(f"- [Блог]({BASE}/blog/): {len(posts)} практических статей об автоматизации бизнеса, AI-агентах, Telegram-ботах, CRM и аналитике")
 L.append("")
 L.append("## Блог")
@@ -130,6 +134,12 @@ L.append("")
 for slug, tag, title, desc in posts:
     L.append(f"- [{title}]({BASE}/blog/{slug}/): {desc}")
 L.append("")
+if all(slug in POSTS_EN for slug, _, _, _ in posts):
+    L.append("## Blog (English)")
+    L.append("")
+    for slug, tag, title, desc in posts:
+        L.append(f"- [{POSTS_EN[slug]['title']}]({BASE}/en/blog/{slug}/): {POSTS_EN[slug]['description']}")
+    L.append("")
 wr("llms.txt", "\n".join(L))
 
 # ------------------------------------------------------------------ llms-full.txt
